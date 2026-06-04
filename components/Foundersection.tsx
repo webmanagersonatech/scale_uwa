@@ -1,0 +1,309 @@
+"use client";
+
+import { useRef } from "react";
+import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import {
+  GraduationCap,
+  BookOpen,
+  Briefcase,
+  Users,
+  TrendingUp,
+  Award,
+  Clock,
+  Globe
+} from "lucide-react";
+
+export default function FounderSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
+
+  const fadeUp = (delay = 0) => ({
+    initial: { opacity: 0, y: 50 },
+    animate: isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 },
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay },
+  });
+
+  const fadeIn = (delay = 0, scale = 1) => ({
+    initial: { opacity: 0, scale: scale === 1 ? 0.95 : scale },
+    animate: isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: scale === 1 ? 0.95 : scale },
+    transition: { duration: 0.6, ease: "easeOut", delay },
+  });
+
+  const slideInLeft = (delay = 0) => ({
+    initial: { opacity: 0, x: -60 },
+    animate: isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 },
+    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1], delay },
+  });
+
+  const slideInRight = (delay = 0) => ({
+    initial: { opacity: 0, x: 60 },
+    animate: isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 60 },
+    transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1], delay },
+  });
+
+  // Programme comparison data
+  const programmeStats = [
+    {
+      number: "2 Years",
+      label: "Traditional USA Route",
+      icon: GraduationCap,
+      color: "from-purple-500 to-pink-500",
+      gradient: "purple"
+    },
+    {
+      number: "1+1",
+      label: "UWA × SCALE Route",
+      icon: BookOpen,
+      color: "from-blue-500 to-cyan-500",
+      gradient: "blue"
+    },
+    {
+      number: "Lower",
+      label: "Cost Exposure",
+      icon: Briefcase,
+      color: "from-green-500 to-emerald-500",
+      gradient: "green"
+    },
+    {
+      number: "Stronger",
+      label: "Career Readiness",
+      icon: Users,
+      color: "from-orange-500 to-red-500",
+      gradient: "orange"
+    },
+  ];
+
+  return (
+    <section
+      ref={ref}
+      className="w-full bg-gradient-to-br from-white via-gray-50 to-white py-16 sm:py-20 overflow-hidden relative"
+    >
+      {/* Decorative background elements */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 0.03 } : { opacity: 0 }}
+        transition={{ duration: 1 }}
+        className="absolute top-20 right-10 w-72 h-72 bg-[#8c1d32] rounded-full blur-3xl"
+      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 0.03 } : { opacity: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        className="absolute bottom-20 left-10 w-96 h-96 bg-[#8c1d32] rounded-full blur-3xl"
+      />
+
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative z-10">
+
+        {/* ── LEFT: Stacked Images + Stats Cards ── */}
+        <div className="flex-1 w-full">
+          {/* Images Stack */}
+          <motion.div
+            {...slideInLeft(0.1)}
+            className="relative w-full max-w-[480px] mx-auto lg:mx-0 h-[420px] sm:h-[500px] mb-8"
+          >
+            {/* Back image */}
+            <motion.div
+              {...fadeIn(0.15, 0.9)}
+              className="absolute top-0 left-0 w-[58%] sm:w-[55%] aspect-[4/5] rounded-2xl overflow-hidden shadow-xl z-10"
+            >
+              <Image
+                src="/homeimages/found1.webp"
+                alt="University campus"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </motion.div>
+
+            {/* Front image */}
+            <motion.div
+              {...fadeIn(0.3, 0.95)}
+              whileHover={{ scale: 1.02 }}
+              className="absolute bottom-0 right-0 w-[62%] sm:w-[60%] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl z-20 ring-4 ring-white/50"
+            >
+              <Image
+                src="/homeimages/found3.webp"
+                alt="Founder portrait"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-110"
+              />
+            </motion.div>
+
+            {/* Circular badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5, rotate: -30 }}
+              animate={isInView ? { opacity: 1, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.5, rotate: -30 }}
+              transition={{ duration: 0.8, ease: "backOut", delay: 0.5 }}
+              whileHover={{ scale: 1.05, rotate: 5 }}
+              className="absolute top-[-2%] right-[4%] z-30 w-[110px] h-[110px] sm:w-[130px] sm:h-[130px] cursor-pointer"
+            >
+              <svg viewBox="0 0 130 130" className="w-full h-full animate-spin-slow">
+                <defs>
+                  <path id="circle-path" d="M 65,65 m -47,0 a 47,47 0 1,1 94,0 a 47,47 0 1,1 -94,0" />
+                </defs>
+                <text fontSize="11" fontFamily="serif" letterSpacing="2.8" fill="#1a1a1a" fontWeight="500">
+                  <textPath href="#circle-path" startOffset="0%">
+                    SMARTER ROUTE TO U.S. HIGHER EDUCATION •
+                  </textPath>
+                </text>
+              </svg>
+
+              <motion.div
+                className="absolute inset-0 flex items-center justify-center"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+              >
+                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
+                  <svg viewBox="0 0 48 48" fill="none" className="w-full h-full">
+                    <rect x="8" y="22" width="32" height="18" rx="2" fill="#8c1d32" opacity="0.15" />
+                    <rect x="12" y="18" width="24" height="16" rx="1" fill="#8c1d32" />
+                    <rect x="15" y="21" width="18" height="10" rx="1" fill="white" opacity="0.3" />
+                    <polygon points="24,6 4,16 24,22 44,16" fill="#1a1a1a" />
+                    <line x1="40" y1="16" x2="40" y2="30" stroke="#1a1a1a" strokeWidth="2.5" strokeLinecap="round" />
+                    <circle cx="40" cy="32" r="3" fill="#8c1d32" />
+                  </svg>
+                </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+
+          {/* Stats Cards - Programme Comparison */}
+          <motion.div
+            {...slideInLeft(0.3)}
+            className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-[500px] mx-auto lg:mx-0"
+          >
+            {programmeStats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.08 }}
+                className="text-center"
+              >
+                <div className="text-2xl sm:text-3xl font-bold text-[#C8102E] mb-1">
+                  {stat.number}
+                </div>
+                <div className="text-xs sm:text-sm text-gray-500 uppercase tracking-wide">
+                  {stat.label}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* ── RIGHT: Text Content with Programme Focus ── */}
+        <div className="flex-1 w-full">
+          {/* Since label */}
+          <motion.p
+            {...slideInRight(0.15)}
+            className="text-[#8c1d32] text-xs sm:text-sm font-semibold tracking-[3px] uppercase mb-4 inline-block"
+          >
+            Why This Programme?
+          </motion.p>
+
+          {/* Heading */}
+          <motion.h2
+            {...slideInRight(0.25)}
+            className="font-serif text-[36px] sm:text-[46px] lg:text-[52px] leading-[1.08] text-black mb-6"
+          >
+            A Smarter Route to
+            <br />
+            U.S.{" "}
+            <motion.span
+              className="text-[#8c1d32] underline underline-offset-4 decoration-[3px] inline-block"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+            >
+              Higher Education
+            </motion.span>
+          </motion.h2>
+
+          {/* Programme Mission Statement */}
+          <motion.div
+            {...slideInRight(0.35)}
+            className="mb-6"
+          >
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-3">
+              The <span className="font-semibold text-[#8c1d32]">UWA × SCALE pathway</span> helps students reduce cost exposure,
+              prepare better, and enter the U.S. academic system with stronger technical,
+              communication, and career readiness.
+            </p>
+
+          </motion.div>
+
+
+          {/* Route Comparison Card */}
+          <motion.div
+            {...slideInRight(0.48)}
+            className="mt-5 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm"
+          >
+            <div className="grid md:grid-cols-2">
+
+              {/* Traditional Route */}
+              <div className="bg-gray-50 p-4 lg:p-5 border-b md:border-b-0 md:border-r border-gray-200">
+                <h3 className="text-[#8c1d32] font-bold text-lg mb-3">
+                  Traditional 2-Year USA Route
+                </h3>
+
+                <ul className="space-y-1.5 text-gray-700 text-sm leading-relaxed">
+                  <li>• Student moves to the USA immediately.</li>
+                  <li>• Higher first-year international living cost exposure.</li>
+                  <li>• Direct cultural and academic transition.</li>
+                  <li>• Higher initial loan and forex burden.</li>
+                  <li>• Rapid adjustment to U.S. academic expectations.</li>
+                </ul>
+              </div>
+
+              {/* SCALE Route */}
+              <div className="bg-white p-4 lg:p-5">
+                <h3 className="text-[#8c1d32] font-bold text-lg mb-3">
+                  UWA × SCALE 1+1 Route
+                </h3>
+
+                <ul className="space-y-1.5 text-gray-700 text-sm leading-relaxed">
+                  <li>• Complete Year 1 at SCALE, Bengaluru.</li>
+                  <li>• Reduce one full year of U.S. living costs.</li>
+                  <li>• Additional technical & communication preparation.</li>
+                  <li>• Phased financial planning for families.</li>
+                  <li>• Stronger readiness before progressing to UWA.</li>
+                </ul>
+              </div>
+
+            </div>
+          </motion.div>
+
+
+      
+
+          {/* CTA Button */}
+          <motion.div
+            {...slideInRight(0.65)}
+            className="mt-6"
+          >
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-[#8c1d32] text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#a0223a] transition-colors shadow-md"
+            >
+              Explore Programme →
+            </motion.button>
+          </motion.div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        @keyframes spin-slow {
+          from { transform: rotate(0deg); }
+          to   { transform: rotate(360deg); }
+        }
+        .animate-spin-slow { 
+          animation: spin-slow 18s linear infinite;
+        }
+        .border-gradient {
+          border-image: linear-gradient(to bottom, #8c1d32, #c72a48);
+          border-image-slice: 1;
+        }
+      `}</style>
+    </section>
+  );
+}
