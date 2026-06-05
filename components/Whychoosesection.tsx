@@ -266,13 +266,41 @@ export default function WhyChooseSection() {
                                 </p>
 
                                 {/* Read More button */}
-                                <motion.button
-                                    whileHover={{ backgroundColor: "rgba(0,0,0,0.05)" }}
-                                    className="relative z-10 mt-auto w-full border border-gray-300 py-3 text-gray-700 text-[11px] font-semibold tracking-[2.5px] uppercase flex items-center justify-center gap-2 transition-colors duration-300 rounded-sm"
-                                >
-                                    Read More
-                                    <ArrowUpRight size={12} />
-                                </motion.button>
+                            <motion.button
+  whileHover={{ scale: 1.03 }}
+  whileTap={{ scale: 0.97 }}
+  className="
+    relative z-10 mt-auto
+
+    bg-[#078671]
+    hover:bg-[#067864]
+
+    text-white
+    font-bold
+    uppercase
+    tracking-[2px]
+    text-[11px]
+
+    py-3 px-8
+
+    rounded-tr-[20px]
+    rounded-bl-[20px]
+    rounded-tl-none
+    rounded-br-none
+
+    inline-flex
+    items-center
+    justify-center
+    gap-2
+
+    transition-all
+    duration-300
+    shadow-md
+  "
+>
+  Read More
+  <ArrowUpRight size={14} />
+</motion.button>
                             </motion.div>
                         ))}
                     </motion.div>

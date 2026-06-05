@@ -67,13 +67,13 @@ const Footer = () => {
                 height={50}
                 className="object-contain"
               />
-             
+
             </div>
 
             {/* UWA × SCALE Label */}
             <div className="mb-4">
               <div className="text-[11px] font-bold text-[#8c1d32] tracking-widest uppercase">
-                UWA × SCALE
+                SONA UWA
               </div>
               <div className="text-[12px] font-semibold text-gray-300">
                 1+1 International Pathway
@@ -92,27 +92,25 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <FaPhone className="text-[#8c1d32] mt-1 text-sm" />
                 <div className="text-gray-400 text-sm">
-                  <p>(844) 361-6034</p>
-                  <p>+1 (888) 999-0022</p>
+                  <p>(+91) 9442592170</p>
+
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-[#8c1d32] text-sm" />
                 <a
-                  href="mailto:admissions@uwa.edu"
+                  href="mailto:sonauwa@@sonastar.com"
                   className="text-gray-400 hover:text-[#8c1d32] transition text-sm"
                 >
-                  admissions@uwa.edu
+                  sonauwa@sonastar.com
                 </a>
               </div>
 
               <div className="flex items-start gap-3">
                 <FaLocationDot className="text-[#8c1d32] mt-1 text-sm" />
-                <p className="text-gray-400 text-sm">
-                  SCALE, Bengaluru, India
-                  <br />
-                  Livingston, Alabama, USA
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Sona Towers, 71 Millers Road, Vasanth Nagar, Bengaluru, Karnataka - 560052
                 </p>
               </div>
             </div>
@@ -214,7 +212,7 @@ const Footer = () => {
         {/* BOTTOM BAR */}
         <div className="mt-10 pt-6 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500">
-            © {currentYear} UWA × SCALE. All Rights Reserved.
+            © {currentYear}  SONA UWA. All Rights Reserved.
           </p>
 
           <div className="flex items-center gap-6 text-xs">

@@ -6,7 +6,8 @@ const faqItems = [
   {
     number: "01",
     title: "Where is Year 1 conducted?",
-    description: "Year 1 is conducted at SCALE, Bengaluru, India.",
+    description:
+      "Year 1 is conducted at SCALE, located in Sona Towers, 71 Millers Road, Vasanth Nagar, Bengaluru, Karnataka - 560052, India.",
     image: "/homeimages/acadamic1.webp",
   },
   {
@@ -45,27 +46,27 @@ export default function AcademiesSection() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 ">
 
         {/* Header */}
-    <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    animate={isInView ? { opacity: 1, y: 0 } : {}}
-    transition={{ duration: 0.6 }}
-    className="text-center mb-8 sm:mb-10 md:mb-12 px-4 sm:px-0"
->
-    <div className="inline-block">
-        <p className="text-[#8c1d32] text-[10px] sm:text-xs font-semibold tracking-[3px] sm:tracking-[4px] uppercase relative mb-4 sm:mb-5">
-            Common Questions
-            <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-6 h-px bg-[#8c1d32]/40"></span>
-        </p>
-    </div>
-    <h2 className="font-serif text-[28px] sm:text-[40px] md:text-[46px] lg:text-[52px] leading-[1.2] sm:leading-tight text-black">
-        Frequently Asked{" "}
-        <span className="text-[#8c1d32] relative inline-block">
-            Questions
-            <span className="absolute bottom-0 left-0 w-full h-0.5 sm:h-1 bg-[#8c1d32]/20 rounded-full"></span>
-            <span className="absolute bottom-0 left-0 w-1/3 h-0.5 sm:h-1 bg-[#8c1d32] rounded-full"></span>
-        </span>
-    </h2>
-</motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-8 sm:mb-10 md:mb-12 px-4 sm:px-0"
+        >
+          <div className="inline-block">
+            <p className="text-[#8c1d32] text-[10px] sm:text-xs font-semibold tracking-[3px] sm:tracking-[4px] uppercase relative mb-4 sm:mb-5">
+              Common Questions
+              <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-6 h-px bg-[#8c1d32]/40"></span>
+            </p>
+          </div>
+          <h2 className="font-serif text-[28px] sm:text-[40px] md:text-[46px] lg:text-[52px] leading-[1.2] sm:leading-tight text-black">
+            Frequently Asked{" "}
+            <span className="text-[#8c1d32] relative inline-block">
+              Questions
+              <span className="absolute bottom-0 left-0 w-full h-0.5 sm:h-1 bg-[#8c1d32]/20 rounded-full"></span>
+              <span className="absolute bottom-0 left-0 w-1/3 h-0.5 sm:h-1 bg-[#8c1d32] rounded-full"></span>
+            </span>
+          </h2>
+        </motion.div>
 
         {/* Two-column: list left, image right */}
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 items-stretch">

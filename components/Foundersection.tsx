@@ -143,7 +143,7 @@ export default function FounderSection() {
                 </defs>
                 <text fontSize="11" fontFamily="serif" letterSpacing="2.8" fill="#1a1a1a" fontWeight="500">
                   <textPath href="#circle-path" startOffset="0%">
-                    SMARTER ROUTE TO U.S. HIGHER EDUCATION •
+                    STUDY IN INDIA. GRADUATE IN  U.S. •
                   </textPath>
                 </text>
               </svg>
@@ -288,7 +288,7 @@ export default function FounderSection() {
 
 
 
-          {/* CTA Button */}
+  
           <motion.div
             {...slideInRight(0.65)}
             className="mt-6"
@@ -319,7 +319,7 @@ export default function FounderSection() {
       items-center
       justify-center
 
-      hover:bg-[#067663]
+      hover:bg-[#067864]
       transition-all
       duration-300
       shadow-md

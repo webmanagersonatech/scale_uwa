@@ -134,7 +134,7 @@ export default function HeroSection() {
 
             {/* CTA Buttons - reduced padding */}
             <div className="mt-5 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
-              <button className="bg-[#078671] hover:bg-[#08917a] text-white px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 transition text-xs sm:text-sm rounded-md">
+              <button className="bg-[#078671] hover:bg-[#067864] text-white px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 transition text-xs sm:text-sm rounded-md">
                 APPLY NOW
                 <ArrowRight size={16} />
               </button>
@@ -187,17 +187,35 @@ export default function HeroSection() {
                   <div className="text-[11px] text-gray-400">Cost Savings</div>
                 </div>
 
-                {/* Year 1 */}
+                {/* Year 1 - India */}
                 <div className="px-3 py-3 text-center">
                   <GraduationCap className="w-4 h-4 text-[#8c1d32] mx-auto mb-1" />
-                  <div className="text-sm font-medium text-gray-900">SCALE</div>
+                  <div className="text-sm font-medium text-gray-900 flex items-center justify-center gap-1">
+                    SCALE
+                    <span className="inline-flex items-center">
+                      <img
+                        src="https://flagcdn.com/w20/in.png"
+                        alt="India flag"
+                        className="w-4 h-3 object-cover rounded-sm"
+                      />
+                    </span>
+                  </div>
                   <div className="text-[11px] text-gray-400">Year 1 • India</div>
                 </div>
 
-                {/* Year 2 */}
+                {/* Year 2 - USA */}
                 <div className="px-3 py-3 text-center">
                   <Plane className="w-4 h-4 text-[#8c1d32] mx-auto mb-1" />
-                  <div className="text-sm font-medium text-gray-900">UWA</div>
+                  <div className="text-sm font-medium text-gray-900 flex items-center justify-center gap-1">
+                    UWA
+                    <span className="inline-flex items-center">
+                      <img
+                        src="https://flagcdn.com/w20/us.png"
+                        alt="USA flag"
+                        className="w-4 h-3 object-cover rounded-sm"
+                      />
+                    </span>
+                  </div>
                   <div className="text-[11px] text-gray-400">Year 2 • USA</div>
                 </div>
 

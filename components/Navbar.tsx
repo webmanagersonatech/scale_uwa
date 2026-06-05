@@ -89,7 +89,7 @@ export default function Navbar() {
             </Link>
 
             {/* RIGHT SIDE CONTENT - now flush right within 1440px container */}
-            <div className="h-8 flex items-center justify-end">
+            <div className="h-8 flex items-center justify-end px-2">
               <div className="flex items-center gap-6 text-[12px]">
                 <Link
                   href="#apply"
@@ -101,7 +101,7 @@ export default function Navbar() {
                   href="#"
                   className="hover:text-[#e5c66b] transition text-white"
                 >
-                  Call Us: (844) 361-6034
+                  Call Us: (+91) 9442592170
                 </Link>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function Navbar() {
               {/* PROGRAM INFO - Fixed text color for dark background */}
               <div className="hidden xl:flex flex-col justify-center px-6 border-r border-gray-700 h-full">
                 <span className="text-[10px] uppercase tracking-[2px] text-[#AC1F2D] font-bold">
-                  UWA × SCALE
+                  SONA UWA
                 </span>
                 <span className="text-[13px] font-semibold whitespace-nowrap text-white">
                   International Pathway
@@ -251,7 +251,7 @@ export default function Navbar() {
               <div className="flex items-center gap-2">
                 <span className="text-[11px] tracking-wide">📞</span>
                 <Link href="#" className="text-[13px] hover:text-[#e5c66b] transition text-white">
-                  Call Us: (844) 361-6034
+                  Call Us: (+91) 9442592170
                 </Link>
               </div>
               <div className="text-[11px] opacity-90 text-white">
@@ -262,7 +262,7 @@ export default function Navbar() {
 
           <div className="bg-gray-50 border-b border-gray-200 px-4 py-3">
             <div className="text-[10px] tracking-[2px] uppercase font-bold text-[#AC1F2D]">
-              UWA × SCALE
+              SONA UWA
             </div>
             <div className="font-semibold text-sm text-gray-800 mt-0.5">
               1+1 International Pathway

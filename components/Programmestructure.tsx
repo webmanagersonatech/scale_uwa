@@ -25,7 +25,7 @@ export default function ProgrammeStructure() {
                     </p>
                     <h2 className="text-[28px] sm:text-[32px] lg:text-[40px]  font-serif text-gray-900 mb-2 leading-tight">
                         <span className="bg-gradient-to-r from-[#8c1d32] to-[#c44563] bg-clip-text text-transparent font-black drop-shadow-sm">
-                            30-Credit 
+                            30-Credit
                         </span>
                         <br className="sm:hidden" />
                         <span className="inline-block mt-1 sm:mt-0"> Programme Structure</span>
@@ -75,11 +75,7 @@ export default function ProgrammeStructure() {
                                             className="w-6 h-4 sm:w-7 sm:h-5 rounded-sm border border-gray-200 shadow-sm object-cover"
                                         />
 
-                                        {/* Icon */}
-                                        <MapPin
-                                            size={20}
-                                            className="text-[#078671] shrink-0"
-                                        />
+
 
                                         {/* Heading */}
                                         <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 leading-tight">
@@ -153,12 +149,6 @@ export default function ProgrammeStructure() {
                                             src="https://flagcdn.com/w40/us.png"
                                             alt="USA Flag"
                                             className="w-6 h-4 sm:w-7 sm:h-5 rounded-sm border border-gray-200 shadow-sm object-cover"
-                                        />
-
-                                        {/* Icon */}
-                                        <GraduationCap
-                                            size={20}
-                                            className="text-[#078671] shrink-0"
                                         />
 
                                         {/* Heading */}
