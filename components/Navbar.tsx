@@ -150,7 +150,7 @@ export default function Navbar() {
             ))}
             <Link
               href="#apply"
-              className="ml-3 px-5 py-2 bg-[#9b1c31] text-white text-sm font-bold rounded-md hover:bg-[#7a1627] transition-colors duration-200 shadow-sm"
+              className="ml-3 px-5 py-2 bg-[#078671] hover:bg-[#08917a] text-white text-sm font-bold rounded-md transition-colors duration-200 shadow-sm"
             >
               Apply Now
             </Link>

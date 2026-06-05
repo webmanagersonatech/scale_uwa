@@ -54,7 +54,7 @@ export default function AcademiesSection() {
           <p className="text-[#8c1d32] text-xs font-semibold tracking-[4px] uppercase underline underline-offset-2 mb-4">
             Common Questions
           </p>
-          <h2 className="font-serif text-[38px] sm:text-[42px] lg:text-[52px] leading-tight text-black">
+          <h2 className="font-serif text-[36px] sm:text-[46px] lg:text-[52px] leading-tight text-black">
             Frequently Asked{" "}
             <span className="text-[#8c1d32] underline underline-offset-4 decoration-[3px]">
               Questions

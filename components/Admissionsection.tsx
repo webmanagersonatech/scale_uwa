@@ -174,7 +174,7 @@ export default function AdmissionSection() {
               />
               <button
                 onClick={handleSubscribe}
-                className="bg-[#6b0f1a] hover:bg-[#8c1d32] text-white px-6 sm:px-8 py-3 text-xs font-bold tracking-[2px] uppercase flex items-center gap-2 transition-colors duration-300 whitespace-nowrap"
+                className="bg-[#078671] hover:bg-[#08917a] text-white px-6 sm:px-8 py-3 text-xs font-bold tracking-[2px] uppercase flex items-center gap-2 transition-colors duration-300 whitespace-nowrap"
               >
                 {submitted ? "Sent ✓" : (
                   <>Subscribe <ArrowUpRight size={14} /></>

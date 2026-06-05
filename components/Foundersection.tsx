@@ -273,7 +273,7 @@ export default function FounderSection() {
           </motion.div>
 
 
-      
+
 
           {/* CTA Button */}
           <motion.div
@@ -283,7 +283,7 @@ export default function FounderSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-[#8c1d32] text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#a0223a] transition-colors shadow-md"
+              className="bg-[#078671] text-white px-8 py-3 rounded-tl-[24px] rounded-br-[24px] rounded-tr-md rounded-bl-md text-sm font-bold uppercase tracking-wide hover:bg-[#08917a] transition-all duration-300 shadow-lg"
             >
               Explore Programme →
             </motion.button>

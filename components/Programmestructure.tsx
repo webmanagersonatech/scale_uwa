@@ -1,4 +1,3 @@
-"use client";
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -22,10 +21,10 @@ export default function ProgrammeStructure() {
                     transition={{ duration: 0.6 }}
                     className="text-center mb-8"
                 >
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-900 mb-2">
+                    <h2 className="text-[36px] sm:text-[46px] lg:text-[52px] font-serif text-gray-900 mb-2">
                         Programme Structure
                     </h2>
-                    <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         One Programme. Two Learning Environments.
                     </p>
                     <div className="w-16 h-0.5 bg-[#8c1d32] mx-auto mt-3" />
@@ -63,9 +62,9 @@ export default function ProgrammeStructure() {
                                         initial={{ opacity: 0, x: -10 }}
                                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                                         transition={{ duration: 0.3, delay: 0.2 + idx * 0.05 }}
-                                        className="flex items-start gap-3 text-gray-600 text-base"
+                                        className="flex items-start gap-3 text-gray-600 text-sm sm:text-base"
                                     >
-                                        <span className="text-[#8c1d32] font-medium mt-0.5">—</span>
+                                        <span className="text-[#8c1d32]  font-medium mt-0.5">—</span>
                                         <span>{item}</span>
                                     </motion.li>
                                 ))}

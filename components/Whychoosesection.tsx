@@ -1,6 +1,5 @@
-"use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowUpRight, ArrowLeft, ArrowRight } from "lucide-react";
 
@@ -99,9 +98,27 @@ export default function WhyChooseSection() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-60px" });
     const [startIndex, setStartIndex] = useState(0);
-    const cardsPerPage = 3;
+    const [cardsPerPage, setCardsPerPage] = useState(3);
+
+    // Handle responsive cards per page
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 640) {
+                setCardsPerPage(1); // Mobile: 1 card
+            } else if (window.innerWidth < 1024) {
+                setCardsPerPage(2); // Tablet: 2 cards
+            } else {
+                setCardsPerPage(3); // Desktop: 3 cards
+            }
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const totalCards = cards.length;
-    const maxStartIndex = totalCards - cardsPerPage;
+    const maxStartIndex = Math.max(0, totalCards - cardsPerPage);
 
     const handlePrev = () => {
         setStartIndex((prev) => Math.max(0, prev - 1));
@@ -124,15 +141,10 @@ export default function WhyChooseSection() {
         >
             {/* Decorative circles - MBA style */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                {/* Large circle top right */}
                 <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full border border-white/10" />
                 <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full border border-white/8" />
-
-                {/* Medium circle bottom left */}
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full border border-white/10" />
                 <div className="absolute -bottom-24 -left-24 w-48 h-48 rounded-full border border-white/6" />
-
-                {/* Small accent circles */}
                 <div className="absolute top-1/4 left-10 w-12 h-12 rounded-full border border-white/15" />
                 <div className="absolute bottom-1/3 right-16 w-20 h-20 rounded-full border border-white/12" />
                 <div className="absolute top-2/3 left-1/4 w-8 h-8 rounded-full bg-white/5" />
@@ -143,12 +155,10 @@ export default function WhyChooseSection() {
                     <line x1="75%" y1="60%" x2="95%" y2="60%" stroke="white" strokeWidth="0.5" strokeDasharray="4 8" />
                     <line x1="85%" y1="15%" x2="85%" y2="35%" stroke="white" strokeWidth="0.5" strokeDasharray="3 6" />
                     <line x1="15%" y1="75%" x2="15%" y2="90%" stroke="white" strokeWidth="0.5" strokeDasharray="3 6" />
-                    {/* Diagonal line */}
                     <line x1="5%" y1="85%" x2="20%" y2="70%" stroke="white" strokeWidth="0.3" strokeDasharray="2 5" />
                     <line x1="80%" y1="10%" x2="90%" y2="20%" stroke="white" strokeWidth="0.3" strokeDasharray="2 5" />
                 </svg>
 
-                {/* Horizontal accent lines */}
                 <div className="absolute top-32 left-0 w-32 h-px bg-gradient-to-r from-white/0 via-white/20 to-white/0" />
                 <div className="absolute bottom-32 right-0 w-40 h-px bg-gradient-to-r from-white/0 via-white/20 to-white/0" />
             </div>
@@ -164,8 +174,7 @@ export default function WhyChooseSection() {
             />
 
             <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8">
-
-                {/* Header - reduced margin */}
+                {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -183,33 +192,35 @@ export default function WhyChooseSection() {
                     </h2>
                 </motion.div>
 
-                {/* Navigation Arrows */}
-                <div className="flex justify-end gap-3 mb-5">
-                    <button
-                        onClick={handlePrev}
-                        disabled={startIndex === 0}
-                        className={`p-2 rounded-full border border-white/20 transition-all duration-300 ${
-                            startIndex === 0
-                                ? "opacity-30 cursor-not-allowed"
-                                : "hover:bg-white/10 hover:scale-110 cursor-pointer"
-                        }`}
-                    >
-                        <ArrowLeft size={20} className="text-white" />
-                    </button>
-                    <button
-                        onClick={handleNext}
-                        disabled={startIndex >= maxStartIndex}
-                        className={`p-2 rounded-full border border-white/20 transition-all duration-300 ${
-                            startIndex >= maxStartIndex
-                                ? "opacity-30 cursor-not-allowed"
-                                : "hover:bg-white/10 hover:scale-110 cursor-pointer"
-                        }`}
-                    >
-                        <ArrowRight size={20} className="text-white" />
-                    </button>
-                </div>
+                {/* Navigation Arrows - hide on mobile if only one page, otherwise show */}
+                {maxStartIndex > 0 && (
+                    <div className="flex justify-end gap-3 mb-5">
+                        <button
+                            onClick={handlePrev}
+                            disabled={startIndex === 0}
+                            className={`p-2 rounded-full border border-white/20 transition-all duration-300 ${
+                                startIndex === 0
+                                    ? "opacity-30 cursor-not-allowed"
+                                    : "hover:bg-white/10 hover:scale-110 cursor-pointer"
+                            }`}
+                        >
+                            <ArrowLeft size={20} className="text-white" />
+                        </button>
+                        <button
+                            onClick={handleNext}
+                            disabled={startIndex >= maxStartIndex}
+                            className={`p-2 rounded-full border border-white/20 transition-all duration-300 ${
+                                startIndex >= maxStartIndex
+                                    ? "opacity-30 cursor-not-allowed"
+                                    : "hover:bg-white/10 hover:scale-110 cursor-pointer"
+                            }`}
+                        >
+                            <ArrowRight size={20} className="text-white" />
+                        </button>
+                    </div>
+                )}
 
-                {/* Cards grid - with slide animation */}
+                {/* Cards grid - responsive columns */}
                 <div className="overflow-hidden">
                     <motion.div
                         key={startIndex}
@@ -217,7 +228,13 @@ export default function WhyChooseSection() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -30 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+                        className={`grid gap-5 ${
+                            cardsPerPage === 1 
+                                ? "grid-cols-1 max-w-sm mx-auto" 
+                                : cardsPerPage === 2 
+                                    ? "grid-cols-1 sm:grid-cols-2" 
+                                    : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                        }`}
                     >
                         {visibleCards.map((card, i) => (
                             <motion.div
@@ -236,7 +253,7 @@ export default function WhyChooseSection() {
                                     transition={{ duration: 0.3 }}
                                 />
 
-                                {/* Icon - smaller */}
+                                {/* Icon */}
                                 <motion.div
                                     whileHover={{ scale: 1.05, rotate: 2 }}
                                     transition={{ duration: 0.3 }}
@@ -255,7 +272,7 @@ export default function WhyChooseSection() {
                                     {card.description}
                                 </p>
 
-                                {/* Read More button - more compact */}
+                                {/* Read More button */}
                                 <motion.button
                                     whileHover={{ backgroundColor: "rgba(255,255,255,0.1)" }}
                                     className="relative z-10 mt-auto w-full border border-white/20 py-3 text-white text-[11px] font-semibold tracking-[2.5px] uppercase flex items-center justify-center gap-2 transition-colors duration-300 rounded-sm"
@@ -268,20 +285,22 @@ export default function WhyChooseSection() {
                     </motion.div>
                 </div>
 
-                {/* Pagination Dots */}
-                <div className="flex justify-center gap-2 mt-8">
-                    {Array.from({ length: totalCards - cardsPerPage + 1 }).map((_, idx) => (
-                        <button
-                            key={idx}
-                            onClick={() => setStartIndex(idx)}
-                            className={`transition-all duration-300 rounded-full ${
-                                startIndex === idx
-                                    ? "w-8 h-1.5 bg-white"
-                                    : "w-1.5 h-1.5 bg-white/30 hover:bg-white/50"
-                            }`}
-                        />
-                    ))}
-                </div>
+                {/* Pagination Dots - show only if more than one page */}
+                {maxStartIndex > 0 && (
+                    <div className="flex justify-center gap-2 mt-8">
+                        {Array.from({ length: maxStartIndex + 1 }).map((_, idx) => (
+                            <button
+                                key={idx}
+                                onClick={() => setStartIndex(idx)}
+                                className={`transition-all duration-300 rounded-full ${
+                                    startIndex === idx
+                                        ? "w-8 h-1.5 bg-white"
+                                        : "w-1.5 h-1.5 bg-white/30 hover:bg-white/50"
+                                }`}
+                            />
+                        ))}
+                    </div>
+                )}
             </div>
         </section>
     );

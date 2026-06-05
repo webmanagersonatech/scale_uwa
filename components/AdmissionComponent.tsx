@@ -1,4 +1,3 @@
-"use client";
 
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
@@ -104,7 +103,7 @@ export default function Admissions() {
                       <p className="text-[#8c1d32] text-sm font-semibold tracking-[4px] uppercase mb-3">
                        Your Journey Begins
                     </p>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-serif text-gray-900 mb-4">
+                    <h2 className="text-[36px] sm:text-[46px] lg:text-[52px] font-serif text-gray-900 mb-4">
                         Admission{" "}
                         <span className="text-[#8c1d32] relative inline-block">
                             Process

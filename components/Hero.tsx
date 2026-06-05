@@ -134,7 +134,7 @@ export default function HeroSection() {
 
             {/* CTA Buttons - reduced padding */}
             <div className="mt-5 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
-              <button className="bg-[#8c1d32] text-white px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 hover:bg-[#741828] transition text-xs sm:text-sm rounded-md">
+              <button className="bg-[#078671] hover:bg-[#08917a] text-white px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2  transition text-xs sm:text-sm rounded-md">
                 APPLY NOW
                 <ArrowRight size={16} />
               </button>
@@ -151,59 +151,127 @@ export default function HeroSection() {
             </div>
 
             {/* Programme Snapshot — Compact Stats Section - reduced spacing */}
-            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200">
-              <p className="text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 font-semibold mb-2 sm:mb-3">
-                Programme Snapshot
-              </p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-                <div>
-                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium">Programme</h4>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">MS in Data Science Pathway</p>
+            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6">
+              {/* Elegant divider */}
+              <div className="relative mb-6 sm:mb-8">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-gray-200"></div>
                 </div>
-                <div>
-                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium">Model</h4>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">1 Year India + 1 Year USA</p>
-                </div>
-                <div>
-                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium">Year 1</h4>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">SCALE, Bengaluru</p>
-                </div>
-                <div>
-                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium">Year 2</h4>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">University of West Alabama</p>
-                </div>
-                <div>
-                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium">Discipline</h4>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">STEM-aligned Data Science</p>
-                </div>
-                <div>
-                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium">Ideal For</h4>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">CS, IT, AI/ML, BCA, MCA, Science Graduates</p>
+                <div className="relative flex justify-center">
+                  <span className="bg-white px-4 text-[10px] sm:text-xs uppercase tracking-wider text-gray-500 font-semibold">
+                    Programme Snapshot
+                  </span>
                 </div>
               </div>
+
+              {/* Modern grid layout with subtle dividers */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+                <div className="relative group">
+                  {/* Animated hover indicator */}
+                  <div className="absolute -top-2 left-0 w-8 h-0.5 bg-gradient-to-r from-[#8c1d32] to-[#8c1d32]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">
+                    Programme
+                  </h4>
+                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">
+                    MS in Data Science Pathway
+                  </p>
+                </div>
+
+                {/* Vertical divider between items (desktop only) */}
+                <div className="hidden lg:block w-px h-10 bg-gray-200 absolute left-1/4 transform -translate-x-1/2"></div>
+
+                <div className="relative group">
+                  <div className="absolute -top-2 left-0 w-8 h-0.5 bg-gradient-to-r from-[#8c1d32] to-[#8c1d32]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">
+                    Model
+                  </h4>
+                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">
+                    1 Year India + 1 Year USA
+                  </p>
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute -top-2 left-0 w-8 h-0.5 bg-gradient-to-r from-[#8c1d32] to-[#8c1d32]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">
+                    Year 1
+                  </h4>
+                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">
+                    SCALE, Bengaluru
+                  </p>
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute -top-2 left-0 w-8 h-0.5 bg-gradient-to-r from-[#8c1d32] to-[#8c1d32]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">
+                    Year 2
+                  </h4>
+                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">
+                    University of West Alabama
+                  </p>
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute -top-2 left-0 w-8 h-0.5 bg-gradient-to-r from-[#8c1d32] to-[#8c1d32]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">
+                    Discipline
+                  </h4>
+                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">
+                    STEM-aligned Data Science
+                  </p>
+                </div>
+
+                <div className="relative group">
+                  <div className="absolute -top-2 left-0 w-8 h-0.5 bg-gradient-to-r from-[#8c1d32] to-[#8c1d32]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <h4 className="text-[10px] sm:text-xs text-gray-500 font-medium uppercase tracking-wide mb-1">
+                    Ideal For
+                  </h4>
+                  <p className="text-xs sm:text-sm font-semibold text-gray-900 leading-tight">
+                    CS, IT, AI/ML, BCA, MCA, Science Graduates
+                  </p>
+                </div>
+              </div>
+
+
             </div>
 
+
             {/* Career-Focused Data Science */}
-            <div className="mt-4 sm:mt-5 pt-3 sm:pt-4 border-t border-gray-200 pb-2">
-              <div className="flex flex-wrap justify-start gap-x-6 gap-y-2">
-                <span className="text-xs sm:text-sm font-semibold text-[#8c1d32]">
-                  Public University in USA
-                </span>
-                <span className="text-xs sm:text-sm font-semibold text-[#8c1d32]">
-                  1+1 International Pathway
-                </span>
-                <span className="text-xs sm:text-sm font-semibold text-[#8c1d32]">
-                  Year 1 in Bengaluru
-                </span>
-                <span className="text-xs sm:text-sm font-semibold text-[#8c1d32]">
-                  Year 2 in Alabama
-                </span>
-                <span className="text-xs sm:text-sm font-semibold text-[#8c1d32]">
-                  Career-Focused Data Science
-                </span>
+            <div className=" pt-3 sm:pt-4 pb-2">
+              {/* Left accent border */}
+              <div className="relative pl-3 sm:pl-4">
+                <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#8c1d32] via-[#8c1d32]/50 to-transparent"></div>
+
+                <div className="flex flex-wrap justify-start gap-x-2 gap-y-2">
+                  {[
+                    "Public University in USA",
+                    "1+1 International Pathway",
+                    "Year 1 in Bengaluru",
+                    "Year 2 in Alabama",
+                    "Career-Focused Data Science"
+                  ].map((tag, idx) => (
+                    <div key={idx} className="relative">
+                      <span className="text-xs sm:text-sm font-semibold text-gray-700 hover:text-[#8c1d32] transition-colors duration-300 inline-block">
+                        {tag}
+                      </span>
+                      {/* Dot separator for mobile */}
+                      {idx < 4 && (
+                        <span className="mx-2 text-gray-300 hidden sm:inline">•</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
 
-
+              {/* Bottom divider with dot pattern */}
+              <div className="mt-4 flex items-center gap-2">
+                <div className="h-px flex-1 bg-gradient-to-r from-gray-200 to-transparent"></div>
+                <div className="flex gap-1">
+                  <div className="w-1 h-1 rounded-full bg-[#8c1d32]/30"></div>
+                  <div className="w-1 h-1 rounded-full bg-[#8c1d32]/60"></div>
+                  <div className="w-1 h-1 rounded-full bg-[#8c1d32]"></div>
+                </div>
+                <div className="h-px flex-1 bg-gradient-to-l from-gray-200 to-transparent"></div>
+              </div>
             </div>
 
           </div>
