@@ -85,7 +85,7 @@ export default function Admissions() {
                     <p className="text-[#8c1d32] text-[11px] sm:text-sm font-semibold tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3">
                         Your Journey Begins
                     </p>
-                    <h2 className="text-[32px] sm:text-[44px] md:text-[50px] lg:text-[52px] font-serif text-gray-900 mb-3 sm:mb-4 leading-tight">
+                    <h2 className="text-[28px] sm:text-[32px] lg:text-[40px] font-serif text-gray-900 mb-3 sm:mb-4 leading-tight">
                         Admission{" "}
                         <span className="text-[#8c1d32] relative inline-block">
                             Process

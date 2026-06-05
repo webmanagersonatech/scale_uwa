@@ -58,7 +58,7 @@ export default function AcademiesSection() {
               <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-6 h-px bg-[#8c1d32]/40"></span>
             </p>
           </div>
-          <h2 className="font-serif text-[28px] sm:text-[40px] md:text-[46px] lg:text-[52px] leading-[1.2] sm:leading-tight text-black">
+          <h2 className="font-serif text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.2] sm:leading-tight text-black">
             Frequently Asked{" "}
             <span className="text-[#8c1d32] relative inline-block">
               Questions
