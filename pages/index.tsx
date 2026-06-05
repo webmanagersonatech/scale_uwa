@@ -4,7 +4,7 @@ import FounderSection from '../components/Foundersection'
 import AcademiesSection from '../components/Acadamicsection'
 import WhyChooseSection from '../components/Whychoosesection'
 import AdmissionSection from '../components/Admissionsection'
-
+import ScrollToTop from '../components/ScrollToTop'
 import ProgrammeStructure from '../components/Programmestructure'
 import CareerPathway from '../components/Careerpathway'
 import Admissions from '../components/AdmissionComponent'
@@ -20,6 +20,7 @@ export default function Home() {
       <CareerPathway />
       <Admissions/>
       <AcademiesSection />
+      <ScrollToTop/>
 
       <div
         className="relative bg-fixed bg-center bg-cover"
