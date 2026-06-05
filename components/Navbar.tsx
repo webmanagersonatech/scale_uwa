@@ -163,7 +163,7 @@ export default function Navbar() {
             </button>
             <Link
               href="#apply"
-              className="px-3 py-1.5 bg-[#9b1c31] text-white text-sm font-bold rounded-md hover:bg-[#7a1627] transition-colors duration-200"
+              className="px-3 py-1.5 bg-[#078671] hover:bg-[#08917a] text-white text-sm font-bold rounded-md  transition-colors duration-200"
             >
               Apply
             </Link>
@@ -229,7 +229,7 @@ export default function Navbar() {
               <div className="px-4 py-3">
                 <Link
                   href="#apply"
-                  className="block w-full text-center px-4 py-2.5 bg-[#9b1c31] text-white font-bold rounded-md hover:bg-[#7a1627] transition-colors duration-200"
+                  className="block w-full text-center px-4 py-2.5 bg-[#078671] hover:bg-[#08917a] text-white font-bold rounded-md  transition-colors duration-200"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Apply Now
