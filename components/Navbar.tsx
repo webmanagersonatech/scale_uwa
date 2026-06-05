@@ -230,7 +230,7 @@ export default function Navbar() {
 
               <div className="border-l border-gray-300 pl-3 leading-tight">
                 <p className="text-[13px] font-bold tracking-wide text-[#AC1F2D]">
-                  UWA × SONA
+                   SONA UWA
                 </p>
                 <p className="text-[10px] uppercase tracking-wider text-gray-500">
                   International Pathway
