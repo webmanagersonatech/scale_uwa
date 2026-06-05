@@ -249,7 +249,7 @@ export default function Navbar() {
           <div className="bg-[#AC1F2D] text-white px-4 py-3">
             <div className="text-xs space-y-1.5">
               <div className="flex items-center gap-2">
-                <span className="text-[11px] tracking-wide">📞</span>
+               
                 <Link href="#" className="text-[13px] hover:text-[#e5c66b] transition text-white">
                   Call Us: (+91) 9442592170
                 </Link>
