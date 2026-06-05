@@ -22,7 +22,10 @@ export default function ProgrammeStructure() {
                     className="text-center mb-8"
                 >
                     <h2 className="text-[36px] sm:text-[46px] lg:text-[52px] font-serif text-gray-900 mb-2">
-                        Programme Structure
+                        <span className="bg-gradient-to-r from-[#8c1d32] to-[#c44563] bg-clip-text text-transparent font-black drop-shadow-sm">
+                            30-Credit
+                        </span>
+                        {" "}Programme Structure
                     </h2>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                         One Programme. Two Learning Environments.
@@ -42,10 +45,13 @@ export default function ProgrammeStructure() {
                             <div className="flex items-center gap-3 mb-1">
                                 <MapPin size={20} className="text-[#8c1d32]" />
                                 <h3 className="text-2xl font-medium text-gray-900">
-                                    Year 1: SCALE, Bengaluru
+                                    Year 1: Bengaluru, India
                                 </h3>
                             </div>
-                            <p className="text-sm text-gray-400 pl-8">Foundations & Readiness</p>
+
+                            <p className="text-sm text-gray-500 pl-8">
+                                🇮🇳 SCALE Campus · 15 Credits
+                            </p>
                         </div>
 
                         <div className="border-t border-gray-100 pt-4">
@@ -82,10 +88,13 @@ export default function ProgrammeStructure() {
                             <div className="flex items-center gap-3 mb-1">
                                 <GraduationCap size={20} className="text-[#8c1d32]" />
                                 <h3 className="text-2xl font-medium text-gray-900">
-                                    Year 2: UWA, Alabama, USA
+                                 Year 2: Livingston, Alabama, USA
                                 </h3>
                             </div>
-                            <p className="text-sm text-gray-400 pl-8">Advanced Studies & Campus Experience</p>
+
+                            <p className="text-sm text-gray-500 pl-8">
+                                🇺🇸 UWA Campus · 15 Credits
+                            </p>
                         </div>
 
                         <div className="border-t border-gray-100 pt-4">
