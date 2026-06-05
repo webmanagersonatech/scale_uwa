@@ -8,31 +8,31 @@ const faqItems = [
     title: "Where is Year 1 conducted?",
     description:
       "Year 1 is conducted at SCALE, located in Sona Towers, 71 Millers Road, Vasanth Nagar, Bengaluru, Karnataka - 560052, India.",
-    image: "/homeimages/acadamic1.webp",
+    image: "/homeimages/faq1.webp",
   },
   {
     number: "02",
     title: "Where is UWA located?",
     description: "The University of West Alabama is located in Livingston, Alabama, USA.",
-    image: "/homeimages/acadamic2.webp",
+    image: "/homeimages/faq2.webp",
   },
   {
     number: "03",
     title: "Is visa guaranteed?",
     description: "No. Visa approval is solely at the discretion of the U.S. Embassy or Consulate.",
-    image: "/homeimages/acadamic3.webp",
+    image: "/homeimages/faq3.webp",
   },
   {
     number: "04",
     title: "Is OPT guaranteed?",
     description: "No. OPT, STEM OPT, employment, and H-1B outcomes are governed by U.S. immigration rules, employer requirements, and student eligibility.",
-    image: "/homeimages/acadamic4.webp",
+    image: "/homeimages/faq4.webp",
   },
   {
     number: "05",
     title: "Why choose the 1+1 model?",
     description: "It reduces one year of U.S. living cost exposure, gives students more time to prepare, and supports a smoother transition.",
-    image: "/homeimages/acadamic1.webp",
+    image: "/homeimages/faq5.webp",
   },
 ];
 
