@@ -41,17 +41,27 @@ export default function ProgrammeStructure() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.5, delay: 0.1 }}
                     >
-                        <div className="mb-4">
-                            <div className="flex items-center gap-3 mb-1">
-                                <MapPin size={20} className="text-[#8c1d32]" />
-                                <h3 className="text-2xl font-medium text-gray-900">
-                                    Year 1: Bengaluru, India
-                                </h3>
-                            </div>
 
-                            <p className="text-sm text-gray-500 pl-8">
-                                🇮🇳 SCALE Campus · 15 Credits
-                            </p>
+
+                        <div className="mb-4">
+                            <div className="flex items-start gap-3">
+                                <div className="mt-1 px-3 py-1 rounded-full bg-[#8c1d32]/10 text-[#8c1d32] text-xs font-bold uppercase tracking-wider">
+                                    Year 1
+                                </div>
+
+                                <div>
+                                    <div className="flex items-center gap-2">
+                                        <MapPin size={20} className="text-[#8c1d32]" />
+                                        <h3 className="text-2xl font-semibold text-gray-900">
+                                            Bengaluru, India
+                                        </h3>
+                                    </div>
+
+                                    <p className="text-sm text-gray-500 mt-1 ml-7">
+                                        🇮🇳 SCALE Campus · 15 Credits
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="border-t border-gray-100 pt-4">
@@ -85,16 +95,24 @@ export default function ProgrammeStructure() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                     >
                         <div className="mb-4">
-                            <div className="flex items-center gap-3 mb-1">
-                                <GraduationCap size={20} className="text-[#8c1d32]" />
-                                <h3 className="text-2xl font-medium text-gray-900">
-                                 Year 2: Livingston, Alabama, USA
-                                </h3>
-                            </div>
+                            <div className="flex items-start gap-3">
+                                <div className="mt-1 px-3 py-1 rounded-full bg-[#8c1d32]/10 text-[#8c1d32] text-xs font-bold uppercase tracking-wider">
+                                    Year 2
+                                </div>
 
-                            <p className="text-sm text-gray-500 pl-8">
-                                🇺🇸 UWA Campus · 15 Credits
-                            </p>
+                                <div>
+                                    <div className="flex items-center gap-2">
+                                        <GraduationCap size={20} className="text-[#8c1d32]" />
+                                        <h3 className="text-2xl font-semibold text-gray-900">
+                                            Livingston, Alabama, USA
+                                        </h3>
+                                    </div>
+
+                                    <p className="text-sm text-gray-500 mt-1 ml-7">
+                                        🇺🇸 UWA Campus · 15 Credits
+                                    </p>
+                                </div>
+                            </div>
                         </div>
 
                         <div className="border-t border-gray-100 pt-4">
