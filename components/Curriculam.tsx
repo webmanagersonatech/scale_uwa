@@ -95,17 +95,29 @@ export default function CurriculumSnapshot() {
                     transition={{ duration: 0.6 }}
                     className="text-center"
                 >
-                    <p className="text-[#8c1d32] text-sm font-semibold tracking-[4px] uppercase mb-3">
+                    {/* Small top accent */}
+                    <div className="flex justify-center mb-2 sm:mb-3">
+                        <div className="w-8 h-px bg-[#8c1d32]/30"></div>
+                    </div>
+
+                    <p className="text-[#8c1d32] text-[10px] sm:text-sm font-semibold tracking-[4px] sm:tracking-[5px] uppercase mb-2 sm:mb-3">
                         Curriculum Snapshot
                     </p>
-                    <h2 className="text-[36px] sm:text-[46px] lg:text-[52px] font-serif text-gray-900 mb-4">
+
+                    <h2 className="text-[30px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-serif text-gray-900 mb-3 sm:mb-4 leading-[1.2] sm:leading-[1.1] px-3">
                         What You Will Study
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+
+                    <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto px-4">
                         A Data Science pathway built around programming, statistics, analytics,
                         machine learning, visualization, and applied projects.
                     </p>
-                    <div className="w-16 h-0.5 bg-[#8c1d32] mx-auto" />
+
+                    <div className="flex items-center justify-center gap-2 mt-3 sm:mt-4">
+                        <div className="w-6 sm:w-8 h-px bg-gradient-to-r from-transparent to-gray-300"></div>
+                        <div className="w-1 h-1 rounded-full bg-[#8c1d32]"></div>
+                        <div className="w-6 sm:w-8 h-px bg-gradient-to-l from-transparent to-gray-300"></div>
+                    </div>
                 </motion.div>
 
                 {/* Navigation Arrows - hide if only one page */}
@@ -114,22 +126,20 @@ export default function CurriculumSnapshot() {
                         <button
                             onClick={handlePrev}
                             disabled={startIndex === 0}
-                            className={`p-2 rounded border transition-all duration-300 ${
-                                startIndex === 0
+                            className={`p-2 rounded border transition-all duration-300 ${startIndex === 0
                                     ? "border-gray-200 text-gray-300 cursor-not-allowed"
                                     : "border-gray-300 text-gray-600 hover:border-gray-400 hover:text-gray-900 cursor-pointer"
-                            }`}
+                                }`}
                         >
                             <ArrowLeft size={16} />
                         </button>
                         <button
                             onClick={handleNext}
                             disabled={startIndex >= maxStartIndex}
-                            className={`p-2 rounded border transition-all duration-300 ${
-                                startIndex >= maxStartIndex
+                            className={`p-2 rounded border transition-all duration-300 ${startIndex >= maxStartIndex
                                     ? "border-gray-200 text-gray-300 cursor-not-allowed"
                                     : "border-gray-300 text-gray-600 hover:border-gray-400 hover:text-gray-900 cursor-pointer"
-                            }`}
+                                }`}
                         >
                             <ArrowRight size={16} />
                         </button>
@@ -144,13 +154,12 @@ export default function CurriculumSnapshot() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -30 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className={`grid gap-5 ${
-                            cardsPerPage === 1 
-                                ? "grid-cols-1 max-w-sm mx-auto" 
-                                : cardsPerPage === 2 
-                                    ? "grid-cols-1 sm:grid-cols-2" 
+                        className={`grid gap-5 ${cardsPerPage === 1
+                                ? "grid-cols-1 max-w-sm mx-auto"
+                                : cardsPerPage === 2
+                                    ? "grid-cols-1 sm:grid-cols-2"
                                     : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-                        }`}
+                            }`}
                     >
                         {visibleCards.map((card, i) => {
                             const Icon = card.icon;
@@ -192,11 +201,10 @@ export default function CurriculumSnapshot() {
                             <button
                                 key={idx}
                                 onClick={() => setStartIndex(idx)}
-                                className={`transition-all duration-300 rounded-full ${
-                                    startIndex === idx
+                                className={`transition-all duration-300 rounded-full ${startIndex === idx
                                         ? "w-6 h-1 bg-gray-600"
                                         : "w-1.5 h-1 bg-gray-300 hover:bg-gray-400"
-                                }`}
+                                    }`}
                             />
                         ))}
                     </div>

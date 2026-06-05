@@ -19,18 +19,24 @@ export default function ProgrammeStructure() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-8"
+                    className="text-center mb-6 sm:mb-8 md:mb-10"
                 >
-                    <h2 className="text-[36px] sm:text-[46px] lg:text-[52px] font-serif text-gray-900 mb-2">
+                    <h2 className="text-[32px] sm:text-[42px] md:text-[48px] lg:text-[52px] font-serif text-gray-900 mb-2 sm:mb-3 leading-tight">
                         <span className="bg-gradient-to-r from-[#8c1d32] to-[#c44563] bg-clip-text text-transparent font-black drop-shadow-sm">
                             30-Credit
                         </span>
-                        {" "}Programme Structure
+                        <br className="sm:hidden" />
+                        <span className="inline-block mt-1 sm:mt-0"> Programme Structure</span>
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        One Programme. Two Learning Environments.
-                    </p>
-                    <div className="w-16 h-0.5 bg-[#8c1d32] mx-auto mt-3" />
+
+                    <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                        <div className="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent to-gray-300"></div>
+                        <p className="text-sm sm:text-lg text-gray-600 italic">
+                            One Programme. Two Learning Environments.
+                        </p>
+                        <div className="h-px w-8 sm:w-12 bg-gradient-to-l from-transparent to-gray-300"></div>
+                    </div>
+
                 </motion.div>
 
                 {/* Two column layout - No cards, just content */}

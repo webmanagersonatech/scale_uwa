@@ -97,19 +97,18 @@ export default function Admissions() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-12 md:mb-16"
+                    className="text-center mb-10 sm:mb-12 md:mb-16 px-4 sm:px-0"
                 >
-                   
-                      <p className="text-[#8c1d32] text-sm font-semibold tracking-[4px] uppercase mb-3">
-                       Your Journey Begins
+                    <p className="text-[#8c1d32] text-[11px] sm:text-sm font-semibold tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3">
+                        Your Journey Begins
                     </p>
-                    <h2 className="text-[36px] sm:text-[46px] lg:text-[52px] font-serif text-gray-900 mb-4">
+                    <h2 className="text-[32px] sm:text-[44px] md:text-[50px] lg:text-[52px] font-serif text-gray-900 mb-3 sm:mb-4 leading-tight">
                         Admission{" "}
                         <span className="text-[#8c1d32] relative inline-block">
                             Process
                             <svg
-                                className="absolute -bottom-2 left-0 w-full"
-                                height="8"
+                                className="absolute -bottom-1 sm:-bottom-2 left-0 w-full"
+                                height="6"
                                 viewBox="0 0 200 8"
                                 fill="none"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -117,17 +116,18 @@ export default function Admissions() {
                                 <path
                                     d="M1 5.5C40.5 2.5 120 1 199 5.5"
                                     stroke="#8c1d32"
-                                    strokeWidth="2"
+                                    strokeWidth="1.5"
                                     strokeLinecap="round"
-                                    strokeDasharray="4 6"
+                                    strokeDasharray="3 5"
                                 />
                             </svg>
                         </span>
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4">
+                    <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto mt-3 sm:mt-4 px-2">
                         Your journey from application to graduation — clear,
                         transparent, and fully supported every step of the way.
                     </p>
+                    <div className="w-12 sm:w-16 h-0.5 bg-gradient-to-r from-[#8c1d32]/50 via-[#8c1d32] to-[#8c1d32]/50 mx-auto mt-4 sm:mt-5" />
                 </motion.div>
 
                 {/* Navigation Arrows */}
@@ -136,8 +136,8 @@ export default function Admissions() {
                         onClick={handlePrev}
                         disabled={startIndex === 0}
                         className={`p-2.5 rounded-full transition-all duration-300 ${startIndex === 0
-                                ? "bg-gray-100 text-gray-300 cursor-not-allowed"
-                                : "bg-white text-gray-600 hover:bg-[#8c1d32] hover:text-white shadow-sm hover:shadow-md cursor-pointer"
+                            ? "bg-gray-100 text-gray-300 cursor-not-allowed"
+                            : "bg-white text-gray-600 hover:bg-[#8c1d32] hover:text-white shadow-sm hover:shadow-md cursor-pointer"
                             }`}
                     >
                         <ArrowLeft size={18} />
@@ -146,8 +146,8 @@ export default function Admissions() {
                         onClick={handleNext}
                         disabled={startIndex >= maxStartIndex}
                         className={`p-2.5 rounded-full transition-all duration-300 ${startIndex >= maxStartIndex
-                                ? "bg-gray-100 text-gray-300 cursor-not-allowed"
-                                : "bg-white text-gray-600 hover:bg-[#8c1d32] hover:text-white shadow-sm hover:shadow-md cursor-pointer"
+                            ? "bg-gray-100 text-gray-300 cursor-not-allowed"
+                            : "bg-white text-gray-600 hover:bg-[#8c1d32] hover:text-white shadow-sm hover:shadow-md cursor-pointer"
                             }`}
                     >
                         <ArrowRight size={18} />
@@ -241,15 +241,15 @@ export default function Admissions() {
                                 key={idx}
                                 onClick={() => setStartIndex(idx)}
                                 className={`transition-all duration-300 rounded-full ${startIndex === idx
-                                        ? "w-8 h-1.5 bg-[#8c1d32]"
-                                        : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
+                                    ? "w-8 h-1.5 bg-[#8c1d32]"
+                                    : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
                                     }`}
                             />
                         )
                     )}
                 </div>
 
-                
+
             </div>
         </section>
     );

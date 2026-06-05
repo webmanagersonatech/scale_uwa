@@ -88,20 +88,21 @@ export default function CareerPathway() {
         >
             <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
                 {/* Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6 }}
-                    className="text-center"
-                >
-                    <p className="text-[#8c1d32] text-sm font-semibold tracking-[4px] uppercase mb-3">
-                        Career Pathway
-                    </p>
-                    <h2 className="text-[36px] sm:text-[46px] lg:text-[52px] font-serif text-gray-900 mb-4">
-                        Build Careers Across Data-Driven Industries
-                    </h2>
-                    <div className="w-16 h-0.5 bg-[#8c1d32] mx-auto" />
-                </motion.div>
+             <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    animate={isInView ? { opacity: 1, y: 0 } : {}}
+    transition={{ duration: 0.6 }}
+    className="text-center px-4 sm:px-0"
+>
+    <p className="text-[#8c1d32] text-[11px] sm:text-sm font-semibold tracking-[3px] sm:tracking-[4px] uppercase mb-2 sm:mb-3">
+        Career Pathway
+    </p>
+    <h2 className="text-[28px] sm:text-[38px] md:text-[44px] lg:text-[52px] font-serif text-gray-900 mb-3 sm:mb-4 leading-tight">
+        Build Careers Across<br className="hidden sm:block" />
+        Data-Driven Industries
+    </h2>
+    <div className="w-12 sm:w-16 h-0.5 bg-gradient-to-r from-[#8c1d32]/50 via-[#8c1d32] to-[#8c1d32]/50 mx-auto mt-2 sm:mt-3 rounded-full" />
+</motion.div>
 
                 {/* Navigation Arrows - hide if only one page */}
                 {maxStartIndex > 0 && (

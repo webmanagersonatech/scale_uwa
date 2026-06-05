@@ -202,21 +202,21 @@ export default function FounderSection() {
           </motion.p>
 
           {/* Heading */}
-          <motion.h2
-            {...slideInRight(0.25)}
-            className="font-serif text-[36px] sm:text-[46px] lg:text-[52px] leading-[1.08] text-black mb-6"
-          >
-            A Smarter Route to
-            <br />
-            U.S.{" "}
-            <motion.span
-              className="text-[#8c1d32] underline underline-offset-4 decoration-[3px] inline-block"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
-              Higher Education
-            </motion.span>
-          </motion.h2>
+        <motion.h2
+    {...slideInRight(0.25)}
+    className="font-serif text-[32px] sm:text-[42px] md:text-[48px] lg:text-[52px] leading-[1.2] sm:leading-[1.15] lg:leading-[1.08] text-black mb-4 sm:mb-6  sm:px-0"
+>
+    A Smarter Route to
+    <br className="hidden sm:block" />
+    <span className="inline-block sm:inline"> U.S.</span>{" "}
+    <motion.span
+        className="text-[#8c1d32] underline underline-offset-4 sm:underline-offset-6 decoration-2 sm:decoration-[3px] inline-block whitespace-nowrap sm:whitespace-normal"
+        whileHover={{ scale: 1.02 }}
+        transition={{ duration: 0.2 }}
+    >
+        Higher Education
+    </motion.span>
+</motion.h2>
 
           {/* Programme Mission Statement */}
           <motion.div
