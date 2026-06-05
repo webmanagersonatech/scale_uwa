@@ -287,7 +287,7 @@ export default function FounderSection() {
 
 
 
-          {/* CTA Button */}
+
           {/* CTA Button */}
           <motion.div
             {...slideInRight(0.65)}

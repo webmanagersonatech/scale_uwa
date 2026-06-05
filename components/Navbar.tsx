@@ -81,7 +81,7 @@ export default function Navbar() {
 
               {/* Text */}
               <div className="mt-1 text-center leading-none">
-                <p className="text-[11px] font-bold tracking-[0.2em] text-[#AC1F2D]">
+                <p className="text-[18px] font-bold tracking-[0.2em] text-[#AC1F2D]">
                   SONA UWA
                 </p>
 
