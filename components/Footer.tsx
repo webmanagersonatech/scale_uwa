@@ -67,13 +67,7 @@ const Footer = () => {
                 height={50}
                 className="object-contain"
               />
-              <Image
-                src="/homeimages/scale.png"
-                alt="SCALE Logo"
-                width={50}
-                height={50}
-                className="object-contain"
-              />
+             
             </div>
 
             {/* UWA × SCALE Label */}

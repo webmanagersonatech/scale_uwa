@@ -116,9 +116,9 @@ export default function AdmissionSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="font-serif text-[28px] sm:text-[36px] lg:text-[42px] leading-[1.15] text-black mb-4"
             >
-              Programme at a{" "}
+              Important {" "}
               <span className="text-[#8c1d32] underline underline-offset-4 decoration-[3px]">
-                Glance
+                Disclaimers
               </span>
             </motion.h2>
 
@@ -126,36 +126,12 @@ export default function AdmissionSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-gray-500 text-sm leading-relaxed max-w-[460px] mb-7"
+              className="text-gray-500 text-sm leading-relaxed  mb-7"
             >
-              Accelerate your career with our globally recognized MBA program.
-              Experience world-class education with significant cost savings and extended work opportunities in the US.
+              Admission is subject to UWA eligibility requirements and university approval. Visa approval is subject to the decision of the U.S. Embassy/Consulate and is not guaranteed by SCALE or UWA. OPT/STEM OPT eligibility is governed by U.S. immigration rules and is not guaranteed. Course mapping and credit transfer are subject to UWA approval. Tuition, fees, housing, meal plan, insurance, scholarships, and university policies are subject to change. INR estimates will vary based on the USD-INR exchange rate at time of payment (1 USD = ₹95 used for estimates). The India-completion route is subject to UWA's written approval, academic regulations, and cost-sharing mechanism.
             </motion.p>
 
-            {/* Stats Row */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.45 }}
-              className="grid grid-cols-2 gap-4 mb-6 max-w-[500px]"
-            >
-              <div className="border-l-2 border-[#8c1d32] pl-3">
-                <span className="block text-2xl font-bold text-black">30cr</span>
-                <span className="text-xs text-gray-400">Total Graduate Credits</span>
-              </div>
-              <div className="border-l-2 border-[#8c1d32] pl-3">
-                <span className="block text-2xl font-bold text-black">2yr</span>
-                <span className="text-xs text-gray-400">Programme Duration</span>
-              </div>
-              <div className="border-l-2 border-[#8c1d32] pl-3">
-                <span className="block text-2xl font-bold text-black">3yr</span>
-                <span className="text-xs text-gray-400">OPT Opportunity</span>
-              </div>
-              <div className="border-l-2 border-[#8c1d32] pl-3">
-                <span className="block text-2xl font-bold text-black">42%</span>
-                <span className="text-xs text-gray-400">Cost Saving vs Full US Route</span>
-              </div>
-            </motion.div>
+        
 
             {/* Email + Subscribe */}
             <motion.div

@@ -1,4 +1,3 @@
-
 import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import {
@@ -8,8 +7,6 @@ import {
     FileCheck,
     Briefcase,
     Users,
-    ArrowLeft,
-    ArrowRight,
     Globe,
     Heart,
     Shield,
@@ -71,27 +68,13 @@ const steps = [
 export default function Admissions() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-60px" });
-    const [startIndex, setStartIndex] = useState(0);
-    const cardsPerPage = 4;
-    const totalCards = steps.length;
-    const maxStartIndex = totalCards - cardsPerPage;
-
-    const handlePrev = () => {
-        setStartIndex((prev) => Math.max(0, prev - 1));
-    };
-
-    const handleNext = () => {
-        setStartIndex((prev) => Math.min(maxStartIndex, prev + 1));
-    };
-
-    const visibleSteps = steps.slice(startIndex, startIndex + cardsPerPage);
 
     return (
         <section id="admissions"
             ref={ref}
-            className="w-full py-16 bg-gradient-to-b from-white to-gray-50 overflow-hidden"
+            className="w-full bg-gradient-to-b from-white to-gray-50 overflow-hidden"
         >
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-8">
+            <div className="max-w-[1440px] mx-auto px-4 ">
                 {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -130,47 +113,21 @@ export default function Admissions() {
                     <div className="w-12 sm:w-16 h-0.5 bg-gradient-to-r from-[#8c1d32]/50 via-[#8c1d32] to-[#8c1d32]/50 mx-auto mt-4 sm:mt-5" />
                 </motion.div>
 
-                {/* Navigation Arrows */}
-                <div className="flex justify-end gap-3 mb-8">
-                    <button
-                        onClick={handlePrev}
-                        disabled={startIndex === 0}
-                        className={`p-2.5 rounded-full transition-all duration-300 ${startIndex === 0
-                            ? "bg-gray-100 text-gray-300 cursor-not-allowed"
-                            : "bg-white text-gray-600 hover:bg-[#8c1d32] hover:text-white shadow-sm hover:shadow-md cursor-pointer"
-                            }`}
-                    >
-                        <ArrowLeft size={18} />
-                    </button>
-                    <button
-                        onClick={handleNext}
-                        disabled={startIndex >= maxStartIndex}
-                        className={`p-2.5 rounded-full transition-all duration-300 ${startIndex >= maxStartIndex
-                            ? "bg-gray-100 text-gray-300 cursor-not-allowed"
-                            : "bg-white text-gray-600 hover:bg-[#8c1d32] hover:text-white shadow-sm hover:shadow-md cursor-pointer"
-                            }`}
-                    >
-                        <ArrowRight size={18} />
-                    </button>
-                </div>
-
-                {/* Steps Flow - No Cards Design */}
+                {/* Steps Flow - All Steps Displayed */}
                 <div className="overflow-hidden">
                     <motion.div
-                        key={startIndex}
-                        initial={{ opacity: 0, x: 30 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0 }}
+                        animate={isInView ? { opacity: 1 } : {}}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10"
                     >
-                        {visibleSteps.map((step, i) => {
+                        {steps.map((step, i) => {
                             const Icon = step.icon;
-                            const actualIndex = startIndex + i;
-                            const isLastInRow = i === visibleSteps.length - 1;
+                            const isLastInRow = (i + 1) % 4 === 0;
+                            const isLastItem = i === steps.length - 1;
                             return (
                                 <motion.div
-                                    key={actualIndex}
+                                    key={i}
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                                     transition={{
@@ -180,7 +137,7 @@ export default function Admissions() {
                                     className="relative"
                                 >
                                     {/* Connector line between steps (horizontal on lg, vertical on mobile) */}
-                                    {!isLastInRow && (
+                                    {!isLastInRow && !isLastItem && (
                                         <>
                                             {/* Desktop horizontal line */}
                                             <div className="hidden lg:block absolute top-12 left-[calc(100%+0.5rem)] w-8 h-px bg-gradient-to-r from-[#8c1d32]/30 to-transparent" />
@@ -232,24 +189,6 @@ export default function Admissions() {
                         })}
                     </motion.div>
                 </div>
-
-                {/* Pagination Dots */}
-                <div className="flex justify-center gap-2 mt-10">
-                    {Array.from({ length: totalCards - cardsPerPage + 1 }).map(
-                        (_, idx) => (
-                            <button
-                                key={idx}
-                                onClick={() => setStartIndex(idx)}
-                                className={`transition-all duration-300 rounded-full ${startIndex === idx
-                                    ? "w-8 h-1.5 bg-[#8c1d32]"
-                                    : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
-                                    }`}
-                            />
-                        )
-                    )}
-                </div>
-
-
             </div>
         </section>
     );

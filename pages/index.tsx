@@ -4,7 +4,7 @@ import FounderSection from '../components/Foundersection'
 import AcademiesSection from '../components/Acadamicsection'
 import WhyChooseSection from '../components/Whychoosesection'
 import AdmissionSection from '../components/Admissionsection'
-import CurriculumSnapshot from '../components/Curriculam'
+
 import ProgrammeStructure from '../components/Programmestructure'
 import CareerPathway from '../components/Careerpathway'
 import Admissions from '../components/AdmissionComponent'
@@ -16,7 +16,7 @@ export default function Home() {
       <FounderSection />
       <ProgrammeStructure />
       <WhyChooseSection />
-      <CurriculumSnapshot />
+  
       <CareerPathway />
       <Admissions/>
       <AcademiesSection />

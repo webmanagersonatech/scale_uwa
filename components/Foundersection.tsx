@@ -202,21 +202,21 @@ export default function FounderSection() {
           </motion.p>
 
           {/* Heading */}
-        <motion.h2
-    {...slideInRight(0.25)}
-    className="font-serif text-[32px] sm:text-[42px] md:text-[48px] lg:text-[52px] leading-[1.2] sm:leading-[1.15] lg:leading-[1.08] text-black mb-4 sm:mb-6  sm:px-0"
->
-    A Smarter Route to
-    <br className="hidden sm:block" />
-    <span className="inline-block sm:inline"> U.S.</span>{" "}
-    <motion.span
-        className="text-[#8c1d32] underline underline-offset-4 sm:underline-offset-6 decoration-2 sm:decoration-[3px] inline-block whitespace-nowrap sm:whitespace-normal"
-        whileHover={{ scale: 1.02 }}
-        transition={{ duration: 0.2 }}
-    >
-        Higher Education
-    </motion.span>
-</motion.h2>
+          <motion.h2
+            {...slideInRight(0.25)}
+            className="font-serif text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.2] sm:leading-[1.15] lg:leading-[1.08] text-black mb-4 sm:mb-6  sm:px-0"
+          >
+            A Smarter Route to
+            <br className="hidden sm:block" />
+            <span className="inline-block sm:inline"> U.S.</span>{" "}
+            <motion.span
+              className="text-[#8c1d32] underline underline-offset-4 sm:underline-offset-6 decoration-2 sm:decoration-[3px] inline-block whitespace-nowrap sm:whitespace-normal"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+            >
+              Higher Education
+            </motion.span>
+          </motion.h2>
 
           {/* Programme Mission Statement */}
           <motion.div
@@ -235,17 +235,29 @@ export default function FounderSection() {
           {/* Route Comparison Card */}
           <motion.div
             {...slideInRight(0.48)}
-            className="mt-5 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm"
+            className="
+    mt-6
+    overflow-hidden
+    bg-white
+    shadow-lg
+    border
+    border-gray-200
+
+    rounded-tl-[0px]
+    rounded-tr-[32px]
+    rounded-bl-[32px]
+    rounded-br-[0px]
+  "
           >
             <div className="grid md:grid-cols-2">
 
-              {/* Traditional Route */}
-              <div className="bg-gray-50 p-4 lg:p-5 border-b md:border-b-0 md:border-r border-gray-200">
-                <h3 className="text-[#8c1d32] font-bold text-lg mb-3">
+              {/* Left */}
+              <div className="bg-gray-50 p-5 border-b md:border-b-0 md:border-r border-gray-200">
+                <h3 className="text-[#8c1d32] font-bold text-lg mb-4">
                   Traditional 2-Year USA Route
                 </h3>
 
-                <ul className="space-y-1.5 text-gray-700 text-sm leading-relaxed">
+                <ul className="space-y-2 text-gray-700 text-sm">
                   <li>• Student moves to the USA immediately.</li>
                   <li>• Higher first-year international living cost exposure.</li>
                   <li>• Direct cultural and academic transition.</li>
@@ -254,13 +266,13 @@ export default function FounderSection() {
                 </ul>
               </div>
 
-              {/* SCALE Route */}
-              <div className="bg-white p-4 lg:p-5">
-                <h3 className="text-[#8c1d32] font-bold text-lg mb-3">
+              {/* Right */}
+              <div className="p-5">
+                <h3 className="text-[#8c1d32] font-bold text-lg mb-4">
                   UWA × SCALE 1+1 Route
                 </h3>
 
-                <ul className="space-y-1.5 text-gray-700 text-sm leading-relaxed">
+                <ul className="space-y-2 text-gray-700 text-sm">
                   <li>• Complete Year 1 at SCALE, Bengaluru.</li>
                   <li>• Reduce one full year of U.S. living costs.</li>
                   <li>• Additional technical & communication preparation.</li>
@@ -276,14 +288,42 @@ export default function FounderSection() {
 
 
           {/* CTA Button */}
+          {/* CTA Button */}
           <motion.div
             {...slideInRight(0.65)}
             className="mt-6"
           >
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-[#078671] text-white px-8 py-3 rounded-tl-[24px] rounded-br-[24px] rounded-tr-md rounded-bl-md text-sm font-bold uppercase tracking-wide hover:bg-[#08917a] transition-all duration-300 shadow-lg"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              className="
+      bg-[#078671]
+      text-white
+      font-bold
+      uppercase
+      tracking-wide
+
+      text-xs sm:text-sm md:text-base lg:text-lg
+
+      px-6 sm:px-8 md:px-10 lg:px-12
+      py-2 sm:py-2 md:py-3
+
+      rounded-tr-[16px] sm:rounded-tr-[20px] md:rounded-tr-[24px]
+      rounded-bl-[16px] sm:rounded-bl-[20px] md:rounded-bl-[24px]
+
+      rounded-tl-none
+      rounded-br-none
+
+      w-auto
+      inline-flex
+      items-center
+      justify-center
+
+      hover:bg-[#067663]
+      transition-all
+      duration-300
+      shadow-md
+    "
             >
               Explore Programme →
             </motion.button>
