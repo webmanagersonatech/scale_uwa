@@ -19,7 +19,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: "Online Degrees", href: "#" },
+   
     { name: "Admissions", href: "#" },
     { name: "Tuition & Aid", href: "#" },
     { name: "Request Info", href: "#" },
