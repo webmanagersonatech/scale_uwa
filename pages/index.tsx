@@ -27,7 +27,7 @@ export default function Home() {
       <div
         className="relative bg-fixed bg-center bg-cover"
         style={{
-          backgroundImage: "url('https://img.magnific.com/free-photo/architecture-independence-palace-ho-chi-minh-city_181624-21243.jpg')",
+          backgroundImage: "url('https://www.uwa.edu/app/uploads/2023/04/UWA-campus-building.png')",
         }}
       >
         <div className="absolute inset-0 bg-black/80"></div>
