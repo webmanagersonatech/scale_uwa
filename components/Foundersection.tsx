@@ -42,18 +42,12 @@ export default function FounderSection() {
     transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1], delay },
   });
 
-  // Programme comparison data
-  const programmeStats = [
-    {
-      number: "2 Years",
-      label: "Traditional USA Route",
-      icon: GraduationCap,
-      color: "from-purple-500 to-pink-500",
-      gradient: "purple"
-    },
+  // Program comparison data
+  const ProgramStats = [
+
     {
       number: "1+1",
-      label: "UWA × SCALE Route",
+      label: "Sona × UWA Route",
       icon: BookOpen,
       color: "from-blue-500 to-cyan-500",
       gradient: "blue"
@@ -167,12 +161,12 @@ export default function FounderSection() {
             </motion.div>
           </motion.div>
 
-          {/* Stats Cards - Programme Comparison */}
+          {/* Stats Cards - Program Comparison */}
           <motion.div
             {...slideInLeft(0.3)}
             className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-[500px] mx-auto lg:mx-0"
           >
-            {programmeStats.map((stat, index) => (
+            {ProgramStats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -191,14 +185,14 @@ export default function FounderSection() {
           </motion.div>
         </div>
 
-        {/* ── RIGHT: Text Content with Programme Focus ── */}
+        {/* ── RIGHT: Text Content with Program Focus ── */}
         <div className="flex-1 w-full">
           {/* Since label */}
           <motion.p
             {...slideInRight(0.15)}
             className="text-[#8c1d32] text-xs sm:text-sm font-semibold tracking-[3px] uppercase mb-4 inline-block"
           >
-            Why This Programme?
+            Why This Program?
           </motion.p>
 
           {/* Heading */}
@@ -218,13 +212,13 @@ export default function FounderSection() {
             </motion.span>
           </motion.h2>
 
-          {/* Programme Mission Statement */}
+          {/* Program Mission Statement */}
           <motion.div
             {...slideInRight(0.35)}
             className="mb-6"
           >
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-3">
-              The <span className="font-semibold text-[#8c1d32]">UWA × SCALE pathway</span> helps students reduce cost exposure,
+              The <span className="font-semibold text-[#8c1d32]">The international pathway to university west Alabama offered at scale by sona star</span> helps students reduce cost exposure,
               prepare better, and enter the U.S. academic system with stronger technical,
               communication, and career readiness.
             </p>
@@ -269,11 +263,11 @@ export default function FounderSection() {
               {/* Right */}
               <div className="p-5">
                 <h3 className="text-[#8c1d32] font-bold text-lg mb-4">
-                  UWA × SCALE 1+1 Route
+                  SONA x UWA  1+1 Route
                 </h3>
 
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Complete Year 1 at SCALE, Bengaluru.</li>
+                  <li>• Complete Year 1 at  Sona star / SCALE, Bengaluru.</li>
                   <li>• Reduce one full year of U.S. living costs.</li>
                   <li>• Additional technical & communication preparation.</li>
                   <li>• Phased financial planning for families.</li>
@@ -288,7 +282,7 @@ export default function FounderSection() {
 
 
 
-  
+
           <motion.div
             {...slideInRight(0.65)}
             className="mt-6"
@@ -325,7 +319,7 @@ export default function FounderSection() {
       shadow-md
     "
             >
-              Explore Programme →
+              Explore Program →
             </motion.button>
           </motion.div>
         </div>

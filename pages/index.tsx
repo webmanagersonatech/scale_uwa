@@ -8,11 +8,13 @@ import ScrollToTop from '../components/ScrollToTop'
 import ProgrammeStructure from '../components/Programmestructure'
 import CareerPathway from '../components/Careerpathway'
 import Admissions from '../components/AdmissionComponent'
+import AboutSection from '../components/AboutComponent'
 export default function Home() {
   return (
     <>
 
       <Hero />
+      <AboutSection/>
       <FounderSection />
       <ProgrammeStructure />
       <WhyChooseSection />

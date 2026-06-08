@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { Search, Menu, X } from "lucide-react";
+import { Search, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [admissionsOpen, setAdmissionsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +20,7 @@ export default function Navbar() {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setMobileMenuOpen(false);
+        setAdmissionsOpen(false);
       }
     };
     window.addEventListener("resize", handleResize);
@@ -38,9 +40,18 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Overview", href: "#overview" },
-    { label: "Programme", href: "#structure" },
+    { label: "Acadamic plan", href: "#structure" },
     { label: "Careers", href: "#careers" },
-    { label: "Admissions", href: "#admissions" },
+    {
+      label: "Admissions",
+      href: "#",
+      hasSubmenu: true,
+      submenu: [
+        { label: "Eligibility", href: "#eligibility" },
+        { label: "Fees Structure", href: "#fees-structure" },
+        { label: "Apply Online", href: "#apply-online" },
+      ],
+    },
     { label: "FAQs", href: "#faq" },
   ];
 
@@ -62,7 +73,7 @@ export default function Navbar() {
               <div className="flex items-center gap-3">
                 <div className="relative w-[64px] h-[64px]">
                   <Image
-                    src="/homeimages/uwa-logo-square.svg"
+                    src="/homeimages/Sona-star-logo.webp"
                     alt="UWA Logo"
                     fill
                     className="object-contain"
@@ -71,7 +82,7 @@ export default function Navbar() {
 
                 <div className="relative w-[52px] h-[52px]">
                   <Image
-                    src="/homeimages/Sona-star-logo.webp"
+                    src="/homeimages/uwa-logo-square.svg"
                     alt="SCALE Logo"
                     fill
                     className="object-contain"
@@ -82,14 +93,22 @@ export default function Navbar() {
               {/* Text */}
               <div className="mt-1 text-center leading-none">
                 <p className="text-[18px] font-bold tracking-[0.2em] text-[#AC1F2D]">
-                  SONA UWA
+                  <span className="text-[#008BC8]">SONA</span> UWA
                 </p>
-
               </div>
             </Link>
 
             {/* RIGHT SIDE CONTENT - now flush right within 1440px container */}
-            <div className="h-8 flex items-center justify-end px-2">
+            <div className="h-8 flex items-center justify-end pl-[260px] pr-2">
+              <div className="absolute left-[180px] top-0 h-8 flex flex-col justify-center leading-none">
+                <span className="text-[10px] uppercase tracking-[2px] text-white font-bold">
+                  <span className="text-[#008BC8]">SONA</span> UWA
+                </span>
+                <span className="text-[11px] font-semibold text-white mt-[2px]">
+                  International Pathway
+                </span>
+              </div>
+
               <div className="flex items-center gap-6 text-[12px]">
                 <Link
                   href="#apply"
@@ -110,38 +129,80 @@ export default function Navbar() {
 
         {/* MAIN NAVBAR - Full width DARK bar with 1440px inner container */}
         <div
-          className={`w-full bg-[#1a1a1a] transition-all duration-300 ${scrolled ? "shadow-lg" : ""
-            }`}
+          className={`w-full bg-[#1a1a1a] transition-all duration-300 ${
+            scrolled ? "shadow-lg" : ""
+          }`}
         >
           <div className="w-full max-w-[1440px] mx-auto relative">
             <div className="h-[64px] lg:h-[72px] flex items-center">
               {/* Spacer for logo */}
               <div className="hidden lg:block w-[175px] shrink-0"></div>
 
-              {/* PROGRAM INFO - Fixed text color for dark background */}
-              <div className="hidden xl:flex flex-col justify-center px-6 border-r border-gray-700 h-full">
-                <span className="text-[10px] uppercase tracking-[2px] text-[#AC1F2D] font-bold">
-                  SONA UWA
-                </span>
-                <span className="text-[13px] font-semibold whitespace-nowrap text-white">
-                  International Pathway
-                </span>
+              {/* PROGRAM INFO - UWA Logo */}
+              <div className="hidden xl:flex items-center justify-center px-2 border-r border-gray-700 h-full">
+                <Image
+                  src="/homeimages/scale.png"
+                  alt="SCALE Logo"
+                  width={100}
+                  height={100}
+                  className="bg-white p-1"
+                  priority
+                />
               </div>
 
-              {/* NAV LINKS - Fixed text color for dark background */}
+              {/* NAV LINKS - WITH ADMISSIONS DROPDOWN */}
               <nav className="hidden lg:flex flex-1 justify-center items-center h-full gap-x-1">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="h-full px-4 xl:px-5 flex items-center text-white font-semibold text-[13px] xl:text-[14px] hover:text-[#AC1F2D] transition whitespace-nowrap"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {navLinks.map((link) =>
+                  link.hasSubmenu ? (
+                    <div
+                      key={link.href}
+                      className="relative h-full group"
+                      onMouseEnter={() => setAdmissionsOpen(true)}
+                      onMouseLeave={() => setAdmissionsOpen(false)}
+                    >
+                      <button
+                        className="h-full px-4 xl:px-5 flex items-center gap-1 text-white font-semibold text-[13px] xl:text-[14px] hover:text-[#AC1F2D] transition whitespace-nowrap"
+                      >
+                        {link.label}
+                        <ChevronDown
+                          size={14}
+                          className={`transition-transform duration-200 ${
+                            admissionsOpen ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      {/* Dropdown Menu */}
+                      <div
+                        className={`absolute left-0 top-full mt-0 w-56 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-200 z-50 ${
+                          admissionsOpen
+                            ? "opacity-100 visible translate-y-0"
+                            : "opacity-0 invisible -translate-y-2"
+                        }`}
+                      >
+                        {link.submenu.map((subItem) => (
+                          <Link
+                            key={subItem.href}
+                            href={subItem.href}
+                            className="block px-4 py-3 text-gray-800 hover:bg-[#AC1F2D] hover:text-white transition text-[14px] border-b border-gray-100 last:border-0"
+                          >
+                            {subItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="h-full px-4 xl:px-5 flex items-center text-white font-semibold text-[13px] xl:text-[14px] hover:text-[#AC1F2D] transition whitespace-nowrap"
+                    >
+                      {link.label}
+                    </Link>
+                  )
+                )}
               </nav>
 
-              {/* APPLY BUTTON - Updated hover styles */}
+              {/* APPLY BUTTON */}
               <Link
                 href="#apply"
                 className="hidden lg:flex h-full px-7 xl:px-8 items-center justify-center bg-[#ffe588] text-black font-semibold text-[14px] hover:bg-[#078671] hover:text-white transition shrink-0 whitespace-nowrap"
@@ -152,30 +213,28 @@ export default function Navbar() {
               {/* MOBILE HEADER */}
               <div className="lg:hidden flex items-center justify-between w-full h-full bg-[#1a1a1a]">
                 <Link href="/" className="flex items-center">
-                  <div className="flex items-center bg-white p-4 ">
+                  <div className="flex items-center bg-white p-4">
                     <div className="flex items-center gap-2">
                       <div className="relative w-[36px] h-[36px]">
                         <Image
-                          src="/homeimages/uwa-logo-square.svg"
+                          src="/homeimages/Sona-star-logo.webp"
                           alt="UWA Logo"
                           fill
                           className="object-contain"
                         />
                       </div>
-
                       <div className="relative w-[36px] h-[36px]">
                         <Image
-                          src="/homeimages/Sona-star-logo.webp"
+                          src="/homeimages/uwa-logo-square.svg"
                           alt="SCALE Logo"
                           fill
                           className="object-contain"
                         />
                       </div>
                     </div>
-
                     <div className="ml-3 pl-3 border-l border-gray-300 leading-tight">
                       <p className="text-[12px] font-bold tracking-[0.12em] text-[#AC1F2D]">
-                        SONA UWA
+                        <span className="text-[#008BC8]">SONA</span> UWA
                       </p>
                       <p className="text-[9px] uppercase tracking-[0.15em] text-gray-500">
                         Global Education Pathway
@@ -197,40 +256,39 @@ export default function Navbar() {
 
         {/* MOBILE DRAWER BACKDROP */}
         <div
-          className={`fixed inset-0 bg-black/60 transition-all duration-300 lg:hidden ${mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-            }`}
+          className={`fixed inset-0 bg-black/60 transition-all duration-300 lg:hidden ${
+            mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+          }`}
           onClick={() => setMobileMenuOpen(false)}
         />
 
         {/* MOBILE DRAWER */}
         <div
-          className={`fixed top-0 left-0 w-[280px] h-full bg-white z-[60] transition-transform duration-300 ease-out shadow-xl lg:hidden ${mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-            }`}
+          className={`fixed top-0 left-0 w-[280px] h-full bg-white z-[60] transition-transform duration-300 ease-out shadow-xl lg:hidden ${
+            mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+          }`}
         >
           <div className="p-4 border-b border-gray-200 flex justify-between items-center bg-white">
-            {/* LOGOS - Horizontal row */}
             <div className="flex items-center gap-3 bg-white rounded-md px-3 py-2">
               <div className="relative w-[45px] h-[45px]">
                 <Image
-                  src="/homeimages/uwa-logo-square.svg"
+                  src="/homeimages/Sona-star-logo.webp"
                   alt="UWA Logo"
                   fill
                   className="object-contain"
                 />
               </div>
-
               <div className="relative w-[45px] h-[45px]">
                 <Image
-                  src="/homeimages/Sona-star-logo.webp"
+                  src="/homeimages/uwa-logo-square.svg"
                   alt="SCALE Logo"
                   fill
                   className="object-contain"
                 />
               </div>
-
               <div className="border-l border-gray-300 pl-3 leading-tight">
                 <p className="text-[13px] font-bold tracking-wide text-[#AC1F2D]">
-                   SONA UWA
+                  <span className="text-[#008BC8]">SONA</span> UWA
                 </p>
                 <p className="text-[10px] uppercase tracking-wider text-gray-500">
                   International Pathway
@@ -245,12 +303,14 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* DARK TOP BAR CONTENT ADDED TO MOBILE SIDEBAR */}
+          {/* DARK TOP BAR CONTENT */}
           <div className="bg-[#AC1F2D] text-white px-4 py-3">
             <div className="text-xs space-y-1.5">
               <div className="flex items-center gap-2">
-               
-                <Link href="#" className="text-[13px] hover:text-[#e5c66b] transition text-white">
+                <Link
+                  href="#"
+                  className="text-[13px] hover:text-[#e5c66b] transition text-white"
+                >
                   Call Us: (+91) 9442592170
                 </Link>
               </div>
@@ -262,24 +322,63 @@ export default function Navbar() {
 
           <div className="bg-gray-50 border-b border-gray-200 px-4 py-3">
             <div className="text-[10px] tracking-[2px] uppercase font-bold text-[#AC1F2D]">
-              SONA UWA
+              <span className="text-[#008BC8]">SONA</span> UWA
             </div>
             <div className="font-semibold text-sm text-gray-800 mt-0.5">
               1+1 International Pathway
             </div>
           </div>
 
+          {/* MOBILE NAV WITH SUBMENU */}
           <nav className="py-2 bg-white">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className="block px-4 py-3.5 font-medium text-gray-800 hover:bg-gray-100 hover:text-[#AC1F2D] transition border-b border-gray-100 text-[15px]"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.hasSubmenu ? (
+                <div key={link.href}>
+                  <div className="flex justify-between items-center px-4 py-3.5 font-medium text-gray-800 border-b border-gray-100">
+                    <span>{link.label}</span>
+                    <button
+                      onClick={() => setAdmissionsOpen(!admissionsOpen)}
+                      className="p-1"
+                    >
+                      <ChevronDown
+                        size={18}
+                        className={`transition-transform duration-200 ${
+                          admissionsOpen ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                  </div>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 bg-gray-50 ${
+                      admissionsOpen ? "max-h-96" : "max-h-0"
+                    }`}
+                  >
+                    {link.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.href}
+                        href={subItem.href}
+                        onClick={() => {
+                          setMobileMenuOpen(false);
+                          setAdmissionsOpen(false);
+                        }}
+                        className="block pl-8 pr-4 py-3 text-gray-600 hover:bg-gray-100 hover:text-[#AC1F2D] transition border-b border-gray-100 text-[14px]"
+                      >
+                        {subItem.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block px-4 py-3.5 font-medium text-gray-800 hover:bg-gray-100 hover:text-[#AC1F2D] transition border-b border-gray-100 text-[15px]"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </nav>
 
           <div className="px-4 mt-4 pb-6 bg-white">

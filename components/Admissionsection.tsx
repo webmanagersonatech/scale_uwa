@@ -9,14 +9,6 @@ export default function AdmissionSection() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubscribe = () => {
-    if (email.trim()) {
-      setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 3000);
-      setEmail("");
-    }
-  };
-
   return (
     <section ref={ref} id="apply" className="w-full relative overflow-hidden">
 
@@ -48,8 +40,8 @@ export default function AdmissionSection() {
 
         {/* Geometric rings */}
         <div className="absolute top-20 right-10 w-72 h-72 rounded-full border border-white/10" />
-        <div className="absolute top-32 right-32 w-48 h-48 rounded-full border border-white/6" />
-        <div className="absolute bottom-16 left-8 w-96 h-96 rounded-full border border-white/8" />
+
+
         <div className="absolute bottom-36 left-36 w-56 h-56 rounded-full border border-white/5" />
 
         {/* Small accent dots */}
@@ -87,7 +79,7 @@ export default function AdmissionSection() {
 
 
       {/* ── ACCREDITATIONS ROW ── */}
-      <div className="relative max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-16 pt-10 pb-12 sm:pb-16">
+      <div className="relative max-w-[1440px] mx-auto px-4  pt-10 pb-12 sm:pb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -105,28 +97,48 @@ export default function AdmissionSection() {
           </h3>
         </motion.div>
 
-        {/* Accreditation cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+
+        {/* Accreditation Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-8">
           {[
             {
               name: "SACSCOC",
-              fullName: "Southern Association of Colleges and Schools Commission on Colleges",
-              description: "Regional accreditation for degree-granting institutions in the Southern states"
+              fullName:
+                "Southern Association of Colleges and Schools Commission on Colleges",
+              description:
+                "Regional accreditation for degree-granting institutions in the Southern states",
+              image: "/homeimages/sacscoc.jpg",
             },
             {
               name: "ALSDE",
               fullName: "Alabama State Department of Education",
-              description: "State-level recognition for educator preparation programs"
+              description:
+                "State-level recognition for educator preparation programs",
+              image: "/homeimages/albama.jpg",
             },
+
             {
               name: "CAEP",
               fullName: "Council for Accreditation of Educator Preparation",
-              description: "Specialized accreditation for excellence in educator training"
+              description:
+                "Specialized accreditation for excellence in educator training",
+              image: "/homeimages/caep.jpg",
+            },
+            {
+              name: "CACREP",
+              fullName:
+                "Council for Accreditation of Counseling and Related Educational Programs",
+              description:
+                "Accreditation for counseling and related educational programs, including Clinical Mental Health Counseling and School Counseling.",
+              image: "/homeimages/cacrep.png",
             },
             {
               name: "ACBSP",
-              fullName: "Accreditation Council for Business Schools and Programs",
-              description: "Leading business program accreditation focused on teaching excellence"
+              fullName:
+                "Accreditation Council for Business Schools and Programs",
+              description:
+                "Leading business program accreditation focused on teaching excellence",
+              image: "/homeimages/acbsp.png",
             },
           ].map((accred, i) => (
             <motion.div
@@ -134,16 +146,29 @@ export default function AdmissionSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.55, delay: 0.65 + i * 0.1 }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="border border-white/15 p-5 sm:p-6 text-center group hover:bg-white/5 transition-colors duration-300 rounded-sm backdrop-blur-sm"
+              whileHover={{ y: -4 }}
+              className="relative border border-white/15 bg-white/5 backdrop-blur-sm rounded-sm px-4 sm:px-5 pt-14 pb-5 text-center group"
             >
-              <h4 className="font-serif text-white text-[28px] sm:text-[32px] font-bold mb-2">
+              {/* Floating Logo */}
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2">
+                <div className="bg-white rounded-full p-2.5 shadow-lg border border-gray-200">
+                  <img
+                    src={accred.image}
+                    alt={`${accred.name} logo`}
+                    className="h-12 w-12 object-contain"
+                  />
+                </div>
+              </div>
+
+              <h4 className="font-serif text-white text-[24px] sm:text-[28px] font-bold mb-2">
                 {accred.name}
               </h4>
-              <p className="text-white/80 text-xs font-medium mb-2">
+
+              <p className="text-white/80 text-[11px] font-medium leading-relaxed mb-2">
                 {accred.fullName}
               </p>
-              <p className="text-white/40 text-xs leading-snug">
+
+              <p className="text-white/50 text-[11px] leading-relaxed">
                 {accred.description}
               </p>
             </motion.div>
@@ -158,16 +183,14 @@ export default function AdmissionSection() {
           className="mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-8"
         >
           <span className="text-white/25 font-serif text-sm tracking-wide">
-            UWA School of Business
+            UWA Livingston, Alabama
           </span>
           <span className="text-white/25 text-xs">•</span>
           <span className="text-white/25 font-serif text-sm tracking-wide">
-            SCALE Bengaluru
+            Sona Star ,SCALE India Bengaluru
           </span>
-          <span className="text-white/25 text-xs">•</span>
-          <span className="text-white/25 font-serif text-sm tracking-wide">
-            Livingston, Alabama
-          </span>
+
+
         </motion.div>
       </div>
 

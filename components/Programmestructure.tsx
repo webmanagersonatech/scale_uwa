@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { MapPin, GraduationCap, FileText } from "lucide-react";
 
-export default function ProgrammeStructure() {
+export default function ProgramStructure() {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -28,13 +28,13 @@ export default function ProgrammeStructure() {
                             30-Credit
                         </span>
                         <br className="sm:hidden" />
-                        <span className="inline-block mt-1 sm:mt-0"> Programme Structure</span>
+                        <span className="inline-block mt-1 sm:mt-0"> Program Structure</span>
                     </h2>
 
                     <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                         <div className="h-px w-8 sm:w-12 bg-gradient-to-r from-transparent to-gray-300"></div>
                         <p className="text-sm sm:text-lg text-gray-600 italic">
-                            One Programme. Two Learning Environments.
+                            One Program. Two Learning Environments.
                         </p>
                         <div className="h-px w-8 sm:w-12 bg-gradient-to-l from-transparent to-gray-300"></div>
                     </div>
@@ -85,7 +85,7 @@ export default function ProgrammeStructure() {
 
                                     {/* Sub Text */}
                                     <p className="mt-2 text-xs sm:text-sm text-gray-500 sm:ml-10">
-                                        SCALE Campus · 15 Credits
+                                         Sona star , SCALE Campus · 15 Credits
                                     </p>
                                 </div>
 
@@ -112,7 +112,7 @@ export default function ProgrammeStructure() {
                                             <span className="text-[#8c1d32] font-mono font-semibold min-w-[60px]">{course.code}</span>
                                             <span className="text-gray-700">{course.name}</span>
                                         </div>
-                                        <span className="text-gray-400 text-xs font-mono whitespace-nowrap">{course.credits}</span>
+                                        {/* <span className="text-gray-400 text-xs font-mono whitespace-nowrap">{course.credits}</span> */}
                                     </motion.li>
                                 ))}
                             </ul>
@@ -186,7 +186,7 @@ export default function ProgrammeStructure() {
                                             <span className="text-[#8c1d32] font-mono font-semibold min-w-[60px]">{course.code}</span>
                                             <span className="text-gray-700">{course.name}</span>
                                         </div>
-                                        <span className="text-gray-400 text-xs font-mono whitespace-nowrap">{course.credits}</span>
+                                        {/* <span className="text-gray-400 text-xs font-mono whitespace-nowrap">{course.credits}</span> */}
                                     </motion.li>
                                 ))}
                             </ul>

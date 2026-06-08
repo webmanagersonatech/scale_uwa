@@ -27,11 +27,26 @@ const Footer = () => {
   ];
 
   const aboutLinks = [
-    { name: "About UWA", href: "#" },
-    { name: "Accreditations", href: "#" },
-    { name: "Faculty & Staff", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "Contact Us", href: "#" },
+    {
+      name: "History & Traditions",
+      href: "https://www.uwa.edu/history-tradition/",
+    },
+    {
+      name: "Accreditation",
+      href: "https://www.uwa.edu/accreditations/",
+    },
+    {
+      name: "Mission & Vision",
+      href: "https://www.uwa.edu/mission-vision/",
+    },
+    {
+      name: "Employment Opportunities",
+      href: "https://www.uwa.edu/employment/",
+    },
+    {
+      name: "Faculty & Staff Directory",
+      href: "https://directory.uwa.edu/",
+    },
   ];
 
   const resourceLinks = [
@@ -165,7 +180,7 @@ const Footer = () => {
               {/* About */}
               <div>
                 <h3 className="text-base font-bold text-[#8c1d32] mb-4 uppercase tracking-wide">
-                  About
+                  About UWA
                 </h3>
                 <ul className="space-y-2">
                   {aboutLinks.map((link) => (
@@ -187,7 +202,7 @@ const Footer = () => {
               {/* Resources */}
               <div>
                 <h3 className="text-base font-bold text-[#8c1d32] mb-4 uppercase tracking-wide">
-                  Resources
+                  About Sona star,Scale
                 </h3>
                 <ul className="space-y-2">
                   {resourceLinks.map((link) => (
