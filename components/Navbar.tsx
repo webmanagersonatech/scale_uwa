@@ -48,7 +48,7 @@ export default function Navbar() {
       hasSubmenu: true,
       submenu: [
         { label: "About the Program", href: "/admission/about-program" },
-        { label: "Fees Structure", href: "/admission/fees-structure" },
+        { label: "Fee Structure", href: "/admission/fees-structure" },
         { label: "Apply Online", href: "#apply-online" },
       ],
     },

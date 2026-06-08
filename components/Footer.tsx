@@ -22,7 +22,7 @@ const Footer = () => {
 
     { name: "Admissions", href: "/admission/about-program" },
     { name: "Acadamic Plan", href: "/#structure" },
-    { name: "Fess Structure", href: "/admission/fees-structure" },
+    { name: "Fee Structure", href: "/admission/fees-structure" },
     { name: "Apply Now", href: "/#" },
   ];
 
@@ -95,7 +95,7 @@ const Footer = () => {
                 1+1 International Pathway
               </div>
               <div className="text-[11px] text-gray-500 mt-0.5">
-                Bengaluru + Alabama, USA
+                Bengaluru,  India + Alabama, USA
               </div>
             </div>
 

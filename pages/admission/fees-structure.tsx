@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface CostItem {
@@ -8,33 +8,19 @@ interface CostItem {
     note?: string;
 }
 
-interface YearCost {
-    title: string;
-    subtitle: string;
-    items: CostItem[];
-    totalLabel: string;
-    totalAmount: string;
-}
-
 // ─── Data (Only client-shared content) ─────────────────────────────────────
-const YEAR1_COST: YearCost = {
-  title: "Year 1: Sona Star, SCALE Bengaluru",
-    subtitle: "Foundation Year in India",
-    items: [
-        { label: " Sona Star , SCALE Year 1 Programme Fee", amount: "₹7,50,000" },
-    ],
-    totalLabel: "Total Year 1 Cost",
-    totalAmount: "₹7,50,000",
-};
+const RECOMMENDED_PATHWAY = {
 
-const YEAR2_COST: YearCost = {
-    title: "Year 2 at UWA, Alabama, USA",
-    subtitle: "Complete Your Degree in the United States",
+    subtitle: "Sona Star , SCALE + UWA Pathway",
+    description: "Year 1 at Sona Star, SCALE Bengaluru, Year 2 on campus at UWA, Alabama. Best value + US experience.",
     items: [
-        { label: "UWA Year 2 estimated cost for 15 credits with housing, meal plan, Tiger One fee and insurance", amount: "$17,248" },
+        { label: "Year 1 at Sona Star , SCALE", amount: "₹7,50,000" },
+        { label: "Year 2 at UWA (COA)", amount: "$17,248" },
+        { label: "Potential Scholarship", amount: "up to USD 5,000", note: "Merit-based, subject to eligibility" },
     ],
-    totalLabel: "Total Year 2 Estimated Cost",
-    totalAmount: "$17,248",
+    totalLabel: "Total Estimate (2 Years)",
+    totalAmount: "~₹23.9 lakh",
+    savingsBadge: "Save ~50% vs Full UWA Route",
 };
 
 const EXCHANGE_RATE = {
@@ -47,14 +33,6 @@ const EXCHANGE_RATE = {
 const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
-};
-
-const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-        opacity: 1,
-        transition: { staggerChildren: 0.1, delayChildren: 0.1 },
-    },
 };
 
 // ─── Breadcrumb component ────────────────────────────────────────────────────
@@ -77,7 +55,7 @@ function Breadcrumb() {
                     </li>
                     <li>
                         <span className="text-[#5a5652] font-medium" aria-current="page">
-                            Fees & Pathway Cost
+                            Fee & Pathway Cost
                         </span>
                     </li>
                 </ol>
@@ -86,28 +64,32 @@ function Breadcrumb() {
     );
 }
 
-// ─── Cost Card Component ─────────────────────────────────────────────────────
-function CostCard({ data, delay = 0 }: { data: YearCost; delay?: number }) {
-    const totalInUSD = data.totalAmount === "$17,248" ? 17248 : null;
-    const totalInINR = totalInUSD ? totalInUSD * EXCHANGE_RATE.rate : null;
+// ─── Main Cost Card Component ─────────────────────────────────────────────────
+function RecommendedPathwayCard() {
+    const totalUSD = 17248;
+    const totalINRFromUSD = totalUSD * EXCHANGE_RATE.rate;
 
     return (
         <motion.div
             variants={fadeInUp}
-            custom={delay}
             initial="hidden"
             animate="visible"
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="bg-white border border-[#e0d6ce] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all"
+            className="bg-white border-2 border-[#AC1F2D] rounded-xl overflow-hidden shadow-lg transition-all relative"
         >
-            <div className="bg-gradient-to-r from-[#AC1F2D] to-[#8a1824] px-6 py-4">
-                <h2 className="text-white text-xl font-serif font-bold mb-1">{data.title}</h2>
-                <p className="text-[#e8c8a0] text-sm">{data.subtitle}</p>
+  
+            {/* Header */}
+            <div className="bg-gradient-to-r from-[#AC1F2D] to-[#8a1824] px-6 py-5">
+              
+                <p className="text-[#e8c8a0] text-sm font-medium">{RECOMMENDED_PATHWAY.subtitle}</p>
+                <p className="text-white/80 text-sm mt-2 max-w-2xl">{RECOMMENDED_PATHWAY.description}</p>
             </div>
 
+            {/* Body */}
             <div className="p-6">
-                <div className="space-y-3 mb-6">
-                    {data.items.map((item, idx) => (
+                {/* Cost Items */}
+                <div className="space-y-4 mb-6">
+                    {RECOMMENDED_PATHWAY.items.map((item, idx) => (
                         <div key={idx} className="flex justify-between items-start border-b border-[#f0e6e0] pb-3 last:border-0">
                             <div>
                                 <span className="text-[#2c2c2a] font-medium text-[15px]">{item.label}</span>
@@ -122,97 +104,58 @@ function CostCard({ data, delay = 0 }: { data: YearCost; delay?: number }) {
                     ))}
                 </div>
 
-                <div className="bg-[#fdf5f0] rounded-lg p-4 mt-2">
-                    <div className="flex justify-between items-center">
-                        <span className="text-[#2c2c2a] font-semibold text-[15px]">{data.totalLabel}</span>
-                        <span className="text-[#AC1F2D] font-bold text-xl">{data.totalAmount}</span>
-                    </div>
-                    {totalInINR && (
-                        <div className="flex justify-between items-center mt-2 pt-2 border-t border-[#f0d8cc]">
-                            <span className="text-[12px] text-[#5a5652]">Approx. INR equivalent</span>
-                            <span className="text-[13px] font-semibold text-[#2c2c2a]">
-                                ₹{totalInINR.toLocaleString('en-IN')}
+                {/* Total + Savings Row */}
+                <div className="bg-gradient-to-r from-[#fdf5f0] to-[#fff8f3] rounded-lg p-5 mt-2 border border-[#e0d6ce]">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div>
+                            <span className="text-[#2c2c2a] font-semibold text-base">{RECOMMENDED_PATHWAY.totalLabel}</span>
+                            <span className="text-[#AC1F2D] font-bold text-3xl ml-3">{RECOMMENDED_PATHWAY.totalAmount}</span>
+                        </div>
+                        <div className="bg-[#AC1F2D]/10 px-4 py-2 rounded-full border border-[#AC1F2D]/30 self-start md:self-auto">
+                            <span className="text-[#AC1F2D] font-bold text-sm flex items-center gap-1">
+                                💰 {RECOMMENDED_PATHWAY.savingsBadge}
                             </span>
                         </div>
-                    )}
+                    </div>
+
+                    {/* Detailed breakdown */}
+                    <div className="mt-4 pt-4 border-t border-[#e0d6ce] grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                        <div className="flex justify-between">
+                            <span className="text-[#5a5652]">Year 1 (INR):</span>
+                            <span className="font-semibold text-[#2c2c2a]">₹7,50,000</span>
+                        </div>
+                        <div className="flex justify-between">
+                            <span className="text-[#5a5652]">Year 2 (USD):</span>
+                            <span className="font-semibold text-[#2c2c2a]">$17,248</span>
+                        </div>
+                        <div className="flex justify-between sm:col-span-2">
+                            <span className="text-[#5a5652]">Year 2 (INR approx.):</span>
+                            <span className="font-semibold text-[#2c2c2a]">
+                                ₹{totalINRFromUSD.toLocaleString('en-IN')}
+                            </span>
+                        </div>
+                        <div className="flex justify-between sm:col-span-2 pt-2 mt-1 border-t border-dashed border-[#e0d6ce]">
+                            <span className="text-[#AC1F2D] font-bold">Total INR Investment:</span>
+                            <span className="text-[#AC1F2D] font-bold text-lg">
+                                ₹{(750000 + totalINRFromUSD).toLocaleString('en-IN')}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Exchange Rate Note */}
+                <div className="mt-4 text-[11px] text-center text-[#8a7a6e] bg-[#f8f5f2] p-3 rounded-lg">
+                    <p>† USD to INR conversion rate: 1 USD = {EXCHANGE_RATE.rate} INR (indicative as of {EXCHANGE_RATE.asOf}). Actual costs may vary based on exchange rate fluctuations.</p>
                 </div>
             </div>
         </motion.div>
     );
 }
 
-// ─── Total Summary Component ─────────────────────────────────────────────────
-function TotalSummary() {
-    const totalINRFirstYear = 750000;
-    const totalUSDSecondYear = 17248;
-    const totalINRSecondYear = totalUSDSecondYear * EXCHANGE_RATE.rate;
-    const grandTotalINR = totalINRFirstYear + totalINRSecondYear;
-
-    return (
-        <motion.div
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-            className="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl overflow-hidden shadow-lg mt-8"
-        >
-            <div className="px-6 py-5 border-b border-white/10">
-                <h3 className="text-white text-lg font-serif font-bold flex items-center gap-2">
-                    <span className="text-2xl">💰</span> Total Pathway Investment
-                </h3>
-                <p className="text-[#a8b2c1] text-sm mt-1">Complete 2-year cost breakdown (India + USA)</p>
-            </div>
-
-            <div className="p-6">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
-                    <div className="bg-white/5 rounded-lg p-4 text-center">
-                        <p className="text-[#a8b2c1] text-xs uppercase tracking-wide">Year 1 (India)</p>
-                        <p className="text-white text-2xl font-bold mt-1">₹7,50,000</p>
-                        <p className="text-[#74b9ff] text-xs mt-1">SCALE, Bengaluru</p>
-                    </div>
-                    <div className="bg-white/5 rounded-lg p-4 text-center">
-                        <p className="text-[#a8b2c1] text-xs uppercase tracking-wide">Year 2 (USA)</p>
-                        <p className="text-white text-2xl font-bold mt-1">$17,248</p>
-                        <p className="text-[#74b9ff] text-xs mt-1">UWA, Alabama</p>
-                    </div>
-                    <div className="bg-[#AC1F2D]/20 rounded-lg p-4 text-center border border-[#AC1F2D]/30">
-                        <p className="text-[#e8c8a0] text-xs uppercase tracking-wide">Grand Total (INR)</p>
-                        <p className="text-[#ffe588] text-2xl font-bold mt-1">
-                            ₹{grandTotalINR.toLocaleString('en-IN')}
-                        </p>
-                        <p className="text-[#e8c8a0] text-xs mt-1">
-                            @ 1 USD = {EXCHANGE_RATE.rate} INR (as of {EXCHANGE_RATE.asOf})
-                        </p>
-                    </div>
-                </div>
-
-                <div className="bg-white/5 rounded-lg p-4">
-                    <div className="flex flex-col md:flex-row md:justify-between gap-3 text-sm">
-                        <div className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-[#ffe588] rounded-full"></span>
-                            <span className="text-[#a8b2c1]">Total INR Investment:</span>
-                            <span className="text-white font-semibold">₹{grandTotalINR.toLocaleString('en-IN')}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-[#74b9ff] rounded-full"></span>
-                            <span className="text-[#a8b2c1]">Total USD Investment:</span>
-                            <span className="text-white font-semibold">${totalUSDSecondYear.toLocaleString()}</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="mt-5 text-[12px] text-center text-[#a8b2c1] border-t border-white/10 pt-4">
-                    <p>† The USD to INR conversion rate is indicative based on {EXCHANGE_RATE.source} as of {EXCHANGE_RATE.asOf}. Actual costs may vary based on exchange rate fluctuations, living expenses, and individual choices.</p>
-                </div>
-            </div>
-        </motion.div>
-    );
-}
-
-// ─── Additional Fee Notes Component (Using only client shared notes) ─────────
+// ─── Additional Fee Notes Component ─────────────────────────────────────────
 function FeeNotes() {
-    const notes = [
-        "Total Pathway estimate: India + USA in INR = 7,50,000(1st yr in India) + 16,38,560 (2nd yr in USA, dollar conversion rate 1$=95 on 30th May 2026) = INR 23,88,560/-",
-    ];
+    const year2INR = 17248 * 95;
+    const totalINR = 750000 + year2INR;
 
     return (
         <motion.div
@@ -222,22 +165,31 @@ function FeeNotes() {
             className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-xl p-6 mt-6"
         >
             <h4 className="text-[#AC1F2D] font-serif font-bold text-lg mb-3 flex items-center gap-2">
-                <span>📋</span> Total Pathway Estimate
+                <span>📋</span> Total Pathway Estimate Details
             </h4>
             <ul className="space-y-2">
-                {notes.map((note, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-[#5a5652] text-sm leading-relaxed">
-                        <span className="text-[#AC1F2D] text-lg leading-5">•</span>
-                        <span>{note}</span>
-                    </li>
-                ))}
+                <li className="flex items-start gap-2 text-[#5a5652] text-sm leading-relaxed">
+                    <span className="text-[#AC1F2D] text-lg leading-5">•</span>
+                    <span>
+                        Total Pathway estimate: India + USA in INR = ₹7,50,000 (1st year in India) + 
+                        ₹{year2INR.toLocaleString('en-IN')} (2nd year in USA, conversion rate 1 USD = 95 INR on 30th May 2026) 
+                        = <strong className="text-[#AC1F2D]">₹{totalINR.toLocaleString('en-IN')}/-</strong>
+                    </span>
+                </li>
+                <li className="flex items-start gap-2 text-[#5a5652] text-sm leading-relaxed">
+                    <span className="text-[#AC1F2D] text-lg leading-5">•</span>
+                    <span>
+                        <strong className="font-semibold">Savings:</strong> Compared to completing full 2 years directly at UWA, 
+                        this pathway saves approximately <strong className="text-[#AC1F2D]">50%</strong> on total tuition and living costs.
+                    </span>
+                </li>
             </ul>
         </motion.div>
     );
 }
 
 // ─── Main Page Component ───────────────────────────────────────────────────
-export default function FeesStructurePage() {
+export default function FeeStructurePage() {
     return (
         <>
             {/* Hero Section */}
@@ -254,7 +206,7 @@ export default function FeesStructurePage() {
                                 Affordable International Degree
                             </div>
                             <h1 className="font-serif text-4xl lg:text-5xl text-white font-bold mb-4 leading-tight">
-                                Fees & <span className="text-[#ffe588]">Pathway Cost</span>
+                                Fee & <span className="text-[#ffe588]">Pathway Cost</span>
                             </h1>
                             <p className="text-[#e8c8a0] text-base lg:text-lg max-w-[600px] leading-relaxed">
                                 Transparent, structured pricing for your MS in Data Science — Year 1 in India, Year 2 at UWA, USA.
@@ -289,23 +241,15 @@ export default function FeesStructurePage() {
                             </p>
                         </div>
 
-                        <motion.div
-                            variants={staggerContainer}
-                            initial="hidden"
-                            animate="visible"
-                            className="grid grid-cols-1 md:grid-cols-2 gap-6"
-                        >
-                            <CostCard data={YEAR1_COST} delay={0} />
-                            <CostCard data={YEAR2_COST} delay={0.1} />
-                        </motion.div>
+                        {/* Single Recommended Card */}
+                        <RecommendedPathwayCard />
 
-
+                        {/* Additional Notes */}
                         <FeeNotes />
 
                         {/* Disclaimer */}
                         <div className="text-center mt-8 text-[11px] text-[#8a7a6e]">
                             <p>All figures are estimates and subject to change. For the most current fee structure, please contact the admissions office.</p>
-                           
                         </div>
                     </div>
                 </div>
