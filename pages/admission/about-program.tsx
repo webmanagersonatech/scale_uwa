@@ -36,7 +36,7 @@ const WHY_CARDS: WhyCard[] = [
     {
         number: "01",
         title: "Cost-Effective International Route",
-        body: "Students can begin the programme in India and reduce the cost of completing the entire programme in the USA from the first year itself.",
+        body: "Students can begin the Program in India and reduce the cost of completing the entire Program in the USA from the first year itself.",
         highlight: "Save on Year 1 costs",
     },
     {
@@ -48,7 +48,7 @@ const WHY_CARDS: WhyCard[] = [
     {
         number: "03",
         title: "Data Science Career Focus",
-        body: "The programme prepares students for roles in data science, analytics, AI, machine learning, business intelligence, predictive modelling, and data-driven decision-making.",
+        body: "The Program prepares students for roles in data science, analytics, AI, machine learning, business intelligence, predictive modelling, and data-driven decision-making.",
         highlight: "Industry-aligned curriculum",
     },
     {
@@ -59,7 +59,7 @@ const WHY_CARDS: WhyCard[] = [
     },
     {
         number: "05",
-        title: "Programme Continuation Support",
+        title: "Program Continuation Support",
         body: "If a student is unable to travel due to visa-related reasons or chooses to continue from India, the second-year academic delivery may be facilitated through a UWA-supported mechanism, subject to UWA's written approval.",
         highlight: "Flexible delivery options",
     },
@@ -72,11 +72,11 @@ const ELIGIBILITY_GROUPS = [
     },
     {
         label: "Science / Computer Applications",
-        items: ["BCA / MCA / B.Sc. / M.Sc. students with strong quantitative and programming orientation"],
+        items: ["BCA / MCA / B.Sc. / M.Sc. students with strong quantitative and Programming orientation"],
     },
     {
         label: "Interest Areas",
-        items: ["Data analysis, programming, statistics, AI, machine learning, and business analytics"],
+        items: ["Data analysis, Programming, statistics, AI, machine learning, and business analytics"],
     },
     {
         label: "Working Professionals",
@@ -98,7 +98,7 @@ const OUTCOMES = [
 const TABS = [
     { id: "who-should-apply", label: "Who Should Apply?" },
     { id: "why-choose", label: "Why Choose This Pathway?" },
-    { id: "programme-outcomes", label: "Programme Outcomes" },
+    { id: "Program-outcomes", label: "Program Outcomes" },
     { id: "course-structure", label: "Course Structure" },
 ];
 
@@ -129,7 +129,7 @@ function Breadcrumb() {
                         <span className="text-[#bbb] mx-1" aria-hidden="true">›</span>
                     </li>
                     <li className="flex items-center">
-                        <Link href="/admissions" className="text-[#AC1F2D] hover:underline no-underline">
+                        <Link href="/admissions/about-Program" className="text-[#AC1F2D] hover:underline no-underline">
                             Admissions
                         </Link>
                         <span className="text-[#bbb] mx-1" aria-hidden="true">›</span>
@@ -200,11 +200,11 @@ function MobileNav({ activeTab, setActiveTab }: { activeTab: string; setActiveTa
             <div className="bg-[#fdf5f0] border border-[#f0d8cc] rounded-lg p-[18px] mt-4">
                 <div className="text-[13px] lg:text-[14px] font-bold text-[#AC1F2D] mb-2">Request More Information</div>
                 <p className="text-[12px] lg:text-[13px] text-[#5a5652] leading-[1.55] mb-3">
-                    Have questions about the MS in Data Science programme or the Sona Star, SCALE
+                    Have questions about the MS in Data Science Program or the Sona Star, SCALE
                     pathway? Our advisors are here to help.
                 </p>
-                <Link href="/sacscoc/contact" className="inline-block text-[13px] lg:text-[14px] text-[#AC1F2D] font-semibold no-underline hover:underline">
-                    Contact Us →
+                <Link href="/admissions/about-Program" className="inline-block text-[13px] lg:text-[14px] text-[#AC1F2D] font-semibold no-underline hover:underline">
+                    Contact Usqq →
                 </Link>
             </div>
         </div>
@@ -214,10 +214,10 @@ function MobileNav({ activeTab, setActiveTab }: { activeTab: string; setActiveTa
 // ─── Sidebar component (Desktop) ─────────────────────────────────────────────
 function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab: (id: string) => void }) {
     return (
-        <aside className="w-[260px] max-md:hidden" aria-label="Programme navigation">
+        <aside className="w-[260px] max-md:hidden" aria-label="Program navigation">
             <div className="bg-white border border-[#e0d6ce] rounded-lg overflow-hidden mb-5 sticky top-24">
                 <div className="bg-[#AC1F2D] text-white text-[11px] lg:text-[12px] font-semibold py-2.5 px-3.5 tracking-[0.9px] uppercase">
-                    Programme Sections
+                    Program Sections
                 </div>
                 <nav className="flex flex-col">
                     {TABS.map((tab) => (
@@ -240,10 +240,10 @@ function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
             <div className="bg-[#fdf5f0] border border-[#f0d8cc] rounded-lg p-[18px] mb-5">
                 <div className="text-[13px] lg:text-[14px] font-bold text-[#AC1F2D] mb-2">Request More Information</div>
                 <p className="text-[12px] lg:text-[13px] text-[#5a5652] leading-[1.55] mb-3">
-                    Have questions about the MS in Data Science programme or the SCALE
+                    Have questions about the MS in Data Science Program or the  Sona star, SCALE
                     pathway? Our advisors are here to help.
                 </p>
-                <Link href="/sacscoc/contact" className="inline-block text-[13px] lg:text-[14px] text-[#AC1F2D] font-semibold no-underline hover:underline">
+                <Link href="/admissions/about-Program" className="inline-block text-[13px] lg:text-[14px] text-[#AC1F2D] font-semibold no-underline hover:underline">
                     Contact Us →
                 </Link>
             </div>
@@ -266,7 +266,7 @@ function WhoShouldApply() {
                 Who Should Apply?
             </h2>
             <p className="text-sm lg:text-base text-[#5a5652] leading-relaxed mb-5">
-                This programme is designed for students and professionals with a
+                This Program is designed for students and professionals with a
                 strong quantitative foundation who are ready to build a career in
                 data science.
             </p>
@@ -349,7 +349,7 @@ function WhyChoose() {
     );
 }
 
-function ProgrammeOutcomes() {
+function ProgramOutcomes() {
     return (
         <motion.section
             variants={fadeInUp}
@@ -359,7 +359,7 @@ function ProgrammeOutcomes() {
             aria-labelledby="outcomes"
         >
             <h2 id="outcomes" className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]">
-                Programme Outcomes
+                Program Outcomes
             </h2>
             <p className="text-sm lg:text-base text-[#5a5652] leading-relaxed mb-5">
                 After completing the MS in Data Science, students are expected
@@ -384,7 +384,7 @@ function ProgrammeOutcomes() {
                 ))}
             </motion.ol>
             <p className="text-[12px] lg:text-[13px] text-[#5a5652] italic pt-3 border-t border-[#e0d6ce]">
-                These outcomes are aligned with UWA&apos;s published programme
+                These outcomes are aligned with UWA&apos;s published Program
                 outcomes for the MS in Data Science.
             </p>
         </motion.section>
@@ -479,8 +479,8 @@ export default function AboutProgramPage() {
                 return <WhoShouldApply />;
             case "why-choose":
                 return <WhyChoose />;
-            case "programme-outcomes":
-                return <ProgrammeOutcomes />;
+            case "Program-outcomes":
+                return <ProgramOutcomes />;
             case "course-structure":
                 return <CourseStructure />;
             default:
@@ -511,7 +511,7 @@ export default function AboutProgramPage() {
                                 MS in Data Science
                             </div>
                             <h1 className="font-serif text-4xl lg:text-5xl text-white font-bold mb-4 leading-tight">
-                                About the <span className="text-[#F0C040]">Programme</span>
+                                About the <span className="text-[#F0C040]">Program</span>
                             </h1>
                             <p className="text-[#e8c8a0] text-base lg:text-lg max-w-[580px] leading-relaxed">
                                 A 30-credit graduate pathway through UWA Sona Star , SCALE — start in India,
@@ -574,10 +574,10 @@ export default function AboutProgramPage() {
                                     and start your  Sona Star , SCALE pathway today.
                                 </div>
                                 <div className="flex gap-3 flex-wrap">
-                                    <Link href="/admissions" className="inline-block bg-[#F0C040] text-[#6B1313] text-sm lg:text-base font-bold py-2.5 px-6 rounded-md no-underline transition-colors hover:bg-[#ffd050]">
+                                    <Link href="/admissions/about-Program" className="inline-block bg-[#F0C040] text-[#6B1313] text-sm lg:text-base font-bold py-2.5 px-6 rounded-md no-underline transition-colors hover:bg-[#ffd050]">
                                         Apply Now
                                     </Link>
-                                    <Link href="/sacscoc/contact" className="inline-block border-2 border-white/50 text-white text-sm lg:text-base font-semibold py-2.5 px-5 rounded-md no-underline transition-all hover:border-white hover:bg-white/10">
+                                    <Link href="/admissions/about-Program" className="inline-block border-2 border-white/50 text-white text-sm lg:text-base font-semibold py-2.5 px-5 rounded-md no-underline transition-all hover:border-white hover:bg-white/10">
                                         Ask a Question
                                     </Link>
                                 </div>
