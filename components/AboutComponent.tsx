@@ -2,14 +2,13 @@ import React, { useEffect, useRef, useState } from "react";
 
 interface OptionCardProps {
     optionLabel: string;
-    headerText: string;
     details: string;
     learnMoreHref: string;
 }
 
 const OptionCard: React.FC<OptionCardProps> = ({
     optionLabel,
-    headerText,
+ 
     details,
     learnMoreHref,
 }) => {
@@ -27,10 +26,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
                     </span>
                 </div>
 
-                {/* Header label */}
-                <p className="text-xs tracking-widest uppercase text-gray-500 mb-3 font-semibold pt-6">
-                    {headerText}
-                </p>
+             
 
                 {/* Details text - grows to fill space */}
                 <p className="text-sm text-gray-700 leading-relaxed flex-1">{details}</p>
@@ -87,8 +83,8 @@ const UWAOptionsSection: React.FC = () => {
                     <div className="flex-1 flex">
                         <OptionCard
                             optionLabel="About Sona Star"
-                            headerText="About Sona Star"
-                            details="Sona Star International is a dedicated educational consultancy bridging students to global opportunities. We provide comprehensive guidance on university admissions, visa processing, test preparation, scholarship assistance, career counselling, pre-departure briefings, accommodation support, and post-arrival services across multiple study destinations worldwide."
+                      
+                            details="Sona Star Innovation Private Limited, Bengaluru, is a technology-based solutions company focused on innovation, digital transformation, and industry-driven growth. As one of its key divisions, the Sona Centre of Advanced Learning & Entrepreneurship (SCALE) serves as an industry-led ecosystem that bridges talent, technology, innovation, and entrepreneurship through future-focused learning, workforce development, and emerging technology solutions."
                             learnMoreHref="https://sonstar.com"
                         />
                     </div>
@@ -97,7 +93,7 @@ const UWAOptionsSection: React.FC = () => {
                     <div className="flex-1 flex">
                         <OptionCard
                             optionLabel="About UWA"
-                            headerText="About the University of West Alabama"
+                        
                             details="The University of West Alabama (UWA) is located in Livingston, Alabama, USA. Established in 1835, UWA is a public state university offering a wide range of academic programmes. The university supports international students through admission guidance, visa documentation support, campus services, housing, insurance, and student life resources. UWA's MS in Data Science is a 30-credit graduate programme covering statistics, programming, machine learning, data visualization, predictive modelling, cybersecurity data science, and capstone/thesis-based applied work."
                             learnMoreHref="https://www.uwa.edu"
                         />
