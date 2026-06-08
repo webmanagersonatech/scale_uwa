@@ -46,7 +46,7 @@ export default function CareerOutcomes() {
                         </p>
 
                         <h2 className="font-serif text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.1] text-gray-900 mb-6">
-                           Global  Roles You Can Target
+                            Global  Roles You Can Target
                         </h2>
 
                         <p className="text-gray-600 text-lg leading-relaxed max-w-md">
@@ -54,12 +54,12 @@ export default function CareerOutcomes() {
                         </p>
                     </div>
 
-                {/* RIGHT - ROLES */}
-<div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 w-full">
-  {roles.map((role, idx) => (
-    <div
-      key={idx}
-      className="
+                    {/* RIGHT - ROLES */}
+                    <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 w-full">
+                        {roles.map((role, idx) => (
+                            <div
+                                key={idx}
+                                className="
         w-full sm:w-auto
         px-5 py-3
         rounded-lg
@@ -74,11 +74,11 @@ export default function CareerOutcomes() {
         hover:text-[#8c1d32]
         transition-all
       "
-    >
-      {role}
-    </div>
-  ))}
-</div>
+                            >
+                                {role}
+                            </div>
+                        ))}
+                    </div>
 
                 </div>
 

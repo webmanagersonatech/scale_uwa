@@ -172,15 +172,7 @@ export default function Admissions() {
                                                 {step.description}
                                             </p>
 
-                                            {/* Progress indicator dots */}
-                                            <div className="flex gap-1 mt-3">
-                                                {[0, 1, 2].map((dot) => (
-                                                    <div
-                                                        key={dot}
-                                                        className="w-1 h-1 rounded-full bg-gray-300"
-                                                    />
-                                                ))}
-                                            </div>
+                                      
                                         </div>
                                     </div>
                                 </motion.div>
