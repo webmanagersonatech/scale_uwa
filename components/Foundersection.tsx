@@ -267,7 +267,7 @@ export default function FounderSection() {
                 </h3>
 
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Complete Year 1 at  Sona star,SCALE in Bengaluru.</li>
+                  <li>• Complete Year 1 at  Sona Star,SCALE in Bengaluru.</li>
                   <li>• Reduce one full year of U.S. living costs.</li>
                   <li>• Additional technical & communication preparation.</li>
                   <li>• Phased financial planning for families.</li>

@@ -85,7 +85,7 @@ export default function ProgramStructure() {
 
                                     {/* Sub Text */}
                                     <p className="mt-2 text-xs sm:text-sm text-gray-500 sm:ml-10">
-                                         Sona star , SCALE Campus · 15 Credits
+                                         Sona Star , SCALE Campus · 15 Credits
                                     </p>
                                 </div>
 
