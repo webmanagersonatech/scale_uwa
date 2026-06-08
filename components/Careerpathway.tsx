@@ -54,29 +54,31 @@ export default function CareerOutcomes() {
                         </p>
                     </div>
 
-                    {/* RIGHT - ROLES */}
-                    <div className="flex flex-wrap gap-3">
-                        {roles.map((role, idx) => (
-                            <div
-                                key={idx}
-                                className="
-          px-5 py-3
-          rounded-lg
-          border border-[#8c1d32]/20
-          bg-white
-          text-gray-800
-          text-sm
-          font-medium
-          hover:bg-[#8c1d32]/30
-          hover:border border-[#8c1d32]
-          hover:text-[#8c1d32]
-          transition-all
-        "
-                            >
-                                {role}
-                            </div>
-                        ))}
-                    </div>
+                {/* RIGHT - ROLES */}
+<div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 w-full">
+  {roles.map((role, idx) => (
+    <div
+      key={idx}
+      className="
+        w-full sm:w-auto
+        px-5 py-3
+        rounded-lg
+        border border-[#8c1d32]/20
+        bg-white
+        text-gray-800
+        text-sm
+        font-medium
+        text-center
+        hover:bg-[#8c1d32]/10
+        hover:border-[#8c1d32]
+        hover:text-[#8c1d32]
+        transition-all
+      "
+    >
+      {role}
+    </div>
+  ))}
+</div>
 
                 </div>
 
