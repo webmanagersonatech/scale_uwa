@@ -206,7 +206,7 @@ export default function FeeStructurePage() {
                                 Fee & <span className="text-[#ffe588]">Pathway Cost</span>
                             </h1>
                             <p className="text-[#e8c8a0] text-base lg:text-lg max-w-[600px] leading-relaxed">
-                                Transparent, structured pricing for your MS in Data Science — Year 1 in India, Year 2 at UWA, USA.
+                                Transparent, structured pricing for your MS in Data Science — Year 1 Sona Star , SCALE in India, Year 2 at UWA, USA.
                             </p>
                         </div>
 
