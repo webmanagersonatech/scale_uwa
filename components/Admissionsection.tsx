@@ -107,7 +107,7 @@ export default function AdmissionSection() {
                 "Southern Association of Colleges and Schools Commission on Colleges",
               description:
                 "Regional accreditation for degree-granting institutions in the Southern states",
-              image: "/homeimages/sacscoc.jpg",
+              image: "/homeimages/SACSCOC.jpg",
             },
             {
               name: "ALSDE",

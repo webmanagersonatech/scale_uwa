@@ -18,10 +18,10 @@ interface YearCost {
 
 // ─── Data (Only client-shared content) ─────────────────────────────────────
 const YEAR1_COST: YearCost = {
-    title: "Year 1 at SCALE, Bengaluru",
+  title: "Year 1: Sona Star, SCALE Bengaluru",
     subtitle: "Foundation Year in India",
     items: [
-        { label: "SCALE Year 1 Programme Fee", amount: "₹7,50,000" },
+        { label: " Sona Star , SCALE Year 1 Programme Fee", amount: "₹7,50,000" },
     ],
     totalLabel: "Total Year 1 Cost",
     totalAmount: "₹7,50,000",
@@ -305,7 +305,7 @@ export default function FeesStructurePage() {
                         {/* Disclaimer */}
                         <div className="text-center mt-8 text-[11px] text-[#8a7a6e]">
                             <p>All figures are estimates and subject to change. For the most current fee structure, please contact the admissions office.</p>
-                            <p className="mt-1">© {new Date().getFullYear()} SCALE + UWA Pathway. All rights reserved.</p>
+                           
                         </div>
                     </div>
                 </div>
