@@ -143,10 +143,7 @@ function RecommendedPathwayCard() {
                     </div>
                 </div>
 
-                {/* Exchange Rate Note */}
-                <div className="mt-4 text-[11px] text-center text-[#8a7a6e] bg-[#f8f5f2] p-3 rounded-lg">
-                    <p>† USD to INR conversion rate: 1 USD = {EXCHANGE_RATE.rate} INR (indicative as of {EXCHANGE_RATE.asOf}). Actual costs may vary based on exchange rate fluctuations.</p>
-                </div>
+       
             </div>
         </motion.div>
     );
