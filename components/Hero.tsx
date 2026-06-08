@@ -161,67 +161,63 @@ export default function HeroSection() {
               </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 divide-x divide-y lg:divide-y-0 divide-gray-100">
-             
 
                 {/* Duration */}
-                <div className="px-3 py-3 text-center flex flex-col items-center justify-center">
-                  <Clock3 className="w-4 h-4 text-[#8c1d32] mb-1 flex-shrink-0" />
-                  <div className="text-lg font-semibold text-gray-900 leading-tight">2yr</div>
-                  <div className="text-[11px] text-gray-400 leading-tight">Duration</div>
+                <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
+                  <Clock3 className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
+                  <div className="text-xl font-bold text-gray-900 leading-tight">2yr</div>
+                  <div className="text-xs text-gray-500 mt-1">Duration</div>
                 </div>
 
                 {/* OPT */}
-                <div className="px-3 py-3 text-center flex flex-col items-center justify-center">
-                  <Globe className="w-4 h-4 text-[#8c1d32] mb-1 flex-shrink-0" />
-                  <div className="text-lg font-semibold text-gray-900 leading-tight">3yr</div>
-                  <div className="text-[11px] text-gray-400 leading-tight">OPT Duration</div>
+                <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
+                  <Globe className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
+                  <div className="text-xl font-bold text-gray-900 leading-tight">3yr</div>
+                  <div className="text-xs text-gray-500 mt-1">OPT Duration</div>
                 </div>
 
                 {/* Savings */}
-                <div className="px-3 py-3 text-center flex flex-col items-center justify-center">
-                  <BadgePercent className="w-4 h-4 text-[#8c1d32] mb-1 flex-shrink-0" />
-                  <div className="text-lg font-semibold text-gray-900 leading-tight">50%</div>
-                  <div className="text-[11px] text-gray-400 leading-tight">Cost Savings</div>
+                <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
+                  <BadgePercent className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
+                  <div className="text-xl font-bold text-gray-900 leading-tight">50%</div>
+                  <div className="text-xs text-gray-500 mt-1">Cost Savings</div>
                 </div>
 
                 {/* Year 1 - India */}
-                <div className="px-3 py-3 text-center flex flex-col items-center justify-center">
-                  <GraduationCap className="w-4 h-4 text-[#8c1d32] mb-1 flex-shrink-0" />
-                  <div className="text-sm font-medium text-gray-900 flex items-center justify-center gap-1 leading-tight">
+                <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
+                  <GraduationCap className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
+                  <div className="text-base font-semibold text-gray-900 flex items-center justify-center gap-1.5">
                     SCALE
-                    <span className="inline-flex items-center">
-                      <img
-                        src="https://flagcdn.com/w20/in.png"
-                        alt="India flag"
-                        className="w-4 h-3 object-cover rounded-sm"
-                      />
-                    </span>
+                    <img
+                      src="https://flagcdn.com/w20/in.png"
+                      alt="India flag"
+                      className="w-4 h-3 object-cover rounded-sm"
+                    />
                   </div>
-                  <div className="text-[11px] text-gray-400 leading-tight">Year 1 • India</div>
+                  <div className="text-xs text-gray-500 mt-1">Year 1 • India</div>
                 </div>
 
                 {/* Year 2 - USA */}
-                <div className="px-3 py-3 text-center flex flex-col items-center justify-center">
-                  <Plane className="w-4 h-4 text-[#8c1d32] mb-1 flex-shrink-0" />
-                  <div className="text-sm font-medium text-gray-900 flex items-center justify-center gap-1 leading-tight">
+                <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
+                  <Plane className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
+                  <div className="text-base font-semibold text-gray-900 flex items-center justify-center gap-1.5">
                     UWA
-                    <span className="inline-flex items-center">
-                      <img
-                        src="https://flagcdn.com/w20/us.png"
-                        alt="USA flag"
-                        className="w-4 h-3 object-cover rounded-sm"
-                      />
-                    </span>
+                    <img
+                      src="https://flagcdn.com/w20/us.png"
+                      alt="USA flag"
+                      className="w-4 h-3 object-cover rounded-sm"
+                    />
                   </div>
-                  <div className="text-[11px] text-gray-400 leading-tight">Year 2 • USA</div>
+                  <div className="text-xs text-gray-500 mt-1">Year 2 • USA</div>
                 </div>
 
                 {/* Career */}
-                <div className="px-3 py-3 text-center bg-gradient-to-br from-gray-50 to-white flex flex-col items-center justify-center">
-                  <BriefcaseBusiness className="w-4 h-4 text-green-600 mb-1 flex-shrink-0" />
-                  <div className="text-sm font-medium text-gray-900 leading-tight">US Career</div>
-                  <div className="text-[11px] text-gray-400 leading-tight">US career, Data science/ STEM</div>
+                <div className="px-3 py-4 text-center bg-gradient-to-br from-gray-50 to-white flex flex-col items-center justify-center min-h-[110px]">
+                  <BriefcaseBusiness className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
+                  <div className="text-base font-semibold text-gray-900">US Career</div>
+                  <div className="text-xs text-gray-500 mt-1">Data Science / STEM</div>
                 </div>
+
               </div>
             </div>
           </div>
