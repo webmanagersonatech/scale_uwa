@@ -314,7 +314,7 @@ function WhyChoose() {
             aria-labelledby="why-choose-title"
         >
             <h2 id="why-choose-title" className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]">
-                Why Choose This Pathway through  Sona Star , SCALE to UWA, USA?
+                Why Choose This Pathway through  Sona Star , SCALE , Bengaluru  to UWA, USA?
             </h2>
             <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="flex flex-col gap-4">
                 {WHY_CARDS.map((card, idx) => (

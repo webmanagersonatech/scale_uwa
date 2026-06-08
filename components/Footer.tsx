@@ -62,7 +62,7 @@ const Footer = () => {
       {/* Top accent bar */}
       <div className="h-1 w-full bg-[#8c1d32]" />
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 ">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* LEFT COLUMN - Logos & Info */}
           <div className="lg:col-span-4">
