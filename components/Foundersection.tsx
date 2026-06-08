@@ -164,25 +164,34 @@ export default function FounderSection() {
           {/* Stats Cards - Program Comparison */}
           <motion.div
             {...slideInLeft(0.3)}
-            className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-[500px] mx-auto lg:mx-0"
+            className="grid grid-cols-4 gap-2 sm:gap-6 max-w-[500px] mx-auto lg:mx-0"
           >
             {ProgramStats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.08 }}
+                animate={
+                  isInView
+                    ? { opacity: 1, y: 0 }
+                    : { opacity: 0, y: 20 }
+                }
+                transition={{
+                  duration: 0.4,
+                  delay: 0.3 + index * 0.08,
+                }}
                 className="text-center"
               >
-                <div className="text-2xl sm:text-3xl font-bold text-[#C8102E] mb-1">
+                <div className="text-lg sm:text-3xl font-bold text-[#C8102E] mb-1">
                   {stat.number}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-500 uppercase tracking-wide">
+
+                <div className="text-[10px] sm:text-sm text-gray-500 uppercase tracking-wide">
                   {stat.label}
                 </div>
               </motion.div>
             ))}
           </motion.div>
+
         </div>
 
         {/* ── RIGHT: Text Content with Program Focus ── */}
