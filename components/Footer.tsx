@@ -76,7 +76,7 @@ const Footer = () => {
                 className="object-contain"
               />
               <Image
-                src="/homeimages/uwa-logo-square.svg"
+                src="/homeimages/footer-uwa.png"
                 alt="UWA Logo"
                 width={50}
                 height={50}
