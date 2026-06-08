@@ -111,9 +111,9 @@ function RecommendedPathwayCard() {
                             <span className="text-[#2c2c2a] font-semibold text-base">{RECOMMENDED_PATHWAY.totalLabel}</span>
                             <span className="text-[#AC1F2D] font-bold text-3xl ml-3">{RECOMMENDED_PATHWAY.totalAmount}</span>
                         </div>
-                        <div className="bg-[#AC1F2D]/10 px-4 py-2 rounded-full border border-[#AC1F2D]/30 self-start md:self-auto">
+                        <div className="bg-[#AC1F2D]/10 px-4 py-2  border border-[#AC1F2D]/30 self-start md:self-auto">
                             <span className="text-[#AC1F2D] font-bold text-sm flex items-center gap-1">
-                                💰 {RECOMMENDED_PATHWAY.savingsBadge}
+                                {RECOMMENDED_PATHWAY.savingsBadge}
                             </span>
                         </div>
                     </div>
