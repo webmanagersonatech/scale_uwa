@@ -47,7 +47,7 @@ export default function Navbar() {
       href: "#",
       hasSubmenu: true,
       submenu: [
-        { label: "Eligibility", href: "#eligibility" },
+        { label: "About the Program", href: "#program" },
         { label: "Fees Structure", href: "#fees-structure" },
         { label: "Apply Online", href: "#apply-online" },
       ],

@@ -46,7 +46,7 @@ export default function CareerOutcomes() {
                         </p>
 
                         <h2 className="font-serif text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.1] text-gray-900 mb-6">
-                            Roles You Can Target
+                           Global  Roles You Can Target
                         </h2>
 
                         <p className="text-gray-600 text-lg leading-relaxed max-w-md">
