@@ -20,10 +20,10 @@ const Footer = () => {
 
   const quickLinks = [
 
-    { name: "Admissions", href: "#" },
-    { name: "Tuition & Aid", href: "#" },
-    { name: "Request Info", href: "#" },
-    { name: "Apply Now", href: "#" },
+    { name: "Admissions", href: "/admission/about-program" },
+    { name: "Acadamic Plan", href: "/#structure" },
+    { name: "Fess Structure", href: "/admission/fees-structure" },
+    { name: "Apply Now", href: "/#" },
   ];
 
   const aboutLinks = [
