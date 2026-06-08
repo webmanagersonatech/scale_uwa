@@ -98,7 +98,7 @@ const UWAOptionsSection: React.FC = () => {
                         <OptionCard
                             optionLabel="About UWA"
                             headerText="About the University of West Alabama"
-                            details="The University of West Alabama (UWA) is located in Livingston, Alabama, USA. Established in 1885, UWA is a public state university offering a wide range of academic programmes. The university supports international students through admission guidance, visa documentation support, campus services, housing, insurance, and student life resources. UWA's MS in Data Science is a 30-credit graduate programme covering statistics, programming, machine learning, data visualization, predictive modelling, cybersecurity data science, and capstone/thesis-based applied work."
+                            details="The University of West Alabama (UWA) is located in Livingston, Alabama, USA. Established in 1835, UWA is a public state university offering a wide range of academic programmes. The university supports international students through admission guidance, visa documentation support, campus services, housing, insurance, and student life resources. UWA's MS in Data Science is a 30-credit graduate programme covering statistics, programming, machine learning, data visualization, predictive modelling, cybersecurity data science, and capstone/thesis-based applied work."
                             learnMoreHref="https://www.uwa.edu"
                         />
                     </div>

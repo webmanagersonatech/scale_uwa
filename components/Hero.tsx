@@ -5,21 +5,21 @@ import { ArrowRight, Download, MessageCircle, BookOpen, Globe, Clock3, Graduatio
 
 const slides = [
   {
-    image: "/homeimages/hero1.jpeg",
+    image: "/homeimages/hero1.webp",
     badge: "Start in Bengaluru. Complete in Alabama.",
     title: "Earn Your MS in Data Science from the University of West Alabama, USA",
     description:
       "A structured 1+1 international pathway for students aspiring to build global careers in Data Science, Artificial Intelligence, Machine Learning, Analytics, and emerging technology domains.",
   },
   {
-    image: "/homeimages/hero2.jpeg",
+    image: "/homeimages/hero2.webp",
     badge: "STEM-aligned Curriculum",
     title: "Future-Ready Data Science Education",
     description:
       "Gain hands-on experience with cutting-edge tools and methodologies that prepare you for leadership roles in AI, ML, and analytics across global industries.",
   },
   {
-    image: "/homeimages/hero3.png",
+    image: "/homeimages/hero3.webp",
     badge: "Global Career Pathway",
     title: "From Bengaluru to Alabama — Your Journey to Success",
     description:
@@ -160,13 +160,8 @@ export default function HeroSection() {
                 </h3>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 divide-x divide-y lg:divide-y-0 divide-gray-100">
-                {/* Credits */}
-                <div className="px-3 py-3 text-center flex flex-col items-center justify-center">
-                  <BookOpen className="w-4 h-4 text-[#8c1d32] mb-1 flex-shrink-0" />
-                  <div className="text-lg font-semibold text-gray-900 leading-tight">30cr</div>
-                  <div className="text-[11px] text-gray-400 leading-tight">Graduate Credits</div>
-                </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 divide-x divide-y lg:divide-y-0 divide-gray-100">
+             
 
                 {/* Duration */}
                 <div className="px-3 py-3 text-center flex flex-col items-center justify-center">
@@ -225,7 +220,7 @@ export default function HeroSection() {
                 <div className="px-3 py-3 text-center bg-gradient-to-br from-gray-50 to-white flex flex-col items-center justify-center">
                   <BriefcaseBusiness className="w-4 h-4 text-green-600 mb-1 flex-shrink-0" />
                   <div className="text-sm font-medium text-gray-900 leading-tight">US Career</div>
-                  <div className="text-[11px] text-gray-400 leading-tight">OPT / STEM</div>
+                  <div className="text-[11px] text-gray-400 leading-tight">US career, Data science/ STEM</div>
                 </div>
               </div>
             </div>
