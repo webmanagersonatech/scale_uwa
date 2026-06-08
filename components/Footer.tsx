@@ -19,7 +19,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-   
+
     { name: "Admissions", href: "#" },
     { name: "Tuition & Aid", href: "#" },
     { name: "Request Info", href: "#" },
@@ -69,26 +69,27 @@ const Footer = () => {
             {/* Three Logos Row */}
             <div className="flex items-center gap-4 mb-6">
               <Image
-                src="/homeimages/uwa-logo-square.svg"
-                alt="UWA Logo"
-                width={50}
-                height={50}
-                className="object-contain"
-              />
-              <Image
                 src="/homeimages/Sona-star-logo.webp"
                 alt="Sona Star Logo"
                 width={50}
                 height={50}
                 className="object-contain"
               />
+              <Image
+                src="/homeimages/uwa-logo-square.svg"
+                alt="UWA Logo"
+                width={50}
+                height={50}
+                className="object-contain"
+              />
+
 
             </div>
 
             {/* UWA × SCALE Label */}
             <div className="mb-4">
               <div className="text-[11px] font-bold text-[#8c1d32] tracking-widest uppercase">
-                SONA UWA
+                <span className="text-[#008BC8]">SONA</span> UWA
               </div>
               <div className="text-[12px] font-semibold text-gray-300">
                 1+1 International Pathway
