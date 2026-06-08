@@ -85,7 +85,7 @@ const UWAOptionsSection: React.FC = () => {
                             optionLabel="About Sona Star"
                       
                             details="Sona Star Innovation Private Limited, Bengaluru, is a technology-based solutions company focused on innovation, digital transformation, and industry-driven growth. As one of its key divisions, the Sona Centre of Advanced Learning & Entrepreneurship (SCALE) serves as an industry-led ecosystem that bridges talent, technology, innovation, and entrepreneurship through future-focused learning, workforce development, and emerging technology solutions."
-                            learnMoreHref="https://sonstar.com"
+                            learnMoreHref="https://sonastar.com"
                         />
                     </div>
 
