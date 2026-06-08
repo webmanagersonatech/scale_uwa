@@ -12,14 +12,14 @@ const slides = [
       "A structured 1+1 international pathway for students aspiring to build global careers in Data Science, Artificial Intelligence, Machine Learning, Analytics, and emerging technology domains.",
   },
   {
-    image: "/homeimages/hero2.webp",
+    image: "/homeimages/hero2.jpg",
     badge: "STEM-aligned Curriculum",
     title: "Future-Ready Data Science Education",
     description:
       "Gain hands-on experience with cutting-edge tools and methodologies that prepare you for leadership roles in AI, ML, and analytics across global industries.",
   },
   {
-    image: "/homeimages/hero3.webp",
+    image: "/homeimages/hero3.jpg",
     badge: "Global Career Pathway",
     title: "From Bengaluru to Alabama — Your Journey to Success",
     description:

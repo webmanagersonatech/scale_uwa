@@ -39,7 +39,7 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { label: "Home", href: "#overview" },
+    { label: "Home", href: "/" },
     { label: "Acadamic plan", href: "#structure" },
     { label: "Careers", href: "#careers" },
     {
@@ -47,7 +47,7 @@ export default function Navbar() {
       href: "#",
       hasSubmenu: true,
       submenu: [
-        { label: "About the Program", href: "#program" },
+        { label: "About the Program", href: "admission/about-program" },
         { label: "Fees Structure", href: "#fees-structure" },
         { label: "Apply Online", href: "#apply-online" },
       ],
@@ -82,10 +82,10 @@ export default function Navbar() {
 
                 <div className="relative w-[52px] h-[52px]">
                   <Image
-                    src="/homeimages/uwa-logo-square.svg"
-                    alt="SCALE Logo"
+                    src="/homeimages/uwa.jpg"
+                    alt="uwa Logo"
                     fill
-                    className="object-contain"
+                    className="object-contain "
                   />
                 </div>
               </div>
@@ -172,8 +172,8 @@ export default function Navbar() {
                       {/* Dropdown Menu */}
                       <div
                         className={`absolute left-0 top-full mt-0 w-56 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-200 z-50 ${admissionsOpen
-                            ? "opacity-100 visible translate-y-0"
-                            : "opacity-0 invisible -translate-y-2"
+                          ? "opacity-100 visible translate-y-0"
+                          : "opacity-0 invisible -translate-y-2"
                           }`}
                       >
                         {link.submenu.map((subItem) => (
@@ -222,7 +222,7 @@ export default function Navbar() {
                       </div>
                       <div className="relative w-[36px] h-[36px]">
                         <Image
-                          src="/homeimages/uwa-logo-square.svg"
+                            src="/homeimages/uwa.jpg"
                           alt="SCALE Logo"
                           fill
                           className="object-contain"
@@ -275,7 +275,7 @@ export default function Navbar() {
               </div>
               <div className="relative w-[45px] h-[45px]">
                 <Image
-                  src="/homeimages/uwa-logo-square.svg"
+                    src="/homeimages/uwa.jpg"
                   alt="SCALE Logo"
                   fill
                   className="object-contain"
