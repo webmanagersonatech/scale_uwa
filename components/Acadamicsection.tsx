@@ -8,7 +8,7 @@ const faqItems = [
     title: "Where is Year 1 conducted?",
     description:
       "Year 1 is conducted at Sona Star , SCALE located in Sona Towers, 71 Millers Road, Vasanth Nagar, Bengaluru, Karnataka - 560052, India.",
-    image: "/homeimages/faq1.webp",
+    image: "/homeimages/faq1.jpeg",
   },
   {
     number: "02",

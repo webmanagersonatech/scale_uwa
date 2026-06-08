@@ -202,7 +202,7 @@ export default function FounderSection() {
           >
             A Smarter Route to
             <br className="hidden sm:block" />
-            <span className="inline-block sm:inline"> U.S.</span>{" "}
+            <span className="inline-block sm:inline ml-1 sm:ml-0"> U.S.</span>{" "}
             <motion.span
               className="text-[#8c1d32] underline underline-offset-4 sm:underline-offset-6 decoration-2 sm:decoration-[3px] inline-block whitespace-nowrap sm:whitespace-normal"
               whileHover={{ scale: 1.02 }}
@@ -218,7 +218,7 @@ export default function FounderSection() {
             className="mb-6"
           >
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-3">
-              The <span className="font-semibold text-[#8c1d32]">The international pathway to university west Alabama offered at scale by sona star</span> helps students reduce cost exposure,
+              The <span className="font-semibold text-[#8c1d32]">The international pathway to university west Alabama offered at SCALE by Sona Star</span> helps students reduce cost exposure,
               prepare better, and enter the U.S. academic system with stronger technical,
               communication, and career readiness.
             </p>

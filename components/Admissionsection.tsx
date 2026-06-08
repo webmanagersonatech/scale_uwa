@@ -183,11 +183,11 @@ export default function AdmissionSection() {
           className="mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-8"
         >
           <span className="text-white/25 font-serif text-sm tracking-wide">
-            UWA Livingston, Alabama
+            UWA Livingston, Alabama.
           </span>
           <span className="text-white/25 text-xs">•</span>
           <span className="text-white/25 font-serif text-sm tracking-wide">
-            Sona Star ,SCALE India Bengaluru
+            Sona Star , SCALE , Bengaluru , India.
           </span>
 
 

@@ -175,7 +175,7 @@ export default function WhyChooseSection() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.65 }}
-                    className="text-center mb-10 sm:mb-12"
+                    className="text-center "
                 >
                     <p className="text-[#8c1d32] text-[10px] sm:text-sm font-semibold tracking-[2px] uppercase mb-4">
                         Why Year 1 at Sona Star, SCALE Matters
@@ -190,7 +190,7 @@ export default function WhyChooseSection() {
 
                 {/* Navigation Arrows - hide on mobile if only one page, otherwise show */}
                 {maxStartIndex > 0 && (
-                    <div className="flex justify-end gap-3 mb-5">
+                    <div className="flex justify-end gap-3 mb-3">
                         <button
                             onClick={handlePrev}
                             disabled={startIndex === 0}

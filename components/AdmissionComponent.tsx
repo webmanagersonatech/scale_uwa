@@ -59,7 +59,7 @@ const steps = [
     {
         number: "07",
         title: "OPT / Career Pathway",
-        description: "US Career, Data Science / Stem ",
+        description: "Apply for OPT/STEM OPT subject to U.S. government rules and eligibility. ",
         icon: Briefcase,
     },
 ];
