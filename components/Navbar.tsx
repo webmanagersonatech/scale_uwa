@@ -39,7 +39,7 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   const navLinks = [
-    { label: "Overview", href: "#overview" },
+    { label: "Home", href: "#overview" },
     { label: "Acadamic plan", href: "#structure" },
     { label: "Careers", href: "#careers" },
     {
@@ -129,9 +129,8 @@ export default function Navbar() {
 
         {/* MAIN NAVBAR - Full width DARK bar with 1440px inner container */}
         <div
-          className={`w-full bg-[#1a1a1a] transition-all duration-300 ${
-            scrolled ? "shadow-lg" : ""
-          }`}
+          className={`w-full bg-[#1a1a1a] transition-all duration-300 ${scrolled ? "shadow-lg" : ""
+            }`}
         >
           <div className="w-full max-w-[1440px] mx-auto relative">
             <div className="h-[64px] lg:h-[72px] flex items-center">
@@ -161,29 +160,27 @@ export default function Navbar() {
                       onMouseLeave={() => setAdmissionsOpen(false)}
                     >
                       <button
-                        className="h-full px-4 xl:px-5 flex items-center gap-1 text-white font-semibold text-[13px] xl:text-[14px] hover:text-[#AC1F2D] transition whitespace-nowrap"
+                        className="h-full px-4 xl:px-5 flex items-center gap-1 text-white font-semibold text-[15px] xl:text-[17px] hover:text-[#AC1F2D] transition whitespace-nowrap"
                       >
                         {link.label}
                         <ChevronDown
                           size={14}
-                          className={`transition-transform duration-200 ${
-                            admissionsOpen ? "rotate-180" : ""
-                          }`}
+                          className={`transition-transform duration-200 ${admissionsOpen ? "rotate-180" : ""
+                            }`}
                         />
                       </button>
                       {/* Dropdown Menu */}
                       <div
-                        className={`absolute left-0 top-full mt-0 w-56 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-200 z-50 ${
-                          admissionsOpen
+                        className={`absolute left-0 top-full mt-0 w-56 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-200 z-50 ${admissionsOpen
                             ? "opacity-100 visible translate-y-0"
                             : "opacity-0 invisible -translate-y-2"
-                        }`}
+                          }`}
                       >
                         {link.submenu.map((subItem) => (
                           <Link
                             key={subItem.href}
                             href={subItem.href}
-                            className="block px-4 py-3 text-gray-800 hover:bg-[#AC1F2D] hover:text-white transition text-[14px] border-b border-gray-100 last:border-0"
+                            className="block px-4 py-3 text-gray-800 hover:bg-[#AC1F2D] hover:text-white transition text-[16px] border-b border-gray-100 last:border-0"
                           >
                             {subItem.label}
                           </Link>
@@ -194,7 +191,7 @@ export default function Navbar() {
                     <Link
                       key={link.href}
                       href={link.href}
-                      className="h-full px-4 xl:px-5 flex items-center text-white font-semibold text-[13px] xl:text-[14px] hover:text-[#AC1F2D] transition whitespace-nowrap"
+                      className="h-full px-4 xl:px-5 flex items-center text-white font-semibold text-[15px] xl:text-[17px] hover:text-[#AC1F2D] transition whitespace-nowrap"
                     >
                       {link.label}
                     </Link>
@@ -256,17 +253,15 @@ export default function Navbar() {
 
         {/* MOBILE DRAWER BACKDROP */}
         <div
-          className={`fixed inset-0 bg-black/60 transition-all duration-300 lg:hidden ${
-            mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+          className={`fixed inset-0 bg-black/60 transition-all duration-300 lg:hidden ${mobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
+            }`}
           onClick={() => setMobileMenuOpen(false)}
         />
 
         {/* MOBILE DRAWER */}
         <div
-          className={`fixed top-0 left-0 w-[280px] h-full bg-white z-[60] transition-transform duration-300 ease-out shadow-xl lg:hidden ${
-            mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
+          className={`fixed top-0 left-0 w-[280px] h-full bg-white z-[60] transition-transform duration-300 ease-out shadow-xl lg:hidden ${mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
         >
           <div className="p-4 border-b border-gray-200 flex justify-between items-center bg-white">
             <div className="flex items-center gap-3 bg-white rounded-md px-3 py-2">
@@ -342,16 +337,14 @@ export default function Navbar() {
                     >
                       <ChevronDown
                         size={18}
-                        className={`transition-transform duration-200 ${
-                          admissionsOpen ? "rotate-180" : ""
-                        }`}
+                        className={`transition-transform duration-200 ${admissionsOpen ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                   </div>
                   <div
-                    className={`overflow-hidden transition-all duration-300 bg-gray-50 ${
-                      admissionsOpen ? "max-h-96" : "max-h-0"
-                    }`}
+                    className={`overflow-hidden transition-all duration-300 bg-gray-50 ${admissionsOpen ? "max-h-96" : "max-h-0"
+                      }`}
                   >
                     {link.submenu.map((subItem) => (
                       <Link
