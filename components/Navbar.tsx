@@ -40,8 +40,8 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Acadamic plan", href: "#structure" },
-    { label: "Careers", href: "#careers" },
+    { label: "Acadamic plan", href: "/#structure" },
+    { label: "Careers", href: "/#careers" },
     {
       label: "Admissions",
       href: "#",
@@ -52,7 +52,7 @@ export default function Navbar() {
         { label: "Apply Online", href: "#apply-online" },
       ],
     },
-    { label: "FAQs", href: "#faq" },
+    { label: "FAQs", href: "/#faq" },
   ];
 
   return (
