@@ -98,6 +98,9 @@ export default function WhyChooseSection() {
     const isInView = useInView(ref, { once: true, margin: "-60px" });
     const [startIndex, setStartIndex] = useState(0);
     const [cardsPerPage, setCardsPerPage] = useState(3);
+    
+    // Auto-pagination timer ref
+    const autoPaginateTimerRef = useRef(null);
 
     // Handle responsive cards per page
     useEffect(() => {
@@ -129,11 +132,71 @@ export default function WhyChooseSection() {
 
     const visibleCards = cards.slice(startIndex, startIndex + cardsPerPage);
 
+    // Auto-pagination effect
+    useEffect(() => {
+        // Clear existing timer
+        if (autoPaginateTimerRef.current) {
+            clearInterval(autoPaginateTimerRef.current);
+        }
+
+        // Only start auto-pagination if there's more than one page
+        if (maxStartIndex > 0 && isInView) {
+            autoPaginateTimerRef.current = setInterval(() => {
+                setStartIndex((prev) => {
+                    // If at the end, loop back to beginning
+                    if (prev >= maxStartIndex) {
+                        return 0;
+                    }
+                    return prev + 1;
+                });
+            }, 4000); // 4 seconds
+        }
+
+        // Cleanup timer on unmount or when dependencies change
+        return () => {
+            if (autoPaginateTimerRef.current) {
+                clearInterval(autoPaginateTimerRef.current);
+            }
+        };
+    }, [maxStartIndex, isInView, cardsPerPage]);
+
+    // Reset timer when user manually navigates
+    const handleManualPrev = () => {
+        handlePrev();
+        resetTimer();
+    };
+
+    const handleManualNext = () => {
+        handleNext();
+        resetTimer();
+    };
+
+    const handleManualDotClick = (idx) => {
+        setStartIndex(idx);
+        resetTimer();
+    };
+
+    const resetTimer = () => {
+        if (autoPaginateTimerRef.current) {
+            clearInterval(autoPaginateTimerRef.current);
+        }
+        
+        if (maxStartIndex > 0 && isInView) {
+            autoPaginateTimerRef.current = setInterval(() => {
+                setStartIndex((prev) => {
+                    if (prev >= maxStartIndex) {
+                        return 0;
+                    }
+                    return prev + 1;
+                });
+            }, 4000);
+        }
+    };
+
     return (
         <section
             ref={ref}
             className="w-full py-12 sm:py-14 bg-gradient-to-br from-white via-gray-50 to-white overflow-hidden relative"
-
         >
             {/* Decorative circles - light gray tones */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
@@ -175,7 +238,7 @@ export default function WhyChooseSection() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.65 }}
-                    className="text-center "
+                    className="text-center"
                 >
                     <p className="text-[#8c1d32] text-[10px] sm:text-sm font-semibold tracking-[2px] uppercase mb-4">
                         Why Year 1 at Sona Star, SCALE Matters
@@ -190,9 +253,9 @@ export default function WhyChooseSection() {
 
                 {/* Navigation Arrows - hide on mobile if only one page, otherwise show */}
                 {maxStartIndex > 0 && (
-                    <div className="flex justify-end gap-3 mb-3">
+                    <div className="flex justify-end gap-3 mb-3 mt-2">
                         <button
-                            onClick={handlePrev}
+                            onClick={handleManualPrev}
                             disabled={startIndex === 0}
                             className={`p-2 rounded-full border border-gray-300 transition-all duration-300 ${startIndex === 0
                                 ? "opacity-40 cursor-not-allowed"
@@ -202,7 +265,7 @@ export default function WhyChooseSection() {
                             <ArrowLeft size={20} className="text-gray-700" />
                         </button>
                         <button
-                            onClick={handleNext}
+                            onClick={handleManualNext}
                             disabled={startIndex >= maxStartIndex}
                             className={`p-2 rounded-full border border-gray-300 transition-all duration-300 ${startIndex >= maxStartIndex
                                 ? "opacity-40 cursor-not-allowed"
@@ -275,7 +338,7 @@ export default function WhyChooseSection() {
                         {Array.from({ length: maxStartIndex + 1 }).map((_, idx) => (
                             <button
                                 key={idx}
-                                onClick={() => setStartIndex(idx)}
+                                onClick={() => handleManualDotClick(idx)}
                                 className={`transition-all duration-300 rounded-full ${startIndex === idx
                                     ? "w-8 h-1.5 bg-gray-600"
                                     : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"

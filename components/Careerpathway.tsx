@@ -35,7 +35,7 @@ export default function CareerOutcomes() {
     ];
 
     return (
-        <section ref={ref} id="careers" className="w-full py-20 bg-white">
+        <section ref={ref} id="careers" className="w-full pb-14 pt-10 bg-white">
             <div className="max-w-[1440px] mx-auto px-6 lg:px-10">
                 <div className="grid lg:grid-cols-[500px_1fr] gap-16 items-start">
 

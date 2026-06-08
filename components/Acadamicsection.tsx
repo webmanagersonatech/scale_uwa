@@ -43,7 +43,7 @@ export default function AcademiesSection() {
   const isInView = useInView(ref, { once: true, margin: "-60px" });
 
   return (
-    <section ref={ref} id="faq" className="w-full bg-white py-16 sm:py-20 overflow-hidden">
+    <section ref={ref} id="faq" className="w-full bg-white py-16 overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 ">
 
         {/* Header */}
