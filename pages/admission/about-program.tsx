@@ -500,18 +500,18 @@ export default function AboutProgramPage() {
 
                 {/* Decorative circles */}
                 <div className="absolute -right-[60px] -top-[60px] w-[360px] h-[360px] rounded-full bg-white/5 pointer-events-none"></div>
-                <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-[#F0C040]/10 pointer-events-none"></div>
-                <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-[#F0C040]/5 pointer-events-none"></div>
+                <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-[#ffe588]/10 pointer-events-none"></div>
+                <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-[#ffe588]/5 pointer-events-none"></div>
 
                 <div className="max-w-[1440px] mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                         <div className="lg:max-w-[55%]">
-                            <div className="inline-flex items-center gap-2 bg-[#F0C040]/20 border border-[#F0C040]/70 text-[#f8e8a0] text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
-                                <span className="w-1.5 h-1.5 bg-[#F0C040] rounded-full"></span>
+                            <div className="inline-flex items-center gap-2 bg-[#ffe588]/20 border border-[#ffe588]/70 text-[#f8e8a0] text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
+                                <span className="w-1.5 h-1.5 bg-[#ffe588] rounded-full"></span>
                                 MS in Data Science
                             </div>
                             <h1 className="font-serif text-4xl lg:text-5xl text-white font-bold mb-4 leading-tight">
-                                About the <span className="text-[#F0C040]">Program</span>
+                                About the <span className="text-[#ffe588]">Program</span>
                             </h1>
                             <p className="text-[#e8c8a0] text-base lg:text-lg max-w-[580px] leading-relaxed">
                                 A 30-credit graduate pathway through UWA Sona Star , SCALE — start in India,
@@ -520,20 +520,20 @@ export default function AboutProgramPage() {
                         </div>
 
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6">
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#F0C040]/40 transition-all duration-300">
-                                <span className="block font-serif text-3xl lg:text-[32px] text-[#F0C040] font-bold leading-none">30</span>
+                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#ffe588]/40 transition-all duration-300">
+                                <span className="block font-serif text-3xl lg:text-[32px] text-[#ffe588] font-bold leading-none">30</span>
                                 <span className="block text-[11px] text-[#cdb89a] tracking-[0.6px] uppercase mt-2">Credit Hours</span>
                             </div>
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#F0C040]/40 transition-all duration-300">
-                                <span className="block font-serif text-3xl lg:text-[32px] text-[#F0C040] font-bold leading-none">10</span>
+                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#ffe588]/40 transition-all duration-300">
+                                <span className="block font-serif text-3xl lg:text-[32px] text-[#ffe588] font-bold leading-none">10</span>
                                 <span className="block text-[11px] text-[#cdb89a] tracking-[0.6px] uppercase mt-2">Core Courses</span>
                             </div>
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#F0C040]/40 transition-all duration-300">
-                                <span className="block font-serif text-3xl lg:text-[32px] text-[#F0C040] font-bold leading-none">3yr</span>
+                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#ffe588]/40 transition-all duration-300">
+                                <span className="block font-serif text-3xl lg:text-[32px] text-[#ffe588] font-bold leading-none">3yr</span>
                                 <span className="block text-[11px] text-[#cdb89a] tracking-[0.6px] uppercase mt-2">STEM OPT</span>
                             </div>
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#F0C040]/40 transition-all duration-300">
-                                <span className="block font-serif text-3xl lg:text-[32px] text-[#F0C040] font-bold leading-none">2</span>
+                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#ffe588]/40 transition-all duration-300">
+                                <span className="block font-serif text-3xl lg:text-[32px] text-[#ffe588] font-bold leading-none">2</span>
                                 <span className="block text-[11px] text-[#cdb89a] tracking-[0.6px] uppercase mt-2">Locations</span>
                             </div>
                         </div>
@@ -574,7 +574,7 @@ export default function AboutProgramPage() {
                                     and start your  Sona Star , SCALE pathway today.
                                 </div>
                                 <div className="flex gap-3 flex-wrap">
-                                    <Link href="/admissions/about-Program" className="inline-block bg-[#F0C040] text-[#6B1313] text-sm lg:text-base font-bold py-2.5 px-6 rounded-md no-underline transition-colors hover:bg-[#ffd050]">
+                                    <Link href="/admissions/about-Program" className="inline-block bg-[#ffe588] text-[#6B1313] text-sm lg:text-base font-bold py-2.5 px-6 rounded-md no-underline transition-colors hover:bg-[#ffd050]">
                                         Apply Now
                                     </Link>
                                     <Link href="/admissions/about-Program" className="inline-block border-2 border-white/50 text-white text-sm lg:text-base font-semibold py-2.5 px-5 rounded-md no-underline transition-all hover:border-white hover:bg-white/10">

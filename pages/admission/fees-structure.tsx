@@ -176,7 +176,7 @@ function TotalSummary() {
                     </div>
                     <div className="bg-[#AC1F2D]/20 rounded-lg p-4 text-center border border-[#AC1F2D]/30">
                         <p className="text-[#e8c8a0] text-xs uppercase tracking-wide">Grand Total (INR)</p>
-                        <p className="text-[#F0C040] text-2xl font-bold mt-1">
+                        <p className="text-[#ffe588] text-2xl font-bold mt-1">
                             ₹{grandTotalINR.toLocaleString('en-IN')}
                         </p>
                         <p className="text-[#e8c8a0] text-xs mt-1">
@@ -188,7 +188,7 @@ function TotalSummary() {
                 <div className="bg-white/5 rounded-lg p-4">
                     <div className="flex flex-col md:flex-row md:justify-between gap-3 text-sm">
                         <div className="flex items-center gap-2">
-                            <span className="w-2 h-2 bg-[#F0C040] rounded-full"></span>
+                            <span className="w-2 h-2 bg-[#ffe588] rounded-full"></span>
                             <span className="text-[#a8b2c1]">Total INR Investment:</span>
                             <span className="text-white font-semibold">₹{grandTotalINR.toLocaleString('en-IN')}</span>
                         </div>
@@ -243,18 +243,18 @@ export default function FeesStructurePage() {
             {/* Hero Section */}
             <section className="bg-[#AC1F2D] py-12 lg:py-16 relative overflow-hidden">
                 <div className="absolute -right-[60px] -top-[60px] w-[360px] h-[360px] rounded-full bg-white/5 pointer-events-none"></div>
-                <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-[#F0C040]/10 pointer-events-none"></div>
-                <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-[#F0C040]/5 pointer-events-none"></div>
+                <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-[#ffe588]/10 pointer-events-none"></div>
+                <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-[#ffe588]/5 pointer-events-none"></div>
 
                 <div className="max-w-[1440px] mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                         <div className="lg:max-w-[60%]">
-                            <div className="inline-flex items-center gap-2 bg-[#F0C040]/20 border border-[#F0C040]/70 text-[#f8e8a0] text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
-                                <span className="w-1.5 h-1.5 bg-[#F0C040] rounded-full"></span>
+                            <div className="inline-flex items-center gap-2 bg-[#ffe588]/20 border border-[#ffe588]/70 text-[#f8e8a0] text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
+                                <span className="w-1.5 h-1.5 bg-[#ffe588] rounded-full"></span>
                                 Affordable International Degree
                             </div>
                             <h1 className="font-serif text-4xl lg:text-5xl text-white font-bold mb-4 leading-tight">
-                                Fees & <span className="text-[#F0C040]">Pathway Cost</span>
+                                Fees & <span className="text-[#ffe588]">Pathway Cost</span>
                             </h1>
                             <p className="text-[#e8c8a0] text-base lg:text-lg max-w-[600px] leading-relaxed">
                                 Transparent, structured pricing for your MS in Data Science — Year 1 in India, Year 2 at UWA, USA.
@@ -263,11 +263,11 @@ export default function FeesStructurePage() {
 
                         <div className="grid grid-cols-2 gap-4">
                             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
-                                <span className="block font-serif text-3xl text-[#F0C040] font-bold">₹7.5L</span>
+                                <span className="block font-serif text-3xl text-[#ffe588] font-bold">₹7.5L</span>
                                 <span className="block text-[11px] text-[#cdb89a] uppercase mt-1">Year 1 India</span>
                             </div>
                             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
-                                <span className="block font-serif text-3xl text-[#F0C040] font-bold">$17.2k</span>
+                                <span className="block font-serif text-3xl text-[#ffe588] font-bold">$17.2k</span>
                                 <span className="block text-[11px] text-[#cdb89a] uppercase mt-1">Year 2 USA</span>
                             </div>
                         </div>
