@@ -1,212 +1,315 @@
-import { useState, useRef } from "react";
-import Image from "next/image";
-import { motion, AnimatePresence, useInView } from "framer-motion";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
-const faqItems = [
-  {
-    number: "01",
-    title: "Where is Year 1 conducted?",
-    description:
-      "Year 1 is conducted at Sona Star , SCALE located in Sona Towers, 71 Millers Road, Vasanth Nagar, Bengaluru, Karnataka - 560052, India.",
-    image: "/homeimages/faq1.webp",
-  },
-  {
-    number: "02",
-    title: "Where is UWA located?",
-    description: "The University of West Alabama is located in Livingston, Alabama, USA.",
-    image: "/homeimages/faq2.webp",
-  },
-  {
-    number: "03",
-    title: "Is visa guaranteed?",
-    description: "No. Visa approval is solely at the discretion of the U.S. Embassy or Consulate.",
-    image: "/homeimages/faq3.webp",
-  },
-  {
-    number: "04",
-    title: "Is OPT guaranteed?",
-    description: "No. OPT, STEM OPT, employment, and H-1B outcomes are governed by U.S. immigration rules, employer requirements, and student eligibility.",
-    image: "/homeimages/faq4.webp",
-  },
-  {
-    number: "05",
-    title: "Why choose the 1+1 model?",
-    description: "It reduces one year of U.S. living cost exposure, gives students more time to prepare, and supports a smoother transition.",
-    image: "/homeimages/faq5.webp",
-  },
-];
+// ─── Types ────────────────────────────────────────────────────────────────────
+interface CostItem {
+    label: string;
+    amount: string;
+    note?: string;
+}
 
-export default function AcademiesSection() {
-  const [hovered, setHovered] = useState(0); // Default set to 0 (first FAQ)
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-60px" });
+interface YearCost {
+    title: string;
+    subtitle: string;
+    items: CostItem[];
+    totalLabel: string;
+    totalAmount: string;
+}
 
-  return (
-    <section ref={ref} id="faq" className="w-full bg-white py-16 sm:py-20 overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 ">
+// ─── Data (Only client-shared content) ─────────────────────────────────────
+const YEAR1_COST: YearCost = {
+    title: "Year 1 at SCALE, Bengaluru",
+    subtitle: "Foundation Year in India",
+    items: [
+        { label: "SCALE Year 1 Programme Fee", amount: "₹7,50,000" },
+    ],
+    totalLabel: "Total Year 1 Cost",
+    totalAmount: "₹7,50,000",
+};
 
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-8 sm:mb-10 md:mb-12 px-4 sm:px-0"
-        >
-          <div className="inline-block">
-            <p className="text-[#8c1d32] text-[10px] sm:text-xs font-semibold tracking-[3px] sm:tracking-[4px] uppercase relative mb-4 sm:mb-5">
-              Common Questions
-              <span className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-6 h-px bg-[#8c1d32]/40"></span>
-            </p>
-          </div>
-          <h2 className="font-serif text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.2] sm:leading-tight text-black">
-            Frequently Asked{" "}
-            <span className="text-[#8c1d32] relative inline-block">
-              Questions
-              <span className="absolute bottom-0 left-0 w-full h-0.5 sm:h-1 bg-[#8c1d32]/20 rounded-full"></span>
-              <span className="absolute bottom-0 left-0 w-1/3 h-0.5 sm:h-1 bg-[#8c1d32] rounded-full"></span>
-            </span>
-          </h2>
-        </motion.div>
+const YEAR2_COST: YearCost = {
+    title: "Year 2 at UWA, Alabama, USA",
+    subtitle: "Complete Your Degree in the United States",
+    items: [
+        { label: "UWA Year 2 estimated cost for 15 credits with housing, meal plan, Tiger One fee and insurance", amount: "$17,248" },
+    ],
+    totalLabel: "Total Year 2 Estimated Cost",
+    totalAmount: "$17,248",
+};
 
-        {/* Two-column: list left, image right */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 items-stretch">
+const EXCHANGE_RATE = {
+    rate: 95,
+    asOf: "May 30, 2026",
+    source: "Reference exchange rate",
+};
 
-          {/* FAQ list */}
-          <div className="w-full lg:w-[58%] flex flex-col">
-            {faqItems.map((item, i) => {
-              const active = hovered === i;
-              return (
-                <motion.div
-                  key={item.number}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ duration: 0.55, delay: 0.1 + i * 0.1 }}
-                  onMouseEnter={() => setHovered(i)}
-                  onMouseLeave={() => setHovered(i)} // Keep current on leave, don't reset
-                  className="group relative flex items-start gap-6 sm:gap-10 py-7 sm:py-8 border-b border-gray-200 cursor-pointer flex-1"
-                >
-                  {/* Active left accent line */}
-                  <motion.div
-                    animate={{ scaleY: active ? 1 : 0, opacity: active ? 1 : 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute left-0 top-0 bottom-0 w-[3px] bg-[#8c1d32] origin-top"
-                  />
+// ─── Animation Variants ──────────────────────────────────────────────────────
+const fadeInUp = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
-                  {/* Number */}
-                  <span
-                    className={`font-serif text-[48px] sm:text-[64px] leading-none select-none transition-colors duration-300 ${active ? "text-[#8c1d32]" : "text-gray-200"
-                      }`}
-                    style={{ minWidth: "80px" }}
-                  >
-                    {item.number}.
-                  </span>
+const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.1, delayChildren: 0.1 },
+    },
+};
 
-                  {/* Text */}
-                  <div className="pt-2 flex-1">
-                    <motion.h3
-                      animate={{ x: active ? 6 : 0 }}
-                      transition={{ duration: 0.3 }}
-                      className={`font-serif text-[22px] sm:text-[28px] leading-snug mb-2 transition-colors duration-300 ${active ? "text-[#8c1d32]" : "text-black"
-                        }`}
-                    >
-                      {item.title}
-                    </motion.h3>
-                    <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-[480px]">
-                      {item.description}
-                    </p>
-                  </div>
-
-                  {/* Mobile image (shows inline on small screens) */}
-                  <AnimatePresence>
-                    {active && (
-                      <motion.div
-                        key="mobile-img"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="lg:hidden absolute bottom-0 left-0 right-0 overflow-hidden"
-                      />
-                    )}
-                  </AnimatePresence>
-                </motion.div>
-              );
-            })}
-          </div>
-
-          {/* Sticky image panel — desktop only */}
-          <div className="hidden lg:flex w-[42%] items-stretch pl-10">
-            <div className="sticky top-32 w-full max-w-[518px] aspect-[3/4] relative rounded-sm overflow-hidden bg-gray-100 shadow-xl">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={faqItems[hovered].image}
-                  initial={{ opacity: 0, scale: 1.06, y: 20 }}
-                  animate={{ opacity: 1, scale: 1, y: 0 }}
-                  exit={{ opacity: 0, scale: 0.97, y: -10 }}
-                  transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  className="absolute inset-0"
-                >
-                  <Image
-                    src={faqItems[hovered].image}
-                    alt={faqItems[hovered].title}
-                    fill
-                    className="object-cover"
-                  />
-                  {/* Overlay with faq title */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: 0.2 }}
-                    className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent"
-                  >
-                    <p className="text-white font-serif text-xl leading-snug">
-                      {faqItems[hovered].title}
-                    </p>
-                  </motion.div>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Item number watermark on image */}
-              <AnimatePresence>
-                <motion.span
-                  key={`num-${hovered}`}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 0.18, x: 0 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                  className="absolute top-4 left-5 font-serif text-[90px] leading-none text-white select-none pointer-events-none"
-                >
-                  {faqItems[hovered].number}.
-                </motion.span>
-              </AnimatePresence>
+// ─── Breadcrumb component ────────────────────────────────────────────────────
+function Breadcrumb() {
+    return (
+        <nav aria-label="Breadcrumb" className="bg-[#f8f5f2] border-b border-[#e0d6ce] py-2.5">
+            <div className="max-w-[1440px] mx-auto px-6">
+                <ol className="flex items-center gap-1.5 list-none text-[13px] text-[#5a5652] flex-wrap">
+                    <li className="flex items-center">
+                        <Link href="/" className="text-[#AC1F2D] hover:underline no-underline">
+                            Home
+                        </Link>
+                        <span className="text-[#bbb] mx-1" aria-hidden="true">›</span>
+                    </li>
+                    <li className="flex items-center">
+                        <Link href="/admissions" className="text-[#AC1F2D] hover:underline no-underline">
+                            Admissions
+                        </Link>
+                        <span className="text-[#bbb] mx-1" aria-hidden="true">›</span>
+                    </li>
+                    <li>
+                        <span className="text-[#5a5652] font-medium" aria-current="page">
+                            Fees & Pathway Cost
+                        </span>
+                    </li>
+                </ol>
             </div>
-          </div>
-        </div>
+        </nav>
+    );
+}
 
-        {/* Mobile: show active image below list */}
-        <div className="lg:hidden mt-8">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`mob-${hovered}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.4 }}
-              className="w-full aspect-video relative rounded-sm overflow-hidden shadow-lg"
-            >
-              <Image
-                src={faqItems[hovered].image}
-                alt={faqItems[hovered].title}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-                <p className="text-white font-serif text-lg">{faqItems[hovered].title}</p>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+// ─── Cost Card Component ─────────────────────────────────────────────────────
+function CostCard({ data, delay = 0 }: { data: YearCost; delay?: number }) {
+    const totalInUSD = data.totalAmount === "$17,248" ? 17248 : null;
+    const totalInINR = totalInUSD ? totalInUSD * EXCHANGE_RATE.rate : null;
 
-      </div>
-    </section>
-  );
+    return (
+        <motion.div
+            variants={fadeInUp}
+            custom={delay}
+            initial="hidden"
+            animate="visible"
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
+            className="bg-white border border-[#e0d6ce] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all"
+        >
+            <div className="bg-gradient-to-r from-[#AC1F2D] to-[#8a1824] px-6 py-4">
+                <h2 className="text-white text-xl font-serif font-bold mb-1">{data.title}</h2>
+                <p className="text-[#e8c8a0] text-sm">{data.subtitle}</p>
+            </div>
+
+            <div className="p-6">
+                <div className="space-y-3 mb-6">
+                    {data.items.map((item, idx) => (
+                        <div key={idx} className="flex justify-between items-start border-b border-[#f0e6e0] pb-3 last:border-0">
+                            <div>
+                                <span className="text-[#2c2c2a] font-medium text-[15px]">{item.label}</span>
+                                {item.note && (
+                                    <p className="text-[11px] text-[#8a7a6e] mt-0.5">{item.note}</p>
+                                )}
+                            </div>
+                            <span className="text-[#AC1F2D] font-bold text-[16px] ml-4 whitespace-nowrap">
+                                {item.amount}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="bg-[#fdf5f0] rounded-lg p-4 mt-2">
+                    <div className="flex justify-between items-center">
+                        <span className="text-[#2c2c2a] font-semibold text-[15px]">{data.totalLabel}</span>
+                        <span className="text-[#AC1F2D] font-bold text-xl">{data.totalAmount}</span>
+                    </div>
+                    {totalInINR && (
+                        <div className="flex justify-between items-center mt-2 pt-2 border-t border-[#f0d8cc]">
+                            <span className="text-[12px] text-[#5a5652]">Approx. INR equivalent</span>
+                            <span className="text-[13px] font-semibold text-[#2c2c2a]">
+                                ₹{totalInINR.toLocaleString('en-IN')}
+                            </span>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </motion.div>
+    );
+}
+
+// ─── Total Summary Component ─────────────────────────────────────────────────
+function TotalSummary() {
+    const totalINRFirstYear = 750000;
+    const totalUSDSecondYear = 17248;
+    const totalINRSecondYear = totalUSDSecondYear * EXCHANGE_RATE.rate;
+    const grandTotalINR = totalINRFirstYear + totalINRSecondYear;
+
+    return (
+        <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            className="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl overflow-hidden shadow-lg mt-8"
+        >
+            <div className="px-6 py-5 border-b border-white/10">
+                <h3 className="text-white text-lg font-serif font-bold flex items-center gap-2">
+                    <span className="text-2xl">💰</span> Total Pathway Investment
+                </h3>
+                <p className="text-[#a8b2c1] text-sm mt-1">Complete 2-year cost breakdown (India + USA)</p>
+            </div>
+
+            <div className="p-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+                    <div className="bg-white/5 rounded-lg p-4 text-center">
+                        <p className="text-[#a8b2c1] text-xs uppercase tracking-wide">Year 1 (India)</p>
+                        <p className="text-white text-2xl font-bold mt-1">₹7,50,000</p>
+                        <p className="text-[#74b9ff] text-xs mt-1">SCALE, Bengaluru</p>
+                    </div>
+                    <div className="bg-white/5 rounded-lg p-4 text-center">
+                        <p className="text-[#a8b2c1] text-xs uppercase tracking-wide">Year 2 (USA)</p>
+                        <p className="text-white text-2xl font-bold mt-1">$17,248</p>
+                        <p className="text-[#74b9ff] text-xs mt-1">UWA, Alabama</p>
+                    </div>
+                    <div className="bg-[#AC1F2D]/20 rounded-lg p-4 text-center border border-[#AC1F2D]/30">
+                        <p className="text-[#e8c8a0] text-xs uppercase tracking-wide">Grand Total (INR)</p>
+                        <p className="text-[#F0C040] text-2xl font-bold mt-1">
+                            ₹{grandTotalINR.toLocaleString('en-IN')}
+                        </p>
+                        <p className="text-[#e8c8a0] text-xs mt-1">
+                            @ 1 USD = {EXCHANGE_RATE.rate} INR (as of {EXCHANGE_RATE.asOf})
+                        </p>
+                    </div>
+                </div>
+
+                <div className="bg-white/5 rounded-lg p-4">
+                    <div className="flex flex-col md:flex-row md:justify-between gap-3 text-sm">
+                        <div className="flex items-center gap-2">
+                            <span className="w-2 h-2 bg-[#F0C040] rounded-full"></span>
+                            <span className="text-[#a8b2c1]">Total INR Investment:</span>
+                            <span className="text-white font-semibold">₹{grandTotalINR.toLocaleString('en-IN')}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                            <span className="w-2 h-2 bg-[#74b9ff] rounded-full"></span>
+                            <span className="text-[#a8b2c1]">Total USD Investment:</span>
+                            <span className="text-white font-semibold">${totalUSDSecondYear.toLocaleString()}</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="mt-5 text-[12px] text-center text-[#a8b2c1] border-t border-white/10 pt-4">
+                    <p>† The USD to INR conversion rate is indicative based on {EXCHANGE_RATE.source} as of {EXCHANGE_RATE.asOf}. Actual costs may vary based on exchange rate fluctuations, living expenses, and individual choices.</p>
+                </div>
+            </div>
+        </motion.div>
+    );
+}
+
+// ─── Additional Fee Notes Component (Using only client shared notes) ─────────
+function FeeNotes() {
+    const notes = [
+        "Total Pathway estimate: India + USA in INR = 7,50,000(1st yr in India) + 16,38,560 (2nd yr in USA, dollar conversion rate 1$=95 on 30th May 2026) = INR 23,88,560/-",
+    ];
+
+    return (
+        <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-xl p-6 mt-6"
+        >
+            <h4 className="text-[#AC1F2D] font-serif font-bold text-lg mb-3 flex items-center gap-2">
+                <span>📋</span> Total Pathway Estimate
+            </h4>
+            <ul className="space-y-2">
+                {notes.map((note, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-[#5a5652] text-sm leading-relaxed">
+                        <span className="text-[#AC1F2D] text-lg leading-5">•</span>
+                        <span>{note}</span>
+                    </li>
+                ))}
+            </ul>
+        </motion.div>
+    );
+}
+
+// ─── Main Page Component ───────────────────────────────────────────────────
+export default function FeesStructurePage() {
+    return (
+        <>
+            {/* Hero Section */}
+            <section className="bg-[#AC1F2D] py-12 lg:py-16 relative overflow-hidden">
+                <div className="absolute -right-[60px] -top-[60px] w-[360px] h-[360px] rounded-full bg-white/5 pointer-events-none"></div>
+                <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-[#F0C040]/10 pointer-events-none"></div>
+                <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-[#F0C040]/5 pointer-events-none"></div>
+
+                <div className="max-w-[1440px] mx-auto px-6 relative z-10">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+                        <div className="lg:max-w-[60%]">
+                            <div className="inline-flex items-center gap-2 bg-[#F0C040]/20 border border-[#F0C040]/70 text-[#f8e8a0] text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
+                                <span className="w-1.5 h-1.5 bg-[#F0C040] rounded-full"></span>
+                                Affordable International Degree
+                            </div>
+                            <h1 className="font-serif text-4xl lg:text-5xl text-white font-bold mb-4 leading-tight">
+                                Fees & <span className="text-[#F0C040]">Pathway Cost</span>
+                            </h1>
+                            <p className="text-[#e8c8a0] text-base lg:text-lg max-w-[600px] leading-relaxed">
+                                Transparent, structured pricing for your MS in Data Science — Year 1 in India, Year 2 at UWA, USA.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
+                                <span className="block font-serif text-3xl text-[#F0C040] font-bold">₹7.5L</span>
+                                <span className="block text-[11px] text-[#cdb89a] uppercase mt-1">Year 1 India</span>
+                            </div>
+                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
+                                <span className="block font-serif text-3xl text-[#F0C040] font-bold">$17.2k</span>
+                                <span className="block text-[11px] text-[#cdb89a] uppercase mt-1">Year 2 USA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Breadcrumb */}
+            <Breadcrumb />
+
+            {/* Main Content Area */}
+            <div className="py-9">
+                <div className="max-w-[1440px] mx-auto px-6">
+                    <div className="mx-auto">
+                        <div className="mb-8 text-center">
+                            <p className="text-[#5a5652] text-base leading-relaxed">
+                                The MS in Data Science follows a <strong className="text-[#AC1F2D]">2-year pathway model</strong> designed to make U.S. education more accessible.
+                                Pay Indian tuition for your first year, then complete your degree on campus at the University of West Alabama.
+                            </p>
+                        </div>
+
+                        <motion.div
+                            variants={staggerContainer}
+                            initial="hidden"
+                            animate="visible"
+                            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                        >
+                            <CostCard data={YEAR1_COST} delay={0} />
+                            <CostCard data={YEAR2_COST} delay={0.1} />
+                        </motion.div>
+
+
+                        <FeeNotes />
+
+                        {/* Disclaimer */}
+                        <div className="text-center mt-8 text-[11px] text-[#8a7a6e]">
+                            <p>All figures are estimates and subject to change. For the most current fee structure, please contact the admissions office.</p>
+                            <p className="mt-1">© {new Date().getFullYear()} SCALE + UWA Pathway. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
 }
