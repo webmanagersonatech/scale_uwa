@@ -195,8 +195,8 @@ export default function WhyChooseSection() {
                             onClick={handlePrev}
                             disabled={startIndex === 0}
                             className={`p-2 rounded-full border border-gray-300 transition-all duration-300 ${startIndex === 0
-                                    ? "opacity-40 cursor-not-allowed"
-                                    : "hover:bg-gray-100 hover:scale-110 cursor-pointer"
+                                ? "opacity-40 cursor-not-allowed"
+                                : "hover:bg-gray-100 hover:scale-110 cursor-pointer"
                                 }`}
                         >
                             <ArrowLeft size={20} className="text-gray-700" />
@@ -205,8 +205,8 @@ export default function WhyChooseSection() {
                             onClick={handleNext}
                             disabled={startIndex >= maxStartIndex}
                             className={`p-2 rounded-full border border-gray-300 transition-all duration-300 ${startIndex >= maxStartIndex
-                                    ? "opacity-40 cursor-not-allowed"
-                                    : "hover:bg-gray-100 hover:scale-110 cursor-pointer"
+                                ? "opacity-40 cursor-not-allowed"
+                                : "hover:bg-gray-100 hover:scale-110 cursor-pointer"
                                 }`}
                         >
                             <ArrowRight size={20} className="text-gray-700" />
@@ -223,10 +223,10 @@ export default function WhyChooseSection() {
                         exit={{ opacity: 0, x: -30 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
                         className={`grid gap-5 ${cardsPerPage === 1
-                                ? "grid-cols-1 max-w-sm mx-auto"
-                                : cardsPerPage === 2
-                                    ? "grid-cols-1 sm:grid-cols-2"
-                                    : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+                            ? "grid-cols-1 max-w-sm mx-auto"
+                            : cardsPerPage === 2
+                                ? "grid-cols-1 sm:grid-cols-2"
+                                : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
                             }`}
                     >
                         {visibleCards.map((card, i) => (
@@ -236,7 +236,7 @@ export default function WhyChooseSection() {
                                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                                 transition={{ duration: 0.5, delay: 0.1 + i * 0.1, ease: "easeOut" }}
                                 whileHover={{ y: -4, transition: { duration: 0.25 } }}
-                                className="group relative border border-gray-200 backdrop-blur-sm bg-white/80 p-6 sm:p-8 flex flex-col items-center text-center cursor-pointer overflow-hidden rounded-sm shadow-sm"
+                                className="group relative border border-gray-200 backdrop-blur-sm bg-white/80 p-4 sm:p-5 flex flex-col items-center text-center cursor-pointer overflow-hidden rounded-sm shadow-sm"
                             >
                                 {/* Hover background fill */}
                                 <motion.div
@@ -246,61 +246,24 @@ export default function WhyChooseSection() {
                                     transition={{ duration: 0.3 }}
                                 />
 
-                                {/* Icon */}
+                                {/* Icon - reduced margin and size if needed */}
                                 <motion.div
                                     whileHover={{ scale: 1.05, rotate: 2 }}
                                     transition={{ duration: 0.3 }}
-                                    className="relative z-10 mb-5 text-gray-800"
+                                    className="relative z-10 mb-3 text-gray-800 [&>svg]:w-8 [&>svg]:h-8"
                                 >
                                     {card.icon}
                                 </motion.div>
 
-                                {/* Title */}
-                                <h3 className="relative z-10 font-serif text-gray-900 text-lg sm:text-xl leading-snug mb-3 whitespace-pre-line">
+                                {/* Title - reduced margin */}
+                                <h3 className="relative z-10 font-serif text-gray-900 text-base sm:text-lg leading-snug mb-2 whitespace-pre-line">
                                     {card.title}
                                 </h3>
 
-                                {/* Description */}
-                                <p className="relative z-10 text-gray-500 text-sm leading-relaxed mb-6 max-w-[240px]">
+                                {/* Description - reduced margin and max-width */}
+                                <p className="relative z-10 text-gray-500 text-sm leading-relaxed mb-4 max-w-[220px]">
                                     {card.description}
                                 </p>
-
-                                {/* Read More button */}
-                            <motion.button
-  whileHover={{ scale: 1.03 }}
-  whileTap={{ scale: 0.97 }}
-  className="
-    relative z-10 mt-auto
-
-    bg-[#078671]
-    hover:bg-[#067864]
-
-    text-white
-    font-bold
-    uppercase
-    tracking-[2px]
-    text-[11px]
-
-    py-3 px-8
-
-    rounded-tr-[20px]
-    rounded-bl-[20px]
-    rounded-tl-none
-    rounded-br-none
-
-    inline-flex
-    items-center
-    justify-center
-    gap-2
-
-    transition-all
-    duration-300
-    shadow-md
-  "
->
-  Read More
-  <ArrowUpRight size={14} />
-</motion.button>
                             </motion.div>
                         ))}
                     </motion.div>
@@ -314,8 +277,8 @@ export default function WhyChooseSection() {
                                 key={idx}
                                 onClick={() => setStartIndex(idx)}
                                 className={`transition-all duration-300 rounded-full ${startIndex === idx
-                                        ? "w-8 h-1.5 bg-gray-600"
-                                        : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
+                                    ? "w-8 h-1.5 bg-gray-600"
+                                    : "w-1.5 h-1.5 bg-gray-300 hover:bg-gray-400"
                                     }`}
                             />
                         ))}

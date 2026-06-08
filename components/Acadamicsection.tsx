@@ -135,7 +135,7 @@ export default function AcademiesSection() {
 
           {/* Sticky image panel — desktop only */}
           <div className="hidden lg:flex w-[42%] items-stretch pl-10">
-            <div className="sticky top-32 w-full max-w-[518px] aspect-[3/4] relative rounded-sm overflow-hidden bg-gray-100 shadow-xl">
+            <div className="sticky top-32 w-full max-w-[518px] aspect-[3/4] relative rounded-sm overflow-hidden bg-gray-100">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={faqItems[hovered].image}

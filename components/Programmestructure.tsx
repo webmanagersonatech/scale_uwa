@@ -28,7 +28,7 @@ export default function ProgramStructure() {
                             30-Credit
                         </span>
                         <br className="sm:hidden" />
-                        <span className="inline-block mt-1 sm:mt-0"> Program Structure</span>
+                        <span className="inline-block mt-1 sm:mt-0 ml-2"> Program Structure</span>
                     </h2>
 
                     <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
