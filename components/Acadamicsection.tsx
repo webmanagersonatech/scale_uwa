@@ -25,8 +25,9 @@ const faqItems = [
   },
   {
     number: "04",
-    title: "Is OPT guaranteed?",
-    description: "No. OPT, STEM OPT, employment, and H-1B outcomes are governed by U.S. immigration rules, employer requirements, and student eligibility.",
+    title: "Is the Post-Study Work Visa (STEM OPT) guaranteed?",
+    description:
+      "No. Post-Study Work Visa opportunities through OPT/STEM OPT, employment, and H-1B outcomes are governed by U.S. immigration rules, employer requirements, and individual student eligibility.",
     image: "/homeimages/faq4.webp",
   },
   {

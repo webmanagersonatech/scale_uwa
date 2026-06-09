@@ -173,13 +173,18 @@ export default function HeroSection() {
                   <div className="text-xs text-gray-500 mt-1">Duration</div>
                 </div>
 
-              
+
 
                 {/* OPT */}
                 <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
                   <Globe className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
-                  <div className="text-xl font-bold text-gray-900 leading-tight">3yr</div>
-                  <div className="text-xs text-gray-500 mt-1">OPT Duration</div>
+                  <div className="text-xl font-bold text-gray-900 leading-tight">3 Yrs</div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    Post-Study Work Visa
+                  </div>
+                  <div className="text-[10px] text-[#8c1d32] font-medium">
+                    (STEM OPT)
+                  </div>
                 </div>
 
                 {/* Savings */}

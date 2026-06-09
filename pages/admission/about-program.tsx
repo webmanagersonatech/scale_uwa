@@ -1,5 +1,3 @@
-
-
 import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,9 +51,9 @@ const WHY_CARDS: WhyCard[] = [
     },
     {
         number: "04",
-        title: "3-Year OPT Opportunity",
-        body: "Eligible students who complete the required U.S. study and meet applicable U.S. immigration rules may be able to access OPT/STEM OPT opportunities. Subject to USCIS rules, visa status, and employer requirements.",
-        highlight: "STEM OPT eligible",
+        title: "Post-Study Work Visa (STEM OPT)",
+        body: "Eligible graduates may access up to 3 years of Post-Study Work Visa opportunities through the STEM OPT pathway, subject to U.S. immigration regulations and individual eligibility.",
+        highlight: "Up to 3 Years",
     },
     {
         number: "05",
@@ -253,6 +251,128 @@ function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
 
 // ─── Tab Content Components ───────────────────────────────────────────────────
 
+// ADMISSIONS REQUIREMENTS COMPONENT (UPDATED: GRE/GMAT removed)
+function AdmissionsRequirements() {
+    return (
+        <motion.section
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            className="bg-white border border-[#e0d6ce] rounded-lg p-7 mb-6 shadow-sm"
+            aria-labelledby="admissions-req"
+        >
+            <h2
+                id="admissions-req"
+                className="font-serif text-xl text-[#AC1F2D] font-bold mb-5 pb-3 border-b-2 border-[#f5e8e0]"
+            >
+                Admissions Requirements
+            </h2>
+
+            {/* UPDATED: No GRE/GMT requirement - standardised tests not needed */}
+            <div className="mb-6">
+                <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full py-1.5 px-4 mb-4">
+                    <span className="w-2 h-2 bg-green-600 rounded-full"></span>
+                    <span className="text-green-800 text-sm font-medium">
+                        GRE/GMAT not required
+                    </span>
+                </div>
+                <p className="text-[#5a5652] text-sm leading-relaxed">
+                    The program does not require GRE or GMAT scores for admission.
+                    Candidates are evaluated based on their academic background,
+                    professional experience, and demonstrated interest in data science.
+                </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {/* Academic Background */}
+                <div className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                        <svg className="w-5 h-5 text-[#AC1F2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                        </svg>
+                        <h3 className="font-semibold text-[#2c2c2a]">Academic Background</h3>
+                    </div>
+                    <ul className="space-y-2 text-sm text-[#5a5652] list-disc pl-5">
+                        <li>Bachelor&apos;s degree from an accredited institution</li>
+                        <li>Minimum 3.0 GPA (on a 4.0 scale) or equivalent</li>
+                        <li>Strong quantitative and analytical foundation</li>
+                        <li>Programming exposure recommended but not mandatory</li>
+                    </ul>
+                </div>
+
+                {/* English Proficiency */}
+                <div className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                        <svg className="w-5 h-5 text-[#AC1F2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                        </svg>
+                        <h3 className="font-semibold text-[#2c2c2a]">English Proficiency</h3>
+                    </div>
+                    <ul className="space-y-2 text-sm text-[#5a5652] list-disc pl-5">
+                        <li>TOEFL iBT: Minimum 71</li>
+                        <li>IELTS: Minimum 6.0 overall</li>
+                        <li>Duolingo: Minimum 95</li>
+                        <li className="text-[#AC1F2D] font-medium mt-2">Waivers available for qualifying applicants</li>
+                    </ul>
+                </div>
+
+                {/* Application Materials */}
+                <div className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                        <svg className="w-5 h-5 text-[#AC1F2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <h3 className="font-semibold text-[#2c2c2a]">Application Materials</h3>
+                    </div>
+                    <ul className="space-y-2 text-sm text-[#5a5652] list-disc pl-5">
+                        <li>Completed online application form</li>
+                        <li>Official transcripts from all institutions attended</li>
+                        <li>Statement of Purpose (500-750 words)</li>
+                        <li>Two letters of recommendation</li>
+                        <li>Current resume/CV</li>
+                    </ul>
+                </div>
+
+                {/* Important Deadlines */}
+                <div className="bg-[#fdf5f0] border border-[#f0d8cc] rounded-lg p-4">
+                    <div className="flex items-center gap-2 mb-3">
+                        <svg className="w-5 h-5 text-[#AC1F2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <h3 className="font-semibold text-[#2c2c2a]">Important Deadlines</h3>
+                    </div>
+                    <div className="space-y-2 text-sm">
+                        <div className="flex justify-between items-center border-b border-[#e0d6ce] pb-1">
+                            <span className="font-medium text-[#5a5652]">Fall Semester:</span>
+                            <span className="text-[#2c2c2a]">July 15</span>
+                        </div>
+                        <div className="flex justify-between items-center border-b border-[#e0d6ce] pb-1">
+                            <span className="font-medium text-[#5a5652]">Spring Semester:</span>
+                            <span className="text-[#2c2c2a]">December 1</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                            <span className="font-medium text-[#5a5652]">Summer Semester:</span>
+                            <span className="text-[#2c2c2a]">April 15</span>
+                        </div>
+                    </div>
+                    <div className="mt-3 pt-2 text-xs text-[#8a8682] italic">
+                        *International applicants are encouraged to apply early to allow time for visa processing.
+                    </div>
+                </div>
+            </div>
+
+            {/* Application Process Note */}
+            <div className="mt-5 p-4 bg-[#f0f4f8] border border-[#dce3ec] rounded-lg">
+                <p className="text-sm text-[#2c2c2a]">
+                    <span className="font-bold">Need assistance? </span>
+                    Our admissions team is available to guide you through the application process,
+                    review your eligibility, and help with any questions about requirements or deadlines.
+                </p>
+            </div>
+        </motion.section>
+    );
+}
+
 function WhoShouldApply() {
     return (
         <motion.section
@@ -262,14 +382,125 @@ function WhoShouldApply() {
             className="bg-white border border-[#e0d6ce] rounded-lg p-7 mb-6 shadow-sm"
             aria-labelledby="who-apply"
         >
-            <h2 id="who-apply" className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]">
+            <h2
+                id="who-apply"
+                className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]"
+            >
                 Who Should Apply?
             </h2>
-            <p className="text-sm lg:text-base text-[#5a5652] leading-relaxed mb-5">
-                This Program is designed for students and professionals with a
-                strong quantitative foundation who are ready to build a career in
-                data science.
+
+            <p className="text-sm lg:text-base text-[#5a5652] leading-relaxed mb-6">
+                The MS in Data Science pathway is designed for ambitious students
+                and professionals who want to build globally relevant skills in
+                data science while benefiting from a cost-effective 1+1
+                international study model.
             </p>
+
+            {/* Eligibility / Pathway Map */}
+            <div className="bg-gradient-to-r from-[#fdf7f2] to-[#fffaf5] border border-[#e0d6ce] rounded-lg p-5 mb-6">
+                <h3 className="text-lg font-semibold text-[#AC1F2D] text-center mb-4">
+                    1+1 International Pathway
+                </h3>
+
+                <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <div className="text-center">
+                        {/* India Flag - SVG */}
+                        <div className="flex justify-center mb-2">
+                            <svg width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="10.67" fill="#FF9933" />
+                                <rect y="10.67" width="48" height="10.66" fill="#FFFFFF" />
+                                <rect y="21.33" width="48" height="10.67" fill="#138808" />
+                                <circle cx="24" cy="16" r="5.33" fill="#000080" />
+                                <circle cx="24" cy="16" r="4" fill="#FFFFFF" />
+                                <circle cx="24" cy="16" r="3" fill="#000080" />
+                            </svg>
+                        </div>
+                        <h4 className="font-semibold text-[#2d2a26]">
+                            Year 1
+                        </h4>
+                        <p className="text-sm text-[#5a5652]">
+                            Sona Star, SCALE, Bengaluru
+                        </p>
+                        <p className="text-xs text-[#8a8682] mt-1">
+                            India
+                        </p>
+                    </div>
+
+                    <div className="text-3xl text-[#AC1F2D] font-bold">
+                        →
+                    </div>
+
+                    <div className="text-center">
+                        {/* USA Flag - SVG */}
+                        <div className="flex justify-center mb-2">
+                            <svg width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="32" fill="#B22234" />
+                                <g fill="#FFFFFF">
+                                    <rect width="48" height="2.46" />
+                                    <rect y="4.92" width="48" height="2.46" />
+                                    <rect y="9.84" width="48" height="2.46" />
+                                    <rect y="14.76" width="48" height="2.46" />
+                                    <rect y="19.68" width="48" height="2.46" />
+                                    <rect y="24.6" width="48" height="2.46" />
+                                    <rect y="29.52" width="48" height="2.46" />
+                                </g>
+                                <rect width="18.46" height="16" fill="#3C3B6E" />
+                                <g fill="#FFFFFF">
+                                    <circle cx="1.5" cy="1.5" r="0.8" />
+                                    <circle cx="4.5" cy="1.5" r="0.8" />
+                                    <circle cx="7.5" cy="1.5" r="0.8" />
+                                    <circle cx="10.5" cy="1.5" r="0.8" />
+                                    <circle cx="13.5" cy="1.5" r="0.8" />
+                                    <circle cx="16.5" cy="1.5" r="0.8" />
+                                    <circle cx="1.5" cy="4.5" r="0.8" />
+                                    <circle cx="4.5" cy="4.5" r="0.8" />
+                                    <circle cx="7.5" cy="4.5" r="0.8" />
+                                    <circle cx="10.5" cy="4.5" r="0.8" />
+                                    <circle cx="13.5" cy="4.5" r="0.8" />
+                                    <circle cx="16.5" cy="4.5" r="0.8" />
+                                    <circle cx="1.5" cy="7.5" r="0.8" />
+                                    <circle cx="4.5" cy="7.5" r="0.8" />
+                                    <circle cx="7.5" cy="7.5" r="0.8" />
+                                    <circle cx="10.5" cy="7.5" r="0.8" />
+                                    <circle cx="13.5" cy="7.5" r="0.8" />
+                                    <circle cx="16.5" cy="7.5" r="0.8" />
+                                    <circle cx="1.5" cy="10.5" r="0.8" />
+                                    <circle cx="4.5" cy="10.5" r="0.8" />
+                                    <circle cx="7.5" cy="10.5" r="0.8" />
+                                    <circle cx="10.5" cy="10.5" r="0.8" />
+                                    <circle cx="13.5" cy="10.5" r="0.8" />
+                                    <circle cx="16.5" cy="10.5" r="0.8" />
+                                    <circle cx="1.5" cy="13.5" r="0.8" />
+                                    <circle cx="4.5" cy="13.5" r="0.8" />
+                                    <circle cx="7.5" cy="13.5" r="0.8" />
+                                    <circle cx="10.5" cy="13.5" r="0.8" />
+                                    <circle cx="13.5" cy="13.5" r="0.8" />
+                                    <circle cx="16.5" cy="13.5" r="0.8" />
+                                </g>
+                            </svg>
+                        </div>
+                        <h4 className="font-semibold text-[#2d2a26]">
+                            Year 2
+                        </h4>
+                        <p className="text-sm text-[#5a5652]">
+                            UWA, Alabama
+                        </p>
+                        <p className="text-xs text-[#8a8682] mt-1">
+                            United States
+                        </p>
+                    </div>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-[#e0d6ce]">
+                    <p className="text-center text-sm text-[#5a5652]">
+                        Eligible students begin their journey in India and complete
+                        their degree in the USA through the Sona Star, SCALE × UWA pathway,
+                        saving up to <strong className="text-[#AC1F2D]">~₹72 Lakhs</strong> compared to many
+                        traditional study-abroad routes.
+                    </p>
+                </div>
+            </div>
+
             <motion.div
                 variants={staggerContainer}
                 initial="hidden"
@@ -281,13 +512,17 @@ function WhoShouldApply() {
                         key={group.label}
                         variants={fadeInUp}
                         custom={idx}
-                        whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-                        className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-md p-3.5"
+                        whileHover={{
+                            scale: 1.02,
+                            transition: { duration: 0.2 },
+                        }}
+                        className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-md p-3.5 hover:shadow-md transition-shadow"
                     >
                         <div className="text-[11px] font-bold text-[#AC1F2D] uppercase tracking-[0.8px] mb-2">
                             {group.label}
                         </div>
-                        <ul className="list-none p-0">
+
+                        <ul className="list-none p-0 space-y-1.5">
                             {group.items.map((item) => (
                                 <li
                                     key={item}
@@ -506,8 +741,8 @@ export default function AboutProgramPage() {
                 <div className="max-w-[1440px] mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                         <div className="lg:max-w-[55%]">
-                            <div className="inline-flex items-center gap-2 bg-[#ffe588]/20 border border-[#ffe588]/70 text-[#f8e8a0] text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
-                                <span className="w-1.5 h-1.5 bg-[#ffe588] rounded-full"></span>
+                            <div className="inline-flex items-center gap-2 bg-[#ffe588]/20 border border-[#ffe588]/70 text-[#f8e8a0] text-lg tracking-[1.2px] uppercase py-2.5 px-6  mb-4">
+                                <span className="w-2 h-2 bg-[#ffe588] rounded-full"></span>
                                 MS in Data Science
                             </div>
                             <h1 className="font-serif text-4xl lg:text-5xl text-white font-bold mb-4 leading-tight">
@@ -574,10 +809,10 @@ export default function AboutProgramPage() {
                                     and start your  Sona Star , SCALE pathway today.
                                 </div>
                                 <div className="flex gap-3 flex-wrap">
-                                    <Link href="https://hikaapp.sonastar.com/INS-0VVEACMY" target="_blank"  className="inline-block bg-[#ffe588] text-[#6B1313] text-sm lg:text-base font-bold py-2.5 px-6 rounded-md no-underline transition-colors hover:bg-[#ffd050]">
+                                    <Link href="https://hikaapp.sonastar.com/INS-0VVEACMY" target="_blank" className="inline-block bg-[#ffe588] text-[#6B1313] text-sm lg:text-base font-bold py-2.5 px-6 rounded-md no-underline transition-colors hover:bg-[#ffd050]">
                                         Apply Now
                                     </Link>
-                                  
+
                                 </div>
                             </div>
                         </main>

@@ -58,8 +58,9 @@ const steps = [
     },
     {
         number: "07",
-        title: "OPT / Career Pathway",
-        description: "Apply for OPT/STEM OPT subject to U.S. government rules and eligibility. ",
+        title: "Post-Study Work Visa (STEM OPT) Career Pathway",
+        description:
+            "Eligible graduates may access up to 3 years of Post-Study Work Visa opportunities through the STEM OPT pathway, subject to U.S. government regulations, employer requirements, and individual eligibility.",
         icon: Briefcase,
     },
 ];
@@ -172,7 +173,7 @@ export default function Admissions() {
                                                 {step.description}
                                             </p>
 
-                                      
+
                                         </div>
                                     </div>
                                 </motion.div>

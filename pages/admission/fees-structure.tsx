@@ -10,17 +10,16 @@ interface CostItem {
 
 // ─── Data (Only client-shared content) ─────────────────────────────────────
 const RECOMMENDED_PATHWAY = {
-
-    subtitle: "Sona Star , SCALE + UWA Pathway",
-    description: "Year 1 at Sona Star, SCALE Bengaluru, Year 2 on campus at UWA, Alabama. Best value + US experience.",
+    subtitle: "Sona Star, SCALE + UWA Pathway",
+    description: "Year 1 at Sona Star, SCALE Bengaluru | Year 2 on campus at UWA, Alabama. Best value + US experience.",
     items: [
-        { label: "Year 1 at Sona Star , SCALE", amount: "₹7,50,000" },
+        { label: "Year 1 at Sona Star, SCALE", amount: "₹7,50,000" },
         { label: "Year 2 at UWA (COA)", amount: "$17,248" },
         { label: "Potential Scholarship", amount: "up to USD 5,000", note: "Merit-based, subject to eligibility" },
     ],
     totalLabel: "Total Estimate (2 Years)",
     totalAmount: "~₹23.9 lakh",
-    savingsBadge: "Save ~50% vs Full UWA Route",
+    savingsBadge: "Save ~₹72 Lakhs vs Traditional MS",
 };
 
 const EXCHANGE_RATE = {
@@ -77,12 +76,22 @@ function RecommendedPathwayCard() {
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
             className="bg-white border-2 border-[#AC1F2D] rounded-xl overflow-hidden shadow-lg transition-all relative"
         >
-  
             {/* Header */}
             <div className="bg-gradient-to-r from-[#AC1F2D] to-[#8a1824] px-6 py-5">
-              
                 <p className="text-[#e8c8a0] text-sm font-medium">{RECOMMENDED_PATHWAY.subtitle}</p>
                 <p className="text-white/80 text-sm mt-2 max-w-2xl">{RECOMMENDED_PATHWAY.description}</p>
+                
+                {/* Two Key Numbers: 1+1 Pathway Model + ₹72 Lakhs Savings */}
+                <div className="flex flex-wrap gap-3 mt-4">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-1.5 flex items-center gap-2">
+                        <span className="text-white font-bold text-base">1+1</span>
+                        <span className="text-white/70 text-xs">Pathway Model</span>
+                    </div>
+                    <div className="bg-[#ffe588]/20 backdrop-blur-sm rounded-lg px-3 py-1.5 flex items-center gap-2">
+                        <span className="text-[#ffe588] font-bold text-base">~₹72 Lakhs</span>
+                        <span className="text-white/70 text-xs">Total Savings</span>
+                    </div>
+                </div>
             </div>
 
             {/* Body */}
@@ -111,9 +120,9 @@ function RecommendedPathwayCard() {
                             <span className="text-[#2c2c2a] font-semibold text-base">{RECOMMENDED_PATHWAY.totalLabel}</span>
                             <span className="text-[#AC1F2D] font-bold text-3xl ml-3">{RECOMMENDED_PATHWAY.totalAmount}</span>
                         </div>
-                        <div className="bg-[#AC1F2D]/10 px-4 py-2  border border-[#AC1F2D]/30 self-start md:self-auto">
+                        <div className="bg-[#AC1F2D]/10 px-4 py-2 border border-[#AC1F2D]/30 self-start md:self-auto">
                             <span className="text-[#AC1F2D] font-bold text-sm flex items-center gap-1">
-                                {RECOMMENDED_PATHWAY.savingsBadge}
+                                💰 {RECOMMENDED_PATHWAY.savingsBadge}
                             </span>
                         </div>
                     </div>
@@ -142,8 +151,6 @@ function RecommendedPathwayCard() {
                         </div>
                     </div>
                 </div>
-
-       
             </div>
         </motion.div>
     );
@@ -177,10 +184,22 @@ function FeeNotes() {
                     <span className="text-[#AC1F2D] text-lg leading-5">•</span>
                     <span>
                         <strong className="font-semibold">Savings:</strong> Compared to completing full 2 years directly at UWA, 
-                        this pathway saves approximately <strong className="text-[#AC1F2D]">50%</strong> on total tuition and living costs.
+                        this pathway saves approximately <strong className="text-[#AC1F2D]">~₹72 Lakhs</strong> on total tuition and living costs.
                     </span>
                 </li>
             </ul>
+
+            {/* OPT → Post-Study Work Visa (STEM) - Explicit Label */}
+            <div className="mt-5 pt-4 border-t border-[#e0d6ce] bg-[#e8f0fe] rounded-lg p-4">
+                <p className="text-[#2c2c2a] text-sm font-medium flex items-start gap-3">
+                    <span className="text-[#AC1F2D] text-xl">🎓</span>
+                    <span className="leading-relaxed">
+                        <strong className="text-[#AC1F2D]">OPT (Optional Practical Training):</strong> Functions as a 
+                        <strong className="text-[#AC1F2D]"> Post-Study Work Visa — STEM OPT Pathway</strong>. 
+                        Eligible for <strong>36 months (3 years)</strong> of U.S. work authorization after graduation.
+                    </span>
+                </p>
+            </div>
         </motion.div>
     );
 }
@@ -200,13 +219,13 @@ export default function FeeStructurePage() {
                         <div className="lg:max-w-[60%]">
                             <div className="inline-flex items-center gap-2 bg-[#ffe588]/20 border border-[#ffe588]/70 text-[#f8e8a0] text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
                                 <span className="w-1.5 h-1.5 bg-[#ffe588] rounded-full"></span>
-                                Affordable International Degree
+                                Affordable International Degree 
                             </div>
                             <h1 className="font-serif text-4xl lg:text-5xl text-white font-bold mb-4 leading-tight">
                                 Fee & <span className="text-[#ffe588]">Pathway Cost</span>
                             </h1>
                             <p className="text-[#e8c8a0] text-base lg:text-lg max-w-[600px] leading-relaxed">
-                                Transparent, structured pricing for your MS in Data Science — Year 1 Sona Star , SCALE in India, Year 2 at UWA, USA.
+                                Transparent, structured pricing for your <strong className="text-white text-lg md:text-xl">MS in Data Science</strong> — Year 1 at Sona Star, SCALE in India, Year 2 at UWA, USA.
                             </p>
                         </div>
 
@@ -233,8 +252,9 @@ export default function FeeStructurePage() {
                     <div className="mx-auto">
                         <div className="mb-8 text-center">
                             <p className="text-[#5a5652] text-base leading-relaxed">
-                                The MS in Data Science follows a <strong className="text-[#AC1F2D]">2-year pathway model</strong> designed to make U.S. education more accessible.
+                                The <strong className="text-[#AC1F2D] text-lg md:text-xl">MS in Data Science</strong> follows a <strong className="text-[#AC1F2D]">1+1 pathway model</strong> designed to make U.S. education more accessible.
                                 Pay Indian tuition for your first year, then complete your degree on campus at the University of West Alabama.
+                              
                             </p>
                         </div>
 

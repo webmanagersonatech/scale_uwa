@@ -1,5 +1,3 @@
-
-
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,7 +10,10 @@ import {
   TrendingUp,
   Award,
   Clock,
-  Globe
+  Globe,
+  DollarSign,
+  PiggyBank,
+  TrendingDown
 } from "lucide-react";
 
 export default function FounderSection() {
@@ -43,9 +44,28 @@ export default function FounderSection() {
     transition: { duration: 0.7, ease: [0.25, 0.1, 0.25, 1], delay },
   });
 
+  // Two Large Highlight Cards/Statistics
+  const HighlightStats = [
+    {
+      mainNumber: "1+1",
+      subText: "Program Structure",
+      description: "1 Year in India + 1 Year in USA",
+      icon: BookOpen,
+      gradient: "from-[#8c1d32] to-[#c72a48]",
+      bgGradient: "from-rose-50 to-red-50"
+    },
+    {
+      mainNumber: "~₹72 Lakhs",
+      subText: "Estimated Cost Savings",
+      description: "Compared to traditional 2-year USA route",
+      icon: PiggyBank,
+      gradient: "from-[#078671] to-[#0a9b82]",
+      bgGradient: "from-emerald-50 to-teal-50"
+    }
+  ];
+
   // Program comparison data
   const ProgramStats = [
-
     {
       number: "1+1",
       label: "Sona × UWA Route",
@@ -90,7 +110,7 @@ export default function FounderSection() {
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative z-10">
 
-        {/* ── LEFT: Stacked Images + Stats Cards ── */}
+        {/* ── LEFT: Stacked Images + Two Large Highlight Cards ── */}
         <div className="flex-1 w-full">
           {/* Images Stack */}
           <motion.div
@@ -162,37 +182,62 @@ export default function FounderSection() {
             </motion.div>
           </motion.div>
 
-          {/* Stats Cards - Program Comparison */}
+          {/* TWO LARGE HIGHLIGHT CARDS */}
+          {/* TWO LARGE HIGHLIGHT CARDS - FLEX DIRECTION (SIDE BY SIDE) */}
           <motion.div
             {...slideInLeft(0.3)}
-            className="grid grid-cols-4 gap-2 sm:gap-6 max-w-[500px] mx-auto lg:mx-0"
+            className="flex flex-row flex-wrap gap-6 max-w-full mx-auto lg:mx-0"
           >
-            {ProgramStats.map((stat, index) => (
+            {HighlightStats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={
-                  isInView
-                    ? { opacity: 1, y: 0 }
-                    : { opacity: 0, y: 20 }
-                }
-                transition={{
-                  duration: 0.4,
-                  delay: 0.3 + index * 0.08,
-                }}
-                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                whileHover={{ scale: 1.02 }}
+                className="flex-1 min-w-[200px]"
               >
-                <div className="text-lg sm:text-3xl font-bold text-[#C8102E] mb-1">
-                  {stat.number}
-                </div>
+                <div className="flex items-center gap-3">
+                  {/* Icon Circle - Flat */}
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br ${stat.gradient} flex items-center justify-center flex-shrink-0`}>
+                    <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                  </div>
 
-                <div className="text-[10px] sm:text-sm text-gray-500 uppercase tracking-wide">
-                  {stat.label}
+                  <div className="flex-1">
+                    <div className={`text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent`}>
+                      {stat.mainNumber}
+                    </div>
+                    <div className="text-xs sm:text-sm font-semibold text-gray-600 uppercase tracking-wide">
+                      {stat.subText}
+                    </div>
+                    <div className="text-[10px] sm:text-xs text-gray-400">
+                      {stat.description}
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             ))}
-          </motion.div>
 
+            {/* Cost Breakdown - No Card, Just Text */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="w-full mt-2"
+            >
+              <div className="flex flex-wrap items-center justify-center gap-3 text-sm">
+                <span className="text-gray-400">Traditional</span>
+                <span className="text-gray-400 line-through">~₹95L</span>
+
+                <span className="text-gray-300">→</span>
+
+                <span className="text-gray-600 font-medium">1+1 Route</span>
+                <span className="font-bold text-[#078671]">~₹23L</span>
+
+                <span className="text-green-500 text-xs font-semibold">Save ₹72L</span>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
 
         {/* ── RIGHT: Text Content with Program Focus ── */}
@@ -208,7 +253,7 @@ export default function FounderSection() {
           {/* Heading */}
           <motion.h2
             {...slideInRight(0.25)}
-            className="font-serif text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.2] sm:leading-[1.15] lg:leading-[1.08] text-black mb-4 sm:mb-6  sm:px-0"
+            className="font-serif text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.2] sm:leading-[1.15] lg:leading-[1.08] text-black mb-4 sm:mb-6 sm:px-0"
           >
             A Smarter Route to
             <br className="hidden sm:block" />
@@ -228,39 +273,34 @@ export default function FounderSection() {
             className="mb-6"
           >
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-3">
-              The <span className="font-semibold text-[#8c1d32]">The international pathway to university west Alabama offered at SCALE by Sona Star</span> helps students reduce cost exposure,
+              The <span className="font-semibold text-[#8c1d32]">international pathway to University of West Alabama offered at SCALE by Sona Star</span> helps students reduce cost exposure,
               prepare better, and enter the U.S. academic system with stronger technical,
               communication, and career readiness.
             </p>
-
           </motion.div>
-
 
           {/* Route Comparison Card */}
           <motion.div
             {...slideInRight(0.48)}
             className="
-    mt-6
-    overflow-hidden
-    bg-white
-    shadow-lg
-    border
-    border-gray-200
-
-    rounded-tl-[0px]
-    rounded-tr-[32px]
-    rounded-bl-[32px]
-    rounded-br-[0px]
-  "
+              mt-6
+              overflow-hidden
+              bg-white
+              shadow-lg
+              border
+              border-gray-200
+              rounded-tl-[0px]
+              rounded-tr-[32px]
+              rounded-bl-[32px]
+              rounded-br-[0px]
+            "
           >
             <div className="grid md:grid-cols-2">
-
-              {/* Left */}
+              {/* Left - Traditional Route */}
               <div className="bg-gray-50 p-5 border-b md:border-b-0 md:border-r border-gray-200">
                 <h3 className="text-[#8c1d32] font-bold text-lg mb-4">
                   Traditional 2-Year USA Route
                 </h3>
-
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li>• Student moves to the USA immediately.</li>
                   <li>• Higher first-year international living cost exposure.</li>
@@ -268,31 +308,35 @@ export default function FounderSection() {
                   <li>• Higher initial loan and forex burden.</li>
                   <li>• Rapid adjustment to U.S. academic expectations.</li>
                 </ul>
+                <div className="mt-4 pt-3 border-t border-gray-200">
+                  <p className="text-xs text-gray-500">
+                    Total estimated cost: <span className="font-bold text-gray-700 line-through">~₹95 Lakhs</span>
+                  </p>
+                </div>
               </div>
 
-              {/* Right */}
-              <div className="p-5">
-                <h3 className="text-[#8c1d32] font-bold text-lg mb-4">
-                  SONA x UWA  1+1 Route
+              {/* Right - 1+1 Route */}
+              <div className="p-5 bg-gradient-to-br from-white to-emerald-50/30">
+                <h3 className="text-[#078671] font-bold text-lg mb-4">
+                  SONA × UWA 1+1 Route
                 </h3>
-
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Complete Year 1 at  Sona Star,SCALE in Bengaluru.</li>
+                  <li>• Complete Year 1 at Sona Star, SCALE in Bengaluru.</li>
                   <li>• Reduce one full year of U.S. living costs.</li>
                   <li>• Additional technical & communication preparation.</li>
                   <li>• Phased financial planning for families.</li>
                   <li>• Stronger readiness before progressing to UWA.</li>
                 </ul>
+                <div className="mt-4 pt-3 border-t border-emerald-200">
+                  <p className="text-xs font-semibold text-[#078671]">
+                    ✓ Save ~₹72 Lakhs compared to traditional route
+                  </p>
+                </div>
               </div>
-
             </div>
           </motion.div>
 
-
-
-
-
-
+          {/* CTA Button */}
           <motion.div
             {...slideInRight(0.65)}
             className="mt-6"
@@ -302,40 +346,32 @@ export default function FounderSection() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="
-      bg-[#078671]
-      text-white
-      font-bold
-      uppercase
-      tracking-wide
-
-      text-xs sm:text-sm md:text-base lg:text-lg
-
-      px-6 sm:px-8 md:px-10 lg:px-12
-      py-2 sm:py-2 md:py-3
-
-      rounded-tr-[16px] sm:rounded-tr-[20px] md:rounded-tr-[24px]
-      rounded-bl-[16px] sm:rounded-bl-[20px] md:rounded-bl-[24px]
-
-      rounded-tl-none
-      rounded-br-none
-
-      w-auto
-      inline-flex
-      items-center
-      justify-center
-
-      hover:bg-[#067864]
-      transition-all
-      duration-300
-      shadow-md
-    "
+                  bg-[#078671]
+                  text-white
+                  font-bold
+                  uppercase
+                  tracking-wide
+                  text-xs sm:text-sm md:text-base lg:text-lg
+                  px-6 sm:px-8 md:px-10 lg:px-12
+                  py-2 sm:py-2 md:py-3
+                  rounded-tr-[16px] sm:rounded-tr-[20px] md:rounded-tr-[24px]
+                  rounded-bl-[16px] sm:rounded-bl-[20px] md:rounded-bl-[24px]
+                  rounded-tl-none
+                  rounded-br-none
+                  w-auto
+                  inline-flex
+                  items-center
+                  justify-center
+                  hover:bg-[#067864]
+                  transition-all
+                  duration-300
+                  shadow-md
+                "
               >
                 Explore Program →
               </motion.button>
             </Link>
           </motion.div>
-
-
         </div>
       </div>
 
