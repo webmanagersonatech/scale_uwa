@@ -49,7 +49,7 @@ export default function Navbar() {
       submenu: [
         { label: "About the Program", href: "/admission/about-program" },
         { label: "Fee Structure", href: "/admission/fees-structure" },
-        { label: "Apply Online", href: "#apply-online" },
+        { label: "Apply Online", href: "https://hikaapp.sonastar.com/INS-0VVEACMY" },
       ],
     },
     { label: "FAQs", href: "/#faq" },
@@ -201,7 +201,8 @@ export default function Navbar() {
 
               {/* APPLY BUTTON */}
               <Link
-                href="#apply"
+                target="_blank"
+                href="https://hikaapp.sonastar.com/INS-0VVEACMY"
                 className="hidden lg:flex h-full px-7 xl:px-8 items-center justify-center bg-[#ffe588] text-black font-semibold text-[14px] hover:bg-[#078671] hover:text-white transition shrink-0 whitespace-nowrap"
               >
                 APPLY NOW
@@ -222,7 +223,7 @@ export default function Navbar() {
                       </div>
                       <div className="relative w-[36px] h-[36px]">
                         <Image
-                            src="/homeimages/uwa.jpg"
+                          src="/homeimages/uwa.jpg"
                           alt="SCALE Logo"
                           fill
                           className="object-contain"
@@ -275,7 +276,7 @@ export default function Navbar() {
               </div>
               <div className="relative w-[45px] h-[45px]">
                 <Image
-                    src="/homeimages/uwa.jpg"
+                  src="/homeimages/uwa.jpg"
                   alt="SCALE Logo"
                   fill
                   className="object-contain"
@@ -376,7 +377,8 @@ export default function Navbar() {
 
           <div className="px-4 mt-4 pb-6 bg-white">
             <Link
-              href="#apply"
+              target="_blank"
+              href="https://hikaapp.sonastar.com/INS-0VVEACMY"
               onClick={() => setMobileMenuOpen(false)}
               className="block text-center bg-[#ffe588] text-black font-bold py-3 rounded-md hover:bg-[#078671] hover:text-white transition text-[15px]"
             >

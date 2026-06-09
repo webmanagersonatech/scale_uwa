@@ -8,7 +8,7 @@ interface OptionCardProps {
 
 const OptionCard: React.FC<OptionCardProps> = ({
     optionLabel,
- 
+
     details,
     learnMoreHref,
 }) => {
@@ -26,7 +26,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
                     </span>
                 </div>
 
-             
+
 
                 {/* Details text - grows to fill space */}
                 <p className="text-sm text-gray-700 leading-relaxed flex-1">{details}</p>
@@ -39,6 +39,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
             <div className="relative -mt-6 z-20">
                 <a
                     href={learnMoreHref}
+                    target="_blank"
                     className="
                         inline-flex
                         items-center
@@ -83,7 +84,7 @@ const UWAOptionsSection: React.FC = () => {
                     <div className="flex-1 flex">
                         <OptionCard
                             optionLabel="About Sona Star"
-                      
+
                             details="Sona Star Innovation Private Limited, Bengaluru, is a technology-based solutions company focused on innovation, digital transformation, and industry-driven growth. As one of its key divisions, the Sona Centre of Advanced Learning & Entrepreneurship (SCALE) serves as an industry-led ecosystem that bridges talent, technology, innovation, and entrepreneurship through future-focused learning, workforce development, and emerging technology solutions."
                             learnMoreHref="https://sonastar.com"
                         />
@@ -93,7 +94,7 @@ const UWAOptionsSection: React.FC = () => {
                     <div className="flex-1 flex">
                         <OptionCard
                             optionLabel="About UWA"
-                        
+
                             details="The University of West Alabama (UWA) is located in Livingston, Alabama, USA. Established in 1835, UWA is a public state university offering a wide range of academic programmes. The university supports international students through admission guidance, visa documentation support, campus services, housing, insurance, and student life resources. UWA's MS in Data Science is a 30-credit graduate programme covering statistics, programming, machine learning, data visualization, predictive modelling, cybersecurity data science, and capstone/thesis-based applied work."
                             learnMoreHref="https://www.uwa.edu"
                         />

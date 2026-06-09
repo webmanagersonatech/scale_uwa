@@ -203,9 +203,9 @@ function MobileNav({ activeTab, setActiveTab }: { activeTab: string; setActiveTa
                     Have questions about the MS in Data Science Program or the Sona Star, SCALE
                     pathway? Our advisors are here to help.
                 </p>
-                <Link href="/admissions/about-Program" className="inline-block text-[13px] lg:text-[14px] text-[#AC1F2D] font-semibold no-underline hover:underline">
+                {/* <Link href="/admissions/about-Program" className="inline-block text-[13px] lg:text-[14px] text-[#AC1F2D] font-semibold no-underline hover:underline">
                     Contact Us →
-                </Link>
+                </Link> */}
             </div>
         </div>
     );
@@ -243,9 +243,9 @@ function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
                     Have questions about the MS in Data Science Program or the  Sona star, SCALE
                     pathway? Our advisors are here to help.
                 </p>
-                <Link href="/admissions/about-Program" className="inline-block text-[13px] lg:text-[14px] text-[#AC1F2D] font-semibold no-underline hover:underline">
+                {/* <Link href="/admissions/about-Program" className="inline-block text-[13px] lg:text-[14px] text-[#AC1F2D] font-semibold no-underline hover:underline">
                     Contact Us →
-                </Link>
+                </Link> */}
             </div>
         </aside>
     );
@@ -574,12 +574,10 @@ export default function AboutProgramPage() {
                                     and start your  Sona Star , SCALE pathway today.
                                 </div>
                                 <div className="flex gap-3 flex-wrap">
-                                    <Link href="/admissions/about-Program" className="inline-block bg-[#ffe588] text-[#6B1313] text-sm lg:text-base font-bold py-2.5 px-6 rounded-md no-underline transition-colors hover:bg-[#ffd050]">
+                                    <Link href="https://hikaapp.sonastar.com/INS-0VVEACMY" target="_blank"  className="inline-block bg-[#ffe588] text-[#6B1313] text-sm lg:text-base font-bold py-2.5 px-6 rounded-md no-underline transition-colors hover:bg-[#ffd050]">
                                         Apply Now
                                     </Link>
-                                    <Link href="/admissions/about-Program" className="inline-block border-2 border-white/50 text-white text-sm lg:text-base font-semibold py-2.5 px-5 rounded-md no-underline transition-all hover:border-white hover:bg-white/10">
-                                        Ask a Question
-                                    </Link>
+                                  
                                 </div>
                             </div>
                         </main>

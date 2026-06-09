@@ -1,7 +1,8 @@
-"use client";
+
 
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import {
   GraduationCap,
@@ -296,10 +297,11 @@ export default function FounderSection() {
             {...slideInRight(0.65)}
             className="mt-6"
           >
-            <motion.button
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="
+            <Link href="/admission/about-program">
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="
       bg-[#078671]
       text-white
       font-bold
@@ -327,10 +329,13 @@ export default function FounderSection() {
       duration-300
       shadow-md
     "
-            >
-              Explore Program →
-            </motion.button>
+              >
+                Explore Program →
+              </motion.button>
+            </Link>
           </motion.div>
+
+
         </div>
       </div>
 
