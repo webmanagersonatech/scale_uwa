@@ -249,129 +249,7 @@ function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
     );
 }
 
-// ─── Tab Content Components ───────────────────────────────────────────────────
 
-// ADMISSIONS REQUIREMENTS COMPONENT (UPDATED: GRE/GMAT removed)
-function AdmissionsRequirements() {
-    return (
-        <motion.section
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-            className="bg-white border border-[#e0d6ce] rounded-lg p-7 mb-6 shadow-sm"
-            aria-labelledby="admissions-req"
-        >
-            <h2
-                id="admissions-req"
-                className="font-serif text-xl text-[#AC1F2D] font-bold mb-5 pb-3 border-b-2 border-[#f5e8e0]"
-            >
-                Admissions Requirements
-            </h2>
-
-            {/* UPDATED: No GRE/GMT requirement - standardised tests not needed */}
-            <div className="mb-6">
-                <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full py-1.5 px-4 mb-4">
-                    <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    <span className="text-green-800 text-sm font-medium">
-                        GRE/GMAT not required
-                    </span>
-                </div>
-                <p className="text-[#5a5652] text-sm leading-relaxed">
-                    The program does not require GRE or GMAT scores for admission.
-                    Candidates are evaluated based on their academic background,
-                    professional experience, and demonstrated interest in data science.
-                </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {/* Academic Background */}
-                <div className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-3">
-                        <svg className="w-5 h-5 text-[#AC1F2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                        </svg>
-                        <h3 className="font-semibold text-[#2c2c2a]">Academic Background</h3>
-                    </div>
-                    <ul className="space-y-2 text-sm text-[#5a5652] list-disc pl-5">
-                        <li>Bachelor&apos;s degree from an accredited institution</li>
-                        <li>Minimum 3.0 GPA (on a 4.0 scale) or equivalent</li>
-                        <li>Strong quantitative and analytical foundation</li>
-                        <li>Programming exposure recommended but not mandatory</li>
-                    </ul>
-                </div>
-
-                {/* English Proficiency */}
-                <div className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-3">
-                        <svg className="w-5 h-5 text-[#AC1F2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                        </svg>
-                        <h3 className="font-semibold text-[#2c2c2a]">English Proficiency</h3>
-                    </div>
-                    <ul className="space-y-2 text-sm text-[#5a5652] list-disc pl-5">
-                        <li>TOEFL iBT: Minimum 71</li>
-                        <li>IELTS: Minimum 6.0 overall</li>
-                        <li>Duolingo: Minimum 95</li>
-                        <li className="text-[#AC1F2D] font-medium mt-2">Waivers available for qualifying applicants</li>
-                    </ul>
-                </div>
-
-                {/* Application Materials */}
-                <div className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-3">
-                        <svg className="w-5 h-5 text-[#AC1F2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                        <h3 className="font-semibold text-[#2c2c2a]">Application Materials</h3>
-                    </div>
-                    <ul className="space-y-2 text-sm text-[#5a5652] list-disc pl-5">
-                        <li>Completed online application form</li>
-                        <li>Official transcripts from all institutions attended</li>
-                        <li>Statement of Purpose (500-750 words)</li>
-                        <li>Two letters of recommendation</li>
-                        <li>Current resume/CV</li>
-                    </ul>
-                </div>
-
-                {/* Important Deadlines */}
-                <div className="bg-[#fdf5f0] border border-[#f0d8cc] rounded-lg p-4">
-                    <div className="flex items-center gap-2 mb-3">
-                        <svg className="w-5 h-5 text-[#AC1F2D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                        <h3 className="font-semibold text-[#2c2c2a]">Important Deadlines</h3>
-                    </div>
-                    <div className="space-y-2 text-sm">
-                        <div className="flex justify-between items-center border-b border-[#e0d6ce] pb-1">
-                            <span className="font-medium text-[#5a5652]">Fall Semester:</span>
-                            <span className="text-[#2c2c2a]">July 15</span>
-                        </div>
-                        <div className="flex justify-between items-center border-b border-[#e0d6ce] pb-1">
-                            <span className="font-medium text-[#5a5652]">Spring Semester:</span>
-                            <span className="text-[#2c2c2a]">December 1</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                            <span className="font-medium text-[#5a5652]">Summer Semester:</span>
-                            <span className="text-[#2c2c2a]">April 15</span>
-                        </div>
-                    </div>
-                    <div className="mt-3 pt-2 text-xs text-[#8a8682] italic">
-                        *International applicants are encouraged to apply early to allow time for visa processing.
-                    </div>
-                </div>
-            </div>
-
-            {/* Application Process Note */}
-            <div className="mt-5 p-4 bg-[#f0f4f8] border border-[#dce3ec] rounded-lg">
-                <p className="text-sm text-[#2c2c2a]">
-                    <span className="font-bold">Need assistance? </span>
-                    Our admissions team is available to guide you through the application process,
-                    review your eligibility, and help with any questions about requirements or deadlines.
-                </p>
-            </div>
-        </motion.section>
-    );
-}
 
 function WhoShouldApply() {
     return (
@@ -379,7 +257,7 @@ function WhoShouldApply() {
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
-            className="bg-white border border-[#e0d6ce] rounded-lg p-7 mb-6 shadow-sm"
+            className="mb-6"
             aria-labelledby="who-apply"
         >
             <h2
@@ -397,7 +275,7 @@ function WhoShouldApply() {
             </p>
 
             {/* Eligibility / Pathway Map */}
-            <div className="bg-gradient-to-r from-[#fdf7f2] to-[#fffaf5] border border-[#e0d6ce] rounded-lg p-5 mb-6">
+            <div className="mb-6">
                 <h3 className="text-lg font-semibold text-[#AC1F2D] text-center mb-4">
                     1+1 International Pathway
                 </h3>
@@ -501,40 +379,26 @@ function WhoShouldApply() {
                 </div>
             </div>
 
-            <motion.div
-                variants={staggerContainer}
-                initial="hidden"
-                animate="visible"
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5"
-            >
-                {ELIGIBILITY_GROUPS.map((group, idx) => (
-                    <motion.div
-                        key={group.label}
-                        variants={fadeInUp}
-                        custom={idx}
-                        whileHover={{
-                            scale: 1.02,
-                            transition: { duration: 0.2 },
-                        }}
-                        className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-md p-3.5 hover:shadow-md transition-shadow"
-                    >
-                        <div className="text-[11px] font-bold text-[#AC1F2D] uppercase tracking-[0.8px] mb-2">
+            {/* Eligibility Groups - No Cards */}
+            <div className="space-y-4">
+                {ELIGIBILITY_GROUPS.map((group) => (
+                    <div key={group.label}>
+                        <h3 className="text-sm font-bold text-[#AC1F2D] uppercase tracking-wide mb-2">
                             {group.label}
-                        </div>
-
-                        <ul className="list-none p-0 space-y-1.5">
+                        </h3>
+                        <ul className="list-disc pl-5 space-y-1">
                             {group.items.map((item) => (
                                 <li
                                     key={item}
-                                    className="text-[13px] lg:text-[14px] text-[#5a5652] leading-[1.5] pl-4 relative before:content-['✓'] before:absolute before:left-0 before:text-[#AC1F2D] before:text-[11px] before:top-px"
+                                    className="text-[13px] lg:text-[14px] text-[#5a5652] leading-relaxed"
                                 >
                                     {item}
                                 </li>
                             ))}
                         </ul>
-                    </motion.div>
+                    </div>
                 ))}
-            </motion.div>
+            </div>
         </motion.section>
     );
 }
@@ -545,20 +409,17 @@ function WhyChoose() {
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
-            className="bg-white border border-[#e0d6ce] rounded-lg p-7 mb-6 shadow-sm"
+            className="mb-6"
             aria-labelledby="why-choose-title"
         >
             <h2 id="why-choose-title" className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]">
-                Why Choose This Pathway through  Sona Star , SCALE , Bengaluru  to UWA, USA?
+                Why Choose This Pathway through Sona Star, SCALE, Bengaluru to UWA, USA?
             </h2>
-            <motion.div variants={staggerContainer} initial="hidden" animate="visible" className="flex flex-col gap-4">
-                {WHY_CARDS.map((card, idx) => (
-                    <motion.div
+            <div className="flex flex-col gap-4">
+                {WHY_CARDS.map((card) => (
+                    <div
                         key={card.number}
-                        variants={fadeInUp}
-                        custom={idx}
-                        whileHover={{ scale: 1.01, boxShadow: "0 4px 12px rgba(0,0,0,0.08)" }}
-                        className="flex gap-[18px] items-start p-[18px] bg-[#f8f5f2] border border-[#e0d6ce] rounded-lg transition-all cursor-pointer"
+                        className="flex gap-[18px] items-start"
                     >
                         <div className="font-serif text-[26px] font-bold text-[#d4a0a0] min-w-[40px] leading-none pt-0.5">
                             {card.number}
@@ -567,19 +428,14 @@ function WhyChoose() {
                             <div className="text-[15px] lg:text-[16px] font-bold text-[#2c2c2a] mb-1.5">{card.title}</div>
                             <p className="text-[13px] lg:text-[15px] text-[#5a5652] leading-relaxed mb-2.5">{card.body}</p>
                             {card.highlight && (
-                                <motion.span
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: idx * 0.05 }}
-                                    className="inline-block bg-[#AC1F2D]/10 text-[#AC1F2D] text-[11px] font-bold py-0.5 px-2.5 rounded tracking-[0.5px] uppercase"
-                                >
+                                <span className="inline-block bg-[#AC1F2D]/10 text-[#AC1F2D] text-[11px] font-bold py-0.5 px-2.5 rounded tracking-[0.5px] uppercase">
                                     {card.highlight}
-                                </motion.span>
+                                </span>
                             )}
                         </div>
-                    </motion.div>
+                    </div>
                 ))}
-            </motion.div>
+            </div>
         </motion.section>
     );
 }
@@ -590,7 +446,7 @@ function ProgramOutcomes() {
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
-            className="bg-white border border-[#e0d6ce] rounded-lg p-7 mb-6 shadow-sm"
+            className="mb-6"
             aria-labelledby="outcomes"
         >
             <h2 id="outcomes" className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]">
@@ -600,24 +456,16 @@ function ProgramOutcomes() {
                 After completing the MS in Data Science, students are expected
                 to develop the ability to:
             </p>
-            <motion.ol variants={staggerContainer} initial="hidden" animate="visible" className="list-none p-0 flex flex-col gap-3 mb-4">
+            <ol className="list-decimal pl-5 space-y-3 mb-4">
                 {OUTCOMES.map((outcome, i) => (
-                    <motion.li
+                    <li
                         key={i}
-                        variants={fadeInUp}
-                        custom={i}
-                        className="flex items-start gap-3.5 text-sm lg:text-base text-[#2c2c2a] leading-relaxed"
+                        className="text-sm lg:text-base text-[#2c2c2a] leading-relaxed pl-1"
                     >
-                        <motion.span
-                            whileHover={{ scale: 1.1 }}
-                            className="w-7 h-7 min-w-7 bg-[#AC1F2D] text-white rounded-full flex items-center justify-center text-xs font-bold"
-                        >
-                            {i + 1}
-                        </motion.span>
-                        <span>{outcome}</span>
-                    </motion.li>
+                        {outcome}
+                    </li>
                 ))}
-            </motion.ol>
+            </ol>
             <p className="text-[12px] lg:text-[13px] text-[#5a5652] italic pt-3 border-t border-[#e0d6ce]">
                 These outcomes are aligned with UWA&apos;s published Program
                 outcomes for the MS in Data Science.
@@ -632,7 +480,7 @@ function CourseStructure() {
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
-            className="bg-white border border-[#e0d6ce] rounded-lg p-7 mb-6 shadow-sm"
+            className="mb-6"
             aria-labelledby="courses"
         >
             <h2 id="courses" className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]">
@@ -643,12 +491,7 @@ function CourseStructure() {
                 <strong>30 graduate credit hours</strong> across 10 courses
                 published by UWA.
             </p>
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-                className="overflow-x-auto"
-            >
+            <div className="overflow-x-auto">
                 <table className="w-full border-collapse text-sm lg:text-base" aria-label="MS Data Science course list">
                     <thead>
                         <tr>
@@ -664,14 +507,8 @@ function CourseStructure() {
                         </tr>
                     </thead>
                     <tbody>
-                        {COURSES.map((course, idx) => (
-                            <motion.tr
-                                key={course.code}
-                                initial={{ opacity: 0, x: -10 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: idx * 0.02, duration: 0.2 }}
-                                className="hover:bg-[#fdf5f0]"
-                            >
+                        {COURSES.map((course) => (
+                            <tr key={course.code}>
                                 <td className="py-2.5 px-3.5 border-b border-[#e0d6ce] text-[#5a5652] align-middle">
                                     <code className="bg-[#f0ece8] py-0.5 px-1.5 rounded text-[12px] lg:text-[13px] text-[#AC1F2D] font-mono whitespace-nowrap">
                                         {course.code}
@@ -681,11 +518,11 @@ function CourseStructure() {
                                     {course.title}
                                 </td>
                                 <td className="py-2.5 px-3.5 border-b border-[#e0d6ce] text-center align-middle">
-                                    <span className="inline-block bg-[#AC1F2D]/10 text-[#AC1F2D] text-[12px] lg:text-[13px] font-bold py-0.5 px-2.5 rounded-full">
+                                    <span className="bg-[#AC1F2D]/10 text-[#AC1F2D] text-[12px] lg:text-[13px] font-bold py-0.5 px-2.5 rounded-full">
                                         {course.credits}
                                     </span>
                                 </td>
-                            </motion.tr>
+                            </tr>
                         ))}
                     </tbody>
                     <tfoot>
@@ -699,7 +536,7 @@ function CourseStructure() {
                         </tr>
                     </tfoot>
                 </table>
-            </motion.div>
+            </div>
         </motion.section>
     );
 }
@@ -725,56 +562,50 @@ export default function AboutProgramPage() {
 
     return (
         <>
-            {/* Hero Section */}
-            <section className="bg-[#AC1F2D] py-12 lg:py-16 relative overflow-hidden">
-                {/* Light background image overlay */}
-                <div
-                    className="absolute inset-0 opacity-10 bg-cover bg-center bg-no-repeat pointer-events-none"
-                    style={{ backgroundImage: "url('https://img.magnific.com/premium-photo/female-graduate-cap-gown-holding-diploma-outdoors-campus_538159-26032.jpg?uid=R224290380&ga=GA1.1.1847424523.1777460742&semt=ais_hybrid&w=740&q=80')" }}
-                ></div>
+      {/* Hero Section */}
+<section className="bg-gray-100 py-12 lg:py-16 relative overflow-hidden">
+    {/* Decorative circles */}
+    <div className="absolute -right-[60px] -top-[60px] w-[360px] h-[360px] rounded-full bg-gray-200/50 pointer-events-none"></div>
+    <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-gray-300/30 pointer-events-none"></div>
+    <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-gray-200/40 pointer-events-none"></div>
 
-                {/* Decorative circles */}
-                <div className="absolute -right-[60px] -top-[60px] w-[360px] h-[360px] rounded-full bg-white/5 pointer-events-none"></div>
-                <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-[#ffe588]/10 pointer-events-none"></div>
-                <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-[#ffe588]/5 pointer-events-none"></div>
-
-                <div className="max-w-[1440px] mx-auto px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-                        <div className="lg:max-w-[55%]">
-                            <div className="inline-flex items-center gap-2 bg-[#ffe588]/20 border border-[#ffe588]/70 text-[#f8e8a0] text-lg tracking-[1.2px] uppercase py-2.5 px-6  mb-4">
-                                <span className="w-2 h-2 bg-[#ffe588] rounded-full"></span>
-                                MS in Data Science
-                            </div>
-                            <h1 className="font-serif text-4xl lg:text-5xl text-white font-bold mb-4 leading-tight">
-                                About the <span className="text-[#ffe588]">Program</span>
-                            </h1>
-                            <p className="text-[#e8c8a0] text-base lg:text-lg max-w-[580px] leading-relaxed">
-                                A 30-credit graduate pathway through UWA Sona Star , SCALE — start in India,
-                                complete at the University of West Alabama, USA.
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6">
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#ffe588]/40 transition-all duration-300">
-                                <span className="block font-serif text-3xl lg:text-[32px] text-[#ffe588] font-bold leading-none">30</span>
-                                <span className="block text-[11px] text-[#cdb89a] tracking-[0.6px] uppercase mt-2">Credit Hours</span>
-                            </div>
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#ffe588]/40 transition-all duration-300">
-                                <span className="block font-serif text-3xl lg:text-[32px] text-[#ffe588] font-bold leading-none">10</span>
-                                <span className="block text-[11px] text-[#cdb89a] tracking-[0.6px] uppercase mt-2">Core Courses</span>
-                            </div>
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#ffe588]/40 transition-all duration-300">
-                                <span className="block font-serif text-3xl lg:text-[32px] text-[#ffe588] font-bold leading-none">3yr</span>
-                                <span className="block text-[11px] text-[#cdb89a] tracking-[0.6px] uppercase mt-2">STEM OPT</span>
-                            </div>
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10 hover:border-[#ffe588]/40 transition-all duration-300">
-                                <span className="block font-serif text-3xl lg:text-[32px] text-[#ffe588] font-bold leading-none">2</span>
-                                <span className="block text-[11px] text-[#cdb89a] tracking-[0.6px] uppercase mt-2">Locations</span>
-                            </div>
-                        </div>
-                    </div>
+    <div className="max-w-[1440px] mx-auto px-6 relative z-10">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div className="lg:max-w-[55%]">
+                <div className="inline-flex items-center gap-2 bg-gray-200 border border-gray-300 text-gray-700 text-lg tracking-[1.2px] uppercase py-2.5 px-6 mb-4">
+                    <span className="w-2 h-2 bg-gray-600 rounded-full"></span>
+                    MS in Data Science
                 </div>
-            </section>
+                <h1 className="font-serif text-4xl lg:text-5xl text-gray-900 font-bold mb-4 leading-tight">
+                    About the <span className="text-gray-700">Program</span>
+                </h1>
+                <p className="text-gray-600 text-base lg:text-lg max-w-[580px] leading-relaxed">
+                    A 30-credit graduate pathway through UWA Sona Star , SCALE — start in India,
+                    complete at the University of West Alabama, USA.
+                </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6">
+                <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
+                    <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">30</span>
+                    <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">Credit Hours</span>
+                </div>
+                <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
+                    <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">10</span>
+                    <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">Core Courses</span>
+                </div>
+                <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
+                    <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">3yr</span>
+                    <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">STEM OPT</span>
+                </div>
+                <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
+                    <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">2</span>
+                    <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">Locations</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
             {/* Breadcrumb */}
             <Breadcrumb />

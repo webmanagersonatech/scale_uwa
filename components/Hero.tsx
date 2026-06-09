@@ -146,17 +146,22 @@ export default function HeroSection() {
                   DOWNLOAD BROCHURE
                 </button>
 
-                <button className="border border-gray-400 bg-white/80 backdrop-blur-sm px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 hover:bg-black hover:text-white hover:border-black transition text-xs sm:text-sm rounded-md">
+                <a
+                  href="https://wa.me/919442592170?text=Hi,%20I%20would%20like%20to%20know%20more%20about%20the%20MS%20in%20Data%20Science%20program."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-gray-400 bg-white/80 backdrop-blur-sm px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 hover:bg-black hover:text-white hover:border-black transition text-xs sm:text-sm rounded-md"
+                >
                   <MessageCircle size={16} />
                   SPEAK TO A COUNSELLOR
-                </button>
+                </a>
               </div>
             </div>
             <div className="my-5 rounded-xl border border-gray-100 bg-white shadow-sm overflow-hidden">
               {/* Heading */}
               <div className="px-4 py-2 bg-white border-b border-gray-100">
                 <h3 className="text-xs font-semibold uppercase tracking-wider text-[#8c1d32]">
-                  MS in Data science program at a Glance
+                  <span className="text-[18px]">MS in Data Science Program</span> at a Glance
                 </h3>
               </div>
 
@@ -169,7 +174,7 @@ export default function HeroSection() {
                 {/* Duration */}
                 <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
                   <Clock3 className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
-                  <div className="text-xl font-bold text-gray-900 leading-tight">2yr</div>
+                  <div className="text-xl font-bold text-gray-900 leading-tight">2 Years</div>
                   <div className="text-xs text-gray-500 mt-1">Duration</div>
                 </div>
 
@@ -178,19 +183,19 @@ export default function HeroSection() {
                 {/* OPT */}
                 <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
                   <Globe className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
-                  <div className="text-xl font-bold text-gray-900 leading-tight">3 Yrs</div>
+                  <div className="text-xl font-bold text-gray-900 leading-tight">3 Years</div>
                   <div className="text-xs text-gray-500 mt-1">
-                    Post-Study Work Visa
+                    Post Study Work Visa
                   </div>
                   <div className="text-[10px] text-[#8c1d32] font-medium">
-                    (STEM OPT)
+                    (STEM)
                   </div>
                 </div>
 
                 {/* Savings */}
                 <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
                   <BadgePercent className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
-                  <div className="text-xl font-bold text-gray-900 leading-tight">50%</div>
+                  <div className="text-xl font-bold text-gray-900 leading-tight">72%</div>
                   <div className="text-xs text-gray-500 mt-1">Cost Savings</div>
                 </div>
 

@@ -85,7 +85,7 @@ export default function ProgramStructure() {
 
                                     {/* Sub Text */}
                                     <p className="mt-2 text-xs sm:text-sm text-gray-500 sm:ml-10">
-                                         Sona Star , SCALE Campus · 15 Credits
+                                        SCALE Campus · 15 Credits
                                     </p>
                                 </div>
 
@@ -194,20 +194,7 @@ export default function ProgramStructure() {
                     </motion.div>
                 </div>
 
-                {/* Simple separator before note */}
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : {}}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                    className="mt-10 pt-6 border-t border-gray-100"
-                >
-                    <div className="flex gap-3 items-start">
-                        <FileText size={18} className="text-gray-400 flex-shrink-0 mt-0.5" />
-                        <p className="text-sm text-gray-500 leading-relaxed">
-                            <span className="font-medium text-gray-700">Note:</span> Progression to UWA requires meeting admission requirements, successful completion of prescribed academic requirements, documentation, financial requirements, visa approval, and applicable university and immigration policies.
-                        </p>
-                    </div>
-                </motion.div>
+         
             </div>
         </section>
     );

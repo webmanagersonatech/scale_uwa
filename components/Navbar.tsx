@@ -102,11 +102,9 @@ export default function Navbar() {
             <div className="h-8 flex items-center justify-end pl-[260px] pr-2">
               <div className="absolute left-[180px] top-0 h-8 flex flex-col justify-center leading-none">
                 <span className="text-[10px] uppercase tracking-[2px] text-white font-bold">
-                  <span className="text-[#008BC8]">SONA</span> UWA
+                  <span className="text-[#008BC8]">SONA</span> UWA International Pathway
                 </span>
-                <span className="text-[11px] font-semibold text-white mt-[2px]">
-                  International Pathway
-                </span>
+              
               </div>
 
               <div className="flex items-center gap-6 text-[12px]">
@@ -114,7 +112,7 @@ export default function Navbar() {
                   href="#apply"
                   className="hover:text-[#e5c66b] transition text-white"
                 >
-                  Admissions Open · Bengaluru + Alabama, USA
+                  Admissions Open · Bengaluru,India + Alabama, USA
                 </Link>
                 <Link
                   href="#"

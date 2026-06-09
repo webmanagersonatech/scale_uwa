@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 
 interface OptionCardProps {
     optionLabel: string;
-    details: string;
+    details: string | React.ReactNode;
     learnMoreHref: string;
-    countryFlag: string;
+    countryFlagSrc: string; // Changed from countryFlag emoji to image src
     countryName: string;
     studentResources?: string[]; // New prop for student resources list
 }
@@ -13,7 +13,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
     optionLabel,
     details,
     learnMoreHref,
-    countryFlag,
+    countryFlagSrc,
     countryName,
     studentResources,
 }) => {
@@ -22,27 +22,19 @@ const OptionCard: React.FC<OptionCardProps> = ({
             {/* White content card - flex column to push button area */}
             <div className="relative bg-white/90 backdrop-blur-sm shadow-lg w-full px-8 pt-8 pb-12 rounded-sm flex flex-col flex-1">
                 {/* Option italic label - positioned above the card */}
-                <div className="absolute -top-8 left-0 z-10">
+                <div className="absolute -top-5 left-0 z-10">
                     <span
-                        className="font-serif italic text-4xl md:text-5xl text-gray-800 leading-none select-none whitespace-nowrap"
+                        className="font-serif italic text-3xl md:text-4xl text-gray-800 leading-none select-none whitespace-nowrap"
                         style={{ fontFamily: "'Playfair Display', serif" }}
                     >
                         {optionLabel}
                     </span>
                 </div>
 
-                {/* Country Flag & Name Badge - Enhanced */}
-                <div className="flex items-center gap-3 mb-4 pb-2 border-b border-gray-200">
-                    <div className="flex items-center gap-2 px-3 py-1 ">
-                        <span className="text-2xl sm:text-3xl">{countryFlag}</span>
-                        <span className="text-sm font-bold text-gray-700 uppercase tracking-wide">
-                            {countryName}
-                        </span>
-                    </div>
-                </div>
+
 
                 {/* Details text - grows to fill space */}
-                <p className="text-sm text-gray-700 leading-relaxed mb-4">{details}</p>
+                <p className="text-sm text-gray-700 leading-relaxed mb-4 mt-2">{details}</p>
 
                 {/* Student Resources Section - Only shown if resources exist */}
                 {studentResources && studentResources.length > 0 && (
@@ -111,16 +103,6 @@ const OptionCard: React.FC<OptionCardProps> = ({
 };
 
 const UWAOptionsSection: React.FC = () => {
-    // UWA Student Resources
-    const uwaStudentResources = [
-        "Career Services",
-        "Academic Support",
-        "Research Opportunities",
-        "International Student Support",
-        "Alumni Network",
-        "Industry Connections"
-    ];
-
     return (
         <section
             className="relative w-full overflow-hidden py-10 bg-gray-100"
@@ -133,7 +115,12 @@ const UWAOptionsSection: React.FC = () => {
                     <div className="flex items-center justify-center gap-2 flex-wrap">
                         {/* India */}
                         <div className="flex items-center gap-2 px-4 py-2">
-                            <span className="text-4xl drop-shadow-sm">🇮🇳</span>
+                            <img
+                                src="https://flagcdn.com/w40/in.png"
+                                alt="India flag"
+                                className="w-8 h-auto rounded-sm shadow-sm"
+                                title="India"
+                            />
                             <span className="font-medium text-gray-600">India</span>
                         </div>
 
@@ -146,7 +133,12 @@ const UWAOptionsSection: React.FC = () => {
 
                         {/* USA */}
                         <div className="flex items-center gap-2 px-4 py-2">
-                            <span className="text-4xl drop-shadow-sm">🇺🇸</span>
+                            <img
+                                src="https://flagcdn.com/w40/us.png"
+                                alt="USA flag"
+                                className="w-8 h-auto rounded-sm shadow-sm"
+                                title="USA"
+                            />
                             <span className="font-medium text-gray-600">USA</span>
                         </div>
                     </div>
@@ -157,13 +149,26 @@ const UWAOptionsSection: React.FC = () => {
             <div className="w-full max-w-[1440px] mx-auto px-6">
                 {/* Added items-stretch to make children equal height */}
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-stretch">
-                    {/* Option One - Left side (India) */}
+                    {/* Option One - Left side (India) - WITH HYPERLINK */}
                     <div className="flex-1 flex">
                         <OptionCard
-                            optionLabel="About Sona Star"
-                            details="Sona Star Innovation Private Limited, Bengaluru, is a technology-based solutions company focused on innovation, digital transformation, and industry-driven growth. As one of its key divisions, the Sona Centre of Advanced Learning & Entrepreneurship (SCALE) serves as an industry-led ecosystem that bridges talent, technology, innovation, and entrepreneurship through future-focused learning, workforce development, and emerging technology solutions."
+                            optionLabel="About the Sona Star"
+                            details={
+                                <>
+                                    Sona Star Innovation Private Limited, Bengaluru, is a technology-based solutions company focused on innovation, digital transformation, and industry-driven growth. As one of its key divisions, the{" "}
+                                    <a
+                                        href="https://scaleindia.in/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[#078671] hover:text-[#067864] underline font-medium"
+                                    >
+                                        Sona Centre of Advanced Learning & Entrepreneurship (SCALE)
+                                    </a>{" "}
+                                    serves as an industry-led ecosystem that bridges talent, technology, innovation, and entrepreneurship through future-focused learning, workforce development, and emerging technology solutions.
+                                </>
+                            }
                             learnMoreHref="https://sonastar.com"
-                            countryFlag="🇮🇳"
+                            countryFlagSrc="https://flagcdn.com/w20/in.png"
                             countryName="India"
                         />
                     </div>
@@ -171,12 +176,24 @@ const UWAOptionsSection: React.FC = () => {
                     {/* Option Two - Right side (USA) - WITH Student Resources */}
                     <div className="flex-1 flex">
                         <OptionCard
-                            optionLabel="About UWA"
+                            optionLabel="About the UWA"
                             details="The University of West Alabama (UWA) is located in Livingston, Alabama, USA. Established in 1835, UWA is a public state university offering a wide range of academic programmes. The university supports international students through admission guidance, visa documentation support, campus services, housing, insurance, and student life resources. UWA's MS in Data Science is a 30-credit graduate programme covering statistics, programming, machine learning, data visualization, predictive modelling, cybersecurity data science, and capstone/thesis-based applied work."
                             learnMoreHref="https://www.uwa.edu"
-                            countryFlag="🇺🇸"
+                            countryFlagSrc="https://flagcdn.com/w20/us.png"
                             countryName="USA"
-                            studentResources={uwaStudentResources}
+                        />
+                    </div>
+
+                    {/* Option Three - About MS in Data Science */}
+                    <div className="flex-1 flex">
+                        <OptionCard
+                            optionLabel="About MS in Data Science"
+                            details="With a Master of Science in Data Science Degree from the University of West Alabama, you will learn to blend theory with practical application and prepare to advance your career. This program's core courses in statistics, programming and machine learning will strengthen your foundational knowledge and help you stand out as a competitive job candidate. With specialized electives and hands-on projects, you will foster both technical expertise and problem-solving skills.
+
+This data science degree gives you the flexibility to fit study into your schedule. Upon completion, you will have earned the skills and knowledge necessary to advance your data science career with confidence."
+                            learnMoreHref="https://scale-uwa.vercel.app/admission/about-program"
+                            countryFlagSrc="https://flagcdn.com/w20/us.png"
+                            countryName="USA"
                         />
                     </div>
                 </div>

@@ -209,39 +209,35 @@ export default function FeeStructurePage() {
     return (
         <>
             {/* Hero Section */}
-            <section className="bg-[#AC1F2D] py-12 lg:py-16 relative overflow-hidden">
-                <div className="absolute -right-[60px] -top-[60px] w-[360px] h-[360px] rounded-full bg-white/5 pointer-events-none"></div>
-                <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-[#ffe588]/10 pointer-events-none"></div>
-                <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-[#ffe588]/5 pointer-events-none"></div>
-
-                <div className="max-w-[1440px] mx-auto px-6 relative z-10">
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-                        <div className="lg:max-w-[60%]">
-                            <div className="inline-flex items-center gap-2 bg-[#ffe588]/20 border border-[#ffe588]/70 text-[#f8e8a0] text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
-                                <span className="w-1.5 h-1.5 bg-[#ffe588] rounded-full"></span>
-                                Affordable International Degree 
-                            </div>
-                            <h1 className="font-serif text-4xl lg:text-5xl text-white font-bold mb-4 leading-tight">
-                                Fee & <span className="text-[#ffe588]">Pathway Cost</span>
-                            </h1>
-                            <p className="text-[#e8c8a0] text-base lg:text-lg max-w-[600px] leading-relaxed">
-                                Transparent, structured pricing for your <strong className="text-white text-lg md:text-xl">MS in Data Science</strong> — Year 1 at Sona Star, SCALE in India, Year 2 at UWA, USA.
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
-                                <span className="block font-serif text-3xl text-[#ffe588] font-bold">₹7.5L</span>
-                                <span className="block text-[11px] text-[#cdb89a] uppercase mt-1">Year 1 India</span>
-                            </div>
-                            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
-                                <span className="block font-serif text-3xl text-[#ffe588] font-bold">$17.2k</span>
-                                <span className="block text-[11px] text-[#cdb89a] uppercase mt-1">Year 2 USA</span>
-                            </div>
-                        </div>
-                    </div>
+      <section className="bg-gray-50 py-12 lg:py-16">
+    <div className="max-w-[1440px] mx-auto px-6">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div className="lg:max-w-[60%]">
+                <div className="inline-flex items-center gap-2 bg-gray-200 text-gray-700 text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
+                    <span className="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
+                    Affordable International Degree 
                 </div>
-            </section>
+                <h1 className="font-serif text-4xl lg:text-5xl text-gray-800 font-bold mb-4 leading-tight">
+                    Fee & <span className="text-gray-600">Pathway Cost</span>
+                </h1>
+                <p className="text-gray-600 text-base lg:text-lg max-w-[600px] leading-relaxed">
+                    Transparent, structured pricing for your <strong className="text-gray-800 text-lg md:text-xl">MS in Data Science</strong> — Year 1 at Sona Star, SCALE in India, Year 2 at UWA, USA.
+                </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+                <div className="p-4 text-center">
+                    <span className="block font-serif text-3xl text-gray-700 font-bold">₹7.5L</span>
+                    <span className="block text-[11px] text-gray-500 uppercase mt-1">Year 1 India</span>
+                </div>
+                <div className="p-4 text-center">
+                    <span className="block font-serif text-3xl text-gray-700 font-bold">$17.2k</span>
+                    <span className="block text-[11px] text-gray-500 uppercase mt-1">Year 2 USA</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
             {/* Breadcrumb */}
             <Breadcrumb />
