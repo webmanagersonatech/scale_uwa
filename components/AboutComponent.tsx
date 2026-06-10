@@ -24,7 +24,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
                 {/* Option italic label - positioned above the card */}
                 <div className="absolute -top-5 left-0 z-10">
                     <span
-                        className="inline-flex items-center gap-2 font-serif italic text-3xl md:text-4xl text-gray-800 leading-none select-none whitespace-nowrap"
+                        className="inline-flex items-center gap-2 font-serif italic text-[28px] sm:text-[32px] lg:text-[40px] text-gray-800 leading-none select-none whitespace-nowrap"
                         style={{ fontFamily: "'Playfair Display', serif" }}
                     >
                         {optionLabel}
@@ -73,7 +73,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
             </div>
 
             {/* Learn More CTA - Half outside, half inside */}
-            <div className="relative -mt-6 z-20">
+            <div className="relative -mt-4 z-20">
                 <a
                     href={learnMoreHref}
                     target="_blank"
@@ -83,7 +83,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
                         justify-center
                         bg-[#078671]
                         text-white
-                        text-justify mt-2
+                        text-justify 
                         font-bold
                         uppercase
                         tracking-wide
@@ -111,7 +111,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
 const UWAOptionsSection: React.FC = () => {
     return (
         <section
-            className="relative w-full overflow-hidden py-10 bg-gray-100"
+            className="relative w-full overflow-hidden py-16 bg-gray-100"
             style={{ fontFamily: "'Lato', sans-serif" }}
         >
 
