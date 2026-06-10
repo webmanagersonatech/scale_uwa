@@ -292,16 +292,7 @@ function WhoShouldApply() {
     </svg>
   </div>
 
-  {/* Connecting globe/network decoration */}
-  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20">
-    <svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="45" fill="none" stroke="#AC1F2D" strokeWidth="0.5"/>
-      <circle cx="50" cy="50" r="35" fill="none" stroke="#AC1F2D" strokeWidth="0.5" strokeDasharray="3 3"/>
-      <circle cx="50" cy="50" r="25" fill="none" stroke="#AC1F2D" strokeWidth="0.5"/>
-      <line x1="50" y1="5" x2="50" y2="95" stroke="#AC1F2D" strokeWidth="0.5" opacity="0.5"/>
-      <line x1="5" y1="50" x2="95" y2="50" stroke="#AC1F2D" strokeWidth="0.5" opacity="0.5"/>
-    </svg>
-  </div>
+
 
   <div className="flex flex-col md:flex-row items-center justify-center gap-6 relative z-10">
     {/* India Section */}
