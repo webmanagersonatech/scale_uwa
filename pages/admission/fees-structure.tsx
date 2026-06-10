@@ -27,7 +27,7 @@ const FULL_UWA = {
 
 const RECOMMENDED = {
     badge: "Recommended",
-      badgeColor: "bg-gray-100 text-gray-600",
+    badgeColor: "bg-gray-100 text-gray-600",
     subtitle: "Year 1 at Sona Star, SCALE Bengaluru · Year 2 at UWA, Alabama",
     items: [
         { label: "Year 1 at Sona Star, SCALE", amount: "₹7,50,000" },
@@ -86,8 +86,8 @@ function ComparisonCard({ data }: { data: typeof RECOMMENDED | typeof FULL_UWA }
     return (
         <div
             className={`flex flex-col  border p-5
-                ${isHighlighted 
-                    ? "border-[#AC1F2D] bg-white" 
+                ${isHighlighted
+                    ? "border-[#AC1F2D] bg-white"
                     : "border-gray-200 bg-white"
                 }`}
         >
@@ -162,37 +162,19 @@ function VsDivider() {
 // ─── Fee Notes ────────────────────────────────────────────────────────────────
 function FeeNotes() {
     const year2INR = 17248 * EXCHANGE_RATE.rate;
-    const totalINR = 750000 + year2INR;
+
 
     return (
-        <div className="border-t border-gray-200  py-6 mt-8 bg-white">
-            <h4 className="text-gray-800 font-semibold text-base mb-4 flex items-center gap-2">
-                <span>📋</span> Pathway Estimate Breakdown
-            </h4>
-            <ul className="space-y-3">
-                <li className="flex items-start gap-2.5 text-gray-600 text-sm leading-relaxed">
+        <div className="border-t border-gray-200 py-6 mt-8 bg-white">
+            <ul className="space-y-3  mx-auto">
+                <li className="flex items-start justify-center gap-2.5 text-gray-600 text-sm leading-relaxed">
                     <span className="text-[#AC1F2D] mt-0.5">•</span>
-                    <span>
-                        Total estimate: ₹7,50,000 (Year 1, India) + ₹{year2INR.toLocaleString("en-IN")} (Year 2, USA at 1 USD = ₹{EXCHANGE_RATE.rate}, as of {EXCHANGE_RATE.asOf})
-                        {" "}= <strong className="text-gray-800">₹{totalINR.toLocaleString("en-IN")}/-</strong>
-                    </span>
-                </li>
-                <li className="flex items-start gap-2.5 text-gray-600 text-sm leading-relaxed">
-                    <span className="text-[#AC1F2D] mt-0.5">•</span>
-                    <span>
+                    <span className="text-center">
                         <strong>Savings:</strong> Compared to completing both years directly at UWA, this pathway saves approximately{" "}
                         <strong className="text-gray-800">~72%</strong> on total tuition and living costs.
                     </span>
                 </li>
             </ul>
-            <div className="mt-5 pt-4 border-t border-gray-100 flex items-start gap-3">
-                <span className="text-xl">🎓</span>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                    <strong className="text-gray-800">OPT (Optional Practical Training)</strong> — Functions as a{" "}
-                    <strong className="text-gray-800">Post-Study Work Visa (STEM OPT)</strong>, providing{" "}
-                    <strong className="text-gray-800">36 months (3 years)</strong> of U.S. work authorization after graduation.
-                </p>
-            </div>
         </div>
     );
 }
@@ -244,9 +226,9 @@ export default function FeeStructurePage() {
 
                         {/* Comparison Grid */}
                         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-0 lg:gap-0 items-stretch">
-                            <ComparisonCard data={FULL_UWA} />
-                            <VsDivider />
                             <ComparisonCard data={RECOMMENDED} />
+                            <VsDivider />
+                            <ComparisonCard data={FULL_UWA} />
                         </div>
 
                         {/* Notes */}
