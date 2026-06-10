@@ -147,7 +147,7 @@ const WhatWeDo: NextPage = () => {
 
                         {/* Body paragraph */}
                         <motion.p
-                            className="text-sm text-gray-700 leading-relaxed  mb-8 max-w-xl"
+                            className="text-sm text-gray-700 leading-relaxed  mb-8 text-justify"
                             variants={itemVariants}
                         >
                             With a Master of Science in Data Science Degree from the University of West Alabama, you will learn to blend theory with practical application and prepare to advance your career. This program's core courses in statistics, programming and machine learning will strengthen your foundational knowledge and help you stand out as a competitive job candidate. With specialized electives and hands-on projects, you will foster both technical expertise and problem-solving skills.

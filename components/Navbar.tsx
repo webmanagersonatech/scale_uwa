@@ -138,7 +138,7 @@ export default function Navbar() {
               {/* PROGRAM INFO - UWA Logo */}
               <div className="hidden xl:flex flex-col items-center justify-center px-2 border-r border-gray-700 h-full">
                 <span className="text-[11px] font-medium text-white  text-center">
-                  Sona Star Initiative
+                 A Sona Star Initiative
                 </span>
 
                 <Image

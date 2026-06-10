@@ -241,7 +241,7 @@ export default function WhyChooseSection() {
                     className="text-center"
                 >
                     <p className="text-[#8c1d32] text-[10px] sm:text-sm font-semibold tracking-[2px] uppercase mb-4">
-                        Why Year 1 at Sona Star, SCALE Matters
+                        Why  First Year  at Sona Star, SCALE Matters
                     </p>
                     <h2 className="font-serif text-gray-900 text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.2] max-w-[780px] mx-auto">
                         Not Just a First Year.{" "}

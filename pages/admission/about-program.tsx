@@ -567,7 +567,7 @@ function CourseStructure() {
                     <tfoot>
                         <tr className="bg-[#f8f5f2]">
                             <td colSpan={2} className="py-2.5 px-3.5 font-bold text-[#2c2c2a] text-sm lg:text-base">
-                                Total Credit Hours
+                                Total Credit
                             </td>
                             <td className="py-2.5 px-3.5 text-center font-bold text-[#2c2c2a] text-sm lg:text-base">
                                 30
@@ -634,7 +634,7 @@ export default function AboutProgramPage() {
                                 <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">Core Courses</span>
                             </div>
                             <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
-                                <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">3year</span>
+                                <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">3 year</span>
                                 <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">STEM OPT</span>
                             </div>
                             <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">

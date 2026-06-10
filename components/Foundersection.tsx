@@ -208,7 +208,7 @@ export default function FounderSection() {
           {/* Heading */}
           <motion.h2
             {...slideInRight(0.25)}
-            className="font-serif text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.2] sm:leading-[1.15] lg:leading-[1.08] text-black mb-4 sm:mb-6  sm:px-0"
+            className="font-serif text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.2] sm:leading-[1.15] lg:leading-[1.08] text-black mb-4   sm:px-0"
           >
             A Smarter Route to
             <br className="hidden sm:block" />
@@ -220,7 +220,13 @@ export default function FounderSection() {
             >
               Higher Education
             </motion.span>
+
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-[22px] mt-1 font-medium">
+              1st Year at SCALE, India and 2nd Year at Alabama, America.
+            </p>
           </motion.h2>
+
+
 
           {/* Program Mission Statement */}
           <motion.div
@@ -257,8 +263,9 @@ export default function FounderSection() {
 
               {/* Left */}
               <div className="bg-gray-50 p-5 border-b md:border-b-0 md:border-r border-gray-200">
-                <h3 className="text-[#8c1d32] font-bold text-lg mb-4">
-                  Traditional 2-Year USA Route
+                <h3 className="text-[#8c1d32] font-bold text-sm mb-4">
+                  Traditional 2-Year USA International Pathway
+
                 </h3>
 
                 <ul className="space-y-2 text-gray-700 text-sm">
@@ -272,8 +279,9 @@ export default function FounderSection() {
 
               {/* Right */}
               <div className="p-5">
-                <h3 className="text-[#8c1d32] font-bold text-lg mb-4">
-                  SONA x UWA  1+1 Route
+                <h3 className="text-[#8c1d32] font-bold text-sm mb-4">
+                  SONA x UWA  1+1 International Pathway
+
                 </h3>
 
                 <ul className="space-y-2 text-gray-700 text-sm">
@@ -311,7 +319,7 @@ export default function FounderSection() {
       text-xs sm:text-sm md:text-base lg:text-lg
 
       px-6 sm:px-8 md:px-10 lg:px-12
-      py-2 sm:py-2 md:py-3
+      py-2 sm:py-2 
 
       rounded-tr-[16px] sm:rounded-tr-[20px] md:rounded-tr-[24px]
       rounded-bl-[16px] sm:rounded-bl-[20px] md:rounded-bl-[24px]
@@ -331,7 +339,7 @@ export default function FounderSection() {
     "
               >
                 Explore Program →
-     
+
               </motion.button>
             </Link>
           </motion.div>

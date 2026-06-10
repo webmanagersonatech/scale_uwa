@@ -7,21 +7,21 @@ const slides = [
   {
     image: "/homeimages/hero1.webp",
     badge: "Start in Bengaluru. Complete in Alabama.",
-    title: "Earn Your MS in Data Science from the University of West Alabama, USA",
+    title: "Earn Your MS in Data Science Program from the University of West Alabama, USA",
     description:
       "A structured 1+1 international pathway for students aspiring to build global careers in Data Science, Artificial Intelligence, Machine Learning, Analytics, and emerging technology domains.",
   },
   {
     image: "/homeimages/hero2.jpg",
     badge: "STEM-aligned Curriculum",
-    title: "Future-Ready Data Science Education",
+    title: "First of it's kind Indo-US Partnership",
     description:
       "Gain hands-on experience with cutting-edge tools and methodologies that prepare you for leadership roles in AI, ML, and analytics across global industries.",
   },
   {
     image: "/homeimages/hero3.png",
     badge: "Global Career Pathway",
-    title: "From Bengaluru to Alabama — Your Journey to Success",
+    title: "Start in India complete in the USA ",
     description:
       "Study one year at SCALE, Bengaluru, then complete your Master's at the University of West Alabama, USA. Build international credentials and a global professional network.",
   },
@@ -35,7 +35,7 @@ export default function HeroSection() {
       setCurrent((prev) =>
         prev === slides.length - 1 ? 0 : prev + 1
       );
-    }, 6000);
+    }, 9000);
 
     return () => clearInterval(timer);
   }, []);
