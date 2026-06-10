@@ -23,7 +23,7 @@ const Footer = () => {
     { name: "Admissions", href: "/admission/about-program" },
     { name: "Acadamic Plan", href: "/#structure" },
     { name: "Fee Structure", href: "/admission/fees-structure" },
-    { name: "Apply Now", href: "/#" },
+    { name: "Apply Now", href: "https://hikaapp.sonastar.com/INS-0VVEACMY" },
   ];
 
   const aboutLinks = [
