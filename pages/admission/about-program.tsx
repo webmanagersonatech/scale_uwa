@@ -27,7 +27,7 @@ const COURSES: Course[] = [
     { code: "DS 560", title: "Predictive Modeling and Big Data Analytics", credits: 3 },
     { code: "DS 570", title: "Fundamentals of Machine and Deep Learning", credits: 3 },
     { code: "DS 580", title: "Fundamentals of Cybersecurity Data Science", credits: 3 },
-    { code: "DS 590 / DS 599", title: "Data Science Capstone / Thesis in Data Science", credits: "3 or 6" },
+    { code: "DS 590 / DS 599", title: "Data Science Capstone / Thesis in Data Science", credits: "3 " },
 ];
 
 const WHY_CARDS: WhyCard[] = [
@@ -215,7 +215,7 @@ function Sidebar({ activeTab, setActiveTab }: { activeTab: string; setActiveTab:
         <aside className="w-[260px] max-md:hidden" aria-label="Program navigation">
             <div className="bg-white border border-[#e0d6ce] rounded-lg overflow-hidden mb-5 sticky top-24">
                 <div className="bg-[#AC1F2D] text-white text-[11px] lg:text-[12px] font-semibold py-2.5 px-3.5 tracking-[0.9px] uppercase">
-                    Program Sections
+                    Admission Sections
                 </div>
                 <nav className="flex flex-col">
                     {TABS.map((tab) => (
@@ -276,98 +276,137 @@ function WhoShouldApply() {
 
             {/* Eligibility / Pathway Map */}
             <div className="mb-6">
-                <h3 className="text-lg font-semibold text-[#AC1F2D] text-center mb-4">
-                    1+1 International Pathway
-                </h3>
+              
 
-                <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                    <div className="text-center">
-                        {/* India Flag - SVG */}
-                        <div className="flex justify-center mb-2">
-                            <svg width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="48" height="10.67" fill="#FF9933" />
-                                <rect y="10.67" width="48" height="10.66" fill="#FFFFFF" />
-                                <rect y="21.33" width="48" height="10.67" fill="#138808" />
-                                <circle cx="24" cy="16" r="5.33" fill="#000080" />
-                                <circle cx="24" cy="16" r="4" fill="#FFFFFF" />
-                                <circle cx="24" cy="16" r="3" fill="#000080" />
-                            </svg>
-                        </div>
-                        <h4 className="font-semibold text-[#2d2a26]">
-                            Year 1
-                        </h4>
-                        <p className="text-sm text-[#5a5652]">
-                            Sona Star, SCALE, Bengaluru
-                        </p>
-                        <p className="text-xs text-[#8a8682] mt-1">
-                            India
-                        </p>
-                    </div>
+<div className="relative bg-gradient-to-br from-blue-50 via-white to-orange-50 rounded-2xl p-8 overflow-hidden">
+  {/* World Map Background SVG */}
+  <div className="absolute inset-0 opacity-10 pointer-events-none">
+    <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+      <path d="M150,200 Q200,150 280,160 Q350,170 380,200 Q410,230 450,220 Q520,200 580,210 Q640,220 680,190" 
+        stroke="#2d2a26" strokeWidth="1.5" fill="none" strokeDasharray="4 4"/>
+      <path d="M120,250 Q180,220 250,240 Q320,260 380,250 Q440,240 500,260 Q560,280 620,250 Q660,240 700,260" 
+        stroke="#2d2a26" strokeWidth="1.5" fill="none" strokeDasharray="4 4"/>
+      {/* Simplified continent outlines */}
+      <ellipse cx="200" cy="200" rx="60" ry="40" fill="none" stroke="#2d2a26" strokeWidth="1"/>
+      <ellipse cx="600" cy="190" rx="70" ry="45" fill="none" stroke="#2d2a26" strokeWidth="1"/>
+    </svg>
+  </div>
 
-                    <div className="text-3xl text-[#AC1F2D] font-bold">
-                        →
-                    </div>
+  {/* Connecting globe/network decoration */}
+  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-20">
+    <svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="45" fill="none" stroke="#AC1F2D" strokeWidth="0.5"/>
+      <circle cx="50" cy="50" r="35" fill="none" stroke="#AC1F2D" strokeWidth="0.5" strokeDasharray="3 3"/>
+      <circle cx="50" cy="50" r="25" fill="none" stroke="#AC1F2D" strokeWidth="0.5"/>
+      <line x1="50" y1="5" x2="50" y2="95" stroke="#AC1F2D" strokeWidth="0.5" opacity="0.5"/>
+      <line x1="5" y1="50" x2="95" y2="50" stroke="#AC1F2D" strokeWidth="0.5" opacity="0.5"/>
+    </svg>
+  </div>
 
-                    <div className="text-center">
-                        {/* USA Flag - SVG */}
-                        <div className="flex justify-center mb-2">
-                            <svg width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="48" height="32" fill="#B22234" />
-                                <g fill="#FFFFFF">
-                                    <rect width="48" height="2.46" />
-                                    <rect y="4.92" width="48" height="2.46" />
-                                    <rect y="9.84" width="48" height="2.46" />
-                                    <rect y="14.76" width="48" height="2.46" />
-                                    <rect y="19.68" width="48" height="2.46" />
-                                    <rect y="24.6" width="48" height="2.46" />
-                                    <rect y="29.52" width="48" height="2.46" />
-                                </g>
-                                <rect width="18.46" height="16" fill="#3C3B6E" />
-                                <g fill="#FFFFFF">
-                                    <circle cx="1.5" cy="1.5" r="0.8" />
-                                    <circle cx="4.5" cy="1.5" r="0.8" />
-                                    <circle cx="7.5" cy="1.5" r="0.8" />
-                                    <circle cx="10.5" cy="1.5" r="0.8" />
-                                    <circle cx="13.5" cy="1.5" r="0.8" />
-                                    <circle cx="16.5" cy="1.5" r="0.8" />
-                                    <circle cx="1.5" cy="4.5" r="0.8" />
-                                    <circle cx="4.5" cy="4.5" r="0.8" />
-                                    <circle cx="7.5" cy="4.5" r="0.8" />
-                                    <circle cx="10.5" cy="4.5" r="0.8" />
-                                    <circle cx="13.5" cy="4.5" r="0.8" />
-                                    <circle cx="16.5" cy="4.5" r="0.8" />
-                                    <circle cx="1.5" cy="7.5" r="0.8" />
-                                    <circle cx="4.5" cy="7.5" r="0.8" />
-                                    <circle cx="7.5" cy="7.5" r="0.8" />
-                                    <circle cx="10.5" cy="7.5" r="0.8" />
-                                    <circle cx="13.5" cy="7.5" r="0.8" />
-                                    <circle cx="16.5" cy="7.5" r="0.8" />
-                                    <circle cx="1.5" cy="10.5" r="0.8" />
-                                    <circle cx="4.5" cy="10.5" r="0.8" />
-                                    <circle cx="7.5" cy="10.5" r="0.8" />
-                                    <circle cx="10.5" cy="10.5" r="0.8" />
-                                    <circle cx="13.5" cy="10.5" r="0.8" />
-                                    <circle cx="16.5" cy="10.5" r="0.8" />
-                                    <circle cx="1.5" cy="13.5" r="0.8" />
-                                    <circle cx="4.5" cy="13.5" r="0.8" />
-                                    <circle cx="7.5" cy="13.5" r="0.8" />
-                                    <circle cx="10.5" cy="13.5" r="0.8" />
-                                    <circle cx="13.5" cy="13.5" r="0.8" />
-                                    <circle cx="16.5" cy="13.5" r="0.8" />
-                                </g>
-                            </svg>
-                        </div>
-                        <h4 className="font-semibold text-[#2d2a26]">
-                            Year 2
-                        </h4>
-                        <p className="text-sm text-[#5a5652]">
-                            UWA, Alabama
-                        </p>
-                        <p className="text-xs text-[#8a8682] mt-1">
-                            United States
-                        </p>
-                    </div>
-                </div>
+  <div className="flex flex-col md:flex-row items-center justify-center gap-6 relative z-10">
+    {/* India Section */}
+    <div className="text-center bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+      {/* India Flag */}
+      <div className="flex justify-center mb-2">
+        <svg width="56" height="38" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" className="shadow-md">
+          <rect width="48" height="10.67" fill="#FF9933" />
+          <rect y="10.67" width="48" height="10.66" fill="#FFFFFF" />
+          <rect y="21.33" width="48" height="10.67" fill="#138808" />
+          <circle cx="24" cy="16" r="5.33" fill="#000080" />
+          <circle cx="24" cy="16" r="4" fill="#FFFFFF" />
+          <circle cx="24" cy="16" r="3" fill="#000080" />
+        </svg>
+      </div>
+      <h4 className="font-bold text-xl text-[#2d2a26]">
+        Year 1
+      </h4>
+      <p className="text-sm font-medium text-[#5a5652]">
+        Sona Star, SCALE, Bengaluru
+      </p>
+      <p className="text-xs text-[#AC1F2D] mt-1 font-semibold flex items-center justify-center gap-1">
+        <span>🇮🇳</span> India
+      </p>
+    </div>
+
+    {/* Connecting Arrow with Globe Icon */}
+    <div className="flex flex-col items-center">
+      <div className="text-4xl text-[#AC1F2D] font-bold animate-pulse">
+        →
+      </div>
+      <div className="text-xs text-[#8a8682] mt-1 flex items-center gap-1">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="#AC1F2D" strokeWidth="1.5"/>
+          <line x1="2" y1="12" x2="22" y2="12" stroke="#AC1F2D" strokeWidth="1"/>
+          <line x1="12" y1="2" x2="12" y2="22" stroke="#AC1F2D" strokeWidth="1"/>
+        </svg>
+        <span>1+1 International Pathway</span>
+      </div>
+    </div>
+
+    {/* USA Section */}
+    <div className="text-center bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+      {/* USA Flag */}
+      <div className="flex justify-center mb-2">
+        <svg width="56" height="38" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" className="shadow-md">
+          <rect width="48" height="32" fill="#B22234" />
+          <g fill="#FFFFFF">
+            <rect width="48" height="2.46" />
+            <rect y="4.92" width="48" height="2.46" />
+            <rect y="9.84" width="48" height="2.46" />
+            <rect y="14.76" width="48" height="2.46" />
+            <rect y="19.68" width="48" height="2.46" />
+            <rect y="24.6" width="48" height="2.46" />
+            <rect y="29.52" width="48" height="2.46" />
+          </g>
+          <rect width="18.46" height="16" fill="#3C3B6E" />
+          <g fill="#FFFFFF">
+            <circle cx="1.5" cy="1.5" r="0.8" />
+            <circle cx="4.5" cy="1.5" r="0.8" />
+            <circle cx="7.5" cy="1.5" r="0.8" />
+            <circle cx="10.5" cy="1.5" r="0.8" />
+            <circle cx="13.5" cy="1.5" r="0.8" />
+            <circle cx="16.5" cy="1.5" r="0.8" />
+            <circle cx="1.5" cy="4.5" r="0.8" />
+            <circle cx="4.5" cy="4.5" r="0.8" />
+            <circle cx="7.5" cy="4.5" r="0.8" />
+            <circle cx="10.5" cy="4.5" r="0.8" />
+            <circle cx="13.5" cy="4.5" r="0.8" />
+            <circle cx="16.5" cy="4.5" r="0.8" />
+            <circle cx="1.5" cy="7.5" r="0.8" />
+            <circle cx="4.5" cy="7.5" r="0.8" />
+            <circle cx="7.5" cy="7.5" r="0.8" />
+            <circle cx="10.5" cy="7.5" r="0.8" />
+            <circle cx="13.5" cy="7.5" r="0.8" />
+            <circle cx="16.5" cy="7.5" r="0.8" />
+            <circle cx="1.5" cy="10.5" r="0.8" />
+            <circle cx="4.5" cy="10.5" r="0.8" />
+            <circle cx="7.5" cy="10.5" r="0.8" />
+            <circle cx="10.5" cy="10.5" r="0.8" />
+            <circle cx="13.5" cy="10.5" r="0.8" />
+            <circle cx="16.5" cy="10.5" r="0.8" />
+            <circle cx="1.5" cy="13.5" r="0.8" />
+            <circle cx="4.5" cy="13.5" r="0.8" />
+            <circle cx="7.5" cy="13.5" r="0.8" />
+            <circle cx="10.5" cy="13.5" r="0.8" />
+            <circle cx="13.5" cy="13.5" r="0.8" />
+            <circle cx="16.5" cy="13.5" r="0.8" />
+          </g>
+        </svg>
+      </div>
+      <h4 className="font-bold text-xl text-[#2d2a26]">
+        Year 2
+      </h4>
+      <p className="text-sm font-medium text-[#5a5652]">
+        UWA, Alabama
+      </p>
+      <p className="text-xs text-[#AC1F2D] mt-1 font-semibold flex items-center justify-center gap-1">
+        <span>🇺🇸</span> United States
+      </p>
+    </div>
+  </div>
+
+
+</div>
 
                 <div className="mt-6 pt-4 border-t border-[#e0d6ce]">
                     <p className="text-center text-sm text-[#5a5652]">
@@ -488,7 +527,7 @@ function CourseStructure() {
             </h2>
             <p className="text-sm lg:text-base text-[#5a5652] leading-relaxed mb-5">
                 The MS in Data Science is structured around{" "}
-                <strong>30 graduate credit hours</strong> across 10 courses
+                <strong>30 credits </strong> across 10 courses
                 published by UWA.
             </p>
             <div className="overflow-x-auto">
@@ -502,7 +541,7 @@ function CourseStructure() {
                                 Course Title
                             </th>
                             <th scope="col" className="bg-[#AC1F2D] text-white py-2.5 px-3.5 text-center text-[12px] lg:text-[13px] font-semibold tracking-[0.6px] uppercase">
-                                Credit Hours
+                                Credit 
                             </th>
                         </tr>
                     </thead>
@@ -562,50 +601,50 @@ export default function AboutProgramPage() {
 
     return (
         <>
-      {/* Hero Section */}
-<section className="bg-gray-100 py-12 lg:py-16 relative overflow-hidden">
-    {/* Decorative circles */}
-    <div className="absolute -right-[60px] -top-[60px] w-[360px] h-[360px] rounded-full bg-gray-200/50 pointer-events-none"></div>
-    <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-gray-300/30 pointer-events-none"></div>
-    <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-gray-200/40 pointer-events-none"></div>
+            {/* Hero Section */}
+            <section className="bg-gray-100 py-12 lg:py-16 relative overflow-hidden">
+                {/* Decorative circles */}
+                <div className="absolute -right-[60px] -top-[60px] w-[360px] h-[360px] rounded-full bg-gray-200/50 pointer-events-none"></div>
+                <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-gray-300/30 pointer-events-none"></div>
+                <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-gray-200/40 pointer-events-none"></div>
 
-    <div className="max-w-[1440px] mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-            <div className="lg:max-w-[55%]">
-                <div className="inline-flex items-center gap-2 bg-gray-200 border border-gray-300 text-gray-700 text-lg tracking-[1.2px] uppercase py-2.5 px-6 mb-4">
-                    <span className="w-2 h-2 bg-gray-600 rounded-full"></span>
-                    MS in Data Science
-                </div>
-                <h1 className="font-serif text-4xl lg:text-5xl text-gray-900 font-bold mb-4 leading-tight">
-                    About the <span className="text-gray-700">Program</span>
-                </h1>
-                <p className="text-gray-600 text-base lg:text-lg max-w-[580px] leading-relaxed">
-                    A 30-credit graduate pathway through UWA Sona Star , SCALE — start in India,
-                    complete at the University of West Alabama, USA.
-                </p>
-            </div>
+                <div className="max-w-[1440px] mx-auto px-6 relative z-10">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+                        <div className="lg:max-w-[55%]">
+                            <div className="inline-flex items-center gap-2 bg-gray-200 border border-gray-300 text-gray-700 text-lg tracking-[1.2px] uppercase py-2.5 px-6 mb-4">
+                                <span className="w-2 h-2 bg-gray-600 rounded-full"></span>
+                                MS in Data Science
+                            </div>
+                            <h1 className="font-serif text-4xl lg:text-5xl text-gray-900 font-bold mb-4 leading-tight">
+                                About the <span className="text-gray-700">Program</span>
+                            </h1>
+                            <p className="text-gray-600 text-base lg:text-lg max-w-[580px] leading-relaxed">
+                                A 30-credit graduate pathway through UWA Sona Star, SCALE — start in India,
+                                complete at the University of West Alabama, USA.
+                            </p>
+                        </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6">
-                <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
-                    <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">30</span>
-                    <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">Credit Hours</span>
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 lg:gap-6">
+                            <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
+                                <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">30</span>
+                                <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">Credits </span>
+                            </div>
+                            <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
+                                <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">10</span>
+                                <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">Core Courses</span>
+                            </div>
+                            <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
+                                <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">3year</span>
+                                <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">STEM OPT</span>
+                            </div>
+                            <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
+                                <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">2</span>
+                                <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">Locations</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
-                    <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">10</span>
-                    <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">Core Courses</span>
-                </div>
-                <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
-                    <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">3yr</span>
-                    <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">STEM OPT</span>
-                </div>
-                <div className="bg-white rounded-xl p-4 text-center border border-gray-200 hover:border-gray-400 transition-all duration-300 shadow-sm">
-                    <span className="block font-serif text-3xl lg:text-[32px] text-gray-800 font-bold leading-none">2</span>
-                    <span className="block text-[11px] text-gray-500 tracking-[0.6px] uppercase mt-2">Locations</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
 
             {/* Breadcrumb */}
             <Breadcrumb />
@@ -634,16 +673,20 @@ export default function AboutProgramPage() {
                             </AnimatePresence>
 
                             {/* CTA */}
-                            <div className="bg-[#AC1F2D] rounded-lg py-6 px-7 flex items-center justify-between gap-5 flex-wrap">
-                                <div className="text-[#e8c8a0] text-[15px] lg:text-base">
-                                    <strong className="text-white">Ready to apply?</strong> Explore admissions requirements
-                                    and start your  Sona Star , SCALE pathway today.
+                            <div className="bg-gray-100 border border-gray-200 rounded-lg py-6 px-7 flex items-center justify-between gap-5 flex-wrap">
+                                <div className="text-gray-700 text-[15px] lg:text-base">
+                                    <strong className="text-gray-900">Ready to apply?</strong> Explore admissions requirements
+                                    and start your Sona Star, SCALE pathway today.
                                 </div>
+
                                 <div className="flex gap-3 flex-wrap">
-                                    <Link href="https://hikaapp.sonastar.com/INS-0VVEACMY" target="_blank" className="inline-block bg-[#ffe588] text-[#6B1313] text-sm lg:text-base font-bold py-2.5 px-6 rounded-md no-underline transition-colors hover:bg-[#ffd050]">
+                                    <Link
+                                        href="https://hikaapp.sonastar.com/INS-0VVEACMY"
+                                        target="_blank"
+                                        className="inline-block bg-[#AC1F2D] text-white text-sm lg:text-base font-bold py-2.5 px-6 rounded-md no-underline transition-colors hover:bg-[#8c1825]"
+                                    >
                                         Apply Now
                                     </Link>
-
                                 </div>
                             </div>
                         </main>

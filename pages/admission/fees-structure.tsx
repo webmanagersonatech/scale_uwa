@@ -69,27 +69,21 @@ function RecommendedPathwayCard() {
     const totalINRFromUSD = totalUSD * EXCHANGE_RATE.rate;
 
     return (
-        <motion.div
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-            whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="bg-white border-2 border-[#AC1F2D] rounded-xl overflow-hidden shadow-lg transition-all relative"
-        >
+        <div className="bg-white  overflow-hidden">
             {/* Header */}
-            <div className="bg-gradient-to-r from-[#AC1F2D] to-[#8a1824] px-6 py-5">
-                <p className="text-[#e8c8a0] text-sm font-medium">{RECOMMENDED_PATHWAY.subtitle}</p>
-                <p className="text-white/80 text-sm mt-2 max-w-2xl">{RECOMMENDED_PATHWAY.description}</p>
+            <div className="border-b border-gray-200 px-6 py-4">
+                <p className="text-gray-500 text-sm font-medium">{RECOMMENDED_PATHWAY.subtitle}</p>
+                <p className="text-gray-600 text-sm mt-2">{RECOMMENDED_PATHWAY.description}</p>
                 
-                {/* Two Key Numbers: 1+1 Pathway Model + ₹72 Lakhs Savings */}
+                {/* Two Key Numbers */}
                 <div className="flex flex-wrap gap-3 mt-4">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg px-3 py-1.5 flex items-center gap-2">
-                        <span className="text-white font-bold text-base">1+1</span>
-                        <span className="text-white/70 text-xs">Pathway Model</span>
+                    <div className="border border-gray-300 rounded px-3 py-1.5">
+                        <span className="text-gray-800 font-semibold text-sm">1+1</span>
+                        <span className="text-gray-500 text-xs ml-1">Pathway Model</span>
                     </div>
-                    <div className="bg-[#ffe588]/20 backdrop-blur-sm rounded-lg px-3 py-1.5 flex items-center gap-2">
-                        <span className="text-[#ffe588] font-bold text-base">~₹72 Lakhs</span>
-                        <span className="text-white/70 text-xs">Total Savings</span>
+                    <div className="border border-gray-300 rounded px-3 py-1.5">
+                        <span className="text-gray-800 font-semibold text-sm">~₹72 Lakhs</span>
+                        <span className="text-gray-500 text-xs ml-1">Total Savings</span>
                     </div>
                 </div>
             </div>
@@ -99,60 +93,44 @@ function RecommendedPathwayCard() {
                 {/* Cost Items */}
                 <div className="space-y-4 mb-6">
                     {RECOMMENDED_PATHWAY.items.map((item, idx) => (
-                        <div key={idx} className="flex justify-between items-start border-b border-[#f0e6e0] pb-3 last:border-0">
+                        <div key={idx} className="flex justify-between items-start border-b border-gray-100 pb-3 last:border-0">
                             <div>
-                                <span className="text-[#2c2c2a] font-medium text-[15px]">{item.label}</span>
+                                <span className="text-gray-700 text-sm">{item.label}</span>
                                 {item.note && (
-                                    <p className="text-[11px] text-[#8a7a6e] mt-0.5">{item.note}</p>
+                                    <p className="text-xs text-gray-400 mt-0.5">{item.note}</p>
                                 )}
                             </div>
-                            <span className="text-[#AC1F2D] font-bold text-[16px] ml-4 whitespace-nowrap">
+                            <span className="text-gray-800 font-semibold text-sm ml-4 whitespace-nowrap">
                                 {item.amount}
                             </span>
                         </div>
                     ))}
                 </div>
 
-                {/* Total + Savings Row */}
-                <div className="bg-gradient-to-r from-[#fdf5f0] to-[#fff8f3] rounded-lg p-5 mt-2 border border-[#e0d6ce]">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                {/* Total Section */}
+                <div className="border-t border-gray-200 pt-4 mt-2">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                         <div>
-                            <span className="text-[#2c2c2a] font-semibold text-base">{RECOMMENDED_PATHWAY.totalLabel}</span>
-                            <span className="text-[#AC1F2D] font-bold text-3xl ml-3">{RECOMMENDED_PATHWAY.totalAmount}</span>
+                            <span className="text-gray-600 text-sm">{RECOMMENDED_PATHWAY.totalLabel}</span>
+                            <span className="text-gray-800 font-bold text-2xl ml-2">{RECOMMENDED_PATHWAY.totalAmount}</span>
                         </div>
-                        <div className="bg-[#AC1F2D]/10 px-4 py-2 border border-[#AC1F2D]/30 self-start md:self-auto">
-                            <span className="text-[#AC1F2D] font-bold text-sm flex items-center gap-1">
-                                💰 {RECOMMENDED_PATHWAY.savingsBadge}
-                            </span>
+                        <div className="border border-gray-300 px-3 py-1.5">
+                            <span className="text-gray-700 text-xs">💰 {RECOMMENDED_PATHWAY.savingsBadge}</span>
                         </div>
                     </div>
 
                     {/* Detailed breakdown */}
-                    <div className="mt-4 pt-4 border-t border-[#e0d6ce] grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
-                        <div className="flex justify-between">
-                            <span className="text-[#5a5652]">Year 1 (INR):</span>
-                            <span className="font-semibold text-[#2c2c2a]">₹7,50,000</span>
-                        </div>
-                        <div className="flex justify-between">
-                            <span className="text-[#5a5652]">Year 2 (USD):</span>
-                            <span className="font-semibold text-[#2c2c2a]">$17,248</span>
-                        </div>
-                        <div className="flex justify-between sm:col-span-2">
-                            <span className="text-[#5a5652]">Year 2 (INR approx.):</span>
-                            <span className="font-semibold text-[#2c2c2a]">
-                                ₹{totalINRFromUSD.toLocaleString('en-IN')}
-                            </span>
-                        </div>
-                        <div className="flex justify-between sm:col-span-2 pt-2 mt-1 border-t border-dashed border-[#e0d6ce]">
-                            <span className="text-[#AC1F2D] font-bold">Total INR Investment:</span>
-                            <span className="text-[#AC1F2D] font-bold text-lg">
+                    <div className="mt-4 pt-3 border-t border-gray-100">
+                        <div className="flex justify-between text-sm py-1">
+                            <span className="text-gray-500">Total INR Investment:</span>
+                            <span className="text-gray-800 font-semibold">
                                 ₹{(750000 + totalINRFromUSD).toLocaleString('en-IN')}
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }
 
@@ -162,45 +140,40 @@ function FeeNotes() {
     const totalINR = 750000 + year2INR;
 
     return (
-        <motion.div
-            variants={fadeInUp}
-            initial="hidden"
-            animate="visible"
-            className="bg-[#f8f5f2] border border-[#e0d6ce] rounded-xl p-6 mt-6"
-        >
-            <h4 className="text-[#AC1F2D] font-serif font-bold text-lg mb-3 flex items-center gap-2">
+        <div className="border-y border-gray-200 p-6 mt-6">
+            <h4 className="text-gray-800 font-semibold text-lg mb-3 flex items-center gap-2">
                 <span>📋</span> Total Pathway Estimate Details
             </h4>
             <ul className="space-y-2">
-                <li className="flex items-start gap-2 text-[#5a5652] text-sm leading-relaxed">
-                    <span className="text-[#AC1F2D] text-lg leading-5">•</span>
+                <li className="flex items-start gap-2 text-gray-600 text-sm leading-relaxed">
+                    <span className="text-gray-500 text-lg leading-5">•</span>
                     <span>
                         Total Pathway estimate: India + USA in INR = ₹7,50,000 (1st year in India) + 
                         ₹{year2INR.toLocaleString('en-IN')} (2nd year in USA, conversion rate 1 USD = 95 INR on 30th May 2026) 
-                        = <strong className="text-[#AC1F2D]">₹{totalINR.toLocaleString('en-IN')}/-</strong>
+                        = <strong className="text-gray-800">₹{totalINR.toLocaleString('en-IN')}/-</strong>
                     </span>
                 </li>
-                <li className="flex items-start gap-2 text-[#5a5652] text-sm leading-relaxed">
-                    <span className="text-[#AC1F2D] text-lg leading-5">•</span>
+                <li className="flex items-start gap-2 text-gray-600 text-sm leading-relaxed">
+                    <span className="text-gray-500 text-lg leading-5">•</span>
                     <span>
                         <strong className="font-semibold">Savings:</strong> Compared to completing full 2 years directly at UWA, 
-                        this pathway saves approximately <strong className="text-[#AC1F2D]">~₹72 Lakhs</strong> on total tuition and living costs.
+                        this pathway saves approximately <strong className="text-gray-800">~₹72 Lakhs</strong> on total tuition and living costs.
                     </span>
                 </li>
             </ul>
 
             {/* OPT → Post-Study Work Visa (STEM) - Explicit Label */}
-            <div className="mt-5 pt-4 border-t border-[#e0d6ce] bg-[#e8f0fe] rounded-lg p-4">
-                <p className="text-[#2c2c2a] text-sm font-medium flex items-start gap-3">
-                    <span className="text-[#AC1F2D] text-xl">🎓</span>
+            <div className="mt-5 pt-4 border-t border-gray-200 p-4">
+                <p className="text-gray-700 text-sm flex items-start gap-3">
+                    <span className="text-gray-500 text-xl">🎓</span>
                     <span className="leading-relaxed">
-                        <strong className="text-[#AC1F2D]">OPT (Optional Practical Training):</strong> Functions as a 
-                        <strong className="text-[#AC1F2D]"> Post-Study Work Visa — STEM OPT Pathway</strong>. 
-                        Eligible for <strong>36 months (3 years)</strong> of U.S. work authorization after graduation.
+                        <strong className="text-gray-800">OPT (Optional Practical Training):</strong> Functions as a 
+                        <strong className="text-gray-800"> Post-Study Work Visa — STEM OPT Pathway</strong>. 
+                        Eligible for <strong className="text-gray-800">36 months (3 years)</strong> of U.S. work authorization after graduation.
                     </span>
                 </p>
             </div>
-        </motion.div>
+        </div>
     );
 }
 
@@ -225,16 +198,7 @@ export default function FeeStructurePage() {
                 </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 text-center">
-                    <span className="block font-serif text-3xl text-gray-700 font-bold">₹7.5L</span>
-                    <span className="block text-[11px] text-gray-500 uppercase mt-1">Year 1 India</span>
-                </div>
-                <div className="p-4 text-center">
-                    <span className="block font-serif text-3xl text-gray-700 font-bold">$17.2k</span>
-                    <span className="block text-[11px] text-gray-500 uppercase mt-1">Year 2 USA</span>
-                </div>
-            </div>
+           
         </div>
     </div>
 </section>

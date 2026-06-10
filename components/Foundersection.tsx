@@ -55,7 +55,7 @@ export default function FounderSection() {
     },
     {
       number: "72%",
-      label: "Cost Exposure",
+      label: "Cost  Savings",
       icon: Briefcase,
       color: "from-green-500 to-emerald-500",
       gradient: "green"
@@ -117,7 +117,7 @@ export default function FounderSection() {
               className="absolute bottom-0 right-0 w-[62%] sm:w-[60%] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl z-20 ring-4 ring-white/50"
             >
               <Image
-                src="/homeimages/found3.webp"
+                src="/homeimages/image1.png"
                 alt="Founder portrait"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-110"
@@ -277,7 +277,7 @@ export default function FounderSection() {
                 </h3>
 
                 <ul className="space-y-2 text-gray-700 text-sm">
-                  <li>• Complete Year 1 at  Sona Star,SCALE in Bengaluru.</li>
+                  <li>• Complete Year 1 at  Sona Star, SCALE in Bengaluru.</li>
                   <li>• Reduce one full year of U.S. living costs.</li>
                   <li>• Additional technical & communication preparation.</li>
                   <li>• Phased financial planning for families.</li>

@@ -20,7 +20,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
     return (
         <div className="relative flex flex-col items-center w-full h-full">
             {/* White content card - flex column to push button area */}
-            <div className="relative bg-white/90 backdrop-blur-sm shadow-lg w-full px-8 pt-8 pb-12 rounded-sm flex flex-col flex-1">
+            <div className="relative bg-white/90 backdrop-blur-sm shadow-lg w-full px-8 pt-8  rounded-sm flex flex-col flex-1">
                 {/* Option italic label - positioned above the card */}
                 <div className="absolute -top-5 left-0 z-10">
                     <span

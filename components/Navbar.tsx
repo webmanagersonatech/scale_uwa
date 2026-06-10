@@ -99,12 +99,12 @@ export default function Navbar() {
             </Link>
 
             {/* RIGHT SIDE CONTENT - now flush right within 1440px container */}
-            <div className="h-8 flex items-center justify-end pl-[260px] pr-2">
+            <div className="h-8 flex items-center justify-end pl-[260px] pr-2 ">
               <div className="absolute left-[180px] top-0 h-8 flex flex-col justify-center leading-none">
-                <span className="text-[10px] uppercase tracking-[2px] text-white font-bold">
-                  <span className="text-[#008BC8]">SONA</span> UWA International Pathway
+                <span className="text-[12px] uppercase tracking-[2px] text-white font-bold">
+                  <span className="text-[#008BC8] ml-1">SONA</span> UWA International Pathway
                 </span>
-              
+
               </div>
 
               <div className="flex items-center gap-6 text-[12px]">
@@ -136,7 +136,11 @@ export default function Navbar() {
               <div className="hidden lg:block w-[175px] shrink-0"></div>
 
               {/* PROGRAM INFO - UWA Logo */}
-              <div className="hidden xl:flex items-center justify-center px-2 border-r border-gray-700 h-full">
+              <div className="hidden xl:flex flex-col items-center justify-center px-2 border-r border-gray-700 h-full">
+                <span className="text-[11px] font-medium text-white  text-center">
+                  Sona Star Initiative
+                </span>
+
                 <Image
                   src="/homeimages/scale.png"
                   alt="SCALE Logo"

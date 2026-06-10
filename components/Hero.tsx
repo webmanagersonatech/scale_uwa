@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Download, MessageCircle, BookOpen, Globe, Clock3, GraduationCap, BadgePercent, BriefcaseBusiness, Plane } from "lucide-react";
+import { ArrowRight, Download, MessageCircle, BookOpen, Globe, Clock3, GraduationCap, BadgePercent, BriefcaseBusiness, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
   {
@@ -19,7 +19,7 @@ const slides = [
       "Gain hands-on experience with cutting-edge tools and methodologies that prepare you for leadership roles in AI, ML, and analytics across global industries.",
   },
   {
-    image: "/homeimages/hero3.jpg",
+    image: "/homeimages/hero3.png",
     badge: "Global Career Pathway",
     title: "From Bengaluru to Alabama — Your Journey to Success",
     description:
@@ -39,6 +39,14 @@ export default function HeroSection() {
 
     return () => clearInterval(timer);
   }, []);
+
+  const goToPrevious = () => {
+    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <section id="overview" className="relative overflow-hidden pt-[65px] md:pt-[128px]">
@@ -174,7 +182,7 @@ export default function HeroSection() {
                 <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
                   <BookOpen className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
                   <div className="text-xl font-bold text-gray-900 leading-tight">30</div>
-                  <div className="text-xs text-gray-500 mt-1">Graduate Credits</div>
+                  <div className="text-xs text-gray-500 mt-1">Credits</div>
                 </div>
                 {/* Duration */}
                 <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
@@ -182,8 +190,6 @@ export default function HeroSection() {
                   <div className="text-xl font-bold text-gray-900 leading-tight">2 Year</div>
                   <div className="text-xs text-gray-500 mt-1">Duration</div>
                 </div>
-
-
 
                 {/* OPT */}
                 <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
@@ -193,7 +199,7 @@ export default function HeroSection() {
                     Post Study Work Visa
                   </div>
                   <div className="text-[10px] text-[#8c1d32] font-medium">
-                    (STEM)
+                    (STEM OPT)
                   </div>
                 </div>
 
@@ -238,12 +244,30 @@ export default function HeroSection() {
                   <div className="text-base font-semibold text-gray-900">US Career</div>
                   <div className="text-xs text-gray-500 mt-1">Data Science / STEM</div>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={goToPrevious}
+        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white backdrop-blur-sm rounded-full p-2 md:p-3 shadow-lg transition-all duration-200 hover:scale-110"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
+      </button>
+
+      <button
+        onClick={goToNext}
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 bg-white/80 hover:bg-white backdrop-blur-sm rounded-full p-2 md:p-3 shadow-lg transition-all duration-200 hover:scale-110"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
+      </button>
+
+
     </section>
   );
 }

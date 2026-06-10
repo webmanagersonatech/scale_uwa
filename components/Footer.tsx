@@ -20,7 +20,7 @@ const Footer = () => {
 
   const quickLinks = [
 
-    { name: "Admissions", href: "/admission/about-program" },
+    { name: "About the Program", href: "/admission/about-program" },
     { name: "Acadamic Plan", href: "/#structure" },
     { name: "Fee Structure", href: "/admission/fees-structure" },
     { name: "Apply Now", href: "https://hikaapp.sonastar.com/INS-0VVEACMY" },
@@ -67,24 +67,23 @@ const Footer = () => {
           {/* LEFT COLUMN - Logos & Info */}
           <div className="lg:col-span-4">
             {/* Three Logos Row */}
-            <div className="flex items-center gap-4 mb-6">
-              <Image
-                src="/homeimages/Sona-star-logo.webp"
-                alt="Sona Star Logo"
-                width={50}
-                height={50}
-                className="object-contain"
-              />
-              <Image
-                src="/homeimages/footer-uwa.png"
-                alt="UWA Logo"
-                width={50}
-                height={50}
-                className="object-contain"
-              />
+          <div className="flex items-center gap-6 mb-6">
+  <Image
+    src="/homeimages/Sona-star-logo.webp"
+    alt="Sona Star Logo"
+    width={70}
+    height={70}
+    className="object-contain"
+  />
 
-
-            </div>
+  <Image
+    src="/homeimages/footer-uwa.png"
+    alt="UWA Logo"
+    width={70}
+    height={70}
+    className="object-contain"
+  />
+</div>
 
             {/* UWA × SCALE Label */}
             <div className="mb-4">

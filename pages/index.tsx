@@ -10,6 +10,7 @@ import ProgrammeStructure from "../components/Programmestructure";
 import CareerPathway from "../components/Careerpathway";
 import Admissions from "../components/AdmissionComponent";
 import AboutSection from "../components/AboutComponent";
+import WhatWeDo from "../components/Aboutdatascience";
 
 export default function Home() {
   return (
@@ -71,6 +72,7 @@ export default function Home() {
 
       <Hero />
       <AboutSection />
+      <WhatWeDo/>
       <FounderSection />
       <ProgrammeStructure />
       <WhyChooseSection />

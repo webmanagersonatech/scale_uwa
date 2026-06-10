@@ -7,7 +7,7 @@ const faqItems = [
     number: "01",
     title: "Where is Year 1 conducted?",
     description:
-      "Year 1 is conducted at Sona Star , SCALE located in Sona Towers, 71 Millers Road, Vasanth Nagar, Bengaluru, Karnataka - 560052, India.",
+      "Year 1 is conducted at Sona Star, SCALE located in Sona Towers, 71 Millers Road, Vasanth Nagar, Bengaluru, Karnataka - 560052, India.",
     image: "/homeimages/faq1.jpeg",
   },
 
@@ -25,7 +25,7 @@ const faqItems = [
   },
   {
     number: "04",
-    title: "Is the Post Study Work Visa (STEM) guaranteed?",
+    title: "Is the Post Study Work Visa (STEM OPT) guaranteed?",
     description:
       "No. Post-Study Work Visa opportunities through OPT/STEM OPT, employment, and H-1B outcomes are governed by U.S. immigration rules, employer requirements, and individual student eligibility.",
     image: "/homeimages/faq4.webp",

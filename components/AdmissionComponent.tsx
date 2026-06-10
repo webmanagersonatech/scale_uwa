@@ -58,9 +58,9 @@ const steps = [
     },
     {
         number: "07",
-        title: "Post Study Work Visa (STEM) Career Pathway",
+        title: "Post Study Work Visa (STEM OPT) Career Pathway",
         description:
-            "Eligible graduates may access up to 3 years of Post-Study Work Visa opportunities through the STEM OPT pathway, subject to U.S. government regulations, employer requirements, and individual eligibility.",
+            "Up to 3 years of U.S. post-study work opportunities through STEM OPT, subject to eligibility.",
         icon: Briefcase,
     },
 ];
