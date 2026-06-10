@@ -19,7 +19,7 @@ const RECOMMENDED_PATHWAY = {
     ],
     totalLabel: "Total Estimate (2 Years)",
     totalAmount: "~₹23.9 lakh",
-    savingsBadge: "Save ~₹72 Lakhs vs Traditional MS",
+    savingsBadge: "Save ~72% vs Traditional MS", // Changed from ₹72 Lakhs to 72%
 };
 
 const EXCHANGE_RATE = {
@@ -69,7 +69,7 @@ function RecommendedPathwayCard() {
     const totalINRFromUSD = totalUSD * EXCHANGE_RATE.rate;
 
     return (
-        <div className="bg-white  overflow-hidden">
+        <div className="bg-white overflow-hidden">
             {/* Header */}
             <div className="border-b border-gray-200 px-6 py-4">
                 <p className="text-gray-500 text-sm font-medium">{RECOMMENDED_PATHWAY.subtitle}</p>
@@ -82,7 +82,7 @@ function RecommendedPathwayCard() {
                         <span className="text-gray-500 text-xs ml-1">Pathway Model</span>
                     </div>
                     <div className="border border-gray-300 rounded px-3 py-1.5">
-                        <span className="text-gray-800 font-semibold text-sm">~₹72 Lakhs</span>
+                        <span className="text-gray-800 font-semibold text-sm">~72%</span>
                         <span className="text-gray-500 text-xs ml-1">Total Savings</span>
                     </div>
                 </div>
@@ -114,8 +114,8 @@ function RecommendedPathwayCard() {
                             <span className="text-gray-600 text-sm">{RECOMMENDED_PATHWAY.totalLabel}</span>
                             <span className="text-gray-800 font-bold text-2xl ml-2">{RECOMMENDED_PATHWAY.totalAmount}</span>
                         </div>
-                        <div className="border border-gray-300 px-3 py-1.5">
-                            <span className="text-gray-700 text-xs">💰 {RECOMMENDED_PATHWAY.savingsBadge}</span>
+                        <div className="border border-gray-300 px-3 py-1.5 bg-green-50">
+                            <span className="text-green-700 text-xs font-medium">💰 {RECOMMENDED_PATHWAY.savingsBadge}</span>
                         </div>
                     </div>
 
@@ -157,7 +157,7 @@ function FeeNotes() {
                     <span className="text-gray-500 text-lg leading-5">•</span>
                     <span>
                         <strong className="font-semibold">Savings:</strong> Compared to completing full 2 years directly at UWA, 
-                        this pathway saves approximately <strong className="text-gray-800">~₹72 Lakhs</strong> on total tuition and living costs.
+                        this pathway saves approximately <strong className="text-gray-800">~72%</strong> on total tuition and living costs.
                     </span>
                 </li>
             </ul>
@@ -182,26 +182,24 @@ export default function FeeStructurePage() {
     return (
         <>
             {/* Hero Section */}
-      <section className="bg-gray-50 py-12 lg:py-16">
-    <div className="max-w-[1440px] mx-auto px-6">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-            <div className="lg:max-w-[60%]">
-                <div className="inline-flex items-center gap-2 bg-gray-200 text-gray-700 text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
-                    <span className="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
-                    Affordable International Degree 
+            <section className="bg-gray-50 py-12 lg:py-16">
+                <div className="max-w-[1440px] mx-auto px-6">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+                        <div className="lg:max-w-[60%]">
+                            <div className="inline-flex items-center gap-2 bg-gray-200 text-gray-700 text-[11px] tracking-[1.2px] uppercase py-1.5 px-4 rounded-full mb-4">
+                                <span className="w-1.5 h-1.5 bg-gray-500 rounded-full"></span>
+                                Affordable International Degree 
+                            </div>
+                            <h1 className="font-serif text-4xl lg:text-5xl text-gray-800 font-bold mb-4 leading-tight">
+                                Fee & <span className="text-gray-600">Pathway Cost</span>
+                            </h1>
+                            <p className="text-gray-600 text-base lg:text-lg max-w-[600px] leading-relaxed">
+                                Transparent, structured pricing for your <strong className="text-gray-800 text-lg md:text-xl">MS in Data Science</strong> — Year 1 at Sona Star, SCALE in India, Year 2 at UWA, USA.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <h1 className="font-serif text-4xl lg:text-5xl text-gray-800 font-bold mb-4 leading-tight">
-                    Fee & <span className="text-gray-600">Pathway Cost</span>
-                </h1>
-                <p className="text-gray-600 text-base lg:text-lg max-w-[600px] leading-relaxed">
-                    Transparent, structured pricing for your <strong className="text-gray-800 text-lg md:text-xl">MS in Data Science</strong> — Year 1 at Sona Star, SCALE in India, Year 2 at UWA, USA.
-                </p>
-            </div>
-
-           
-        </div>
-    </div>
-</section>
+            </section>
 
             {/* Breadcrumb */}
             <Breadcrumb />
@@ -214,7 +212,6 @@ export default function FeeStructurePage() {
                             <p className="text-[#5a5652] text-base leading-relaxed">
                                 The <strong className="text-[#AC1F2D] text-lg md:text-xl">MS in Data Science</strong> follows a <strong className="text-[#AC1F2D]">1+1 pathway model</strong> designed to make U.S. education more accessible.
                                 Pay Indian tuition for your first year, then complete your degree on campus at the University of West Alabama.
-                              
                             </p>
                         </div>
 
