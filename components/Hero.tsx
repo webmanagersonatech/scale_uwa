@@ -5,21 +5,21 @@ import { ArrowRight, Download, MessageCircle, BookOpen, Globe, Clock3, Graduatio
 
 const slides = [
   {
-    image: "/homeimages/hero1.webp",
+    image: "/homeimages/hero2.jpg",
     badge: "Start in Bengaluru. Complete in Alabama.",
     title: "Earn Your MS in Data Science Program from the University of West Alabama, USA",
     description:
       "A structured 1+1 international pathway for students aspiring to build global careers in Data Science, Artificial Intelligence, Machine Learning, Analytics, and emerging technology domains.",
   },
   {
-    image: "/homeimages/hero2.jpg",
+    image: "/homeimages/hero3.webp",
     badge: "STEM-aligned Curriculum",
     title: "First of it's kind Indo-US Partnership",
     description:
       "Gain hands-on experience with cutting-edge tools and methodologies that prepare you for leadership roles in AI, ML, and analytics across global industries.",
   },
   {
-    image: "/homeimages/hero3.png",
+    image: "/homeimages/hero1.webp",
     badge: "Global Career Pathway",
     title: "Start in India complete in the USA ",
     description:
