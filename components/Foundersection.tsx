@@ -48,7 +48,7 @@ export default function FounderSection() {
 
     {
       number: "1+1",
-      label: "Sona × UWA Route",
+      label: "Sona × UWA International Pathway",
       icon: BookOpen,
       color: "from-blue-500 to-cyan-500",
       gradient: "blue"
@@ -228,7 +228,7 @@ export default function FounderSection() {
             className="mb-6"
           >
             <p className="text-gray-700 text-sm sm:text-base leading-relaxed mb-3">
-              The <span className="font-semibold text-[#8c1d32]">The international pathway to university west Alabama offered at SCALE by Sona Star</span> helps students reduce cost exposure,
+              The <span className="font-semibold text-[#8c1d32]">The international pathway to University of West Alabama offered at SCALE by Sona Star</span> helps students reduce cost exposure,
               prepare better, and enter the U.S. academic system with stronger technical,
               communication, and career readiness.
             </p>

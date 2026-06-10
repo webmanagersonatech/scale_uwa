@@ -14,7 +14,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
     details,
     learnMoreHref,
     countryFlagSrc,
-    countryName,
+
     studentResources,
 }) => {
     return (
@@ -24,10 +24,15 @@ const OptionCard: React.FC<OptionCardProps> = ({
                 {/* Option italic label - positioned above the card */}
                 <div className="absolute -top-5 left-0 z-10">
                     <span
-                        className="font-serif italic text-3xl md:text-4xl text-gray-800 leading-none select-none whitespace-nowrap"
+                        className="inline-flex items-center gap-2 font-serif italic text-3xl md:text-4xl text-gray-800 leading-none select-none whitespace-nowrap"
                         style={{ fontFamily: "'Playfair Display', serif" }}
                     >
                         {optionLabel}
+                        <img
+                            src={countryFlagSrc}
+                            alt="India flag"
+                            className="w-10 h-auto rounded-sm shadow-sm"
+                        />
                     </span>
                 </div>
 
@@ -108,42 +113,7 @@ const UWAOptionsSection: React.FC = () => {
             className="relative w-full overflow-hidden py-10 bg-gray-100"
             style={{ fontFamily: "'Lato', sans-serif" }}
         >
-            {/* Section Header with Dual Flags - Modern Design */}
-            <div className="w-full max-w-[1440px] mx-auto px-6 mb-12">
-                <div className="text-center">
-                    {/* Dual Country Flags - Minimal Design */}
-                    <div className="flex items-center justify-center gap-2 flex-wrap">
-                        {/* India */}
-                        <div className="flex items-center gap-2 px-4 py-2">
-                            <img
-                                src="https://flagcdn.com/w40/in.png"
-                                alt="India flag"
-                                className="w-8 h-auto rounded-sm shadow-sm"
-                                title="India"
-                            />
-                            <span className="font-medium text-gray-600">India</span>
-                        </div>
 
-                        {/* Connecting Line */}
-                        <div className="flex items-center gap-1">
-                            <div className="w-8 h-px bg-gradient-to-r from-transparent via-[#078671] to-transparent"></div>
-                            <span className="text-xs font-bold text-[#078671]">+</span>
-                            <div className="w-8 h-px bg-gradient-to-r from-transparent via-[#078671] to-transparent"></div>
-                        </div>
-
-                        {/* USA */}
-                        <div className="flex items-center gap-2 px-4 py-2">
-                            <img
-                                src="https://flagcdn.com/w40/us.png"
-                                alt="USA flag"
-                                className="w-8 h-auto rounded-sm shadow-sm"
-                                title="USA"
-                            />
-                            <span className="font-medium text-gray-600">USA</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             {/* Main container - full width with flex row on desktop, column on mobile */}
             <div className="w-full max-w-[1440px] mx-auto px-6">
@@ -177,7 +147,7 @@ const UWAOptionsSection: React.FC = () => {
                     <div className="flex-1 flex">
                         <OptionCard
                             optionLabel="About the UWA"
-                            details="The University of West Alabama (UWA) is located in Livingston, Alabama, USA. Established in 1835, UWA is a public state university offering a wide range of academic programmes. The university supports international students through admission guidance, visa documentation support, campus services, housing, insurance, and student life resources. UWA's MS in Data Science is a 30-credit graduate programme covering statistics, programming, machine learning, data visualization, predictive modelling, cybersecurity data science, and capstone/thesis-based applied work."
+                            details="The University of West Alabama (UWA) is located in Livingston, Alabama, USA. Established in 1835, UWA is a public state university offering a wide range of academic programmes. . UWA's MS in Data Science is a 30-credit graduate programme covering statistics, programming, machine learning, data visualization, predictive modelling, cybersecurity data science, and capstone/thesis-based applied work."
                             learnMoreHref="https://www.uwa.edu"
                             countryFlagSrc="https://flagcdn.com/w20/us.png"
                             countryName="USA"
@@ -185,7 +155,7 @@ const UWAOptionsSection: React.FC = () => {
                     </div>
 
                     {/* Option Three - About MS in Data Science */}
-                    <div className="flex-1 flex">
+                    {/* <div className="flex-1 flex">
                         <OptionCard
                             optionLabel="About MS in Data Science"
                             details="With a Master of Science in Data Science Degree from the University of West Alabama, you will learn to blend theory with practical application and prepare to advance your career. This program's core courses in statistics, programming and machine learning will strengthen your foundational knowledge and help you stand out as a competitive job candidate. With specialized electives and hands-on projects, you will foster both technical expertise and problem-solving skills.
@@ -195,7 +165,7 @@ This data science degree gives you the flexibility to fit study into your schedu
                             countryFlagSrc="https://flagcdn.com/w20/us.png"
                             countryName="USA"
                         />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </section>

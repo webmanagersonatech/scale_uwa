@@ -136,10 +136,15 @@ export default function HeroSection() {
 
               {/* CTA Buttons - reduced padding */}
               <div className="mt-5 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
-                <button className="bg-[#078671] hover:bg-[#067864] text-white px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 transition text-xs sm:text-sm rounded-md">
+                <a
+                  href="https://hikaapp.sonastar.com/INS-0VVEACMY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-[#078671] hover:bg-[#067864] text-white px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 transition text-xs sm:text-sm rounded-md"
+                >
                   APPLY NOW
                   <ArrowRight size={16} />
-                </button>
+                </a>
 
                 <button className="border border-gray-400 bg-white/80 backdrop-blur-sm px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 hover:bg-black hover:text-white hover:border-black transition text-xs sm:text-sm rounded-md">
                   <Download size={16} />
@@ -174,7 +179,7 @@ export default function HeroSection() {
                 {/* Duration */}
                 <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
                   <Clock3 className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
-                  <div className="text-xl font-bold text-gray-900 leading-tight">2 Years</div>
+                  <div className="text-xl font-bold text-gray-900 leading-tight">2 Year</div>
                   <div className="text-xs text-gray-500 mt-1">Duration</div>
                 </div>
 
@@ -183,7 +188,7 @@ export default function HeroSection() {
                 {/* OPT */}
                 <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
                   <Globe className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
-                  <div className="text-xl font-bold text-gray-900 leading-tight">3 Years</div>
+                  <div className="text-xl font-bold text-gray-900 leading-tight">3 Year</div>
                   <div className="text-xs text-gray-500 mt-1">
                     Post Study Work Visa
                   </div>

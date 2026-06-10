@@ -112,7 +112,7 @@ export default function Navbar() {
                   href="#apply"
                   className="hover:text-[#e5c66b] transition text-white"
                 >
-                  Admissions Open · Bengaluru,India + Alabama, USA
+                  Admissions Open · Bengaluru, India + Alabama, USA
                 </Link>
                 <Link
                   href="#"
