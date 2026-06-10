@@ -40,7 +40,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Acadamic plan", href: "/#structure" },
+    { label: "About UWA", href: "/#structure" },
     { label: "Careers", href: "/#careers" },
     {
       label: "Admissions",
