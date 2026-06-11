@@ -95,10 +95,9 @@ export default function HeroSection() {
 
       {/* Content Container */}
       <div className="relative z-20 max-w-[1440px] mx-auto px-4 sm:px-6">
-        {/* Decorative Rings — hidden on mobile to avoid overflow */}
-        <div className="hidden md:block absolute left-[-260px] bottom-[-260px] w-[720px] h-[720px] rounded-full border-[30px] border-black/5 pointer-events-none" />
-        <div className="hidden md:block absolute left-[-180px] bottom-[-180px] w-[560px] h-[560px] rounded-full border-[20px] border-black/5 pointer-events-none" />
-        <div className="hidden md:block absolute left-[-100px] bottom-[-100px] w-[400px] h-[400px] rounded-full border-[10px] border-black/5 pointer-events-none" />
+      <div className="hidden md:block absolute left-[-260px] bottom-[-260px] w-[720px] h-[720px] rounded-full border-[30px] border-black/[0.02] pointer-events-none" />
+<div className="hidden md:block absolute left-[-180px] bottom-[-180px] w-[560px] h-[560px] rounded-full border-[20px] border-black/[0.02] pointer-events-none" />
+<div className="hidden md:block absolute left-[-100px] bottom-[-100px] w-[400px] h-[400px] rounded-full border-[10px] border-black/[0.02] pointer-events-none" />
 
         {/* Fixed height container to maintain consistent spacing */}
         <div className="min-h-[calc(70vh-65px)] md:min-h-[calc(70vh-128px)] flex items-center">
