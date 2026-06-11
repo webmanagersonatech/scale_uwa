@@ -3,7 +3,15 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Download, MessageCircle, BookOpen, Globe, Clock3, GraduationCap, BadgePercent, BriefcaseBusiness, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 
+
 const slides = [
+  {
+    image: "/homeimages/hero1.webp",
+    badge: "Global Career Pathway",
+    title: "Start in India complete in the USA ",
+    description:
+      "Study one year at SCALE, Bengaluru, then complete your Master's at the University of West Alabama, USA. Build international credentials and a global professional network.",
+  },
   {
     image: "/homeimages/hero2.jpg",
     badge: "Start in Bengaluru. Complete in Alabama.",
@@ -18,13 +26,7 @@ const slides = [
     description:
       "Gain hands-on experience with cutting-edge tools and methodologies that prepare you for leadership roles in AI, ML, and analytics across global industries.",
   },
-  {
-    image: "/homeimages/hero1.jpg",
-    badge: "Global Career Pathway",
-    title: "Start in India complete in the USA ",
-    description:
-      "Study one year at SCALE, Bengaluru, then complete your Master's at the University of West Alabama, USA. Build international credentials and a global professional network.",
-  },
+
 ];
 
 export default function HeroSection() {

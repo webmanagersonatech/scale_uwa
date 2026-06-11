@@ -60,11 +60,12 @@ export default function Navbar() {
       submenu: [
         { label: "About the Program", href: "/admission/about-program" },
         { label: "Fee Structure", href: "/admission/fees-structure" },
-        { label: "FAQs", href: "/admission/faqs" },
+
         { label: "Apply Online", href: "https://hikaapp.sonastar.com/INS-0VVEACMY" },
       ],
     },
-  
+    { label: "FAQs", href: "/admission/faqs" },
+
   ];
 
   return (
