@@ -88,7 +88,7 @@ function ComparisonCard({ data }: { data: typeof RECOMMENDED | typeof FULL_UWA }
             className={`flex flex-col  border p-5
                 ${isHighlighted
                     ? "border-[#AC1F2D] bg-white"
-                    : "border-gray-200 bg-white"
+                    : "border-[#AC1F2D] bg-white"
                 }`}
         >
             {/* Header - simplified */}
@@ -116,7 +116,7 @@ function ComparisonCard({ data }: { data: typeof RECOMMENDED | typeof FULL_UWA }
                                 <p className="text-xs text-gray-400">{item.note}</p>
                             )}
                         </div>
-                        <span className={`text-sm font-medium ${isHighlighted ? "text-[#AC1F2D]" : "text-gray-800"}`}>
+                        <span className={`text-sm font-medium text-[#AC1F2D]`}>
                             {item.amount}
                         </span>
                     </div>
@@ -126,7 +126,7 @@ function ComparisonCard({ data }: { data: typeof RECOMMENDED | typeof FULL_UWA }
             {/* Total - simplified */}
             <div className="pt-4 border-t border-gray-100">
                 <p className="text-xs text-gray-500 mb-1">{data.totalLabel}</p>
-                <p className={`text-2xl font-bold ${isHighlighted ? "text-[#AC1F2D]" : "text-gray-800"}`}>
+                <p className={`text-2xl font-bold text-[#AC1F2D]`}>
                     {data.totalAmount}
                 </p>
                 {data.totalSub && (
