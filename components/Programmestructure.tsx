@@ -71,7 +71,7 @@ export default function ProgramStructure() {
                                         {/* India Flag */}
                                         <img
                                             src="/homeimages/india.png"
-                                            
+
                                             alt="India Flag"
                                             className="w-6 h-4 sm:w-7 sm:h-5 rounded-sm border border-gray-200 shadow-sm object-cover"
                                         />
@@ -195,7 +195,7 @@ export default function ProgramStructure() {
                     </motion.div>
                 </div>
 
-         
+
             </div>
         </section>
     );

@@ -846,7 +846,7 @@ export default function AboutProgramPage() {
                                 About the <span className="text-gray-700">Program</span>
                             </h1>
                             <p className="text-gray-600 text-base lg:text-lg max-w-[580px] leading-relaxed">
-                                A 30-credit graduate pathway through UWA Sona Star, SCALE — start in India,
+                                A 30 credit graduate International pathway through UWA Sona Star, SCALE — start in India,
                                 complete at the University of West Alabama, USA.
                             </p>
                         </div>
