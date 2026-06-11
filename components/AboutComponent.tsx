@@ -31,7 +31,7 @@ const OptionCard: React.FC<OptionCardProps> = ({
                         <img
                             src={countryFlagSrc}
                             alt="India flag"
-                            className="w-10 h-auto rounded-sm shadow-sm"
+                            className="w-10 h-auto "
                         />
                     </span>
                 </div>
@@ -139,7 +139,7 @@ const UWAOptionsSection: React.FC = () => {
                                 </>
                             }
                             learnMoreHref="https://sonastar.com"
-                            countryFlagSrc="https://flagcdn.com/w20/in.png"
+                            countryFlagSrc="/homeimages/india.png"
                             countryName="India"
                         />
                     </div>
@@ -150,7 +150,7 @@ const UWAOptionsSection: React.FC = () => {
                             optionLabel="About the UWA"
                             details="The University of West Alabama (UWA), located in Livingston, Alabama, USA, was established in 1835 and has been shaping education for over 190 years, UWA is a public state university offering a wide range of academic programmes. . UWA's MS in Data Science is a 30 credits graduate program covering statistics, programming, machine learning, data visualization, predictive modelling, cybersecurity data science, and capstone/thesis-based applied work."
                             learnMoreHref="https://www.uwa.edu"
-                            countryFlagSrc="https://flagcdn.com/w20/us.png"
+                           countryFlagSrc="/homeimages/usa.png"
                             countryName="USA"
                         />
                     </div>
