@@ -92,12 +92,188 @@ const OUTCOMES = [
     "Take on data science roles in areas such as AI, finance, healthcare, technology, analytics, and business intelligence",
 ];
 
+
+// ─── FAQ Data & Component ─────────────────────────────────────────────────────
+const FAQ_ITEMS = [
+    {
+        question: "What is the SonaUWA 1+1 International Pathway Program?",
+        answer: "The SonaUWA 1+1 International Pathway is a program where students complete Year 1 in Bengaluru, Karnataka, India at SCALE and Year 2 at the University of West Alabama (UWA), Alabama, USA and earn an Master of Science(MS) in Data Science degree from UWA."
+    },
+    {
+        question: "Who is this program designed for?",
+        answer: "The program is designed for:\nB.Tech / B.E. students from CSE, IT, AI & ML, Data Science, ECE, or related branches\n• BCA / MCA / B.Sc. / M.Sc. students with strong quantitative and programming orientation\n• Students interested in data analysis, programming, statistics, AI, machine learning, and business analytics\n• Working professionals seeking to transition into data science and analytics roles\n• Students looking for an international pathway"
+    },
+    {
+        question: "What is the benefit of studying year 1 in India ?",
+        answer: "Studying the first year in India helps reduce costs significantly(up to 72%), provides academic preparation, and allows students and families more time to plan their move to the USA."
+    },
+    {
+        question: "Do I receive a U.S. degree or an Indian degree?",
+        answer: "You receive an MS in Data Science degree from the University of West Alabama, USA after successfully completing all academic requirements"
+    },
+    {
+        question: "Is this degree recognized internationally?",
+        answer: "Yes. UWA is an accredited public university in Alabama, USA, and the degree is recognized as a U.S. master's degree."
+    },
+    {
+        question: "How much money can I save through this pathway?",
+        answer: "Students may save approximately 72% compared to completing the entire program in the USA."
+    },
+    {
+        question: "What will I learn in this program?",
+        answer: "The Sona-UWA program includes:\nData Science \nPython Programming \nR Programming \nData Visualization \nMachine Learning \nDeep Learning \nBig Data Analytics \nBusiness Intelligence \nCybersecurity Data Science"
+    },
+    {
+        question: "Is this program suitable for recent graduates?",
+        answer: "Yes. Graduates with a quantitative background and an interest in technology, analytics, or programming can apply."
+    },
+    {
+        question: "What is OPT?",
+        answer: "Optional Practical Training (OPT) allows eligible international students to gain work experience in the USA after graduation."
+    },
+    {
+        question: "Why is everyone talking about the 3-year OPT benefit?",
+        answer: "Because eligible STEM graduates can potentially work in the USA for up to three years after graduation through OPT and STEM OPT extensions."
+    },
+    {
+        question: "Can I work in the USA after graduation?",
+        answer: "Upon graduation students may apply for 3 Year OPT/STEM OPT(Post study work visa) as per US Visa and Immigration requirements."
+    },
+    {
+        question: "What jobs can I get after completing this program?",
+        answer: "Possible career paths include:\nData Scientist \nData Analyst \nAI Engineer \nMachine Learning Engineer \nBusiness Intelligence Analyst \nData Engineer \nAnalytics Consultant"
+    },
+    {
+        question: "Which companies hire Data Science graduates?",
+        answer: "Graduates work in industries such as:\nIT and software services\n• Banking and financial services\n• Healthcare and life sciences\n• Retail and e-commerce\n• Manufacturing\n• Automotive\n• Consulting\n• Cybersecurity\n• AI and analytics startups\n• Government and public policy"
+    },
+    {
+        question: "Is Livingston a safe place for international students?",
+        answer: "Yes. UWA is located in Livingston, Alabama, a peaceful small university town with dedicated campus police and a supportive student environment."
+    },
+    {
+        question: "How big are the classes?",
+        answer: "UWA is known for smaller class sizes and personalized faculty interaction compared to many larger universities."
+    },
+    {
+        question: "What support will I receive after reaching the USA?",
+        answer: "In this Sona-UWA Program, upon reaching UWA students receive assistance related to:\nOrientation \nHousing guidance \nCampus services \nAcademic advising \nStudent life resources"
+    },
+    {
+        question: "How do I apply for this program?",
+        answer: "You can submit your application through SCALE, where your academic profile and eligibility will be reviewed before progressing through the admissions process. Apply now (click button)"
+    },
+    {
+        question: "What documents do I need?",
+        answer: "Common documents include:\nPassport copy\n• Bachelor’s degree transcripts\n• Degree certificate / provisional certificate\n• English language proficiency score, if applicable\n• Resume / CV, if required\n• Statement of purpose, if required\n• Financial documents / bank statements\n• Sponsor letter or financial support documents\n• Visa documentation after admission\n• Medical / immunization records, if required"
+    },
+    {
+        question: "What if my visa is delayed or rejected?",
+        answer: "If a student is unable to travel due to visa-related reasons or chooses to continue from India, the second-year academic delivery may be facilitated through a UWA-supported mechanism, subject to UWA’s written approval and academic regulations."
+    },
+    {
+        question: "Can working professionals apply?",
+        answer: "Yes. The program is suitable for professionals looking to upskill, reskill or transition into Data Science, Analytics, AI, and Business Intelligence careers."
+    },
+    {
+        question: "Why should I choose this pathway instead of directly joining a U.S. university?",
+        answer: "The Sona UWA International pathway combines:\nLower Cost (up to 72% cost savings)\nInternational Degree from the University of West Alabama\nU.S. Campus Experience\n3 Year STEM OPT Opportunity\nGlobal Career Opportunity"
+    },
+    {
+        question: "Will there be practical projects during the programme?",
+        answer: "Yes. Students work on applied projects, case studies, assignments, and a capstone/thesis project designed to develop real-world data science skills and problem-solving capabilities."
+    },
+    {
+        question: "Will I gain hands-on experience with Machine Learning?",
+        answer: "Yes. Machine Learning and Deep Learning fundamentals are core components of the curriculum, helping students understand predictive analytics, AI applications, and model development."
+    },
+    {
+        question: "Will the programme help me build a portfolio for job applications?",
+        answer: "Yes. Through projects, assignments, analytics work, and the final capstone/thesis project, students can build a portfolio that showcases their technical and analytical skills to potential employers. \nAdditionally, Career Development Centres at SCALE & UWA will help the students to prepare the portfolio for the job application."
+    },
+    {
+        question: "Is there a research component in the programme?",
+        answer: "Yes. Students complete a Capstone Project or Thesis as part of the programme requirements, allowing them to apply data science concepts to real-world challenges."
+    },
+    {
+        question: "When do students move to the USA?",
+        answer: "Students move to the USA after successfully completing the first year at SCALE and meeting all academic, admission, and visa requirements established by the University of West Alabama."
+    },
+    {
+        question: "Will SCALE help me with the transition to the USA?",
+        answer: "Yes. Students receive support regarding programme progression, documentation guidance, and preparation for their academic transition to the University of West Alabama."
+    },
+    {
+        question: "Will I experience U.S. classroom learning and teaching methods?",
+        answer: "Yes. Students complete their second year on campus at UWA, where they experience American teaching methodologies, classroom discussions, project-based learning, and academic culture. \nAdditionally, the student study UWA approved curriculum at the first year at SCALE which follows UWA teaching methodology and standards."
+    },
+    {
+        question: "Will I interact with international students from different countries?",
+        answer: "Yes. UWA hosts students from diverse backgrounds, allowing students to develop global exposure, cross-cultural communication skills, and international professional networks."
+    },
+    {
+        question: "Do I need to arrange housing myself in the USA?",
+        answer: "Students under Sona UWA 1+1 International Pathway Program have the housing included. \n\nUWA also provides information, resources, and guidance regarding housing options, campus accommodation, and student living arrangements to help students settle comfortably."
+    },
+    {
+        question: "I have never travelled abroad before. Is this programme suitable for me?",
+        answer: "Absolutely! One of the biggest advantages of the Sona UWA International pathway program is that students begin their journey in Bengaluru, giving them time to develop confidence and prepare for international education before relocating to the USA."
+    },
+    {
+        question: "Will I experience culture shock when I move to the USA?",
+        answer: "Spending the first year in India allows students additional time to prepare academically, emotionally, and culturally before transitioning to life in the United States."
+    },
+    {
+        question: "What if I am nervous about speaking English in an international classroom?",
+        answer: "Many international students share this concern. Through presentations, projects, classroom discussions, and interaction with faculty and peers, students gradually improve their communication and professional confidence."
+    },
+    {
+        question: "Can I build a professional network while studying?",
+        answer: "Yes. Students interact with professors, alumni, classmates, industry professionals, and international students, helping them build valuable academic and professional connections."
+    },
+    {
+        question: "Why is Data Science considered a future-ready career?",
+        answer: "Data is now at the center of decision-making across industries. Organizations increasingly depend on data scientists and analysts to improve efficiency, drive innovation, and create business value, making Data Science one of the most sought-after career paths globally."
+    },
+    {
+        question: "Will Artificial Intelligence (AI) replace Data Scientists?",
+        answer: "AI is a powerful tool, but organizations still require skilled professionals who can understand business problems, interpret results, validate models, and make strategic decisions. Data Scientists remain critical in the AI-driven world."
+    },
+    {
+        question: "What makes this pathway different from a regular master's programme?",
+        answer: "The Sona UWA 1+1 International pathway combines the advantages of studying in both India and the USA. Students benefit from lower costs, gradual international exposure, access to U.S. education, industry-relevant skills, and the opportunity to earn a U.S. master's degree through a structured pathway model."
+    },
+    {
+        question: "What is a STEM-designated programme?",
+        answer: "STEM stands for Science, Technology, Engineering, and Mathematics. The MS in Data Science at UWA is a STEM-designated programme designed to develop advanced analytical, technical, and problem-solving skills."
+    },
+    {
+        question: "Can I complete both years of the programme in India?",
+        answer: "In certain situations, students who are unable to travel to the USA due to visa-related reasons or other approved circumstances may have the opportunity to complete the second year through a UWA-supported India delivery mechanism. This option is subject to UWA approval, academic regulations, and programme policies."
+    },
+    {
+        question: "Are scholarships available for students in this programme?",
+        answer: "Yes. Eligible students may be considered for scholarships up to $5000 offered by the University of West Alabama (UWA) subject to university policies, eligibility criteria, and approval. This is applicable for year 2 at UWA."
+    },
+    {
+        question: "Is the scholarship guaranteed for every student?",
+        answer: "No. Scholarships are not guaranteed. They are awarded based on factors such as academic performance, application review, eligibility requirements, and availability of funds. \nHowever, students under Sona UWA 1+1 International Pathway Program will be preferred for the scholarship."
+    },
+    {
+        question: "How much scholarship can a student receive?",
+        answer: "Eligible students may receive scholarships of up to USD 2,500 per semester during the third and fourth semesters at UWA, subject to university approval and scholarship policies."
+    }
+];
+
+
+
 // ─── Tabs ─────────────────────────────────────────────────────────────────────
 const TABS = [
     { id: "who-should-apply", label: "Who Should Apply?" },
     { id: "why-choose", label: "Why Choose This Pathway?" },
     { id: "Program-outcomes", label: "Program Outcomes" },
     { id: "course-structure", label: "Course Structure" },
+    { id: "faq", label: "FAQs" },
 ];
 
 // Animation variants
@@ -276,128 +452,128 @@ function WhoShouldApply() {
 
             {/* Eligibility / Pathway Map */}
             <div className="mb-6">
-              
-
-<div className="relative bg-gradient-to-br from-blue-50 via-white to-orange-50 rounded-2xl p-8 overflow-hidden">
-  {/* World Map Background SVG */}
-  <div className="absolute inset-0 opacity-10 pointer-events-none">
-    <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-      <path d="M150,200 Q200,150 280,160 Q350,170 380,200 Q410,230 450,220 Q520,200 580,210 Q640,220 680,190" 
-        stroke="#2d2a26" strokeWidth="1.5" fill="none" strokeDasharray="4 4"/>
-      <path d="M120,250 Q180,220 250,240 Q320,260 380,250 Q440,240 500,260 Q560,280 620,250 Q660,240 700,260" 
-        stroke="#2d2a26" strokeWidth="1.5" fill="none" strokeDasharray="4 4"/>
-      {/* Simplified continent outlines */}
-      <ellipse cx="200" cy="200" rx="60" ry="40" fill="none" stroke="#2d2a26" strokeWidth="1"/>
-      <ellipse cx="600" cy="190" rx="70" ry="45" fill="none" stroke="#2d2a26" strokeWidth="1"/>
-    </svg>
-  </div>
 
 
-
-  <div className="flex flex-col md:flex-row items-center justify-center gap-6 relative z-10">
-    {/* India Section */}
-    <div className="text-center bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-      {/* India Flag */}
-      <div className="flex justify-center mb-2">
-        <svg width="56" height="38" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" className="shadow-md">
-          <rect width="48" height="10.67" fill="#FF9933" />
-          <rect y="10.67" width="48" height="10.66" fill="#FFFFFF" />
-          <rect y="21.33" width="48" height="10.67" fill="#138808" />
-          <circle cx="24" cy="16" r="5.33" fill="#000080" />
-          <circle cx="24" cy="16" r="4" fill="#FFFFFF" />
-          <circle cx="24" cy="16" r="3" fill="#000080" />
-        </svg>
-      </div>
-      <h4 className="font-bold text-xl text-[#2d2a26]">
-        Year 1
-      </h4>
-      <p className="text-sm font-medium text-[#5a5652]">
-        Sona Star, SCALE, Bengaluru
-      </p>
-      <p className="text-xs text-[#AC1F2D] mt-1 font-semibold flex items-center justify-center gap-1">
-        <span>🇮🇳</span> India
-      </p>
-    </div>
-
-    {/* Connecting Arrow with Globe Icon */}
-    <div className="flex flex-col items-center">
-      <div className="text-4xl text-[#AC1F2D] font-bold animate-pulse">
-        →
-      </div>
-      <div className="text-xs text-[#8a8682] mt-1 flex items-center gap-1">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="12" cy="12" r="10" stroke="#AC1F2D" strokeWidth="1.5"/>
-          <line x1="2" y1="12" x2="22" y2="12" stroke="#AC1F2D" strokeWidth="1"/>
-          <line x1="12" y1="2" x2="12" y2="22" stroke="#AC1F2D" strokeWidth="1"/>
-        </svg>
-        <span>1+1 International Pathway</span>
-      </div>
-    </div>
-
-    {/* USA Section */}
-    <div className="text-center bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-      {/* USA Flag */}
-      <div className="flex justify-center mb-2">
-        <svg width="56" height="38" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" className="shadow-md">
-          <rect width="48" height="32" fill="#B22234" />
-          <g fill="#FFFFFF">
-            <rect width="48" height="2.46" />
-            <rect y="4.92" width="48" height="2.46" />
-            <rect y="9.84" width="48" height="2.46" />
-            <rect y="14.76" width="48" height="2.46" />
-            <rect y="19.68" width="48" height="2.46" />
-            <rect y="24.6" width="48" height="2.46" />
-            <rect y="29.52" width="48" height="2.46" />
-          </g>
-          <rect width="18.46" height="16" fill="#3C3B6E" />
-          <g fill="#FFFFFF">
-            <circle cx="1.5" cy="1.5" r="0.8" />
-            <circle cx="4.5" cy="1.5" r="0.8" />
-            <circle cx="7.5" cy="1.5" r="0.8" />
-            <circle cx="10.5" cy="1.5" r="0.8" />
-            <circle cx="13.5" cy="1.5" r="0.8" />
-            <circle cx="16.5" cy="1.5" r="0.8" />
-            <circle cx="1.5" cy="4.5" r="0.8" />
-            <circle cx="4.5" cy="4.5" r="0.8" />
-            <circle cx="7.5" cy="4.5" r="0.8" />
-            <circle cx="10.5" cy="4.5" r="0.8" />
-            <circle cx="13.5" cy="4.5" r="0.8" />
-            <circle cx="16.5" cy="4.5" r="0.8" />
-            <circle cx="1.5" cy="7.5" r="0.8" />
-            <circle cx="4.5" cy="7.5" r="0.8" />
-            <circle cx="7.5" cy="7.5" r="0.8" />
-            <circle cx="10.5" cy="7.5" r="0.8" />
-            <circle cx="13.5" cy="7.5" r="0.8" />
-            <circle cx="16.5" cy="7.5" r="0.8" />
-            <circle cx="1.5" cy="10.5" r="0.8" />
-            <circle cx="4.5" cy="10.5" r="0.8" />
-            <circle cx="7.5" cy="10.5" r="0.8" />
-            <circle cx="10.5" cy="10.5" r="0.8" />
-            <circle cx="13.5" cy="10.5" r="0.8" />
-            <circle cx="16.5" cy="10.5" r="0.8" />
-            <circle cx="1.5" cy="13.5" r="0.8" />
-            <circle cx="4.5" cy="13.5" r="0.8" />
-            <circle cx="7.5" cy="13.5" r="0.8" />
-            <circle cx="10.5" cy="13.5" r="0.8" />
-            <circle cx="13.5" cy="13.5" r="0.8" />
-            <circle cx="16.5" cy="13.5" r="0.8" />
-          </g>
-        </svg>
-      </div>
-      <h4 className="font-bold text-xl text-[#2d2a26]">
-        Year 2
-      </h4>
-      <p className="text-sm font-medium text-[#5a5652]">
-        UWA, Alabama
-      </p>
-      <p className="text-xs text-[#AC1F2D] mt-1 font-semibold flex items-center justify-center gap-1">
-        <span>🇺🇸</span> United States
-      </p>
-    </div>
-  </div>
+                <div className="relative bg-gradient-to-br from-blue-50 via-white to-orange-50 rounded-2xl p-8 overflow-hidden">
+                    {/* World Map Background SVG */}
+                    <div className="absolute inset-0 opacity-10 pointer-events-none">
+                        <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                            <path d="M150,200 Q200,150 280,160 Q350,170 380,200 Q410,230 450,220 Q520,200 580,210 Q640,220 680,190"
+                                stroke="#2d2a26" strokeWidth="1.5" fill="none" strokeDasharray="4 4" />
+                            <path d="M120,250 Q180,220 250,240 Q320,260 380,250 Q440,240 500,260 Q560,280 620,250 Q660,240 700,260"
+                                stroke="#2d2a26" strokeWidth="1.5" fill="none" strokeDasharray="4 4" />
+                            {/* Simplified continent outlines */}
+                            <ellipse cx="200" cy="200" rx="60" ry="40" fill="none" stroke="#2d2a26" strokeWidth="1" />
+                            <ellipse cx="600" cy="190" rx="70" ry="45" fill="none" stroke="#2d2a26" strokeWidth="1" />
+                        </svg>
+                    </div>
 
 
-</div>
+
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 relative z-10">
+                        {/* India Section */}
+                        <div className="text-center bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                            {/* India Flag */}
+                            <div className="flex justify-center mb-2">
+                                <svg width="56" height="38" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" className="shadow-md">
+                                    <rect width="48" height="10.67" fill="#FF9933" />
+                                    <rect y="10.67" width="48" height="10.66" fill="#FFFFFF" />
+                                    <rect y="21.33" width="48" height="10.67" fill="#138808" />
+                                    <circle cx="24" cy="16" r="5.33" fill="#000080" />
+                                    <circle cx="24" cy="16" r="4" fill="#FFFFFF" />
+                                    <circle cx="24" cy="16" r="3" fill="#000080" />
+                                </svg>
+                            </div>
+                            <h4 className="font-bold text-xl text-[#2d2a26]">
+                                Year 1
+                            </h4>
+                            <p className="text-sm font-medium text-[#5a5652]">
+                                Sona Star, SCALE, Bengaluru
+                            </p>
+                            <p className="text-xs text-[#AC1F2D] mt-1 font-semibold flex items-center justify-center gap-1">
+                                <span>🇮🇳</span> India
+                            </p>
+                        </div>
+
+                        {/* Connecting Arrow with Globe Icon */}
+                        <div className="flex flex-col items-center">
+                            <div className="text-4xl text-[#AC1F2D] font-bold animate-pulse">
+                                →
+                            </div>
+                            <div className="text-xs text-[#8a8682] mt-1 flex items-center gap-1">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="10" stroke="#AC1F2D" strokeWidth="1.5" />
+                                    <line x1="2" y1="12" x2="22" y2="12" stroke="#AC1F2D" strokeWidth="1" />
+                                    <line x1="12" y1="2" x2="12" y2="22" stroke="#AC1F2D" strokeWidth="1" />
+                                </svg>
+                                <span>1+1 International Pathway</span>
+                            </div>
+                        </div>
+
+                        {/* USA Section */}
+                        <div className="text-center bg-white/60 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+                            {/* USA Flag */}
+                            <div className="flex justify-center mb-2">
+                                <svg width="56" height="38" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg" className="shadow-md">
+                                    <rect width="48" height="32" fill="#B22234" />
+                                    <g fill="#FFFFFF">
+                                        <rect width="48" height="2.46" />
+                                        <rect y="4.92" width="48" height="2.46" />
+                                        <rect y="9.84" width="48" height="2.46" />
+                                        <rect y="14.76" width="48" height="2.46" />
+                                        <rect y="19.68" width="48" height="2.46" />
+                                        <rect y="24.6" width="48" height="2.46" />
+                                        <rect y="29.52" width="48" height="2.46" />
+                                    </g>
+                                    <rect width="18.46" height="16" fill="#3C3B6E" />
+                                    <g fill="#FFFFFF">
+                                        <circle cx="1.5" cy="1.5" r="0.8" />
+                                        <circle cx="4.5" cy="1.5" r="0.8" />
+                                        <circle cx="7.5" cy="1.5" r="0.8" />
+                                        <circle cx="10.5" cy="1.5" r="0.8" />
+                                        <circle cx="13.5" cy="1.5" r="0.8" />
+                                        <circle cx="16.5" cy="1.5" r="0.8" />
+                                        <circle cx="1.5" cy="4.5" r="0.8" />
+                                        <circle cx="4.5" cy="4.5" r="0.8" />
+                                        <circle cx="7.5" cy="4.5" r="0.8" />
+                                        <circle cx="10.5" cy="4.5" r="0.8" />
+                                        <circle cx="13.5" cy="4.5" r="0.8" />
+                                        <circle cx="16.5" cy="4.5" r="0.8" />
+                                        <circle cx="1.5" cy="7.5" r="0.8" />
+                                        <circle cx="4.5" cy="7.5" r="0.8" />
+                                        <circle cx="7.5" cy="7.5" r="0.8" />
+                                        <circle cx="10.5" cy="7.5" r="0.8" />
+                                        <circle cx="13.5" cy="7.5" r="0.8" />
+                                        <circle cx="16.5" cy="7.5" r="0.8" />
+                                        <circle cx="1.5" cy="10.5" r="0.8" />
+                                        <circle cx="4.5" cy="10.5" r="0.8" />
+                                        <circle cx="7.5" cy="10.5" r="0.8" />
+                                        <circle cx="10.5" cy="10.5" r="0.8" />
+                                        <circle cx="13.5" cy="10.5" r="0.8" />
+                                        <circle cx="16.5" cy="10.5" r="0.8" />
+                                        <circle cx="1.5" cy="13.5" r="0.8" />
+                                        <circle cx="4.5" cy="13.5" r="0.8" />
+                                        <circle cx="7.5" cy="13.5" r="0.8" />
+                                        <circle cx="10.5" cy="13.5" r="0.8" />
+                                        <circle cx="13.5" cy="13.5" r="0.8" />
+                                        <circle cx="16.5" cy="13.5" r="0.8" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <h4 className="font-bold text-xl text-[#2d2a26]">
+                                Year 2
+                            </h4>
+                            <p className="text-sm font-medium text-[#5a5652]">
+                                UWA, Alabama
+                            </p>
+                            <p className="text-xs text-[#AC1F2D] mt-1 font-semibold flex items-center justify-center gap-1">
+                                <span>🇺🇸</span> United States
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
 
                 <div className="mt-6 pt-4 border-t border-[#e0d6ce]">
                     <p className="text-center text-sm text-[#5a5652]">
@@ -432,7 +608,65 @@ function WhoShouldApply() {
         </motion.section>
     );
 }
+function FAQ() {
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+    const toggleFAQ = (index: number) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+
+    return (
+        <motion.section
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+            className="mb-6"
+            aria-labelledby="faq-title"
+        >
+            <h2 id="faq-title" className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]">
+                Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-3">
+                {FAQ_ITEMS.map((item, index) => (
+                    <div
+                        key={index}
+                        className="border border-[#e0d6ce] rounded-lg overflow-hidden bg-white"
+                    >
+                        <button
+                            onClick={() => toggleFAQ(index)}
+                            className="w-full text-left py-3.5 px-5 flex items-center justify-between gap-4 hover:bg-[#fdf5f0] transition-colors duration-200 cursor-pointer"
+                            aria-expanded={openIndex === index}
+                        >
+                            <span className="text-[14px] lg:text-[15px] font-semibold text-[#2c2c2a] pr-2">
+                                {item.question}
+                            </span>
+                            <span className="text-[#AC1F2D] text-xl flex-shrink-0">
+                                {openIndex === index ? "−" : "+"}
+                            </span>
+                        </button>
+
+                        <AnimatePresence initial={false}>
+                            {openIndex === index && (
+                                <motion.div
+                                    initial={{ height: 0, opacity: 0 }}
+                                    animate={{ height: "auto", opacity: 1 }}
+                                    exit={{ height: 0, opacity: 0 }}
+                                    transition={{ duration: 0.2, ease: "easeInOut" }}
+                                    className="overflow-hidden"
+                                >
+                                    <div className="py-3.5 px-5 pt-0 text-[13px] lg:text-[14px] text-[#5a5652] leading-relaxed border-t border-[#f0e8e2] bg-[#fefcfb]">
+                                        {item.answer}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                ))}
+            </div>
+        </motion.section>
+    );
+}
 function WhyChoose() {
     return (
         <motion.section
@@ -532,7 +766,7 @@ function CourseStructure() {
                                 Course Title
                             </th>
                             <th scope="col" className="bg-[#AC1F2D] text-white py-2.5 px-3.5 text-center text-[12px] lg:text-[13px] font-semibold tracking-[0.6px] uppercase">
-                                Credit 
+                                Credit
                             </th>
                         </tr>
                     </thead>
@@ -585,6 +819,8 @@ export default function AboutProgramPage() {
                 return <ProgramOutcomes />;
             case "course-structure":
                 return <CourseStructure />;
+            case "faq":
+                return <FAQ />;
             default:
                 return <WhoShouldApply />;
         }

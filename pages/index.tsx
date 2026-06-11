@@ -72,13 +72,13 @@ export default function Home() {
 
       <Hero />
       <AboutSection />
-      <WhatWeDo/>
+      <WhatWeDo />
       <FounderSection />
       <ProgrammeStructure />
       <WhyChooseSection />
       <CareerPathway />
       <Admissions />
-      <AcademiesSection />
+      {/* <AcademiesSection /> */}
       <ScrollToTop />
 
       <div

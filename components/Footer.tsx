@@ -29,23 +29,27 @@ const Footer = () => {
   const aboutLinks = [
     {
       name: "History & Traditions",
-      href: "https://www.uwa.edu/history-tradition/",
-    },
-    {
-      name: "Accreditation",
-      href: "https://www.uwa.edu/accreditations/",
+      href: "/uwa/history-tradition",
     },
     {
       name: "Mission & Vision",
-      href: "https://www.uwa.edu/mission-vision/",
+      href: "/uwa/mission-vision",
     },
     {
-      name: "Employment Opportunities",
-      href: "https://www.uwa.edu/employment/",
+      name: "Student Life",
+      href: "/uwa/student-life",
     },
     {
-      name: "Faculty & Staff Directory",
-      href: "https://directory.uwa.edu/",
+      name: "Campus Life",
+      href: "/uwa/campus-life",
+    },
+    {
+      name: "Map & Directions",
+      href: "/uwa/map-direction",
+    },
+    {
+      name: "Why UWA",
+      href: "/uwa/why-uwa",
     },
   ];
 
@@ -67,23 +71,23 @@ const Footer = () => {
           {/* LEFT COLUMN - Logos & Info */}
           <div className="lg:col-span-4">
             {/* Three Logos Row */}
-          <div className="flex items-center gap-6 mb-6">
-  <Image
-    src="/homeimages/Sona-star-logo.webp"
-    alt="Sona Star Logo"
-    width={70}
-    height={70}
-    className="object-contain"
-  />
+            <div className="flex items-center gap-6 mb-6">
+              <Image
+                src="/homeimages/Sona-star-logo.webp"
+                alt="Sona Star Logo"
+                width={70}
+                height={70}
+                className="object-contain"
+              />
 
-  <Image
-    src="/homeimages/footer-uwa.png"
-    alt="UWA Logo"
-    width={70}
-    height={70}
-    className="object-contain"
-  />
-</div>
+              <Image
+                src="/homeimages/footer-uwa.png"
+                alt="UWA Logo"
+                width={70}
+                height={70}
+                className="object-contain"
+              />
+            </div>
 
             {/* UWA × SCALE Label */}
             <div className="mb-4">

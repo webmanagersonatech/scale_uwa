@@ -52,7 +52,6 @@ export default function Navbar() {
         { label: "Apply Online", href: "https://hikaapp.sonastar.com/INS-0VVEACMY" },
       ],
     },
-    { label: "FAQs", href: "/#faq" },
   ];
 
   return (
