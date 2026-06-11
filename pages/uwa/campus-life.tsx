@@ -87,19 +87,22 @@ function SectionRow({
         roundedCorner === "top-right"
             ? "rounded-tr-[80px] rounded-bl-[80px] rounded-tl-none rounded-br-none"  // Both top-right AND bottom-left
             : "rounded-bl-[80px] rounded-tr-[80px] rounded-tl-none rounded-br-none";  // Both as well
-
-    const imageEl = (
-        <div className="w-full lg:w-1/2">
-            <div className={`overflow-hidden ${cornerClass} w-full aspect-[4/2.5]`}>
-                <img
-                    src={imageSrc}
-                    alt={imageAlt}
-                    className="w-full h-full object-cover"
-                />
-            </div>
-        </div>
-    );
-
+const imageEl = (
+  <div className="w-full lg:w-1/2">
+    <div
+      className="overflow-hidden w-full aspect-[4/3] border-t-[6px] border-l-[6px] border-[#b3202d]"
+      style={{
+        borderRadius: "0 180px 0 180px",
+      }}
+    >
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
+);
     const textEl = (
         <div className="w-full lg:w-1/2 flex flex-col justify-center gap-4">
             <h2 className="font-serif text-2xl lg:text-3xl text-gray-900 font-bold leading-tight">
@@ -108,36 +111,7 @@ function SectionRow({
             <div className="text-[#5a5652] text-sm lg:text-base leading-relaxed space-y-3">
                 {body}
             </div>
-            <div>
-                <motion.button
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
-                    className="
-                        bg-[#078671]
-                        text-white
-                        font-bold
-                        uppercase
-                        tracking-wide
-                        text-xs sm:text-sm md:text-base lg:text-lg
-                        px-6 sm:px-8 md:px-10 lg:px-12
-                        py-2 sm:py-2
-                        rounded-tr-[16px] sm:rounded-tr-[20px] md:rounded-tr-[24px]
-                        rounded-bl-[16px] sm:rounded-bl-[20px] md:rounded-bl-[24px]
-                        rounded-tl-none
-                        rounded-br-none
-                        w-auto
-                        inline-flex
-                        items-center
-                        justify-center
-                        hover:bg-[#067864]
-                        transition-all
-                        duration-300
-                        shadow-md
-                    "
-                >
-                    {ctaLabel}
-                </motion.button>
-            </div>
+
         </div>
     );
 
