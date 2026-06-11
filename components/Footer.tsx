@@ -55,12 +55,13 @@ const Footer = () => {
   ];
 
   const resourceLinks = [
-    { name: "Current Students", href: "#" },
-    { name: "Library", href: "#" },
-    { name: "Student Support", href: "#" },
-    { name: "News & Events", href: "#" },
-    { name: "Blog", href: "#" },
+    { name: "History & Legacy", href: "/about-us/history-legacy" },
+    { name: "Management and leadership", href: "/about-us/Management-profiles" },
+    { name: "Our faculty members", href: "#" },
+  
   ];
+
+
 
   return (
     <footer className="bg-[#1a1a1a] text-white">

@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [admissionsOpen, setAdmissionsOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null); // Changed to track which dropdown is open
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +20,7 @@ export default function Navbar() {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setMobileMenuOpen(false);
-        setAdmissionsOpen(false);
+        setOpenDropdown(null); // Reset dropdown when resizing to desktop
       }
     };
     window.addEventListener("resize", handleResize);
@@ -40,18 +40,30 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Home", href: "/" },
-    { label: "About UWA", href: "/#structure" },
+    {
+      label: "About Us",
+      href: "#",
+      hasSubmenu: true,
+      dropdownId: "about", // Added unique ID
+      submenu: [
+        { label: "History & Legacy", href: "/about-us/history-legacy" },
+        { label: "Management and leadership", href: "/about-us/Management-profiles" },
+        { label: "Our faculty members", href: "" },
+      ],
+    },
     { label: "Careers", href: "/#careers" },
     {
       label: "Admissions",
       href: "#",
       hasSubmenu: true,
+      dropdownId: "admissions", // Added unique ID
       submenu: [
         { label: "About the Program", href: "/admission/about-program" },
         { label: "Fee Structure", href: "/admission/fees-structure" },
         { label: "Apply Online", href: "https://hikaapp.sonastar.com/INS-0VVEACMY" },
       ],
     },
+    { label: "Campus Tour", href: "/#campus-tour" },
   ];
 
   return (
@@ -136,8 +148,8 @@ export default function Navbar() {
 
               {/* PROGRAM INFO - UWA Logo */}
               <div className="hidden xl:flex flex-col items-center justify-center px-2 border-r border-gray-700 h-full">
-                <span className="text-[11px] font-medium text-white  text-center">
-                 A Sona Star Initiative
+                <span className="text-[11px] font-medium text-white text-center">
+                  A Sona Star Initiative
                 </span>
 
                 <Image
@@ -150,15 +162,15 @@ export default function Navbar() {
                 />
               </div>
 
-              {/* NAV LINKS - WITH ADMISSIONS DROPDOWN */}
+              {/* NAV LINKS - WITH SEPARATE DROPDOWNS */}
               <nav className="hidden lg:flex flex-1 justify-center items-center h-full gap-x-1">
                 {navLinks.map((link) =>
                   link.hasSubmenu ? (
                     <div
                       key={link.href}
                       className="relative h-full group"
-                      onMouseEnter={() => setAdmissionsOpen(true)}
-                      onMouseLeave={() => setAdmissionsOpen(false)}
+                      onMouseEnter={() => setOpenDropdown(link.dropdownId)}
+                      onMouseLeave={() => setOpenDropdown(null)}
                     >
                       <button
                         className="h-full px-4 xl:px-5 flex items-center gap-1 text-white font-semibold text-[15px] xl:text-[17px] hover:text-[#AC1F2D] transition whitespace-nowrap"
@@ -166,15 +178,15 @@ export default function Navbar() {
                         {link.label}
                         <ChevronDown
                           size={14}
-                          className={`transition-transform duration-200 ${admissionsOpen ? "rotate-180" : ""
+                          className={`transition-transform duration-200 ${openDropdown === link.dropdownId ? "rotate-180" : ""
                             }`}
                         />
                       </button>
                       {/* Dropdown Menu */}
                       <div
-                        className={`absolute left-0 top-full mt-0 w-56 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-200 z-50 ${admissionsOpen
-                          ? "opacity-100 visible translate-y-0"
-                          : "opacity-0 invisible -translate-y-2"
+                        className={`absolute left-0 top-full mt-0 w-56 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-200 z-50 ${openDropdown === link.dropdownId
+                            ? "opacity-100 visible translate-y-0"
+                            : "opacity-0 invisible -translate-y-2"
                           }`}
                       >
                         {link.submenu.map((subItem) => (
@@ -300,6 +312,32 @@ export default function Navbar() {
             </button>
           </div>
 
+          {/* SCALE a SonaStar Initiative - Mobile View */}
+          <div className="bg-gray-50 border-b border-gray-200 px-4 py-3">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-[10px] tracking-[2px] uppercase font-bold text-[#AC1F2D]">
+                  <span className="text-[#008BC8]">SONA</span> UWA
+                </div>
+                <div className="font-semibold text-sm text-gray-800 mt-0.5">
+                  1+1 International Pathway
+                </div>
+              </div>
+              <div className="flex flex-col items-start">
+                <span className="text-[7px] font-medium text-gray-500">
+                  A Sona Star Initiative
+                </span>
+                <Image
+                  src="/homeimages/scale.png"
+                  alt="SCALE Logo"
+                  width={60}
+                  height={60}
+                  className="bg-white p-1 mt-1"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* DARK TOP BAR CONTENT */}
           <div className="bg-[#AC1F2D] text-white px-4 py-3">
             <div className="text-xs space-y-1.5">
@@ -317,16 +355,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="bg-gray-50 border-b border-gray-200 px-4 py-3">
-            <div className="text-[10px] tracking-[2px] uppercase font-bold text-[#AC1F2D]">
-              <span className="text-[#008BC8]">SONA</span> UWA
-            </div>
-            <div className="font-semibold text-sm text-gray-800 mt-0.5">
-              1+1 International Pathway
-            </div>
-          </div>
-
-          {/* MOBILE NAV WITH SUBMENU */}
+          {/* MOBILE NAV WITH SEPARATE SUBMENUS */}
           <nav className="py-2 bg-white">
             {navLinks.map((link) =>
               link.hasSubmenu ? (
@@ -334,18 +363,18 @@ export default function Navbar() {
                   <div className="flex justify-between items-center px-4 py-3.5 font-medium text-gray-800 border-b border-gray-100">
                     <span>{link.label}</span>
                     <button
-                      onClick={() => setAdmissionsOpen(!admissionsOpen)}
+                      onClick={() => setOpenDropdown(openDropdown === link.dropdownId ? null : link.dropdownId)}
                       className="p-1"
                     >
                       <ChevronDown
                         size={18}
-                        className={`transition-transform duration-200 ${admissionsOpen ? "rotate-180" : ""
+                        className={`transition-transform duration-200 ${openDropdown === link.dropdownId ? "rotate-180" : ""
                           }`}
                       />
                     </button>
                   </div>
                   <div
-                    className={`overflow-hidden transition-all duration-300 bg-gray-50 ${admissionsOpen ? "max-h-96" : "max-h-0"
+                    className={`overflow-hidden transition-all duration-300 bg-gray-50 ${openDropdown === link.dropdownId ? "max-h-96" : "max-h-0"
                       }`}
                   >
                     {link.submenu.map((subItem) => (
@@ -354,7 +383,7 @@ export default function Navbar() {
                         href={subItem.href}
                         onClick={() => {
                           setMobileMenuOpen(false);
-                          setAdmissionsOpen(false);
+                          setOpenDropdown(null);
                         }}
                         className="block pl-8 pr-4 py-3 text-gray-600 hover:bg-gray-100 hover:text-[#AC1F2D] transition border-b border-gray-100 text-[14px]"
                       >
