@@ -41,7 +41,7 @@ export default function CareerOutcomes() {
 
 
                     <div>
-                        <p className="text-[#8c1d32] text-[10px] sm:text-sm font-semibold tracking-[3px] uppercase mb-6">
+                        <p className="text-[#8c1d32] text-[10px] sm:text-sm font-bold tracking-[3px] uppercase mb-6">
                             Career Outcomes
                         </p>
 
@@ -50,7 +50,7 @@ export default function CareerOutcomes() {
                         </h2>
 
                         <p className="text-gray-600 text-lg leading-relaxed max-w-md">
-                            The MS in Data Science opens doors across high-growth sectors globally.
+                            The MS in Data Science opens doors across high growth sectors globally.
                         </p>
                     </div>
 
