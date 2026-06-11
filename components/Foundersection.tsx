@@ -220,9 +220,8 @@ export default function FounderSection() {
             >
               Higher Education
             </motion.span>
-
             <p className="text-lg sm:text-xl md:text-2xl lg:text-[22px] mt-1 font-medium">
-              1st Year at SCALE, India and 2nd Year at Alabama, America.
+              1<sup>st</sup> Year at SCALE, India and 2<sup>nd</sup> Year at Alabama, America.
             </p>
           </motion.h2>
 
