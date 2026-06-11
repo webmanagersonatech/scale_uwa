@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-
+import CtaSection from "../../components/CtaComponent";
 const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
@@ -229,6 +229,7 @@ export default function HistoryPage() {
                     <div className="mx-auto">
                         <HistoryContent />
                         <SnapshotsGallery />
+                        <CtaSection/>
                     </div>
                 </div>
             </div>

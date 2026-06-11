@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import CtaSection from "../../components/CtaComponent";
 
 // ─── Animation variants ───────────────────────────────────────────────────────
 const fadeInUp = {
@@ -19,9 +20,9 @@ function Breadcrumb() {
             </Link>
             <span className="text-[#bbb] mx-1" aria-hidden="true">›</span>
           </li>
-              <li>
+          <li>
             <span className="text-[#5a5652] font-medium" aria-current="page">
-             UWA
+              UWA
             </span>
             <span className="text-[#bbb] mx-1" aria-hidden="true">›</span>
           </li>
@@ -154,6 +155,8 @@ export default function WhyUWAPage() {
         <div className="max-w-[1440px] mx-auto px-6">
           <div className="mx-auto">
             <WhyUWAContent />
+            <CtaSection />
+
           </div>
         </div>
       </div>

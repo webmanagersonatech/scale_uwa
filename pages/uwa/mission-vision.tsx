@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-
+import CtaSection from "../../components/CtaComponent";
 // ─── Animation variants (matching your page) ─────────────────────────────────
 const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -194,6 +194,7 @@ export default function MissionVisionPage() {
                     <div className="mx-auto">
                         <OurMission />
                         <OurVision />
+                        <CtaSection/>
                     </div>
                 </div>
             </div>

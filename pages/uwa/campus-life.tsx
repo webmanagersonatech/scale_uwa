@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
+import CtaSection from "../../components/CtaComponent";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
@@ -87,22 +88,22 @@ function SectionRow({
         roundedCorner === "top-right"
             ? "rounded-tr-[80px] rounded-bl-[80px] rounded-tl-none rounded-br-none"  // Both top-right AND bottom-left
             : "rounded-bl-[80px] rounded-tr-[80px] rounded-tl-none rounded-br-none";  // Both as well
-const imageEl = (
-  <div className="w-full lg:w-1/2">
-    <div
-      className="overflow-hidden w-full aspect-[4/3] border-t-[6px] border-l-[6px] border-[#b3202d]"
-      style={{
-        borderRadius: "0 180px 0 180px",
-      }}
-    >
-      <img
-        src={imageSrc}
-        alt={imageAlt}
-        className="w-full h-full object-cover"
-      />
-    </div>
-  </div>
-);
+    const imageEl = (
+        <div className="w-full lg:w-1/2">
+            <div
+                className="overflow-hidden w-full aspect-[4/3] border-t-[6px] border-l-[6px] border-[#b3202d]"
+                style={{
+                    borderRadius: "0 180px 0 180px",
+                }}
+            >
+                <img
+                    src={imageSrc}
+                    alt={imageAlt}
+                    className="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    );
     const textEl = (
         <div className="w-full lg:w-1/2 flex flex-col justify-center gap-4">
             <h2 className="font-serif text-2xl lg:text-3xl text-gray-900 font-bold leading-tight">
@@ -199,7 +200,7 @@ export default function CampusLifePage() {
                         ctaLabel="Performing Arts"
                         ctaHref="/campus-life/performing-arts"
                     />
-
+                    <CtaSection />
                 </div>
             </div>
         </>
