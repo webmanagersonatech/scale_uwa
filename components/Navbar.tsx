@@ -60,10 +60,11 @@ export default function Navbar() {
       submenu: [
         { label: "About the Program", href: "/admission/about-program" },
         { label: "Fee Structure", href: "/admission/fees-structure" },
+        { label: "FAQs", href: "/admission/faqs" },
         { label: "Apply Online", href: "https://hikaapp.sonastar.com/INS-0VVEACMY" },
       ],
     },
-    { label: "Campus Tour", href: "/#campus-tour" },
+  
   ];
 
   return (
@@ -185,8 +186,8 @@ export default function Navbar() {
                       {/* Dropdown Menu */}
                       <div
                         className={`absolute left-0 top-full mt-0 w-56 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-200 z-50 ${openDropdown === link.dropdownId
-                            ? "opacity-100 visible translate-y-0"
-                            : "opacity-0 invisible -translate-y-2"
+                          ? "opacity-100 visible translate-y-0"
+                          : "opacity-0 invisible -translate-y-2"
                           }`}
                       >
                         {link.submenu.map((subItem) => (

@@ -47,7 +47,7 @@ function HeroSection() {
                     <h1 className="font-serif text-4xl lg:text-5xl text-gray-900 font-bold mb-4 leading-tight">
                         Campus Life: <span className="text-gray-700">Connections Beyond the Classroom</span>
                     </h1>
-                    <p className="text-gray-600 text-base lg:text-lg max-w-[580px] leading-relaxed">
+                    <p className="text-gray-600 text-base lg:text-lg  leading-relaxed">
                         Your education includes so much more than going to class. At UWA, there are countless
                         opportunities to be a part of something great — from service organizations and Greek life
                         to clubs and organizations. The more involved you become, the richer and more rewarding

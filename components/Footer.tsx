@@ -23,11 +23,12 @@ const Footer = () => {
     { name: "About the Program", href: "/admission/about-program" },
     { name: "Acadamic Plan", href: "/#structure" },
     { name: "Fee Structure", href: "/admission/fees-structure" },
+    { name: "FAQs", href: "/admission/faqs" },
     { name: "Apply Now", href: "https://hikaapp.sonastar.com/INS-0VVEACMY" },
   ];
 
   const aboutLinks = [
-     {
+    {
       name: "Why UWA",
       href: "/uwa/why-uwa",
     },
@@ -51,14 +52,14 @@ const Footer = () => {
       name: "Map & Directions",
       href: "/uwa/map-direction",
     },
-   
+
   ];
 
   const resourceLinks = [
     { name: "History & Legacy", href: "/about-us/history-legacy" },
     { name: "Management and leadership", href: "/about-us/Management-profiles" },
     { name: "Our faculty members", href: "#" },
-  
+
   ];
 
 

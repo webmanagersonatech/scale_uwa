@@ -76,11 +76,11 @@ const profiles: Profile[] = [
         imageSrc: "/homeimages/thyagu-valliappa.webp", // Update with your actual image path
         imageAlt: "Thyagu Valliappa - CEO",
         socials: [
-            {
-                href: "https://www.facebook.com/thyagu.valliappa/",
-                label: "Facebook",
-                icon: <FacebookIcon />,
-            },
+            // {
+            //     href: "https://www.facebook.com/thyagu.valliappa/",
+            //     label: "Facebook",
+            //     icon: <FacebookIcon />,
+            // },
             {
                 href: "https://in.linkedin.com/in/thyagu-valliappa-3616a97",
                 label: "LinkedIn",
@@ -91,11 +91,11 @@ const profiles: Profile[] = [
                 label: "X",
                 icon: <XIcon />,
             },
-            {
-                href: "https://youtube.com/@ttimewiththyaguvalliappa-gn8cq?si=dWrFKVS7IrB_o7z3",
-                label: "YouTube",
-                icon: <YouTubeIcon />,
-            },
+            // {
+            //     href: "https://youtube.com/@ttimewiththyaguvalliappa-gn8cq?si=dWrFKVS7IrB_o7z3",
+            //     label: "YouTube",
+            //     icon: <YouTubeIcon />,
+            // },
         ],
     },
 ];

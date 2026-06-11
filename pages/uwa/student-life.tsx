@@ -46,7 +46,7 @@ function HeroSection() {
 
                         Student <span className="text-gray-700">Life</span>
                     </h1>
-                    <p className="text-gray-600 text-base lg:text-lg max-w-[580px] leading-relaxed">
+                    <p className="text-gray-600 text-base lg:text-lg  leading-relaxed">
                         Student Life provides meaningful experiences through programs and services to our campus
                         community. From group fitness classes and outdoor adventures and aquatics to intramural
                         sports, there's something for you no matter your level of ability or expertise.
@@ -179,10 +179,10 @@ export default function StudentLifePage() {
             <div className="py-12">
                 <div className="max-w-[1440px] mx-auto px-6">
                     <ActivitiesGrid />
-                    <CtaSection/>
+                    <CtaSection />
                 </div>
             </div>
-            
+
         </>
     );
 }
