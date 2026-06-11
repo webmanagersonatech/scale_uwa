@@ -27,6 +27,10 @@ const Footer = () => {
   ];
 
   const aboutLinks = [
+     {
+      name: "Why UWA",
+      href: "/uwa/why-uwa",
+    },
     {
       name: "History & Traditions",
       href: "/uwa/history-tradition",
@@ -47,10 +51,7 @@ const Footer = () => {
       name: "Map & Directions",
       href: "/uwa/map-direction",
     },
-    {
-      name: "Why UWA",
-      href: "/uwa/why-uwa",
-    },
+   
   ];
 
   const resourceLinks = [
