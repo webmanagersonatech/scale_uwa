@@ -903,7 +903,7 @@ export default function AboutProgramPage() {
                             <div className="bg-gray-100 border border-gray-200 rounded-lg py-6 px-7 flex items-center justify-between gap-5 flex-wrap">
                                 <div className="text-gray-700 text-[15px] lg:text-base">
                                     <strong className="text-gray-900">Ready to apply?</strong> Explore admissions requirements
-                                    and start your Sona Star, SCALE pathway today.
+                                    and start your Sona Star, SCALE  International pathway today.
                                 </div>
 
                                 <div className="flex gap-3 flex-wrap">
