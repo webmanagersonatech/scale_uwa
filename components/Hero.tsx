@@ -19,7 +19,7 @@ const slides = [
       "Gain hands-on experience with cutting-edge tools and methodologies that prepare you for leadership roles in AI, ML, and analytics across global industries.",
   },
   {
-    image: "/homeimages/hero1.webp",
+    image: "/homeimages/hero1.jpg",
     badge: "Global Career Pathway",
     title: "Start in India complete in the USA ",
     description:
