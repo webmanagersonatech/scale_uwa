@@ -54,14 +54,14 @@ export default function FounderSection() {
       gradient: "blue"
     },
     {
-      number: "72%",
+      number: "75%",
       label: "Cost  Savings",
       icon: Briefcase,
       color: "from-green-500 to-emerald-500",
       gradient: "green"
     },
     {
-      number: "Stronger",
+      number: "Global",
       label: "Career Readiness",
       icon: Users,
       color: "from-orange-500 to-red-500",

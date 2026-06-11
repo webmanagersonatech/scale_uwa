@@ -72,7 +72,7 @@ function SavingsBadge() {
     return (
         <div className="flex justify-center my-8">
             <div className="inline-flex items-center gap-3 bg-green-50 border border-green-200  px-5 py-2.5">
-                <span className="text-green-700 font-bold text-sm">💰 Save ~72% with the Pathway Model</span>
+                <span className="text-green-700 font-bold text-sm">💰 Save ~75% with the Pathway Model</span>
                 <span className="text-green-600 text-xs border-l border-green-300 pl-3">vs Full UWA Route</span>
             </div>
         </div>
@@ -171,7 +171,7 @@ function FeeNotes() {
                     <span className="text-[#AC1F2D] mt-0.5">•</span>
                     <span className="text-center">
                         <strong>Savings:</strong> Compared to completing both years directly at UWA, this pathway saves approximately{" "}
-                        <strong className="text-gray-800">~72%</strong> on total tuition and living costs.
+                        <strong className="text-gray-800">~75%</strong> on total tuition and living costs.
                     </span>
                 </li>
             </ul>

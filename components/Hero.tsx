@@ -206,7 +206,7 @@ export default function HeroSection() {
                 {/* Savings */}
                 <div className="px-3 py-4 text-center flex flex-col items-center justify-center min-h-[110px]">
                   <BadgePercent className="w-5 h-5 text-[#8c1d32] mb-2 flex-shrink-0" />
-                  <div className="text-xl font-bold text-gray-900 leading-tight">72%</div>
+                  <div className="text-xl font-bold text-gray-900 leading-tight">75%</div>
                   <div className="text-xs text-gray-500 mt-1">Cost Savings</div>
                 </div>
 

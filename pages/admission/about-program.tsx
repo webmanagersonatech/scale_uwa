@@ -105,7 +105,7 @@ const FAQ_ITEMS = [
     },
     {
         question: "What is the benefit of studying year 1 in India ?",
-        answer: "Studying the first year in India helps reduce costs significantly(up to 72%), provides academic preparation, and allows students and families more time to plan their move to the USA."
+        answer: "Studying the first year in India helps reduce costs significantly(up to 75%), provides academic preparation, and allows students and families more time to plan their move to the USA."
     },
     {
         question: "Do I receive a U.S. degree or an Indian degree?",
@@ -117,7 +117,7 @@ const FAQ_ITEMS = [
     },
     {
         question: "How much money can I save through this pathway?",
-        answer: "Students may save approximately 72% compared to completing the entire program in the USA."
+        answer: "Students may save approximately 75% compared to completing the entire program in the USA."
     },
     {
         question: "What will I learn in this program?",
@@ -177,7 +177,7 @@ const FAQ_ITEMS = [
     },
     {
         question: "Why should I choose this pathway instead of directly joining a U.S. university?",
-        answer: "The Sona UWA International pathway combines:\nLower Cost (up to 72% cost savings)\nInternational Degree from the University of West Alabama\nU.S. Campus Experience\n3 Year STEM OPT Opportunity\nGlobal Career Opportunity"
+        answer: "The Sona UWA International pathway combines:\nLower Cost (up to 75% cost savings)\nInternational Degree from the University of West Alabama\nU.S. Campus Experience\n3 Year STEM OPT Opportunity\nGlobal Career Opportunity"
     },
     {
         question: "Will there be practical projects during the programme?",
