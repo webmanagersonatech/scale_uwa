@@ -1,4 +1,3 @@
-"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -14,7 +13,7 @@ import {
   FaArrowRight,
   FaLinkedinIn,
 } from "react-icons/fa6";
-
+import { BASE_PATH } from "../utils/config";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -76,7 +75,7 @@ const Footer = () => {
             {/* Three Logos Row */}
             <div className="flex items-center gap-6 mb-6">
               <Image
-                src="/homeimages/Sona-star-logo.webp"
+                src={`${BASE_PATH}/homeimages/Sona-star-logo.webp`}
                 alt="Sona Star Logo"
                 width={70}
                 height={70}
@@ -84,7 +83,7 @@ const Footer = () => {
               />
 
               <Image
-                src="/homeimages/footer-uwa.png"
+                src={`${BASE_PATH}/homeimages/footer-uwa.png`}
                 alt="UWA Logo"
                 width={70}
                 height={70}

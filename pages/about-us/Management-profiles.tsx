@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-
+import { BASE_PATH } from "../../utils/config";
 
 // ─── Animation variants ───────────────────────────────────────────────────────
 const fadeInUp = {
@@ -168,7 +168,7 @@ function ProfileCard({ profile }: { profile: Profile }) {
                 <div className="flex justify-center mb-4">
                     {profile.imageSrc ? (
                         <img
-                            src={profile.imageSrc}
+                           src={`${BASE_PATH}${profile.imageSrc}`}
                             alt={profile.imageAlt || `${profile.name} - ${profile.title}`}
                             className="w-32 h-32 rounded-full object-cover border-4 border-[#e8cfc8] shadow-md"
                         />
