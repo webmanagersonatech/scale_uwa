@@ -15,8 +15,8 @@ const FULL_UWA = {
     badgeColor: "bg-gray-100 text-gray-600",
     subtitle: "Both years on campus at University of West Alabama, USA",
     items: [
-        { label: "Year 1 at UWA (COA)", amount: "$24,248–$28,138" },
-        { label: "Year 2 at UWA (COA)", amount: "$24,248–$28,138" },
+        { label: "Year 1 at UWA ", amount: "$24,248–$28,138" },
+        { label: "Year 2 at UWA ", amount: "$24,248–$28,138" },
         { label: "Tuition (15 credits/yr)", amount: "$12,870 / yr" },
     ],
     totalLabel: "Total Estimate (2 Years)",
@@ -31,7 +31,7 @@ const RECOMMENDED = {
     subtitle: "Year 1 at Sona Star, SCALE Bengaluru · Year 2 at UWA, Alabama",
     items: [
         { label: "Year 1 at Sona Star, SCALE", amount: "₹7,50,000" },
-        { label: "Year 2 at UWA (COA)", amount: "$17,248" },
+        { label: "Year 2 at UWA ", amount: "$17,248" },
         {
             label: "Potential Scholarship",
             amount: "Up to $5,000",
