@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { MapPin, GraduationCap, FileText } from "lucide-react";
+import { BASE_PATH } from "../utils/config";
 
 export default function ProgramStructure() {
     const ref = useRef(null);
@@ -70,8 +70,7 @@ export default function ProgramStructure() {
 
                                         {/* India Flag */}
                                         <img
-                                            src="/homeimages/india.png"
-
+                                            src={`${BASE_PATH}/homeimages/india.png`}
                                             alt="India Flag"
                                             className="w-6 h-4 sm:w-7 sm:h-5 rounded-sm border border-gray-200 shadow-sm object-cover"
                                         />
@@ -147,7 +146,7 @@ export default function ProgramStructure() {
 
                                         {/* USA Flag */}
                                         <img
-                                            src="/homeimages/usa.png"
+                                            src={`${BASE_PATH}/homeimages/usa.png`}
                                             alt="USA Flag"
                                             className="w-6 h-4 sm:w-7 sm:h-5 rounded-sm border border-gray-200 shadow-sm object-cover"
                                         />
