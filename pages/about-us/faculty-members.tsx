@@ -145,17 +145,17 @@ function Breadcrumb() {
 function HeroSection() {
     return (
         <section className="bg-gray-100 py-12 lg:py-16 relative overflow-hidden">
-            <div className="absolute -right-[60px] -top-[60px] w-[360px] h-[360px] rounded-full bg-gray-200/50 pointer-events-none" />
+            <div className="absolute -right-[60px] -top-[60px]  h-[360px] rounded-full bg-gray-200/50 pointer-events-none" />
             <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-gray-300/30 pointer-events-none" />
             <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-gray-200/40 pointer-events-none" />
 
             <div className="max-w-[1440px] mx-auto px-6 relative z-10">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-                    <div className="lg:max-w-[55%]">
+                    <div >
                         <h1 className="font-serif text-4xl lg:text-5xl text-gray-900 font-bold mb-4 leading-tight">
                             Our <span className="text-gray-700">Leadership & Faculty</span>
                         </h1>
-                        <p className="text-gray-600 text-base lg:text-lg max-w-[580px] leading-relaxed">
+                        <p className="text-gray-600 text-base lg:text-lg  leading-relaxed">
                             Meet the distinguished educators, researchers, and administrators who mentor, challenge, and inspire our students every day.
                         </p>
                     </div>

@@ -57,7 +57,7 @@ const Footer = () => {
   const resourceLinks = [
     { name: "History & Legacy", href: "/about-us/history-legacy" },
     { name: "Management and leadership", href: "/about-us/Management-profiles" },
-    { name: "Our faculty members", href: "#" },
+    { name: "Our faculty members", href: "/about-us/faculty-members" },
 
   ];
 
