@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-
+import { BASE_PATH } from "../utils/config";
 export default function AdmissionSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
@@ -153,7 +153,7 @@ export default function AdmissionSection() {
               <div className="absolute -top-8 left-1/2 -translate-x-1/2">
                 <div className="bg-white rounded-full p-2.5 shadow-lg border border-gray-200">
                   <img
-                    src={accred.image}
+                  src={`${BASE_PATH}${accred.image}`}
                     alt={`${accred.name} logo`}
                     className="h-12 w-12 object-contain"
                   />

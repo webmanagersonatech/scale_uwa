@@ -14,6 +14,7 @@ import {
   Clock,
   Globe
 } from "lucide-react";
+import { BASE_PATH } from "../utils/config";
 
 export default function FounderSection() {
   const ref = useRef(null);
@@ -103,7 +104,7 @@ export default function FounderSection() {
               className="absolute top-0 left-0 w-[58%] sm:w-[55%] aspect-[4/5] rounded-2xl overflow-hidden shadow-xl z-10"
             >
               <Image
-                src="/homeimages/found1.webp"
+                src={`${BASE_PATH}/homeimages/found1.webp`}
                 alt="University campus"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
@@ -117,7 +118,7 @@ export default function FounderSection() {
               className="absolute bottom-0 right-0 w-[62%] sm:w-[60%] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl z-20 ring-4 ring-white/50"
             >
               <Image
-                src="/homeimages/image1.png"
+                src={`${BASE_PATH}/homeimages/image1.png`}
                 alt="Founder portrait"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-110"
