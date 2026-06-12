@@ -111,7 +111,38 @@ const facultyMembers: Faculty[] = [
         expertise: ["Corporate Training", "Curriculum Design", "Leadership Development", "Instructional Design"],
         imageSrc: "/homeimages/akhil.webp", // Update with actual path
         imageAlt: "Akhil Narayan - Learning and Development Manager",
-    }
+    },
+    {
+        initials: "BB",
+        name: "Dr. Butchi Babu Muvva",
+        title: "Adjunct Professor | Director – AI & Business Intelligence",
+        qualification: "Ph.D.",
+        department: "Artificial Intelligence & Business Intelligence",
+        expertise: [
+            "Artificial Intelligence",
+            "Business Intelligence",
+            "Digital Innovation",
+            "Social Impact through AI"
+        ],
+        imageSrc: "/homeimages/butchi_babu_muvva.jpg",
+        imageAlt: "Dr. Butchi Babu Muvva - Adjunct Professor and Director AI & Business Intelligence",
+    },
+
+    {
+        initials: "SC",
+        name: "A. Sailesh Chandra",
+        title: "Senior Operations & Digital Transformation Leader",
+        qualification: "",
+        department: "Operations & Digital Transformation",
+        expertise: [
+            "Operations Management",
+            "Digital Transformation",
+            "Business Process Optimization",
+            "Strategic Leadership"
+        ],
+        imageSrc: "/homeimages/sailesh_chandra.jpg",
+        imageAlt: "A. Sailesh Chandra - Senior Operations & Digital Transformation Leader",
+    },
 ];
 
 // ─── Breadcrumb (updated for Faculty) ────────────────────────────────────────
@@ -229,7 +260,7 @@ function FacultySection() {
                 They bring a wealth of knowledge, research, and real-world experience to the classroom and the institution.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
                 {facultyMembers.map((faculty) => (
                     <FacultyCard key={faculty.name} faculty={faculty} />
                 ))}
