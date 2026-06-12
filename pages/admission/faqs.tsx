@@ -401,15 +401,6 @@ export default function FaqsPage() {
                                 )}
                             </div>
 
-                            <div className="mt-8 p-5 bg-[#f8f5f2] rounded-lg text-center">
-                                <p className="text-[#5a5652] text-sm">
-                                    Still have questions?{" "}
-                                    <a href="/contact" className="text-[#AC1F2D] font-medium hover:underline">
-                                        Contact our admissions team
-                                    </a>{" "}
-                                    for personalized guidance.
-                                </p>
-                            </div>
                         </motion.section>
 
                     </div>
