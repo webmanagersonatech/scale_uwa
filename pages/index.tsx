@@ -17,7 +17,7 @@ export default function Home() {
     <>
       <Head>
         <title>
-          MS in Data Science | Sona SCALE & University of West Alabama (UWA)
+          MS in Data Science | Sona SCALE, Bengaluru & University of West Alabama (UWA)
         </title>
 
         <meta
@@ -33,11 +33,11 @@ export default function Home() {
         {/* Open Graph */}
         <meta
           property="og:title"
-          content="MS in Data Science | Sona SCALE & University of West Alabama (UWA)"
+          content="MS in Data Science | Sona SCALE ,Bengaluru & University of West Alabama (UWA)"
         />
         <meta
           property="og:description"
-          content="Launch your global career in Data Science. Study at Sona SCALE and progress to UWA, USA."
+          content="Launch your global career in Data Science. Study at Sona SCALE ,Bengaluru and progress to UWA, USA."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://your-domain.com" />
@@ -53,11 +53,11 @@ export default function Home() {
         />
         <meta
           name="twitter:title"
-          content="MS in Data Science | Sona SCALE & University of West Alabama"
+          content="MS in Data Science | Sona SCALE ,Bengaluru & University of West Alabama"
         />
         <meta
           name="twitter:description"
-          content="Complete Year 1 at Sona SCALE and continue at UWA, USA."
+          content="Complete Year 1 at Sona SCALE, Bengaluru and continue at UWA, USA."
         />
         <meta
           name="twitter:image"
