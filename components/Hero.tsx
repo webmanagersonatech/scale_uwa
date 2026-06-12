@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Download, MessageCircle, BookOpen, Globe, Clock3, GraduationCap, BadgePercent, BriefcaseBusiness, Plane, ChevronLeft, ChevronRight } from "lucide-react";
-
+import { BASE_PATH } from "../utils/config";
 
 const slides = [
   {
@@ -63,7 +63,7 @@ export default function HeroSection() {
           className="absolute inset-0"
         >
           <Image
-            src={slides[current].image}
+            src={`${BASE_PATH}${slides[current].image}`}
             alt="Hero"
             fill
             priority
@@ -95,9 +95,9 @@ export default function HeroSection() {
 
       {/* Content Container */}
       <div className="relative z-20 max-w-[1440px] mx-auto px-4 sm:px-6">
-      <div className="hidden md:block absolute left-[-260px] bottom-[-260px] w-[720px] h-[720px] rounded-full border-[30px] border-black/[0.02] pointer-events-none" />
-<div className="hidden md:block absolute left-[-180px] bottom-[-180px] w-[560px] h-[560px] rounded-full border-[20px] border-black/[0.02] pointer-events-none" />
-<div className="hidden md:block absolute left-[-100px] bottom-[-100px] w-[400px] h-[400px] rounded-full border-[10px] border-black/[0.02] pointer-events-none" />
+        <div className="hidden md:block absolute left-[-260px] bottom-[-260px] w-[720px] h-[720px] rounded-full border-[30px] border-black/[0.02] pointer-events-none" />
+        <div className="hidden md:block absolute left-[-180px] bottom-[-180px] w-[560px] h-[560px] rounded-full border-[20px] border-black/[0.02] pointer-events-none" />
+        <div className="hidden md:block absolute left-[-100px] bottom-[-100px] w-[400px] h-[400px] rounded-full border-[10px] border-black/[0.02] pointer-events-none" />
 
         {/* Fixed height container to maintain consistent spacing */}
         <div className="min-h-[calc(70vh-65px)] md:min-h-[calc(70vh-128px)] flex items-center">

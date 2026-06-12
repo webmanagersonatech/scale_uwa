@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Search, Menu, X, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-
+import { BASE_PATH } from "../utils/config";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -86,7 +86,7 @@ export default function Navbar() {
               <div className="flex items-center gap-3">
                 <div className="relative w-[64px] h-[64px]">
                   <Image
-                    src="/homeimages/Sona-star-logo.webp"
+                    src={`${BASE_PATH}/homeimages/Sona-star-logo.webp`}
                     alt="UWA Logo"
                     fill
                     className="object-contain"
@@ -95,7 +95,7 @@ export default function Navbar() {
 
                 <div className="relative w-[52px] h-[52px]">
                   <Image
-                    src="/homeimages/uwa.jpg"
+                    src={`${BASE_PATH}/homeimages/uwa.jpg`}
                     alt="uwa Logo"
                     fill
                     className="object-contain "
@@ -155,7 +155,7 @@ export default function Navbar() {
                 </span>
 
                 <Image
-                  src="/homeimages/scale.png"
+                  src={`${BASE_PATH}/homeimages/scale.png`}
                   alt="SCALE Logo"
                   width={100}
                   height={100}
@@ -230,7 +230,7 @@ export default function Navbar() {
                     <div className="flex items-center gap-2">
                       <div className="relative w-[36px] h-[36px]">
                         <Image
-                          src="/homeimages/Sona-star-logo.webp"
+                          src={`${BASE_PATH}/homeimages/Sona-star-logo.webp`}
                           alt="UWA Logo"
                           fill
                           className="object-contain"
@@ -238,7 +238,7 @@ export default function Navbar() {
                       </div>
                       <div className="relative w-[36px] h-[36px]">
                         <Image
-                          src="/homeimages/uwa.jpg"
+                          src={`${BASE_PATH}/homeimages/uwa.jpg`}
                           alt="SCALE Logo"
                           fill
                           className="object-contain"
@@ -283,7 +283,7 @@ export default function Navbar() {
             <div className="flex items-center gap-3 bg-white rounded-md px-3 py-2">
               <div className="relative w-[45px] h-[45px]">
                 <Image
-                  src="/homeimages/Sona-star-logo.webp"
+                  src={`${BASE_PATH}/homeimages/Sona-star-logo.webp`}
                   alt="UWA Logo"
                   fill
                   className="object-contain"
@@ -291,7 +291,8 @@ export default function Navbar() {
               </div>
               <div className="relative w-[45px] h-[45px]">
                 <Image
-                  src="/homeimages/uwa.jpg"
+                  src={`${BASE_PATH}/homeimages/uwa.jpg`}
+                  
                   alt="SCALE Logo"
                   fill
                   className="object-contain"
@@ -330,7 +331,7 @@ export default function Navbar() {
                   A Sona Star Initiative
                 </span>
                 <Image
-                  src="/homeimages/scale.png"
+                   src={`${BASE_PATH}/homeimages/scale.png`}
                   alt="SCALE Logo"
                   width={60}
                   height={60}
