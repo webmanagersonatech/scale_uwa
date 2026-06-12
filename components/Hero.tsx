@@ -156,7 +156,7 @@ export default function HeroSection() {
                 </a>
 
                 <a
-                  href="/homeimages/Brochure.pdf"
+                href={`${BASE_PATH}/homeimages/Brochure.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border border-gray-400 bg-white/80 backdrop-blur-sm px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 hover:bg-black hover:text-white hover:border-black transition text-xs sm:text-sm rounded-md"
