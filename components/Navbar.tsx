@@ -48,7 +48,11 @@ export default function Navbar() {
       submenu: [
         { label: "History & Legacy", href: "/about-us/history-legacy" },
         { label: "Management and leadership", href: "/about-us/Management-profiles" },
+        
+        
         { label: "Our faculty members", href: "/about-us/faculty-members" },
+
+        { label: "Academic Calendar", href: "/about-us/academic-calendar" },
       ],
     },
     { label: "Careers", href: "/#careers" },

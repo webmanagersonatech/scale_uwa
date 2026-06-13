@@ -58,6 +58,7 @@ const Footer = () => {
     { name: "History & Legacy", href: "/about-us/history-legacy" },
     { name: "Management and leadership", href: "/about-us/Management-profiles" },
     { name: "Our faculty members", href: "/about-us/faculty-members" },
+    { name: "Academic Calendar", href: "/about-us/academic-calendar" },
 
   ];
 
