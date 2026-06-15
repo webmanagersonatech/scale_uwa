@@ -51,10 +51,10 @@ const Footer = () => {
       name: "Map & Directions",
       href: "/uwa/map-direction",
     },
-      {
-      name: "Privacy Statement",
-      href: "/uwa/privacy",
-    },
+    //   {
+    //   name: "Privacy Statement",
+    //   href: "/uwa/privacy",
+    // },
 
   ];
 
