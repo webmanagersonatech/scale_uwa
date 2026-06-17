@@ -150,7 +150,7 @@ const UWAOptionsSection: React.FC = () => {
                     <div className="flex-1 flex">
                         <OptionCard
                             optionLabel="About the UWA"
-                            details="The University of West Alabama (UWA), located in Livingston, Alabama, USA, was established in 1835 and has been shaping education for over 190 years, UWA is a public state university offering a wide range of academic programmes. . UWA's MS in Data Science is a 30 credits graduate program covering statistics, programming, machine learning, data visualization, predictive modelling, cybersecurity data science, and capstone/thesis-based applied work."
+                            details="The University of West Alabama (UWA), located in Livingston, Alabama, USA, was established in 1835 and has been shaping education for over 190 years, UWA is a public state university offering a wide range of academic programes. . UWA's MS in Data Science is a 30 credits graduate program covering statistics, programming, machine learning, data visualization, predictive modelling, cybersecurity data science, and capstone/thesis-based applied work."
                             learnMoreHref="https://www.uwa.edu"
                             countryFlagSrc="/homeimages/usa.png"
                             countryName="USA"

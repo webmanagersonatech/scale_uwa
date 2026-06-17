@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Download, MessageCircle, BookOpen, Globe, Clock3, GraduationCap, BadgePercent, BriefcaseBusiness, Plane, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, Download, CircleHelp, MessageCircle, BookOpen, Globe, Clock3, GraduationCap, BadgePercent, BriefcaseBusiness, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 import { BASE_PATH } from "../utils/config";
 
 const slides = [
@@ -156,7 +156,7 @@ export default function HeroSection() {
                 </a>
 
                 <a
-                href={`${BASE_PATH}/homeimages/Brochure.pdf`}
+                  href={`${BASE_PATH}/homeimages/Brochure.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border border-gray-400 bg-white/80 backdrop-blur-sm px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 hover:bg-black hover:text-white hover:border-black transition text-xs sm:text-sm rounded-md"
@@ -173,6 +173,18 @@ export default function HeroSection() {
                 >
                   <MessageCircle size={16} />
                   SPEAK TO A COUNSELLOR
+                </a>
+
+
+
+                <a
+                  href="https://hikabackend.sonastar.com/api/institutions/enquiry/INS-0VVEACMY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-gray-400 bg-white/80 backdrop-blur-sm px-5 sm:px-6 py-2.5 sm:py-3 font-semibold flex items-center justify-center gap-2 hover:bg-black hover:text-white hover:border-black transition text-xs sm:text-sm rounded-md"
+                >
+                  <CircleHelp size={16} />
+                  ENQUIRY NOW
                 </a>
               </div>
             </div>
