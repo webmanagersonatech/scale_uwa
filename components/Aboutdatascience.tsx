@@ -116,7 +116,7 @@ const WhatWeDo: NextPage = () => {
 
     return (
         <main className="bg-white flex items-center justify-center pt-16 overflow-hidden">
-            <section className="w-full mx-auto max-w-[1440px] px-4 ">
+            <section className="w-full mx-auto max-w-[1440px] px-6 ">
                 <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                     {/* ── LEFT: Content block with animations ── */}
                     <motion.div
@@ -129,8 +129,8 @@ const WhatWeDo: NextPage = () => {
                         {/* Section heading */}
                         <motion.div variants={itemVariants}>
                             <h2 className="font-serif text-[28px] sm:text-[32px] lg:text-[40px] leading-[1.2] sm:leading-[1.15] lg:leading-[1.08] text-black mb-1">
-                                About MS in Data Science{" "}
-                                <span className="text-gray-400 font-light">--</span>
+                                About MS in Data Science
+                                
                             </h2>
                         </motion.div>
 

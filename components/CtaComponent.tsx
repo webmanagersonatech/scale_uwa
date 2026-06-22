@@ -60,7 +60,7 @@ const CtaSection = () => {
         no-underline
     "
                 >
-                     ENQUIRY NOW
+                    ENQUIRY NOW
                 </a>
             </div>
         </motion.section>

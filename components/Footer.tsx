@@ -144,11 +144,11 @@ const Footer = () => {
             {/* Social Icons */}
             <div className="flex items-center gap-3">
               {[
-                { icon: <FaFacebookF />, href: "#" },
-                { icon: <FaXTwitter />, href: "#" },
-                { icon: <FaInstagram />, href: "#" },
-                { icon: <FaLinkedinIn />, href: "#" },
-                { icon: <FaYoutube />, href: "#" },
+                { icon: <FaFacebookF />, href: "https://www.facebook.com/share/1GyRbZ15UZ/" },
+                // { icon: <FaXTwitter />, href: "#" },
+                { icon: <FaInstagram />, href: "https://www.instagram.com/sona_uwa?igsh=MXkxazV2aGZ6cDVlZw==" },
+                // { icon: <FaLinkedinIn />, href: "#" },
+                { icon: <FaYoutube />, href: "https://www.youtube.com/@SonaUWA" },
               ].map((item, index) => (
                 <a
                   key={index}
@@ -241,7 +241,7 @@ const Footer = () => {
             © {currentYear}  SONA UWA. All Rights Reserved.
           </p>
 
-          <div className="flex items-center gap-6 text-xs">
+          {/* <div className="flex items-center gap-6 text-xs">
             <Link href="#" className="text-gray-500 hover:text-[#8c1d32] transition">
               Privacy Policy
             </Link>
@@ -251,7 +251,7 @@ const Footer = () => {
             <Link href="#" className="text-gray-500 hover:text-[#8c1d32] transition">
               Accessibility
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

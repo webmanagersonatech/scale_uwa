@@ -89,7 +89,7 @@ export default function FounderSection() {
         className="absolute bottom-20 left-10 w-96 h-96 bg-[#8c1d32] rounded-full blur-3xl"
       />
 
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative z-10">
+      <div className="max-w-[1440px] mx-auto px-6  flex flex-col lg:flex-row items-center gap-12 lg:gap-16 relative z-10">
 
         {/* ── LEFT: Stacked Images + Stats Cards ── */}
         <div className="flex-1 w-full">
