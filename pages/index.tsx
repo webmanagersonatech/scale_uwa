@@ -12,6 +12,7 @@ import Admissions from "../components/AdmissionComponent";
 import AboutSection from "../components/AboutComponent";
 import WhatWeDo from "../components/Aboutdatascience";
 import YouTubeEmbed from "../components/Youtubeembed";
+import Enquiryform from "../components/Forms";
 
 export default function Home() {
   return (
@@ -82,6 +83,7 @@ export default function Home() {
       <Admissions />
       {/* <AcademiesSection /> */}
       <ScrollToTop />
+      <Enquiryform/>
 
       <div
         className="relative bg-fixed bg-center bg-cover"
