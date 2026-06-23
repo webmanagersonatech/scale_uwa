@@ -75,6 +75,7 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <WhatWeDo />
+      <Enquiryform/>
       <YouTubeEmbed/>
       <FounderSection />
       <ProgrammeStructure />
@@ -83,7 +84,7 @@ export default function Home() {
       <Admissions />
       {/* <AcademiesSection /> */}
       <ScrollToTop />
-      <Enquiryform/>
+      
 
       <div
         className="relative bg-fixed bg-center bg-cover"
