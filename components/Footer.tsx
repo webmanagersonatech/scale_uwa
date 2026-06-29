@@ -11,7 +11,7 @@ import {
   FaEnvelope,
   FaLocationDot,
   FaArrowRight,
-  FaLinkedinIn,
+  FaLinkedin,  
 } from "react-icons/fa6";
 import { BASE_PATH } from "../utils/config";
 const Footer = () => {
@@ -149,6 +149,7 @@ const Footer = () => {
                 { icon: <FaInstagram />, href: "https://www.instagram.com/sona_uwa?igsh=MXkxazV2aGZ6cDVlZw==" },
                 // { icon: <FaLinkedinIn />, href: "#" },
                 { icon: <FaYoutube />, href: "https://www.youtube.com/@SonaUWA" },
+                { icon: <FaLinkedin />, href: "https://www.linkedin.com/showcase/sona-uwa/" },
               ].map((item, index) => (
                 <a
                   key={index}
