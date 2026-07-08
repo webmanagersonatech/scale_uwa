@@ -13,6 +13,7 @@ import AboutSection from "../components/AboutComponent";
 import WhatWeDo from "../components/Aboutdatascience";
 import YouTubeEmbed from "../components/Youtubeembed";
 import Enquiryform from "../components/Forms";
+import Eventsection from "../components/Eventscomponents";
 
 export default function Home() {
   return (
@@ -74,6 +75,7 @@ export default function Home() {
 
       <Hero />
       <AboutSection />
+      <Eventsection/>
       <WhatWeDo />
       <Enquiryform/>
       <YouTubeEmbed/>
