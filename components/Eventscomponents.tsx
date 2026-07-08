@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { BASE_PATH } from "../utils/config";
 const Eventsection: NextPage = () => {
     const [isClient, setIsClient] = useState(false);
 
@@ -281,7 +282,7 @@ const Eventsection: NextPage = () => {
                         {/* Background Image Layer */}
                         <div className="absolute inset-0 z-0">
                             <img
-                                src="/homeimages/sonauwa.webp"
+                                src={`${BASE_PATH}/homeimages/sonauwa.webp`}
                                 alt="Event background"
                                 className="w-full h-full object-cover"
                             />

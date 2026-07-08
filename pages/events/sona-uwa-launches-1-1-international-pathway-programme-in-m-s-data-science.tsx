@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { BASE_PATH } from "../../utils/config";
 
 // ─── Animation variants ───────────────────────────────────────────────────────
 const fadeInUp = {
@@ -122,7 +123,9 @@ function Breadcrumb() {
 // ─── Hero Section ─────────────────────────────────────────────────────────────
 function HeroSection() {
     return (
-        <section className="relative py-12 lg:py-16 overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/homeimages/sonauwa.webp')" }}>
+        <section className="relative py-12 lg:py-16 overflow-hidden bg-cover bg-center bg-no-repeat" style={{
+            backgroundImage: `url(${BASE_PATH}/homeimages/sonauwa.webp)`,
+        }}>
             {/* Black Overlay with Gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 pointer-events-none" />
 
