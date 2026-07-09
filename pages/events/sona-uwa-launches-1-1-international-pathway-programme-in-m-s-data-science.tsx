@@ -138,12 +138,12 @@ function HeroSection() {
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
                     <div className="lg:max-w-[70%]">
                         <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-lg tracking-[1.2px] uppercase py-2.5 px-6 mb-4">
-                            <span className="w-2 h-2 bg-[#AC1F2D] rounded-full" />
+                            <span className="w-2 h-2 bg-[#ffe588] rounded-full" />
                             Event
                         </div>
                         <h1 className="font-serif text-3xl lg:text-5xl text-white font-bold mb-4 leading-tight">
                             SONA–UWA Launches 1+1 International Pathway Programme in{" "}
-                            <span className="text-[#AC1F2D]">M.S. Data Science</span>
+                            <span className="text-[#ffe588]">M.S. Data Science</span>
                         </h1>
                         <p className="text-gray-200 text-base lg:text-lg max-w-[680px] leading-relaxed">
                             In collaboration with the University of West Alabama, USA — held on 3rd July 2026 at
@@ -166,12 +166,7 @@ function EventContent() {
             className="mb-10"
             aria-labelledby="event-title"
         >
-            <h2
-                id="event-title"
-                className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]"
-            >
-                Programme Launch
-            </h2>
+          
 
             <div className="space-y-4 text-[#5a5652] leading-relaxed text-sm lg:text-base">
                 <p>
@@ -251,19 +246,6 @@ function EventContent() {
                     helping them build successful global careers in Data Science and emerging technologies.
                 </p>
 
-                <div className="mt-6 pt-4 border-t border-[#e0d6ce]">
-                    <p className="text-[#5a5652]">
-                        <strong>Learn more:</strong>{" "}
-                        <a
-                            href="https://www.scaleindia.in/sona-uwa"
-                            className="text-[#AC1F2D] hover:underline font-medium"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            https://www.scaleindia.in/sona-uwa
-                        </a>
-                    </p>
-                </div>
             </div>
         </motion.section>
     );
