@@ -443,7 +443,7 @@ const Eventsection: NextPage = () => {
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}
             >
-                Official UWA Partner
+                Official UWA International partner
             </motion.p>
         </motion.div>
 
