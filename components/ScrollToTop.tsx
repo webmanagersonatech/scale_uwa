@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import { ChevronUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -33,7 +31,7 @@ export default function ScrollToTop() {
 
   return (
     <AnimatePresence>
-      <div className="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-[999] flex flex-col gap-3 items-end">
+      <div className="fixed bottom-36 sm:bottom-36 right-6 sm:right-8 z-[999] flex flex-col gap-3 items-end">
         {/* WhatsApp Button with Official Logo */}
         <motion.button
           initial={{ opacity: 0, y: 30, scale: 0.8 }}
