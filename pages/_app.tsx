@@ -20,6 +20,12 @@ export default function App({ Component, pageProps }: AppProps) {
           gtag('config', 'G-DV9H87WQSY');
         `}
       </Script>
+      <Script src="https://chatbot-widjet.vercel.app/embed.js" defer></Script>
+      <Script
+        src="https://chatbot-widget.vercel.app/embed.js"
+        strategy="afterInteractive"
+      />
+
       <Navbar />
       <Component {...pageProps} />
       <Footer />
