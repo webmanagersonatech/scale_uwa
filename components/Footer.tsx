@@ -11,7 +11,7 @@ import {
   FaEnvelope,
   FaLocationDot,
   FaArrowRight,
-  FaLinkedin,  
+  FaLinkedin,
 } from "react-icons/fa6";
 import { BASE_PATH } from "../utils/config";
 const Footer = () => {
@@ -242,17 +242,17 @@ const Footer = () => {
             © {currentYear}  SONA UWA. All Rights Reserved.
           </p>
 
-          {/* <div className="flex items-center gap-6 text-xs">
-            <Link href="#" className="text-gray-500 hover:text-[#8c1d32] transition">
+          <div className="flex items-center gap-6 text-xs">
+            <Link href="/privacy-policy" className="text-gray-500 hover:text-[#8c1d32] transition">
               Privacy Policy
             </Link>
-            <Link href="#" className="text-gray-500 hover:text-[#8c1d32] transition">
+            {/* <Link href="#" className="text-gray-500 hover:text-[#8c1d32] transition">
               Terms & Conditions
-            </Link>
-            <Link href="#" className="text-gray-500 hover:text-[#8c1d32] transition">
+            </Link> */}
+            {/* <Link href="#" className="text-gray-500 hover:text-[#8c1d32] transition">
               Accessibility
-            </Link>
-          </div> */}
+            </Link> */}
+          </div>
         </div>
       </div>
     </footer>
