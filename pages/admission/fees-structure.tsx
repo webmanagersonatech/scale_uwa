@@ -32,7 +32,7 @@ const RECOMMENDED = {
     items: [
         { label: "Year 1 at Sona Star, SCALE", amount: "₹7,50,000" },
         { label: "Year 2 at UWA ", amount: "$17,248" },
-      
+    
     ],
     totalLabel: "Total Estimate (2 Years)",
     totalAmount: "~₹23.9 lakh",
@@ -108,9 +108,7 @@ function ComparisonCard({ data }: { data: typeof RECOMMENDED | typeof FULL_UWA }
                     <div key={idx} className="flex justify-between items-center">
                         <div>
                             <p className="text-sm text-gray-700">{item.label}</p>
-                            {item.note && (
-                                <p className="text-xs text-gray-400">{item.note}</p>
-                            )}
+                           
                         </div>
                         <span className={`text-sm font-medium text-[#AC1F2D]`}>
                             {item.amount}
