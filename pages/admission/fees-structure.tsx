@@ -32,11 +32,7 @@ const RECOMMENDED = {
     items: [
         { label: "Year 1 at Sona Star, SCALE", amount: "₹7,50,000" },
         { label: "Year 2 at UWA ", amount: "$17,248" },
-        {
-            label: "Potential Scholarship",
-            amount: "Up to $5,000",
-            note: "Merit-based, subject to eligibility",
-        },
+      
     ],
     totalLabel: "Total Estimate (2 Years)",
     totalAmount: "~₹23.9 lakh",
