@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Script>
 
       <Script
-        src="http://161.248.37.193:3006/embed.js"
+        src="https://chatbot-widget.vercel.app/embed.js"
         strategy="afterInteractive"
       />
 
