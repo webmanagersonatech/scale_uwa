@@ -74,6 +74,7 @@ export default function Home() {
       </Head>
 
       <Hero />
+      
       <AboutSection />
       <Eventsection/>
       <WhatWeDo />
