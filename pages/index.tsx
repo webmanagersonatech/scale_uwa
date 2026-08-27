@@ -43,10 +43,10 @@ export default function Home() {
           content="Launch your global career in Data Science. Study at Sona SCALE ,Bengaluru and progress to UWA, USA."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://your-domain.com" />
+        <meta property="og:url" content="https://scaleindia.in/sona-uwa" />
         <meta
           property="og:image"
-          content="https://your-domain.com/homeimages/og-image.jpg"
+          content="https://scaleindia.in/sona-uwa/homeimages/hero1.webp"
         />
 
         {/* Twitter */}
@@ -64,12 +64,12 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://your-domain.com/homeimages/og-image.jpg"
+          content="https://scaleindia.in/sona-uwa/homeimages/hero1.webp"
         />
 
         <link
           rel="canonical"
-          href="https://your-domain.com"
+          href="https://scaleindia.in/sona-uwa"
         />
       </Head>
 
