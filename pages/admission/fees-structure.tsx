@@ -15,12 +15,12 @@ const PATHWAY_1PLUS1 = {
     badgeColor: "bg-gray-100 text-gray-600",
     subtitle: "SonaUWA 1+1 International Pathway · Year 1 India, Year 2 USA",
     items: [
-        { label: "1st Year: India", amount: "₹7.5L" },
+        { label: "1st Year: India", amount: "₹7.5L", note: "+ GST as applicable, per prevailing regulations" },
         { label: "2nd Year: USA", amount: "$17.2k", note: "incl. housing & meals" },
     ],
     totalLabel: "Total Estimate (2 Years)",
     totalAmount: "~₹24 Lakh",
-    totalSub: undefined as string | undefined,
+    totalSub: "Excludes GST on Year 1 India tuition, applicable as per prevailing regulations" as string | undefined,
     highlight: true,
 };
 
@@ -29,12 +29,12 @@ const INDIA_TRACK = {
     badgeColor: "bg-gray-100 text-gray-600",
     subtitle: "India Track · 2 Years in Bengaluru",
     items: [
-        { label: "1st Year: Bengaluru", amount: "₹7.5L" },
-        { label: "2nd Year: Bengaluru", amount: "₹10.5L" },
+        { label: "1st Year: Bengaluru", amount: "₹7.5L", note: "+ GST as applicable, per prevailing regulations" },
+        { label: "2nd Year: Bengaluru", amount: "₹10.5L", note: "+ GST as applicable, per prevailing regulations" },
     ],
     totalLabel: "Total Estimate (2 Years)",
     totalAmount: "~₹18 Lakh",
-    totalSub: undefined as string | undefined,
+    totalSub: "Excludes GST on both years' tuition, applicable as per prevailing government regulations" as string | undefined,
     highlight: true,
 };
 
@@ -202,6 +202,18 @@ function FeeNotes() {
                     <span className="text-center">
                         <strong>Savings:</strong> Compared to completing both years directly at UWA, the pathway options save approximately{" "}
                         <strong className="text-gray-800">~75%</strong> on total tuition and living costs.
+                    </span>
+                </li>
+                <li className="flex items-start justify-center gap-2.5 text-gray-600 text-sm leading-relaxed">
+                    <span className="text-[#AC1F2D] mt-0.5">•</span>
+                    <span className="text-center">
+                        <strong>GST:</strong> GST on Year 1 India tuition fee is additional and applicable as per prevailing regulations.
+                    </span>
+                </li>
+                <li className="flex items-start justify-center gap-2.5 text-gray-600 text-sm leading-relaxed">
+                    <span className="text-[#AC1F2D] mt-0.5">•</span>
+                    <span className="text-center">
+                        <strong>GST:</strong> GST on tuition fees for both years in the India Track is additional and applicable as per prevailing government regulations.
                     </span>
                 </li>
             </ul>
