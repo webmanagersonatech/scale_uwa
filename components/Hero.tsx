@@ -6,21 +6,21 @@ import { BASE_PATH } from "../utils/config";
 
 const slides = [
   {
-    image: "/homeimages/hero1.webp",
+    image: "/homeimages/sona_uwa_1.webp",
     badge: "Global Career Pathway",
     title: "Start in India complete in the USA ",
     description:
       "Study one year at SCALE, Bengaluru, then complete your Master's at the University of West Alabama, USA. Build international credentials and a global professional network.",
   },
   {
-    image: "/homeimages/hero2.jpg",
+    image: "/homeimages/sona_uwa_2.jpg",
     badge: "Start in Bengaluru. Complete in Alabama.",
     title: "Earn Your MS in Data Science Program from the University of West Alabama, USA",
     description:
       "A structured 1+1 international pathway for students aspiring to build global careers in Data Science, Artificial Intelligence, Machine Learning, Analytics, and emerging technology domains.",
   },
   {
-    image: "/homeimages/hero3.webp",
+    image: "/homeimages/sona_uwa_3.webp",
     badge: "STEM-aligned Curriculum",
     title: "First of it's kind Indo-US Partnership",
     description:
