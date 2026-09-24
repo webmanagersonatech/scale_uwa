@@ -33,14 +33,12 @@ function Modal({
 }) {
     if (!isOpen) return null;
 
-    // Close modal on backdrop click
     const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
         if (e.target === e.currentTarget) {
             onClose();
         }
     };
 
-    // Close modal on Escape key
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
             if (e.key === 'Escape') onClose();
@@ -64,9 +62,8 @@ function Modal({
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="relative max-w-4xl w-full max-h-[90vh] bg-white  overflow-hidden shadow-2xl"
+                className="relative max-w-4xl w-full max-h-[90vh] bg-white overflow-hidden shadow-2xl"
             >
-                {/* Close button */}
                 <button
                     onClick={onClose}
                     className="absolute top-3 right-3 z-10 bg-black/60 hover:bg-black/80 text-white rounded-full p-2 transition-colors duration-200"
@@ -77,7 +74,6 @@ function Modal({
                     </svg>
                 </button>
 
-                {/* Image container */}
                 <div className="relative w-full h-[80vh]">
                     <img
                         src={imageSrc}
@@ -85,7 +81,6 @@ function Modal({
                         className="w-full h-full object-contain"
                     />
                 </div>
-
             </motion.div>
         </motion.div>
     );
@@ -98,13 +93,13 @@ function Breadcrumb() {
             <div className="max-w-[1440px] mx-auto px-6">
                 <ol className="flex items-center gap-1.5 list-none text-[13px] text-[#5a5652] flex-wrap">
                     <li className="flex items-center">
-                        <Link href="/" className="text-[#AC1F2D] hover:underline no-underline">
+                        <Link href="/" className="text-[#334155] hover:underline no-underline">
                             Home
                         </Link>
                         <span className="text-[#bbb] mx-1" aria-hidden="true">›</span>
                     </li>
                     <li>
-                        <Link href="/events" className="text-[#AC1F2D] hover:underline no-underline">
+                        <Link href="/events" className="text-[#334155] hover:underline no-underline">
                             Events
                         </Link>
                         <span className="text-[#bbb] mx-1" aria-hidden="true">›</span>
@@ -126,10 +121,8 @@ function HeroSection() {
         <section className="relative py-12 lg:py-16 overflow-hidden bg-cover bg-center bg-no-repeat" style={{
             backgroundImage: `url(${BASE_PATH}/homeimages/sonauwa.webp)`,
         }}>
-            {/* Black Overlay with Gradient */}
             <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 pointer-events-none" />
 
-            {/* Decorative circles - keeping them but making them subtle */}
             <div className="absolute -right-[60px] -top-[60px] w-[360px] h-[360px] rounded-full bg-white/5 pointer-events-none" />
             <div className="absolute left-[38%] -bottom-20 w-60 h-60 rounded-full bg-white/5 pointer-events-none" />
             <div className="absolute -left-10 top-1/3 w-40 h-40 rounded-full bg-white/5 pointer-events-none" />
@@ -166,20 +159,18 @@ function EventContent() {
             className="mb-10"
             aria-labelledby="event-title"
         >
-          
-
             <div className="space-y-4 text-[#5a5652] leading-relaxed text-sm lg:text-base">
                 <p>
                     We are delighted to share the successful launch of the{" "}
-                    <strong className="text-[#AC1F2D]">
+                    <strong className="text-[#334155]">
                         SONA–UWA 1+1 International Pathway Programme in MS in Data Science
                     </strong>
                     , held on{" "}
-                    <strong className="text-[#AC1F2D]">3rd July 2026</strong> at the Sona Valliappa Auditorium,
+                    <strong className="text-[#334155]">3rd July 2026</strong> at the Sona Valliappa Auditorium,
                     in collaboration with the{" "}
                     <a
                         href="https://www.uwa.edu"
-                        className="text-[#AC1F2D] hover:underline"
+                        className="text-[#334155] hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -191,17 +182,17 @@ function EventContent() {
                 <p>
                     This unique Indo-American academic partnership has been designed for Indian students who
                     aspire to earn a U.S. master's degree and build global careers in{" "}
-                    <strong className="text-[#AC1F2D]">
+                    <strong className="text-[#334155]">
                         Data Science, Artificial Intelligence, Machine Learning, Analytics, and Business Intelligence
                     </strong>
                     .
                 </p>
 
-                <div className="bg-gray-50 border-l-4 border-[#AC1F2D] p-4 my-4">
+                <div className="bg-gray-50 border-l-4 border-[#334155] p-4 my-4">
                     <p className="text-[#5a5652]">
                         Through this pathway, students will complete{" "}
-                        <strong className="text-[#AC1F2D]">Year 1 at SCALE, Bengaluru</strong>, and{" "}
-                        <strong className="text-[#AC1F2D]">Year 2 at the University of West Alabama, USA</strong>.
+                        <strong className="text-[#334155]">Year 1 at SCALE, Bengaluru</strong>, and{" "}
+                        <strong className="text-[#334155]">Year 2 at the University of West Alabama, USA</strong>.
                         The model offers students the advantage of beginning their international academic journey
                         in India, reducing the initial financial burden, and preparing themselves academically,
                         professionally, and personally before progressing to the United States.
@@ -209,9 +200,9 @@ function EventContent() {
                 </div>
 
                 <p>
-                    <strong className="text-[#AC1F2D]">Mr. Thyagu Valliappa</strong>, Vice Chairman, Sona Institutions,
+                    <strong className="text-[#334155]">Mr. Thyagu Valliappa</strong>, Vice Chairman, Sona Institutions,
                     and Founder &amp; Chief Mentor, SCALE, emphasised that{" "}
-                    <em className="text-[#AC1F2D]">
+                    <em className="text-[#334155]">
                         "at SCALE, our philosophy is 'for the industry, to the industry, and by the industry.'"
                     </em>{" "}
                     In line with this vision, the programme goes beyond academics and supports students through
@@ -221,18 +212,18 @@ function EventContent() {
 
                 <p>
                     The launch, held at the Sona Valliappa Auditorium, Salem, was graced by the august presence of{" "}
-                    <strong className="text-[#AC1F2D]">Dr. Karthikeyan V</strong>, Director, Thiagarajar Polytechnic College;{" "}
-                    <strong className="text-[#AC1F2D]">Dr. Kanagaraj</strong>, Principal (i/c), Thiagarajar Polytechnic College;{" "}
-                    <strong className="text-[#AC1F2D]">Dr. S.R.R. Senthilkumar</strong>, Principal, Sona College of Technology;{" "}
-                    <strong className="text-[#AC1F2D]">Dr. Kadhar Nawaz</strong>, Principal, Sona College of Arts and Science;{" "}
-                    <strong className="text-[#AC1F2D]">Dr. M. Venugopal</strong>, Vice President – Operations, Sona Star Innovation Pvt. Ltd., Bangalore;{" "}
-                    <strong className="text-[#AC1F2D]">Dr. Akilandeswari</strong>, Dean – Academics, Sona College of Technology;{" "}
-                    <strong className="text-[#AC1F2D]">Dr. Sathiyabhama</strong>, Dean – Admissions, Sona College of Technology;{" "}
+                    <strong className="text-[#334155]">Dr. Karthikeyan V</strong>, Director, Thiagarajar Polytechnic College;{" "}
+                    <strong className="text-[#334155]">Dr. Kanagaraj</strong>, Principal (i/c), Thiagarajar Polytechnic College;{" "}
+                    <strong className="text-[#334155]">Dr. S.R.R. Senthilkumar</strong>, Principal, Sona College of Technology;{" "}
+                    <strong className="text-[#334155]">Dr. Kadhar Nawaz</strong>, Principal, Sona College of Arts and Science;{" "}
+                    <strong className="text-[#334155]">Dr. M. Venugopal</strong>, Vice President – Operations, Sona Star Innovation Pvt. Ltd., Bangalore;{" "}
+                    <strong className="text-[#334155]">Dr. Akilandeswari</strong>, Dean – Academics, Sona College of Technology;{" "}
+                    <strong className="text-[#334155]">Dr. Sathiyabhama</strong>, Dean – Admissions, Sona College of Technology;{" "}
                     along with Heads of Departments, faculty members, students, and other distinguished members
                     of the Sona academic community.
                 </p>
 
-                <div className="bg-gray-50 border-l-4 border-[#AC1F2D] p-4 my-4">
+                <div className="bg-gray-50 border-l-4 border-[#334155] p-4 my-4">
                     <p className="text-[#5a5652]">
                         The launch meet provided a comprehensive overview of the programme structure, fee details,
                         scholarship opportunities, admission process, and partnership possibilities. More importantly,
@@ -245,7 +236,6 @@ function EventContent() {
                     We look forward to empowering students through this meaningful international pathway and
                     helping them build successful global careers in Data Science and emerging technologies.
                 </p>
-
             </div>
         </motion.section>
     );
@@ -314,7 +304,7 @@ function ImageGallery() {
             >
                 <h2
                     id="gallery-title"
-                    className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]"
+                    className="font-serif text-xl text-[#334155] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]"
                 >
                     Event Gallery
                 </h2>
@@ -337,9 +327,7 @@ function ImageGallery() {
                                 alt={image.alt}
                                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                             />
-                            {/* Subtle overlay on hover */}
                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                            {/* Click to expand icon */}
                             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <svg className="w-12 h-12 text-white drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5" />
@@ -350,7 +338,6 @@ function ImageGallery() {
                 </motion.div>
             </motion.section>
 
-            {/* Modal */}
             <Modal
                 isOpen={modalOpen}
                 onClose={() => setModalOpen(false)}
@@ -366,7 +353,6 @@ function MediaCoverage() {
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState({ src: "", alt: "" });
 
-    // Media coverage images - replace with actual media coverage images
     const mediaImages = [
         {
             src: "https://scaleindia.in/_next/image?url=https%3A%2F%2Fadmin.scaleindia.in%2Fuploads%2Fmediacoverage_5_bd2b5c654c.webp&w=1200&q=75",
@@ -409,7 +395,7 @@ function MediaCoverage() {
             >
                 <h2
                     id="media-title"
-                    className="font-serif text-xl text-[#AC1F2D] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]"
+                    className="font-serif text-xl text-[#334155] font-bold mb-3 pb-3 border-b-2 border-[#f5e8e0]"
                 >
                     Media Coverage
                 </h2>
@@ -443,7 +429,6 @@ function MediaCoverage() {
                 </motion.div>
             </motion.section>
 
-            {/* Modal */}
             <Modal
                 isOpen={modalOpen}
                 onClose={() => setModalOpen(false)}
