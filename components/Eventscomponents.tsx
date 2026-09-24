@@ -14,6 +14,7 @@ type EventData = {
     id: string;
     badgeText: string;
     headingLines: [string, string];
+    headingHighlight?: string;
     subheading: string;
     thumbnailImage: string;
     details: { label: string; value: string; icon: "calendar" | "globe" }[];
@@ -45,6 +46,7 @@ const EVENTS: EventData[] = [
             "U.S. Master's Degree Spot Admissions",
             " Now Open — Salem & Bangalore!",
         ],
+        headingHighlight: "Spot Admissions",
         subheading: "MS in Data Science (STEM) — International 1+1 Pathway",
         thumbnailImage: `${BASE_PATH}/event/salem-banglore-1.webp`,
         details: [
@@ -54,7 +56,6 @@ const EVENTS: EventData[] = [
         ],
         ctaText: "View Event",
         ctaHref: "/events/us-masters-degree-spot-admissions-salem-bangalore",
-
         extraFootNote: "*Subject to immigration rules, eligibility & university approval",
         extraContact: "9489725499 / 7010150947",
     },
@@ -98,6 +99,23 @@ const Eventsection: NextPage = () => {
     const goTo = (i: number) => setSlide((i + total) % total);
     const next = () => goTo(slide + 1);
     const prev = () => goTo(slide - 1);
+
+    /* Renders heading text, wrapping the highlighted word(s) in a colored span */
+    const renderHeading = (text: string, highlight?: string) => {
+        if (!highlight) return text;
+        const idx = text.indexOf(highlight);
+        if (idx === -1) return text;
+        const before = text.slice(0, idx);
+        const match = text.slice(idx, idx + highlight.length);
+        const after = text.slice(idx + highlight.length);
+        return (
+            <>
+                {before}
+                <span className="text-[#ffe588]">{match}</span>
+                {after}
+            </>
+        );
+    };
 
     const contentVariants = {
         hidden: { opacity: 0, x: -30 },
@@ -221,7 +239,7 @@ const Eventsection: NextPage = () => {
 
                                             <motion.div variants={itemVariants}>
                                                 <h2 className="font-serif text-[24px] sm:text-[28px] lg:text-[32px] xl:text-[36px] leading-[1.15] text-white mb-2">
-                                                    {event.headingLines[0]} <br />
+                                                    {renderHeading(event.headingLines[0], event.headingHighlight)} <br />
                                                     <span className="text-white relative inline-block">
                                                         {event.headingLines[1]}
                                                         <motion.span
@@ -243,30 +261,30 @@ const Eventsection: NextPage = () => {
                                                     {event.subheading}
                                                 </motion.p>
                                             </motion.div>
-<motion.div
-    variants={itemVariants}
-    className="flex flex-wrap gap-4 mb-4"
->
-    {event.details.map((d) => (
-        <div
-            key={d.label}
-            className="flex items-start gap-3 group"
-        >
-            <div className="w-7 h-7 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300 border border-white/10 flex-shrink-0">
-                {d.icon === "calendar" ? <IconCalendar /> : <IconGlobe />}
-            </div>
+                                            <motion.div
+                                                variants={itemVariants}
+                                                className="flex flex-wrap gap-4 mb-4"
+                                            >
+                                                {event.details.map((d) => (
+                                                    <div
+                                                        key={d.label}
+                                                        className="flex items-start gap-3 group"
+                                                    >
+                                                        <div className="w-7 h-7 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300 border border-white/10 flex-shrink-0">
+                                                            {d.icon === "calendar" ? <IconCalendar /> : <IconGlobe />}
+                                                        </div>
 
-            <div>
-                <p className="text-[10px] font-semibold text-white/90">
-                    {d.label}
-                </p>
-                <p className="text-xs text-white/80">
-                    {d.value}
-                </p>
-            </div>
-        </div>
-    ))}
-</motion.div>
+                                                        <div>
+                                                            <p className="text-[10px] font-semibold text-white/90">
+                                                                {d.label}
+                                                            </p>
+                                                            <p className="text-xs text-white/80">
+                                                                {d.value}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </motion.div>
 
                                             <Link href={event.ctaHref}>
                                                 <div className="relative z-10">
@@ -284,8 +302,6 @@ const Eventsection: NextPage = () => {
                                                     </motion.button>
                                                 </div>
                                             </Link>
-
-                                          
                                         </div>
                                     </motion.div>
                                 </motion.div>
