@@ -294,70 +294,70 @@ function EventContent() {
                                     <strong className="text-[#334155]">Time:</strong> 10:00 AM
                                 </span>
                             </div>
-                         <a
-    href="https://www.google.com/maps/search/?api=1&query=TPT+Auditorium%2C+Sona+College%2C+Salem"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="group flex items-start gap-2 text-[#5a5652] cursor-pointer 
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=TPT+Auditorium%2C+Sona+College%2C+Salem"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-start gap-2 text-[#5a5652] cursor-pointer 
                rounded-lg px-2 py-1.5 -mx-2
                 transition-all duration-200"
->
-    <MapPinIcon
-        className="w-4 h-4 text-[#334155] flex-shrink-0 mt-1
+                            >
+                                <MapPinIcon
+                                    className="w-4 h-4 text-[#334155] flex-shrink-0 mt-1
                    group-hover:scale-110 transition-transform duration-200"
-    />
+                                />
 
-    <span className="group-hover:underline group-hover:text-[#334155] transition-colors">
-        <strong className="text-[#334155]">Venue:</strong>{" "}
-        TPT Auditorium, Sona College, Salem
-    </span>
-</a>
+                                <span className="group-hover:underline group-hover:text-[#334155] transition-colors">
+                                    <strong className="text-[#334155]">Venue:</strong>{" "}
+                                    TPT Auditorium, Sona College, Salem
+                                </span>
+                            </a>
                         </div>
                         {/* Bengaluru */}
-                     <div className="lg:border-l lg:border-gray-300 lg:pl-8">
-    <a
-        href="https://www.google.com/maps/search/?api=1&query=Sona+Towers%2C+71+Millers+Road%2C+Bengaluru"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group flex items-center gap-2 mb-2 w-fit cursor-pointer rounded-lg px-2 py-1 -mx-2 hover:bg-[#334155]/5 transition-all duration-200"
-    >
-        <MapPinIcon className="w-5 h-5 text-[#334155] group-hover:scale-110 transition-transform duration-200" />
-        <strong className="text-[#334155] text-base group-hover:underline">
-            Bengaluru
-        </strong>
-    </a>
+                        <div className="lg:border-l lg:border-gray-300 lg:pl-8">
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Sona+Towers%2C+71+Millers+Road%2C+Bengaluru"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-center gap-2 mb-2 w-fit cursor-pointer rounded-lg px-2 py-1 -mx-2 hover:bg-[#334155]/5 transition-all duration-200"
+                            >
+                                <MapPinIcon className="w-5 h-5 text-[#334155] group-hover:scale-110 transition-transform duration-200" />
+                                <strong className="text-[#334155] text-base group-hover:underline">
+                                    Bengaluru
+                                </strong>
+                            </a>
 
-    <div className="flex items-center gap-2 text-[#5a5652] mb-1">
-        <CalendarIcon className="w-4 h-4 text-[#334155] flex-shrink-0" />
-        <span>
-            <strong className="text-[#334155]">Spot Registrations Open On:</strong>{" "}
-            8th October 2026
-        </span>
-    </div>
+                            <div className="flex items-center gap-2 text-[#5a5652] mb-1">
+                                <CalendarIcon className="w-4 h-4 text-[#334155] flex-shrink-0" />
+                                <span>
+                                    <strong className="text-[#334155]">Spot Registrations Open On:</strong>{" "}
+                                    8th October 2026
+                                </span>
+                            </div>
 
-    <div className="flex items-center gap-2 text-[#5a5652] mb-1">
-        <ClockIcon className="w-4 h-4 text-[#334155] flex-shrink-0" />
-        <span>
-            <strong className="text-[#334155]">Time:</strong> 10:00 AM
-        </span>
-    </div>
+                            <div className="flex items-center gap-2 text-[#5a5652] mb-1">
+                                <ClockIcon className="w-4 h-4 text-[#334155] flex-shrink-0" />
+                                <span>
+                                    <strong className="text-[#334155]">Time:</strong> 10:00 AM
+                                </span>
+                            </div>
 
-    <a
-        href="https://www.google.com/maps/search/?api=1&query=Sona+Towers%2C+71+Millers+Road%2C+Bengaluru"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group flex items-start gap-2 text-[#5a5652] cursor-pointer rounded-lg px-2 py-1.5 -mx-2  transition-all duration-200"
-    >
-        <MapPinIcon className="w-4 h-4 text-[#334155] flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-200" />
+                            <a
+                                href="https://www.google.com/maps/search/?api=1&query=Sona+Towers%2C+71+Millers+Road%2C+Bengaluru"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex items-start gap-2 text-[#5a5652] cursor-pointer rounded-lg px-2 py-1.5 -mx-2  transition-all duration-200"
+                            >
+                                <MapPinIcon className="w-4 h-4 text-[#334155] flex-shrink-0 mt-1 group-hover:scale-110 transition-transform duration-200" />
 
-        <span className="group-hover:text-[#334155] transition-colors">
-            <strong className="text-[#334155]">Venue:</strong>{" "}
-            <span className="group-hover:underline">
-                Sona Towers, 71 Millers Road, Bengaluru
-            </span>
-        </span>
-    </a>
-</div>
+                                <span className="group-hover:text-[#334155] transition-colors">
+                                    <strong className="text-[#334155]">Venue:</strong>{" "}
+                                    <span className="group-hover:underline">
+                                        Sona Towers, 71 Millers Road, Bengaluru
+                                    </span>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -518,7 +518,7 @@ function ImageGallery() {
     const [selectedImage, setSelectedImage] = useState({ src: "", alt: "" });
 
     const images = [
-          {
+        {
             src: `${BASE_PATH}/event/salemposter.webp`,
             alt: "SONA-UWA Event - Dignitaries and Chief Guests on Stage"
         },
@@ -526,7 +526,7 @@ function ImageGallery() {
             src: `${BASE_PATH}/event/bangloreposter.webp`,
             alt: "SONA-UWA Event - Grand Inauguration Ceremony"
         },
-      
+
     ];
 
     const handleImageClick = (src: string, alt: string) => {
