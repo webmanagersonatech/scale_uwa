@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Download, CircleHelp, MessageCircle, BookOpen, Globe, Clock3, GraduationCap, BadgePercent, BriefcaseBusiness, Plane, ChevronLeft, ChevronRight } from "lucide-react";
 import { BASE_PATH } from "../utils/config";
+import EventBanner from "./EventBanner";
 
 const slides = [
   {
@@ -285,7 +286,7 @@ export default function HeroSection() {
         <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-800" />
       </button>
 
-
+      <EventBanner />
     </section>
   );
 }
