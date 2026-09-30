@@ -7,14 +7,14 @@ import EventBanner from "./EventBanner";
 
 const slides = [
   {
-    image: "/homeimages/sona_uwa_1.webp",
+    image: "/homeimages/sona_uwa_2.webp",
     badge: "Global Career Pathway",
     title: "Start in India complete in the USA ",
     description:
       "Study one year at SCALE, Bengaluru, then complete your Master's at the University of West Alabama, USA. Build international credentials and a global professional network.",
   },
   {
-    image: "/homeimages/sona_uwa_2.jpg",
+    image: "/homeimages/sona_uwa_1.webp",
     badge: "Start in Bengaluru. Complete in Alabama.",
     title: "Earn Your MS in Data Science Program from the University of West Alabama, USA",
     description:
