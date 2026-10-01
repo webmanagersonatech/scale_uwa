@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Calendar, X } from "lucide-react";
+import Link from "next/link";
 
 export default function EventBanner() {
     const [show, setShow] = useState(true);
@@ -69,7 +70,7 @@ export default function EventBanner() {
                                 </div>
 
                                 <div className="flex items-center gap-2 flex-shrink-0">
-                                    <a
+                                    <Link
                                         href="/events/us-masters-degree-spot-admissions-salem-bangalore"
                                         className="
       inline-flex
@@ -95,7 +96,7 @@ export default function EventBanner() {
     "
                                     >
                                         Know More →
-                                    </a>
+                                    </Link>
 
                                     <button
                                         onClick={() => setShow(false)}
