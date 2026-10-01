@@ -32,6 +32,29 @@ export default function EventBanner() {
                                     <span className="text-[9px] sm:text-[10px] font-semibold text-[#078671] uppercase tracking-wider truncate">
                                         Now Open — Salem &amp; Bangalore
                                     </span>
+                                    <div className="relative inline-flex items-center gap-2 overflow-hidden rounded-full border border-[#078671]/25 bg-white px-3 py-1 shadow-[0_4px_18px_rgba(7,134,113,0.15)]">
+
+                                        {/* Moving shine */}
+                                        <span className="absolute -left-6 top-0 h-full w-5 -skew-x-12 bg-white/70 blur-[2px] transition-all duration-1000 group-hover:left-full" />
+
+                                        {/* NEW text */}
+                                        <span className="relative z-10 text-[10px] font-extrabold uppercase tracking-[0.2em] text-[#078671]">
+                                            New
+                                        </span>
+
+                                        {/* Animated sparkle */}
+                                        <span className="relative z-10 flex h-5 w-5 items-center justify-center rounded-full bg-[#078671]">
+                                            <span className="text-[11px] text-white animate-[spin_2s_linear_infinite]">
+                                                ✦
+                                            </span>
+
+                                            {/* Glow */}
+                                            <span className="absolute inset-0 rounded-full bg-[#078671]/30 animate-ping" />
+                                        </span>
+
+                                        {/* Floating dot */}
+                                        <span className="absolute right-1 top-1 h-1.5 w-1.5 rounded-full bg-[#F9C349] animate-pulse" />
+                                    </div>
                                 </div>
                                 <h3 className="font-serif text-[13px] sm:text-[15px] md:text-base font-bold text-gray-900 leading-tight">
                                     U.S. Master's Degree Spot Admissions
